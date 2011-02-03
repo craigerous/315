@@ -1,0 +1,1188 @@
+\chapter{Wave Mechanics}
+
+\section{Introduction}
+According to {\em classical physics}\/ ({\em i.e.}, physics prior to the 20th century), {\em particles}\/ and {\em waves}\/
+are two completely distinct classes of physical entity that possess markedly 
+ different properties. 1)~Particles are {\em discrete}: {\em i.e.}, they cannot be arbitrarily divided. 
+In other words,  it makes sense to talk about one electron, or two electrons, but not  about a third of an electron. Waves, on the
+other hand, are {\em continuous}: {\em i.e.}, they can be arbitrarily divided. In other words, given a wave whose amplitude has a certain value,  it makes sense to talk about a similar wave whose amplitude is one third, or any other fraction  whatsoever, of this value. 2)~Particles are {\em highly
+ localized}\/ in space.  For example, atomic nuclei  have very small radii of order $10^{-15}\,m$, whilst
+electrons act like point particles: {\em i.e.}, they  have no discernible  spatial extent.
+Waves, on the other hand, are {\em non-localized}\/ in space. In fact, a wave is defined to be a disturbance that
+is periodic in space, with some finite periodicity length: {\em i.e.}, wavelength. Hence, it is fairly meaningless to
+talk about a disturbance being a wave unless it extends over
+a region of space that is at least a few wavelengths in dimension.
+
+The classical scenario, described above, in which particles and waves are completely distinct from one another, had to be
+significantly modified  in the early decades of the 20th century.
+During this time period, physicists discovered, much to their surprise, that, under certain circumstances, waves
+ act as particles, and particles act as waves. This bizarre phenomenon is known as
+{\em wave-particle duality}. For instance, the {\em photoelectric effect}\/ (see Section~\ref{s12.2}) indicates that
+electromagnetic waves  sometimes act like swarms of massless particles called {\em photons}. Moreover, the phenomenon of {\em electron diffraction}\/ by atomic lattices (see Section~\ref{s12.3})
+implies that electrons  sometimes have wave-like properties.  Note, however, that wave-particle
+duality usually only manifests itself on atomic and sub-atomic lengthscales ({\em i.e.}, on lengthscales less than,
+or of order, 
+$10^{-10}\,{\rm m}$---see Section~\ref{s12.3}).  The classical picture remains valid on significantly longer lengthscales. In other words,
+on {\em macroscopic}\/ lengthscales,  
+  waves only act like waves, particles only act like particles, and there is no wave-particle duality.  However, on
+  {\em microscopic}\/ lengthscales, {\em classical mechanics}, which governs the macroscopic behavior of massive particles, and
+{\em classical electrodynamics}, which governs the macroscopic behavior of electromagnetic fields---neither of
+which take wave-particle duality into account---must be replaced by new theories. The theories in question are called {\em quantum mechanics}\/ and {\em quantum electrodynamics},
+respectively. In the following, we shall discuss a simplified version of quantum mechanics in which the microscopic  dynamics of
+ massive particles ({\em i.e.}, particles with finite mass) is described
+ {\em entirely}\/ in terms of  wavefunctions. This
+ particular 
+theory is known as {\em wave mechanics}.  
+
+\section{Photoelectric Effect}\label{s12.2}
+The so-called {\em photoelectric effect}, by which a polished metal surface emits electrons
+when illuminated by visible or ultra-violet light, was discovered by Heinrich Hertz in 1887.
+The following facts regarding this effect can be established via careful
+observation. First, a given surface only emits electrons when the {\em frequency}\/
+of the light with which it is illuminated exceeds a certain threshold value,
+which is a property of the metal. Second, the current of photoelectrons, when it
+exists, is proportional to the {\em intensity}\/ of the light falling on the surface. 
+Third, the energy of the photoelectrons is independent of the light intensity,
+but varies {\em linearly}\/ with the light frequency. These facts are
+inexplicable within the framework of classical physics.
+
+In 1905, Albert Einstein proposed a radical new theory of light in order to
+account for the photoelectric effect. According to this  theory, light
+of  fixed angular frequency $\omega$ consists of a collection of indivisible discrete packages, called
+{\em quanta},\footnote{Plural of {\em quantum}: Latin neuter
+of {\em quantus}\/: how much.} whose energy is
+\begin{equation}\label{e12.1}
+E = \hbar\,\omega.
+\end{equation}
+Here, $\hbar =  1.055\times 10^{-34}\,{\rm J\,s}$ is a new constant of nature,
+known as {\em Planck's constant}. (Strictly speaking, it is Planck's constant divided by $2\pi$). Incidentally, $\hbar$ is called Planck's constant, rather than Einstein's constant, because Max Planck first introduced the concept of the quantization of light, in 1900, whilst trying
+to account for the  electromagnetic spectrum of a black body ({\em i.e.},
+a perfect emitter and absorber of electromagnetic radiation). 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter12/fig01.eps}}
+\caption{\em Variation of the kinetic energy $K$ of photoelectrons with the wave angular frequency $\omega$.}\label{f13.1}   
+\end{figure}
+
+Suppose that the electrons at the surface of a piece of metal lie in a potential well
+of depth $W$. In other words, the electrons have to acquire an energy $W$
+in order to be emitted from the surface. Here, $W$ is generally called
+the {\em work-function}\/ of the surface, and is a property of the
+metal. Suppose that an electron absorbs a single quantum of light, otherwise known as a {\em photon}. Its energy
+therefore increases by $\hbar\,\omega$. If $\hbar\,\omega$ is greater than $W$ then the
+electron is emitted from the surface with the residual kinetic energy
+\begin{equation}
+K = \hbar\,\omega - W.
+\end{equation}
+Otherwise, the electron remains trapped in the potential well, and is not emitted. Here, we are assuming that the probability of an electron absorbing
+two or more photons is negligibly small compared to the probability of it
+absorbing a single photon (as is, indeed, the case for
+low intensity illumination). Incidentally, we can determine Planck's
+constant, as well as the work-function of the metal, by plotting the kinetic
+energy of the emitted photoelectrons as a function of the wave frequency,
+as shown in Figure~\ref{f13.1}. This plot is a straight-line whose slope is $\hbar$,
+and whose intercept with the $\omega$ axis is $W/\hbar$. Finally, the number
+of emitted electrons increases with the intensity of the light because the
+more intense the light the larger the flux of photons onto the surface.
+Thus, Einstein's quantum theory of light is capable of accounting for all
+three of the previously mentioned observational facts regarding the photoelectric
+effect. In the following, we shall assume that  the central component of Einstein's theory---namely, Equation~(\ref{e12.1})---is a general result which applies to {\em all}\/ particles,   not
+just photons. 
+
+\section{Electron Diffraction}\label{s12.3}
+In 1927, George Paget Thomson discovered that if a beam of electrons
+is made to pass through a thin metal film then the regular atomic array in  the metal acts as a
+sort of diffraction grating, so that when a photographic film, placed behind the metal, is developed an
+{\em interference pattern}\/ is discernible. Of course, this implies that electrons have wave-like
+properties. Moreover, the electron wavelength, $\lambda$,  or, alternatively, the wavenumber, $k =2\pi/\lambda$, can be deduced from the spacing
+of the maxima in the interference pattern (see Chapter~\ref{c11}).
+Thomson found that the momentum, $p$, of an electron is related to its wavenumber, $k$, according to the
+following
+simple relation:
+\begin{equation}\label{e12.3}
+p = \hbar\,k.
+\end{equation}
+The associated wavelength, $\lambda = 2\pi/k$, is known as the {\em de Broglie wavelength}, since the above
+relation was first hypothesized   by Louis de Broglie in 1926.
+In the following, we shall assume that Equation~(\ref{e12.3}) is a general result which applies to {\em all}\/ particles,  not just electrons.
+
+It turns out that wave-particle duality only manifests itself on lengthscales less than,
+or of order, the de Broglie wavelength. Note, however, that this wavelength is generally pretty small. For instance,
+the de Broglie wavelength of an electron is
+\begin{equation}
+\lambda_e = 1.2\times 10^{-9}\,[E({\rm eV})]^{-1/2}\,{\rm m},
+\end{equation}
+where the electron energy is conveniently measured in units of electron-volts (eV). 
+(An electron accelerated from rest through a potential difference of $1000$\,V
+acquires an energy of $1000$\,eV, and so on. Electrons in atoms typically have energies in the range $10$ to $100$ eV.) Moreover, the de Broglie wavelength
+of a proton is
+\begin{equation}
+\lambda_p = 2.9\times 10^{-11}\,[E({\rm eV})]^{-1/2}\,{\rm m}.
+\end{equation}
+
+\section{Representation of Waves via Complex Numbers}
+In mathematics, the symbol ${\rm i}$ is conventionally used to represent the {\em square-root of minus one}: {\em i.e.}, the
+solution of ${\rm i}^2 = -1$. Now, a {\em real number}, $x$ (say), can take any value in a continuum of different values lying between $-\infty$ and $+\infty$. 
+On the other hand, an {\em imaginary number}\/ takes the general form ${\rm i}\,y$, where $y$ is a real number. It follows that the square of
+a real number is a positive real number, whereas the square of an imaginary number is a negative real number. In addition, a general {\em complex number}\/ is written
+\begin{equation}
+z = x + {\rm i}\,y,
+\end{equation}
+where $x$ and $y$ are real numbers. In fact, $x$ is termed the {\em real part}\/ of $z$, and $y$ 
+the {\em imaginary part}\/ of $z$. This is written mathematically as $x={\rm Re}(z)$ and $y={\rm Im}(z)$. 
+Finally, the {\em complex conjugate}\/ of $z$ is defined $z^\ast = x-{\rm i}\,y$.
+
+Now, just as we
+can visualize a real number as a point on an infinite straight-line, we can visualize a complex number as
+a point in an infinite plane. The coordinates of the point in question are the real and imaginary
+parts of the number: {\em i.e.}, $z\equiv (x,\,y)$. This idea is illustrated in Figure~\ref{f13.2}. 
+The distance, $r=\sqrt{x^2+y^2}$, of the representative point from the origin is termed the {\em modulus}\/
+of the corresponding complex number, $z$. This is written mathematically as $|z|=\sqrt{x^2+y^2}$.  Incidentally, it follows that $z\,z^\ast = x^2 + y^2=|z|^2$. 
+The angle, $\theta=\tan^{-1}(y/x)$,  that the straight-line joining the representative point to the origin subtends with the 
+real axis is termed the {\em argument}\/ of the corresponding complex number, $z$. This is written mathematically
+as ${\rm arg}(z)=\tan^{-1}(y/x)$. It follows from standard trigonometry that $x=r\,\cos\theta$, and $y=r\,\sin\theta$.
+Hence, $z= r\,\cos\theta+ {\rm i}\,r\sin\theta$. 
+
+\begin{figure}
+\epsfysize=3.25in
+\centerline{\epsffile{Chapter12/fig02.eps}}
+\caption{\em Representation of a complex number as a point in a plane.}\label{f13.2}   
+\end{figure}
+
+Complex numbers are often used to represent waves, and wavefunctions. All such representations  depend ultimately on a fundamental mathematical identity, known as
+{\em de Moivre's theorem}\/ (see Exercise~12.1), which takes the form
+\begin{equation}
+{\rm e}^{\,{\rm i}\,\phi} \equiv \cos\phi + {\rm i}\,\sin\phi,
+\end{equation}
+where $\phi$ is a  real number. Incidentally, given that $z=r\,\cos\theta + {\rm i}\,r\,\sin\theta= r\,[\cos\theta+{\rm i}\,\sin\theta]$, where $z$ is a general
+complex number, $r=|z|$  its modulus, and $\theta={\rm arg}(z)$ its argument, it follows from de Moivre's theorem that any
+complex number, $z$, can be written
+\begin{equation}
+z = r\,{\rm e}^{\,{\rm i}\,\theta},
+\end{equation}
+where $r=|z|$ and $\theta={\rm arg}(z)$ are real numbers. 
+
+Now, a  one-dimensional wavefunction takes the general form
+\begin{equation}\label{e12.8}
+\psi(x,t) = A\,\cos(\phi+k\,x-\omega\,t),
+\end{equation}
+where $A>0$ is the wave amplitude, $\phi$ the phase angle, $k$ the wavenumber, and $\omega$ the angular
+frequency.  Consider the complex wavefunction
+\begin{equation}\label{e12.10}
+\psi(x,t) = \psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)},
+\end{equation}
+where $\psi_0$ is a complex constant. We can write
+\begin{equation}
+\psi_0 = A\,{\rm e}^{\,{\rm i}\,\phi},
+\end{equation}
+where $A$ is the modulus, and $\phi$ the argument, of $\psi_0$.
+Hence, we deduce that
+\begin{eqnarray}
+{\rm Re}\left[\psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\right] &=& {\rm Re}\left[A\,{\rm e}^{\,{\rm i}\,\phi}\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\right]\nonumber\\[0.5ex]
+&=&{\rm Re}\left[A\,{\rm e}^{\,{\rm i}\,(\phi+k\,x-\omega\,t)}\right]\nonumber\\[0.5ex]&=&A\,{\rm Re}\left[{\rm e}^{\,{\rm i}\,(\phi+k\,x-\omega\,t)}\right].
+\end{eqnarray}
+Thus, it follows from de Moirve's theorem, and Equation~(\ref{e12.8}), that
+\begin{equation}
+{\rm Re}\left[\psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\right] =A\,\cos(\phi+k\,x-\omega\,t)=\psi(x,t).
+\end{equation}
+In other words, a  general one-dimensional real wavefunction, (\ref{e12.8}), can be
+represented as the {\em real part}\/ of a complex wavefunction of the form (\ref{e12.10}).
+For ease
+of notation, the ``take the real part''  aspect of the above expression is usually omitted, and our general one-dimension wavefunction
+is simply written
+\begin{equation}\label{e12.13}
+\psi(x,t) = \psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}.
+\end{equation}
+ The
+main advantage of the complex representation, (\ref{e12.13}), over the more straightforward
+real representation, (\ref{e12.8}), is that the former enables us to combine the amplitude, $A$, and the
+phase angle, $\phi$, of the wavefunction into a single complex amplitude, $\psi_0$. 
+
+\section{Schr\"{o}dinger's Equation}\label{s12.5}
+The basic premise of wave mechanics is that a massive particle of energy $E$ and linear momentum $p$, moving in the $x$-direction (say), 
+can be represented by a one-dimensional {\em complex wavefunction}\/ of the form
+\begin{equation}\label{e12.13a}
+\psi(x,t) = \psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)},
+\end{equation}
+where the complex amplitude, $\psi_0$, is arbitrary, whilst the wavenumber, $k$, and the angular frequency, $\omega$,
+are related to the particle momentum, $p$, and energy, $E$, via the fundamental
+relations (\ref{e12.3}) and (\ref{e12.1}), respectively. Now, the above one-dimensional wavefunction is, presumably, the solution of
+some one-dimensional wave equation that determines how the wavefunction evolves in time. 
+As described below, we can guess the form of this wave equation by drawing an analogy with classical physics.
+
+A classical particle of mass $m$, moving in a one-dimensional potential $U(x)$, satisfies the energy conservation
+equation
+\begin{equation}
+E = K+ U,
+\end{equation}
+where
+\begin{equation}
+K = \frac{p^2}{2\,m}
+\end{equation}
+is the particle's kinetic energy. Hence, 
+\begin{equation}\label{e12.16}
+E\,\psi = (K+U)\,\psi
+\end{equation}
+is a valid, but not obviously useful,  wave equation. 
+
+However, it follows from Equations~(\ref{e12.13a}) and (\ref{e12.1}) that
+\begin{equation}
+\frac{\partial \psi}{\partial t} = -{\rm i}\,\omega\,\psi_0\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)} =- {\rm i}\,\frac{E}{\hbar}\,\psi,
+\end{equation}
+which can be rearranged to give
+\begin{equation}\label{e12.18}
+E\,\psi= {\rm i}\,\hbar\,\frac{\partial\psi}{\partial t}.
+\end{equation}
+Likewise, from (\ref{e12.13a}) and (\ref{e12.3}), 
+\begin{equation}
+\frac{\partial^2\psi}{\partial x^2} = - k^2\,\psi_0 \,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)} = - \frac{p^2}{\hbar^2}\,\psi,
+\end{equation}
+which can be rearranged to give
+\begin{equation}\label{e12.20}
+\frac{p^2}{2\,m}\,\psi = -\frac{\hbar^2}{2\,m}\,\frac{\partial^2\psi}{\partial x^2}.
+\end{equation}
+Thus, combining Equations~(\ref{e12.16}), (\ref{e12.18}), and (\ref{e12.20}), we obtain
+\begin{equation}\label{e12.21}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2\,m}\,\frac{\partial^2\psi}{\partial x^2} + U(x)\,\psi.
+\end{equation}
+This equation, which is known as {\em Schr\"{o}dinger's equation}---since it was first formulated  by Erwin Schr\"{o}dinder in 1926---is the fundamental equation of wave mechanics.
+
+Now, for a massive particle moving  in free space ({\em i.e.}, $U=0$), the complex wavefunction (\ref{e12.13a}) is a
+solution of Schr\"{o}dinger's equation, (\ref{e12.21}), provided that
+\begin{equation}\label{e12.25r}
+\omega = \frac{\hbar}{2\,m}\,k^2.
+\end{equation}
+The above expression can be thought of as the {\em dispersion relation}\/ (see Section~\ref{s5.1}) for matter waves in free space. The
+associated {\em phase velocity}\/ (see Section~\ref{s7.2}) is
+\begin{equation}\label{e12.26r}
+v_p = \frac{\omega}{k} = \frac{\hbar\,k}{2\,m} = \frac{p}{2\,m},
+\end{equation}
+where use has been made of (\ref{e12.3}). Note that this phase velocity is only {\em half}\/ the classical velocity, $v=p/m$,
+of a massive (non-relativistic) particle.
+
+\section{Probability Interpretation of the Wavefunction}\label{s12.6}
+After many false starts, physicists in the early 20th century came to the conclusion that the only self-consistent physical
+interpretation of a particle wavefunction, which is consistent with experimental observations, is {\em probabilistic}\/ in nature. To be more exact, if $\psi(x,t)$ is the
+complex wavefunction of a given particle, moving in one-dimension along the $x$-axis, then the {\em probability}\/ of finding the particle between $x$ and
+$x+dx$ at time $t$ is
+\begin{equation}\label{e12.25}
+P(x,t) = |\psi(x,t)|^2\,dx.
+\end{equation}
+A probability is, of course, a real number lying in the range $0$ to $1$. An event which has a probability $0$ is impossible. On the
+other hand, an event which has a probability $1$ is certain to occur. An event which has an probability $1/2$ (say) is such that in a
+very large number of identical trials the event occurs in half of the trials. Now, we can interpret
+\begin{equation}
+P(t) = \int_{-\infty}^\infty |\psi(x,t)|^2\,dx
+\end{equation}
+as the probability of the particle being found {\em anywhere}\/ between $x=-\infty$ and $x=+\infty$ at time $t$. This follows, via induction,
+from the fundamental result in probability theory that the probability of the occurrence of {\em one or other}\/ of two {\em mutually exclusive}\/ events (such as the particle being found in two
+non-overlapping regions) is the {\em sum}\/ (or integral) of the probabilities of the individual events. (For example, the probability
+of throwing a $1$ on a six-sided  die is $1/6$. Likewise, the probability of throwing a 2 is $1/6$. Hence, the
+probability of throwing a $1$ {\em or}\/ a $2$ is $1/6+1/6=1/3$.)
+Now, assuming that the
+particle exists, it is {\em certain}\/ that it will be found somewhere between  $x=-\infty$ and $x=+\infty$ at time $t$. Since a certain event
+has probability $1$, our probability interpretation of the wavefunction is only tenable provided that
+\begin{equation}\label{e12.24r}
+\int_{-\infty}^\infty |\psi(x,t)|^2\,dx=1
+\end{equation}
+at all times. 
+A wavefunction which satisfies the above condition is said to be {\em properly normalized}.
+
+Suppose that we have a wavefunction, $\psi(x,t)$, which is such that it satisfies the normalization condition (\ref{e12.24r})
+at time $t=0$. Furthermore, let the wavefunction evolve in time according to Schr\"{o}dinger's equation, (\ref{e12.21}). 
+Our probability interpretation of the wavefunction only makes sense if the normalization
+condition remains satisfied at all subsequent times. This follows because if the particle is certain to be
+found somewhere on the $x$-axis  (which is the interpretation put on the normalization condition) at time $t=0$ then
+it is equally certain to be found somewhere on the $x$-axis at a later time (since we are not presently dealing with any
+physical process by which particles can be created or destroyed). Thus, it is necessary for us to demonstrate that
+Schr\"{o}dinger's equation preserves the normalization of the wavefunction.
+
+Taking Schr\"{o}dinger's equation, and multiplying it by $\psi^\ast$ (the complex conjugate of the wavefunction), we
+obtain
+\begin{equation}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t}\,\psi^\ast = -\frac{\hbar^2}{2\,m}\,\frac{\partial^2\psi}{\partial x^2}\,\psi^\ast + U(x)\,|\psi|^2.
+\end{equation}
+The complex conjugate of the above expression yields
+\begin{equation}
+-{\rm i}\,\hbar\,\frac{\partial\psi^\ast}{\partial t}\,\psi = -\frac{\hbar^2}{2\,m}\,\frac{\partial^2\psi^\ast}{\partial x^2}\,\psi+ U(x)\,|\psi|^2.
+\end{equation}
+Here, we have made use  of the easily demonstrated results $(\psi^\ast)^\ast=\psi$ and ${\rm i}^\ast=-{\rm i}$, as well as the fact that $U$ is real. 
+Taking the difference between the above two expressions, we obtain
+\begin{equation}
+{\rm i}\,\hbar\left(\frac{\partial\psi}{\partial t}\,\psi^\ast + \frac{\partial\psi^\ast}{\partial t}\,\psi\right)
+= -\frac{\hbar^2}{2\,m}\left(\frac{\partial^2\psi}{\partial x^2}\,\psi^\ast - \frac{\partial^2\psi^\ast}{\partial x^2}\,\psi\right),
+\end{equation}
+which can be written
+\begin{equation}
+{\rm i}\,\hbar\,\frac{\partial |\psi|^2}{\partial t} = -\frac{\hbar^2}{2\,m}\,\frac{\partial}{\partial x}\!\left(
+\frac{\partial\psi}{\partial x}\,\psi^\ast - \frac{\partial\psi^\ast}{\partial x}\,\psi\right).
+\end{equation}
+Integrating in $x$, we get
+\begin{equation}
+{\rm i}\,\hbar\,\frac{d}{dt}\int_{-\infty}^\infty |\psi|^2\,dx= -\frac{\hbar^2}{2\,m}\left[
+\frac{\partial\psi}{\partial x}\,\psi^\ast - \frac{\partial\psi^\ast}{\partial x}\,\psi\right]_{-\infty}^\infty.
+\end{equation}
+Finally, assuming that the wavefunction is {\em localized}\/ in space: {\em i.e.}, 
+\begin{equation}
+|\psi(x,t)|\rightarrow 0 \mbox{\hspace{0.5cm}as\hspace{0.5cm}} |x|\rightarrow\infty,
+\end{equation}
+we obtain
+\begin{equation}
+\frac{d}{dt}\int_{-\infty}^\infty |\psi|^2\,dx=0.
+\end{equation}
+
+It follows, from the above analysis, that if a localized wavefunction is properly normalized at $t=0$  ({\em i.e.}, if
+$\int_{-\infty}^\infty |\psi(x,0)|^2\,dx =1$) then it will remain properly
+normalized as it evolves in time according to Schr\"{o}dinger's equation. Incidentally,
+a wavefunction which is not localized cannot be properly normalized, since its normalization integral $\int_{-\infty}^\infty|\psi|^2\,dx$
+is necessarily {\em infinite}. For such a wavefunction, $|\psi(x,t)|^2\,dx$ gives the {\em relative probability}, rather than the
+absolute probability, of finding the particle between $x$ and $x+dx$ at time $t$: {\em i.e.}, [{\em cf.}, Equation~(\ref{e12.25})]
+\begin{equation}
+P(x,t)\propto |\psi(x,t)|^2\,dx.
+\end{equation}
+
+\section{Wave Packets}
+As we have seen, the wavefunction of a massive particle
+of momentum $p$ and energy $E$, moving in free space  along the $x$-axis,  can be written
+\begin{equation}\label{e12.38r}
+\psi(x,t) = \bar{\psi}\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)},
+\end{equation}
+where $k= p/\hbar$, $\omega = E/\hbar$, and $\bar{\psi}$ is a complex constant. Here, $\omega$ and
+$k$ are linked via the matter wave dispersion relation (\ref{e12.25r}). Expression (\ref{e12.38r}) represents a {\em plane wave}\/ which propagates in the $x$-direction
+with the phase velocity $v_p=\omega/k$.  However, according to (\ref{e12.26r}), this phase velocity is only half of the classical velocity of a massive particle.
+
+Now, according to the discussion in the previous section, the most reasonable physical interpretation of the wavefunction is that
+$|\psi(x,t)|^{\,2}\,dx$ is proportional to (assuming that the wavefunction is not
+properly normalized) the {\em probability}\/  of finding the particle
+between $x$ and $x+dx$ at time $t$.  However, the modulus squared of the wavefunction (\ref{e12.38r}) is $|\bar{\psi}|^{\,2}$, which is a constant that depends on neither $x$ nor $t$. In other words, the above  wavefunction represents a particle
+which is {\em equally likely}\/ to be found {\em anywhere}\/ on the $x$-axis {\em at all times}. 
+Hence, the fact that this wavefunction propagates at 
+a phase velocity which does not correspond to the classical particle velocity has no observable   consequences.
+
+So, how can we write the wavefunction of a particle which is {\em localized}\/
+in $x$: {\em i.e.}, a particle which is more likely to be found at some
+positions on the $x$-axis than at others? It turns out that we can achieve this goal by forming
+a {\em linear combination}\/ of plane waves of different wavenumbers:
+{\em i.e.}, 
+\begin{equation}\label{e12.37}
+\psi(x,t) = \int_{-\infty}^{\infty} \bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,(k\,x-\omega\,t)}\,dk.
+\end{equation}
+Here, $\bar{\psi}(k)$ represents the complex amplitude of plane waves of wavenumber $k$ within this combination. In writing the above expression,
+we are relying on the assumption that matter waves are  {\em superposable}:
+{\em i.e.}, it is possible to add two valid wave solutions to form a third valid wave solution.
+The ultimate justification for this assumption is that matter waves
+satisfy the {\em linear}\/ wave equation (\ref{e12.21}).
+
+Now, there is a fundamental mathematical theorem, known as {\em Fourier's theorem}\/  (see Section~\ref{s8.1} and Exercise 12.2), which states that if
+\begin{equation}\label{e12.38}
+f(x) = \int_{-\infty}^{\infty} \bar{f}(k)\,{\rm e}^{\,{\rm i}\,k\,x}\,dk,
+\end{equation}
+then
+\begin{equation}\label{e12.39}
+\bar{f}(k) = \frac{1}{2\pi}\int_{-\infty}^\infty f(x)\,{\rm e}^{-{\rm i}\,k\,x}\,dx.
+\end{equation}
+Here, $\bar{f}(k)$ is known as the {\em Fourier transform}\/ of the
+function $f(x)$. We can use Fourier's theorem to find the $k$-space function $\bar{\psi}(k)$ which generates any given $x$-space wavefunction $\psi(x)$
+at a given time.
+
+For instance, suppose that at $t=0$ the wavefunction of our particle takes the
+form
+\begin{equation}\label{e12.40}
+\psi(x,0) \propto \exp\left[{\rm i}\,k_0\,x - \frac{(x-x_0)^{\,2}}{4\,({\mit\Delta}x)^{\,2}}\right].
+\end{equation}
+Thus, the initial probability distribution for the particle's $x$-coordinate is 
+\begin{equation}\label{e12.41}
+|\psi(x,0)|^{\,2} \propto \exp\left[- \frac{(x-x_0)^{\,2}}{2\,({\mit\Delta}x)^{\,2}}\right].
+\end{equation}
+This particular  distribution is called a {\em Gaussian}\/ distribution (see Section~\ref{s8.1}), and is plotted in Figure~\ref{f12.3}. 
+It can be seen that a measurement of the particle's position is most
+likely to yield the value $x_0$, and  very
+unlikely to yield a value which differs from $x_0$ by more than
+$3\,{\mit\Delta} x$. Thus, (\ref{e12.40}) is the wavefunction of a particle
+which is initially localized  in some region of $x$-space, centered  on $x=x_0$, whose width is
+of order ${\mit\Delta} x$. This type of wavefunction is
+known as a {\em wave packet}. Of course, a wave packet is just another name for a wave pulse (see Chapter~\ref{c8}).
+
+\begin{figure}
+\epsfysize=3.in
+\centerline{\epsffile{Chapter12/fig03.eps}}
+\caption{\em A one-dimensional Gaussian probability distribution.}\label{f12.3}   
+\end{figure}
+
+Now, according to Equation~(\ref{e12.37}), 
+\begin{equation}
+\psi(x,0) = \int_{-\infty}^{\infty} \bar{\psi}(k)\,{\rm e}^{\,{\rm i}\,k\,x}\,dk.
+\end{equation}
+Hence, we can employ Fourier's theorem to invert this expression to give
+\begin{equation}\label{e12.45}
+\bar{\psi}(k)\propto \int_{-\infty}^{\infty} \psi(x,0)\,{\rm e}^{-{\rm i}\,k\,x}\,dx.
+\end{equation}
+Making use of Equation~(\ref{e12.40}),
+we obtain
+\begin{equation}
+\bar{\psi}(k) \propto
+{\rm e}^{-{\rm i}\,(k-k_0)\,x_0}\int_{-\infty}^{\infty} \exp\left[
+-{\rm i}\,(k-k_0)\,(x-x_0) - \frac{(x-x_0)^2}{4\,({\mit\Delta}x)^2}\right]dx.
+\end{equation}
+Changing the variable of integration to $y=(x-x_0)/ (2\,{\mit\Delta} x)$, the above expression reduces to
+\begin{equation}
+\bar{\psi}(k) \propto {\rm e}^{-{\rm i}\,k\,x_0 - \beta^2/4}\int_{-\infty}^{\infty} {\rm e}^{-(y-y_0)^{\,2}}\,dy,
+\end{equation}
+where  $\beta = 2\,(k-k_0)\,{\mit\Delta}x$ and
+$y_0 = - {\rm i}\,\beta/2$. The integral in the above equation is now just a number,
+as can easily be seen by making the second change of variable $z=y-y_0$. 
+Hence, we deduce that
+\begin{equation}\label{e12.49}
+\bar{\psi}(k) \propto \exp\left[-{\rm i}\,k\,x_0 - \frac{(k-k_0)^{\,2}}{4\,({\mit\Delta}k)^2}\right],
+\end{equation}
+where
+\begin{equation}
+{\mit\Delta} k = \frac{1}{2\,{\mit\Delta} x}.
+\end{equation}
+
+Now, if $|\psi(x,0)|^{\,2}\,dx$ is proportional to the probability  of a measurement of  the
+particle's position yielding a value in the range $x$ to $x+dx$ at time $t=0$ then it stands to reason that $|\bar{\psi}(k)|^{\,2}\,dk$
+is proportional to the probability  of a measurement of the
+particle's wavenumber yielding a value in the range $k$ to $k+dk$. (Recall that $p = \hbar\,k$,
+so a measurement of the particle's wavenumber, $k$, is equivalent to a measurement of the particle's
+momentum, $p$). According to Equation~(\ref{e12.49}),
+\begin{equation}\label{e12.51}
+|\bar{\psi}(k)|^{\,2} \propto \exp\left[- \frac{(k-k_0)^{\,2}}{2\,({\mit\Delta}k)^{\,2}}\right].
+\end{equation}
+Note that this probability distribution is a {\em Gaussian}\/ in $k$-space---see
+Equation~(\ref{e12.41}) and Figure~\ref{f12.3}. Hence, a measurement of $k$ is
+most likely to yield the value $k_0$, and very unlikely to yield
+a value which differs from $k_0$ by more than
+$3\,{\mit\Delta}k$. Incidentally,  as was previously mentioned in Section~\ref{s8.1},  a Gaussian is the {\em only}\/ mathematical function
+in $x$-space which has the same form as its Fourier transform in $k$-space.
+
+We have just seen that a wave packet with a Gaussian probability distribution of characteristic
+width ${\mit\Delta} x$ in $x$-space [see Equation~(\ref{e12.41})] is equivalent  to a wave packet with a Gaussian probability distribution of characteristic width
+${\mit\Delta} k$ in $k$-space [see Equation~(\ref{e12.51})],
+where
+\begin{equation}
+{\mit\Delta}x\,{\mit\Delta} k = \frac{1}{2}.
+\end{equation}
+This illustrates an important property of wave packets. Namely, in order to
+construct a packet which is highly localized in $x$-space ({\em i.e.}, with small ${\mit\Delta}x$)  we need
+to combine plane waves with a very wide range of different $k$-values
+({\em i.e.}, with large ${\mit\Delta}k$). Conversely, if we only combine
+plane waves whose wavenumbers differ by a small amount ({\em i.e.}, if
+${\mit\Delta}k$ is small) then the resulting wave packet is highly 
+extended in $x$-space ({\em i.e.}, ${\mit\Delta}x$ is large).
+
+Now, according to Section~\ref{s9.1}, a wave packet made up of a superposition of
+plane waves that is strongly peaked around some
+central wavenumber $k_0$ propagates at the {\em group velocity},
+\begin{equation}
+v_g = \frac{d\omega(k_0)}{dk},
+\end{equation}
+rather than the {\em phase velocity}, $v_p = (\omega/k)_{k_0}$, 
+assuming that all of the constituent plane waves satisfy a dispersion relation of the form $\omega=\omega(k)$. Now,
+for the case of matter waves, the dispersion relation is (\ref{e12.25r}). Thus, the associated group velocity is
+\begin{equation}
+v_g = \frac{\hbar\,k_0}{m} = \frac{p}{m},
+\end{equation}
+where $p=\hbar\,k_0$. Note that this velocity is {\em identical}\/ to the classical
+velocity of a (non-relativistic) massive particle. We conclude that the matter wave dispersion relation (\ref{e12.25r}) is perfectly consistent
+with classical physics, as long as we recognize  that particles must be identified with
+{\em wave packets}\/ (which propagate at the group velocity) rather than plane waves (which propagate at the phase velocity). 
+
+In Section~\ref{s9.1}, it was also demonstrated that the spatial extent of a  wave packet of initial  extent $(\Delta x)_0$
+grows, as the packet evolves in time, like
+\begin{equation}
+\Delta x \simeq (\Delta x)_0 + \frac{d^2\omega(k_0)}{dk^2}\,\frac{t}{(\Delta x)_0},
+\end{equation}
+where $k_0$ is the packet's central wavenumber. Thus, it follows from the matter wave dispersion relation, (\ref{e12.25r}), that the
+width of a particle wave packet grows in time as
+\begin{equation}\label{e12.55}
+\Delta x \simeq (\Delta x)_0 + \frac{\hbar}{m}\,\frac{t}{(\Delta x)_0}.
+\end{equation}
+For example, if an electron wave packet is initially localized in a region of atomic dimensions ({\em i.e.}, $\Delta x\sim 10^{-10}\,{\rm m}$)
+then the width of the packet doubles in about $10^{-16}\,{\rm s}$. Clearly, particle
+wave packets  spread out very rapidly indeed (in free space).
+
+\section{Heisenberg's Uncertainty Principle}\label{sun}
+According to the analysis contained in the previous section, a particle
+wave packet that is initially localized in $x$-space, with characteristic
+width ${\mit\Delta}x$, is also localized in $k$-space, with characteristic
+width ${\mit\Delta}k= 1/(2\,{\mit\Delta} x)$. However, as time progresses,
+the width of the wave packet in $x$-space increases [see Equation~(\ref{e12.55})], whilst that of the packet in $k$-space stays the same [since $\bar{\psi}(k)$ is given by Equation~(\ref{e12.45}) at all times.] Hence,
+in general, we can say that
+\begin{equation}
+{\mit\Delta}x\,{\mit\Delta} k\gtapp \frac{1}{2}.
+\end{equation}
+Furthermore, we can interpret ${\mit\Delta}x$ and ${\mit\Delta} k$ as
+characterizing our {\em uncertainty}\/ regarding the values of the particle's
+position and wavenumber, respectively.
+
+Now, a measurement of a particle's wavenumber, $k$, is equivalent to
+a measurement of its momentum, $p$, since $p=\hbar \,k$. Hence,
+an uncertainty in $k$ of order ${\mit\Delta} k$ translates to
+an uncertainty in $p$ of order ${\mit\Delta}p=\hbar\,{\mit\Delta}k$.
+It follows, from the above inequality, that
+\begin{equation}\label{e12.58}
+{\mit\Delta}x\,{\mit\Delta} p \gtapp \frac{\hbar}{2}. 
+\end{equation}
+This is the famous {\em Heisenberg uncertainty principle},
+first proposed by Werner Heisenberg in 1927.
+According to this principle, it is impossible to {\em simultaneously}\/
+measure the position and momentum of a particle (exactly). Indeed, a good knowledge
+of the particle's position implies a poor knowledge of its momentum,
+and {\em vice versa}. Note that the uncertainty principle is a direct consequence of representing particles as waves.
+
+It is apparent, from expression (\ref{e12.55}),
+that a particle wave packet of initial spatial extent $({\mit\Delta} x)_0$
+  spreads out in such a manner  that its spatial extent becomes
+\begin{equation}\label{espread}
+\Delta x\sim \frac{\hbar\,t}{m\,({\mit\Delta}x)_0}
+\end{equation}
+at large $t$.
+It is easily demonstrated that this spreading of the wave packet is a consequence of the
+uncertainty principle. Indeed, since the initial uncertainty in the particle's
+position is $({\mit\Delta}x)_0$, it follows that the uncertainty in its
+momentum is of order $\hbar/({\mit\Delta}x)_0$. This translates to an uncertainty
+in velocity of ${\mit\Delta}v = \hbar/[m\,({\mit\Delta}x)_0]$. Thus,
+if we imagine that part of the wave packet propagates at $v_0+ {\mit\Delta}v/2$, and another part at $v_0-{\mit\Delta}v/2$, where $v_0$ is
+the mean propagation velocity, then it is clear that the wave packet will
+ spread out as time progresses. Indeed, at large $t$, we expect the
+width of the wave packet to be
+\begin{equation}
+\Delta x \sim {\mit\Delta}v\,t \sim  \frac{\hbar\,t}{m\,({\mit\Delta}x)_0},
+\end{equation}
+which is identical to Equation~(\ref{espread}). Evidently, the spreading of
+a particle wave packet, as time progresses, should be interpreted as representing an increase
+in our {\em uncertainty}\/ regarding the particle's position, rather than
+an increase in the spatial extent of the particle itself.
+
+\section{Collapse of the Wavefunction}\label{scoll}
+Consider a spatially extended wavefunction, $\psi(x,t)$. According to our
+usual interpretation, $|\psi(x,t)|^{\,2}\,dx$ is proportional to the
+probability  of a measurement of the particle's position yielding 
+a value in the range  $x$ to $x+dx$ at time $t$. Thus, if the wavefunction is extended then there is a wide
+range of likely values that such a  measurement could give. 
+Suppose, however, that we make  a measurement of the particle's position, and obtain the value $x_0$.
+We now know that the particle is located at $x=x_0$.  
+If we make another measurement, immediately after the first one, then
+what value would we expect to obtain? Well, common sense tells us that
+we should obtain the {\em same}\/ value, $x_0$, since the particle
+cannot have shifted position appreciably in an infinitesimal  time interval. 
+Thus, immediately after the first measurement, a measurement of
+the particle's position is {\em certain}\/ to give the value $x_0$, and has
+no chance of giving any other value. This implies that the
+wavefunction must have {\em collapsed}\/ to some sort of  ``spike'' function,
+centered on $x=x_0$. This idea is illustrated in Figure~\ref{f12.4}.
+Of course, as soon as the wavefunction collapses, it  starts to
+expand again, as described in the previous section. Thus, the second measurement
+must be made reasonably quickly after the first one, otherwise the
+same result will not necessarily be obtained.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter12/fig04.eps}}
+\caption{\em Collapse of the wavefunction upon measurement of $x$.}\label{f12.4}   
+\end{figure}
+
+The above discussion illustrates an important point in wave
+mechanics. Namely, that the wavefunction of a massive particle
+changes {\em discontinuously}\/ (in time) whenever a measurement of the particle's position is made. We conclude that there are two types of time
+evolution of the wavefunction in wave mechanics. First, there is a {\em smooth}\/ evolution which is governed
+by Schr\"{o}dinger's equation. This evolution takes place {\em between}\/ measurements. Second, there is a {\em discontinuous}\/ evolution which
+takes place each time a measurement is made.
+
+\section{Stationary States}
+Consider {\em separable}\/ solutions to Schr\"{o}dinger's equation of the form
+\begin{equation}
+\psi(x,t) = \psi(x)\,{\rm e}^{-{\rm i}\,\omega\,t}.
+\end{equation}
+According to (\ref{e12.18}),  such solutions have definite energies $E=\hbar\,\omega$. For this reason,
+they are usually written
+\begin{equation}\label{e12.62}
+\psi(x,t) = \psi(x)\,{\rm e}^{-{\rm i}\,(E/\hbar)\,t}.
+\end{equation}
+Now, the probability of finding the particle between $x$ and $x+dx$ at time $t$ is
+\begin{equation}
+P(x,t) = |\psi(x,t)|^2\,dx = |\psi(x)|^2\,dx.
+\end{equation}
+Note that this probability is {\em time independent}. For this reason, wavefunctions of the
+form (\ref{e12.62}) are known as {\em stationary states}. Moreover, $\psi(x)$ is called a {\em stationary
+wavefunction}. Substituting  (\ref{e12.62}) into Schr\"{o}dinger's equation, (\ref{e12.21}), we
+obtain the following expression for $\psi(x)$:
+\begin{equation}\label{e12.64}
+-\frac{\hbar^2}{2\,m}\,\frac{d^2\psi}{d x^2} + U(x)\,\psi = E\,\psi.
+\end{equation}
+Not surprisingly, the above equation is called  the {\em time independent Schr\"{o}d\-inger equation}. 
+
+Consider a particle trapped in a one-dimensional square potential well, of infinite depth, which is such that
+\begin{equation}
+U(x) = \left\{
+\begin{array}{lll}
+0&\mbox{\hspace{0.5cm}}&0\leq x \leq a\\[0.5ex]
+\infty &&\mbox{otherwise}
+\end{array}\right..
+\end{equation}
+The particle is obviously excluded from the region $x<0$ or $x>a$, so $\psi=0$ in this region ({\em i.e.}, there
+is zero probability of finding the particle outside the well). Within the  well, a particle
+of definite energy $E$ has a stationary wavefunction, $\psi(x)$,  which satisfies
+\begin{equation}\label{e12.66}
+-\frac{\hbar^2}{2\,m}\,\frac{d^2\psi}{d x^2}  = E\,\psi.
+\end{equation}
+The boundary conditions are
+\begin{equation}\label{e12.67}
+\psi(0) = \psi(a) = 0.
+\end{equation}
+This follows because $\psi=0$ in the region $x<0$ or $x>a$, and $\psi(x)$ must be {\em continuous}\/ [since a discontinuous
+wavefunction would generate a singular term ({\em i.e.}, the term involving $d^2\psi/dx^2$) in the time independent Schr\"{o}dinger equation, (\ref{e12.64}),
+which could not be balanced, even by an infinite potential]. 
+
+Let us search for solutions to (\ref{e12.66}) of the form
+\begin{equation}\label{e12.68}
+\psi(x) = \psi_0\,\sin(k\,x),
+\end{equation}
+where $\psi_0$ is a constant. It follows that
+\begin{equation}\label{e12.69x}
+\frac{\hbar^2\,k^2}{2\,m} = E.
+\end{equation}
+The solution (\ref{e12.68}) automatically satisfies the boundary condition $\psi(0)=0$. The second boundary
+condition, $\psi(a)=0$, leads to a quantization of the wavenumber: {\em i.e.}, 
+\begin{equation}\label{e12.69}
+k= n\,\frac{\pi}{a},
+\end{equation}
+where $n=1,\,2,\,3,$  {\em etc.} (Note that a ``quantized'' quantity is one which can only take discrete values.) According to (\ref{e12.69x}), the energy is also quantized.
+In fact, $E=E_n$, where 
+\begin{equation}
+E_n = n^2\,\frac{\hbar^2\,\pi^2}{2\,m\,a^2}.
+\end{equation}
+Thus the allowed wavefunctions for a particle  trapped in a one-dimensional square potential well of infinite depth are
+\begin{equation}\label{e12.72}
+\psi_n(x,t) = A_n\,\sin\left(n\,\pi\,\frac{x}{a}\right)\,\exp\left(-{\rm i}\,n^2\,\frac{E_1}{\hbar}\,t\right),
+\end{equation}
+where $n$ is a positive integer, and $A_n$ a constant. Note that we cannot have $n=0$, since, in this case, we obtain
+a null wavefunction: {\em i.e.}, $\psi=0$, everywhere. Furthermore, if $n$ takes a negative integer value
+then it generates exactly the same wavefunction as the corresponding positive integer value  (assuming $\psi_{-n}=-\psi_n$). 
+
+The constant $A_n$, appearing in the above wavefunction,  can be determined from the constraint that the
+wavefunction be properly normalized. For the  problem presently under consideration, the normalization condition (\ref{e12.24r})
+reduces to
+\begin{equation}
+\int_0^a\,|\psi(x)|^2\,dx = 1.
+\end{equation}
+It follows from (\ref{e12.72}) that $|A_n|^2=2/a$. Hence, a properly normalized version of the  wavefunction (\ref{e12.72})
+is 
+\begin{equation}
+\psi_n(x,t) = \left(\frac{2}{a}\right)^{1/2}\,\sin\left(n\,\pi\,\frac{x}{a}\right)\,\exp\left(-{\rm i}\,n^2\,\frac{E_1}{\hbar}\,t\right).
+\end{equation}
+Figure~\ref{f12.5} shows the first four properly normalized stationary wavefunctions for a particle trapped in a one-dimensional
+square potential well of infinite depth: {\em i.e.},  $\psi_n(x)= \sqrt{2/a}\,\sin(n\,\pi\,x/a)$,
+for $n=1$ to $4$. 
+
+\begin{figure}
+\epsfysize=4in
+\centerline{\epsffile{Chapter12/fig05.eps}}
+\caption{\em First four stationary wavefunctions for  a particle trapped in a one-dimensional
+square potential well of infinite depth.}\label{f12.5}   
+\end{figure}
+
+Note that the stationary wavefunctions that we have just found are, in essence, {\em standing wave}\/ solutions to Schr\"{o}dinger's equation. 
+Indeed, the wavefunctions are very similar in form to the classical standing wave solutions discussed in Chapters~\ref{c5}
+and \ref{c6}.  
+
+At first sight, it seems rather strange that the lowest energy that a particle trapped in a one-dimensional
+potential well can have is not zero, as would be the case in classical mechanics, but rather $E_1= \hbar^2\,\pi^2/(2\,m\,a^2)$. In fact,
+as explained in the following, this residual energy is a direct consequence of {\em Heisenberg's uncertainty principle}. Now,  a
+particle trapped in a one-dimensional well of width $a$ is likely to be found
+anywhere inside the well. Thus, the uncertainty in the particle's position is $\Delta x\sim a$. It
+follows from the uncertainty principle, (\ref{e12.58}), that
+\begin{equation}
+\Delta p \gtapp \frac{\hbar}{2\,\Delta x}\sim \frac{\hbar}{a}.
+\end{equation}
+In other words, the particle {\em cannot}\/ have zero momentum. In fact, the particle's momentum
+must be at least $p\sim \hbar/a$. 
+However, for a free particle, $E=p^2/2\,m$. Hence, the residual energy associated with the
+particle's residual momentum is
+\begin{equation}
+E \sim \frac{p^2}{m}\sim \frac{\hbar^2}{m\,a^2}\sim E_1.
+\end{equation}
+This type of residual energy, which is often found in quantum mechanical systems, and has no equivalent in classical
+mechanics, is generally known as {\em zero point energy}. 
+
+\section{Three-Dimensional Wave Mechanics}
+Up to now, we have only discussed wave mechanics for a particle moving in one dimension. However, the
+generalization to a particle moving in three dimensions is fairly straightforward. 
+ A massive particle moving in three dimensions
+has a complex wavefunction of the form [{\em cf.}, (\ref{e12.13a})]
+\begin{equation}
+\psi(x,y,z,t) = \psi_0\,{\rm e}^{\,{\rm i}\,({\bf k}\cdot{\bf r}-\omega\,t)},
+\end{equation}
+where $\psi_0$ is a complex constant, and ${\bf r}= (x,\,y,\,z)$. Here, the wavevector, ${\bf k}$, and
+the angular frequency, $\omega$, are related to the particle momentum, ${\bf p}$,  and energy, $E$, according
+to [{\em cf.}, (\ref{e12.3})]
+\begin{equation}
+{\bf p} = \hbar\,{\bf k},
+\end{equation}
+and [{\em cf.}, (\ref{e12.1})]
+\begin{equation}
+E = \hbar\,\omega,
+\end{equation}
+ respectively. Generalizing the
+analysis of Section~\ref{s12.5}, the three-dimensional version of Schr\"{o}dinger's
+equation is easily shown to take the form [{\em cf.}, (\ref{e12.21})]
+\begin{equation}\label{e12.78}
+{\rm i}\,\hbar\,\frac{\partial\psi}{\partial t} = - \frac{\hbar^2}{2\,m}\,\nabla^2\psi + U({\bf r})\,\psi,
+\end{equation}
+where the differential operator
+\begin{equation}
+\nabla^2 \equiv \frac{\partial^2}{\partial x^2} + \frac{\partial^2 }{\partial y^2} + \frac{\partial^2}{\partial z^2}
+\end{equation}
+is known as the {\em Laplacian}. The interpretation of a three-dimensional wavefunction is that the
+probability of finding the particle between $x$ and $x+dx$, between $y$ and $y+dy$, and
+between $z$ and $z+dz$, at time $t$ is [{\em cf.}, (\ref{e12.25})]
+\begin{equation}
+P(x,y,z,t) = |\psi(x,y,z,t)|^2\,dx\,dy\,dz.
+\end{equation}
+Moreover, the normalization condition for the wavefunction becomes [{\em cf.}, (\ref{e12.24r})]
+\begin{equation}\label{e12.81}
+\int_{-\infty}^\infty\int_{-\infty}^\infty\int_{-\infty}^\infty|\psi(x,y,z,t)|^2\,dx\,dy\,dz =1.
+\end{equation}
+Incidentally, it is easily demonstrated that Schr\"{o}dinger's equation, (\ref{e12.78}), preserves the normalization
+condition, (\ref{e12.81}), of a {\em localized}\/ wavefunction. 
+Heisenberg's uncertainty principle generalizes to [{\em cf.}, (\ref{e12.58})]
+\begin{eqnarray}
+\Delta x\,\Delta p_x&\gtapp &\frac{\hbar}{2},\\[0.5ex]
+\Delta y\,\Delta p_y&\gtapp &\frac{\hbar}{2},\\[0.5ex]
+\Delta z\,\Delta p_z&\gtapp &\frac{\hbar}{2}.
+\end{eqnarray}
+Finally, a stationary state of energy $E$ is written [{\em cf.}, (\ref{e12.62})]
+\begin{equation}
+\psi(x,y,z,t) = \psi(x,y,z)\,{\rm e}^{-{\rm i}\,(E/\hbar)\,t},
+\end{equation}
+where the stationary wavefunction, $\psi(x,y,z)$, satisfies [{\em cf.}, (\ref{e12.64})]
+\begin{equation}
+ - \frac{\hbar^2}{2\,m}\,\nabla^2\psi + U({\bf r})\,\psi = E\,\psi.
+\end{equation}
+
+As an example of a three-dimensional problem in wave mechanics, consider a particle trapped in a  square potential well  of infinite depth which is
+such that
+\begin{equation}
+U(x,y,z) = \left\{
+\begin{array}{lll}
+0&\mbox{\hspace{0.5cm}}&0\leq x \leq a,\, 0\leq y \leq a,\, 0\leq z\leq a\\[0.5ex]
+\infty &&\mbox{otherwise}
+\end{array}\right..
+\end{equation}
+Within the well, the stationary wavefunction, $\psi(x,y,z)$, satisfies
+\begin{equation}\label{e12.87}
+- \frac{\hbar^2}{2\,m}\,\nabla^2\psi  = E\,\psi,
+\end{equation}
+subject to the boundary conditions
+\begin{equation}\label{e12.88}
+\psi(0,y,z) = \psi(x,0,z)=\psi(x,y,0) =0,
+\end{equation}
+and
+\begin{equation}\label{e12.89}
+\psi(a,y,z) = \psi(x,a,z)=\psi(x,y,a) =0,
+\end{equation}
+since $\psi=0$ outside the well.
+Let us try a seperable wavefunction of the form
+\begin{equation}\label{e12.90}
+\psi(x,y,z) =\psi_0\,\sin(k_x\,x)\,\sin(k_y\,y)\,\sin(k_z\,z).
+\end{equation}
+This expression automatically satisfies the boundary conditions (\ref{e12.88}). The
+remaining boundary conditions, (\ref{e12.89}),  are satisfied provided
+\begin{eqnarray}\label{e12.92}
+k_x &=& n_x\,\frac{\pi}{a},\\[0.5ex]
+k_y &=&n_y\,\frac{\pi}{a},\\[0.5ex]
+k_z &=& n_z\,\frac{\pi}{a},\label{e12.94}
+\end{eqnarray}
+where $n_x$, $n_y$, and $n_z$ are (independent) {\em positive integers}. 
+Substitution of the wavefunction (\ref{e12.90}) into Equation~(\ref{e12.87})
+yields
+\begin{equation}
+E = \frac{\hbar^2}{2\,m}\,(k_x^{\,2} + k_y^{\,2}+k_z^{\,2}).
+\end{equation}
+Thus, it follows from Equations~(\ref{e12.92})--(\ref{e12.94}) that the particle energy is quantized, and that the
+allowed {\em energy levels}\/ are
+\begin{equation}\label{e12.95}
+E_{n_x,n_y,n_z} = \frac{\hbar^2}{2\,m\,a^2}\,(n_x^{\,2}+n_y^{\,2}+n_z^{\,2}).
+\end{equation}
+The properly normalized [see Equation~(\ref{e12.81})] stationary wavefunctions corresponding to
+these energy levels are
+\begin{equation}
+\psi_{n_x,n_y,n_z}(x,y,z) = \left(\frac{2}{a}\right)^{3/2}\,\sin\left(n_x\,\pi\,\frac{x}{a}\right)\,\sin\left(n_y\,\pi\,\frac{y}{a}\right)\,\sin\left(n_z\,\pi\,\frac{z}{a}\right).
+\end{equation}
+
+As is the case for a particle trapped in a one-dimensional  potential well, the lowest
+energy level for a particle trapped in a three-dimensional  well is not zero, but rather
+\begin{equation}
+E_{1,1,1} = 3\,E_1.
+\end{equation}
+Here, 
+\begin{equation}
+E_1 =  \frac{\hbar^2}{2\,m\,a^2}.
+\end{equation}
+is the {\em ground state}\/ ({\em i.e.}, the lowest energy state) energy in the one-dimension\-al
+case.  
+Now, it is clear, from (\ref{e12.95}), that distinct permutations of $n_x$, $n_y$, and $n_z$ which do
+not alter the value of $n_x^{\,2}+n_y^{\,2}+ n_z^{\,2}$ also do not alter the energy. In other words, in three dimensions
+it is possible for distinct wavefunctions to be associated with the same energy level. In this
+situation, the energy level is said to be {\em degenerate}. The ground state energy level, $3\,E_1$, is non-degenerate,
+since the only combination of ($n_x$, $n_y$,  $n_z$) which gives this energy is ($1$, $1$, $1$). 
+However, the next highest energy level, $6\,E_1$, is degenerate, since it is obtained when ($n_x$, $n_y$,  $n_y$) 
+take the values ($2$, $1$, $1$),
+or ($1$, $2$, $1$), or ($1$, $1$, $2$). In fact, it is not difficult to see that a non-degenerate energy
+level corresponds to a case where the three {\em mode numbers}\/ ({\em i.e.}, $n_x$, $n_y$, and $n_z$) all have
+the same value, whereas a three-fold degenerate energy level corresponds to a case where only
+two of the mode numbers have the same value, and, finally,  a six-fold degenerate energy level corresponds to a
+case where the mode numbers are all different. 
+
+\section{Particle in a Finite Potential Well}
+Consider, now, a particle of mass $m$ trapped in a one-dimensional  square potential
+well of width $a$ and finite depth $V>0$. In fact, suppose that the potential takes the form
+\begin{equation}
+U(x) = \left\{
+\begin{array}{lll}
+-V &\mbox{\hspace{0.5cm}}&|x|\leq a/2\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+\right..\label{e12.100}
+\end{equation}
+Here, we have adopted the standard convention that $U(x)\rightarrow 0$ as $|x|\rightarrow \infty$. 
+This convention is useful because, just like in classical mechanics, a particle whose overall energy, $E$,
+is negative is bound in the well ({\em i.e.}, it cannot escape to infinity), whereas a
+particle whose overall energy is positive is unbound. Since we are interested in bound particles,
+we shall assume that $E<0$. We shall also assume that $E+V>0$,  in order to allow the particle
+to have a positive kinetic energy inside the well. 
+
+Let us search for a stationary state 
+\begin{equation}
+\psi(x,t) = \psi(x)\,{\rm e}^{-{\rm i}\,(E/\hbar)\,t},
+\end{equation}
+whose stationary wavefunction, $\psi(x)$, satisfies the time independent Schr\"{o}d\-inger equation, 
+(\ref{e12.64}). Now, it is easily appreciated that the solutions to (\ref{e12.64}) in the symmetric
+ [{\em i.e.}, $U(-x)=U(x)$] potential (\ref{e12.100}) must be either totally
+ symmetric [{\em i.e.}, $\psi(-x)=\psi(x)$] or totally antisymmetric [{\em i.e.}, $\psi(-x)=-\psi(x)$]. 
+ Moreover, the solutions must satisfy the boundary condition
+ \begin{equation}
+ \psi\rightarrow 0\mbox{\hspace{0.5cm}as\hspace{0.5cm}$|x|\rightarrow\infty$},
+ \end{equation}
+ otherwise they would not correspond to bound states.
+ 
+ Let us, first of all, search for a totally symmetric solution. In the region to the left of the well ({\em i.e.}, $x<-a/2$),
+ the solution of the time independent Schr\"{o}dinger equation which satisfies the boundary condition
+ $\psi\rightarrow 0$ as $x\rightarrow -\infty$ is
+ \begin{equation}
+ \psi(x) = A\,{\rm e}^{\,q\,x},
+ \end{equation}
+ where
+ \begin{equation}
+ q = \sqrt{\frac{2\,m\,(-E)}{\hbar^2}},
+ \end{equation}
+ and $A$ is a constant. By symmetry, the solution in the region to the right of the well ({\em i.e.}, $x>a/2$)
+ is
+ \begin{equation}\label{e12.105}
+ \psi(x) = A\,{\rm e}^{- q\,x}.
+ \end{equation}
+ The solution inside the well ({\em i.e.}, $|x|\leq a/2$) which satisfies the symmetry
+ constraint $\psi(-x)=\psi(x)$ is
+ \begin{equation}\label{e12.106}
+ \psi(x) = B\,\cos(k\,x),
+ \end{equation}
+ where
+ \begin{equation}
+ k= \sqrt{\frac{2\,m\,(V+E)}{\hbar^2}},
+ \end{equation}
+ and $B$ is a constant.
+ The appropriate matching conditions at the edges of the well ({\em i.e.}, $x=\pm a/2$) are that $\psi(x)$ and $d\psi(x)/dx$
+ both be {\em continuous}\/ [since  a discontinuity in the
+wavefunction, or  its first derivative, would generate a singular term in the time independent Schr\"{o}dinger equation 
+({\em i.e.}, the term involving $d^2\psi/dx^2$) which could not be balanced]. The matching conditions yield
+\begin{equation}\label{e12.108}
+q = k\,\tan(k\,a/2).
+\end{equation}
+
+Let $y=k\,a/2$. It follows that 
+\begin{equation}
+E = E_0\,y^2 - V,
+\end{equation}
+where
+\begin{equation}
+E_0 = \frac{2\,\hbar^2}{m\,a^2}.
+\end{equation}
+Moreover, Equation~(\ref{e12.108}) becomes
+\begin{equation}\label{e12.111}
+\frac{\sqrt{\lambda-y^2}}{y} = \tan y,
+\end{equation}
+with
+\begin{equation}
+\lambda = \frac{V}{E_0}.
+\end{equation}
+Here, $y$ must lie in the range $0<y<\sqrt{\lambda}$, in order to ensure that $E$
+lies in the range $-V<E<0$.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter12/fig06.eps}}
+\caption{\em The curves $\tan y$ (solid) and $\sqrt{\lambda - y^2}/y$ (dashed), calculated for $\lambda = 1.5\,\pi^2$. The latter curve takes the
+value $0$ when $y>\sqrt{\lambda}$. }\label{f12.6}   
+\end{figure}
+
+Now, the solutions of Equation~(\ref{e12.111}) correspond to the
+intersection of the curve $\sqrt{\lambda - y^2}/y$ with the curve
+$\tan y$. Figure~\ref{f12.6} shows these two curves plotted for
+a particular value of $\lambda$. In this case, the curves intersect
+twice, indicating the existence of two totally symmetric bound states in the well.
+Moreover, it is clear, from the figure, that as $\lambda$ increases ({\em i.e.}, as the well becomes
+deeper) there are more and more bound states. However, it is also apparent  that there is
+always at least one totally symmetric bound state, no matter how small $\lambda$
+becomes ({\em i.e.}, no matter how shallow the well becomes). In the limit $\lambda\gg 1$
+({\em i.e.}, the limit in which the well is very deep), the
+solutions to Equation~(\ref{e12.111}) asymptote to the roots of $\tan y =\infty$.
+This gives $y = (2\,n-1)\,\pi/2$, where $n$ is a positive integer, or
+\begin{equation}
+k = (2\,n-1)\,\frac{\pi}{a}.
+\end{equation}
+These solutions are equivalent to the odd-$n$ infinite-depth potential well solutions 
+specified by Equation~(\ref{e12.69}).
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter12/fig07.eps}}
+\caption{\em The curves $\tan y$ (solid) and $-y/\sqrt{\lambda - y^2}$ (dashed), calculated for $\lambda = 1.5\,\pi^2$. }\label{f12.7}   
+\end{figure}
+
+For the case of a totally antisymmetric bound state, similar analysis to the
+above yields (see Exercise 12.3)
+\begin{equation}\label{e12.113}
+-\frac{y}{\sqrt{\lambda-y^2}} = \tan y.
+\end{equation}
+The solutions of this equation correspond to the intersection of the
+curve $\tan y$ with the curve  $-y/\sqrt{\lambda-y^2}$. Figure~\ref{f12.7} shows these two curves plotted for
+the same value of $\lambda$ as that used in Figure~\ref{f12.6}. In this
+case, the curves intersect once, indicating the existence of
+a single totally antisymmetric bound state in the well. It is, again, clear, from the figure, that as $\lambda$ increases ({\em i.e.}, as the well becomes
+deeper) there are more and more bound states. However, it is also apparent that
+when $\lambda$ becomes sufficiently small [{\em i.e.}, $\lambda < (\pi/2)^2$] then there is no totally
+antisymmetric bound state. In other words, a very shallow potential well
+always possesses a totally symmetric bound state, but does not generally
+possess a totally antisymmetric bound state. In the limit $\lambda\gg 1$
+({\em i.e.}, the limit in which the well becomes very deep), the
+solutions to Equation~(\ref{e12.113}) asymptote to the roots of $\tan y =0$.
+This gives $y = n\,\pi$, where $n$ is a positive integer, or
+\begin{equation}
+k= 2\,n\,\frac{\pi}{a}.
+\end{equation}
+These solutions are equivalent to the even-$n$ infinite-depth potential well solutions 
+specified by Equation~(\ref{e12.69}).
+
+Probably the most surprising aspect of the bound states that we have just
+described is the possibility  of finding the particle {\em outside}\/ the well: {\em
+i.e.}, in the region $|x|>a/2$ where $U(x)>E$. This follows from Equation~(\ref{e12.105}) and (\ref{e12.106}) 
+because the ratio $A/B= \exp(q\,a/2)\,\cos(k\,a/2)$ is not necessarily zero.
+Such behavior is strictly forbidden
+in classical mechanics, according to which  a  particle of energy $E$ is restricted to
+regions of space where $E>U(x)$. In fact, in the case of the ground state ({\em i.e.}, the lowest
+energy symmetric state) it is possible to demonstrate that the probability of a
+measurement finding the particle outside the well is (see Exercise 12.4)
+\begin{equation}
+P_{\rm out}\simeq 1-2\,\lambda
+\end{equation}
+for a shallow well ({\em i.e.}, $\lambda\ll 1$), and
+\begin{equation}
+P_{\rm out}\simeq \frac{\pi^2}{4}\,\frac{1}{\lambda^{3/2}}
+\end{equation}
+for a deep well ({\em i.e.}, $\lambda\gg 1$). It follows that the particle is very likely to be found outside a shallow well, and there is a small, but finite, probability of it being found outside a deep well.
+In fact, the probability of
+finding the particle outside the well only goes to zero   in the case of an infinitely deep well ({\em i.e.}, $\lambda\rightarrow \infty$).
+
+\section{Square Potential Barrier}
+Consider a particle of mass $m$ and energy $E>0$ interacting with the
+simple  potential barrier
+\begin{equation}
+U(x) = \left\{\begin{array}{lcl}
+V&\mbox{\hspace{1cm}}&\mbox{for $0\leq x\leq a$}\\[0.5ex]
+0&&\mbox{otherwise}
+\end{array}
+\right.,
+\end{equation}
+where $V>0$. In the regions to the left and to the right of the
+barrier, the stationary wavefunction, $\psi(x)$, satisfies
+\begin{equation}\label{e12.15f}
+\frac{d^2 \psi}{d x^2} = - k^2\,\psi,
+\end{equation}
+where
+\begin{equation}
+k = \sqrt{\frac{2\,m\,E}{\hbar^2}}.
+\end{equation}
+
+ Let us adopt the following solution
+of the above equation to the left of the barrier ({\em i.e.}, $x<0$):
+\begin{equation}
+\psi(x) = {\rm e}^{\,{\rm i}\,k\,x} + R\,{\rm e}^{-{\rm i}\,k\,x}.
+\end{equation}
+This solution consists of a plane wave of unit amplitude traveling to
+the right [since the full  wavefunction is multiplied by a factor
+$\exp(-{\rm i}\,E\,t/\hbar$)], and a plane wave of complex amplitude $R$ traveling to
+the left. We interpret the first plane wave as an {\em incoming particle}, and
+the second as a particle {\em reflected}\/ by the potential barrier. Hence, $|R|^{\,2}$ is
+the probability of reflection (see Section~\ref{srefl}).
+
+Let us adopt the following solution to Equation~(\ref{e12.15f}) to the right
+of the barrier ({\em i.e.} $x>a$):
+\begin{equation}
+\psi(x) = T\,{\rm e}^{\,{\rm i}\,k\,x}.
+\end{equation}
+This solution consists of a plane wave of complex amplitude $T$
+traveling to the right. We interpret this as a particle {\em transmitted}\/ through
+the barrier. Hence, $|T|^{\,2}$ is the probability of transmission. 
+
+Let us consider the situation in which  $E< V$. In this case, according to classical mechanics, the particle is
+unable to penetrate the barrier, so the coefficient of reflection is unity, and the coefficient
+of transmission  zero. 
+However, this is not necessarily the case in wave mechanics.
+In fact, inside the barrier ({\em i.e.}, $0\leq x \leq a$), $\psi(x)$ satisfies
+\begin{equation}\label{e12.21f}
+\frac{d^2 \psi}{d x^2} =  q^2\,\psi,
+\end{equation}
+where
+\begin{equation}
+q = \sqrt{\frac{2\,m\,(V-E)}{\hbar^2}}.
+\end{equation}
+The general
+solution to Equation~(\ref{e12.21f})  takes the
+form
+\begin{equation}
+\psi(x) = A\,{\rm e}^{\,q\,x} + B\,{\rm e}^{-q\,x}.
+\end{equation}
+
+Now, continuity of $\psi$ and $d \psi/d x$ at the left edge of
+the barrier ({\em i.e.}, $x=0$) yields
+\begin{eqnarray}\label{e12.126}
+1 + R &=& A+B,\\[0.5ex]
+{\rm i}\,k\,(1-R) &=& q\,(A-B).
+\end{eqnarray}
+Likewise, continuity of $\psi$ and $d\psi/d x$ at the right edge of
+the barrier ({\em i.e.}, $x=a$) gives
+\begin{eqnarray}
+A\, {\rm e}^{\,q\,a}+ B \,{\rm e}^{-q\,a} &=& T\,{\rm e}^{\,{\rm i}\,k\,a},\\[0.5ex]
+q\left(A\, {\rm e}^{\,q\,a}-B \,{\rm e}^{-q\,a}\right) &=& {\rm i}\,k\,T\,{\rm e}^{\,{\rm i}\,k\,a}.\label{e12.129}
+\end{eqnarray}
+After considerable algebra (see Exercise~12.5), the above four equations yield
+\begin{equation}\label{e12.37f}
+|T|^{\,2} = 1-|R|^{\,2}= \frac{4\,k^2\,q^2}{4\,k^2\,q^2 + (k^2+q^2)^{\,2}\,\sinh^2(q\,a)}.
+\end{equation}
+Here, $\sinh x\equiv (1/2)\,({\rm e}^{\,x}-{\rm e}^{-x})$. 
+The fact that $|R|^{\,2}+|T|^{\,2}=1$ ensures that the probabilities of reflection and
+transmission sum to unity, as must be the case, since reflection and transmission
+are the only possible outcomes for a particle incident on the barrier.
+Note that, according to Equation~(\ref{e12.37f}), the probability of transmission 
+is not necessarily zero. This means that, in wave mechanics, there is a finite probability for a particle incident on
+a potential barrier, of finite width, to penetrate through the barrier, and reach the other side, even when the barrier
+is sufficiently high to completely reflect the particle according to the laws of classical mechanics. This
+strange phenomenon is known as {\em tunneling}. For the case of a very high barrier, such that
+$V\gg E$, the tunneling probability reduces to
+\begin{equation}
+|T|^{\,2}\simeq \frac{4\,E}{V}\,{\rm e}^{-2\,a/\lambda},
+\end{equation}
+where $\lambda = \sqrt{\hbar^2/2\,m\,V}$ is the de Broglie wavelength inside the barrier. Here, it
+is assumed that $a\gg\lambda$. 
+Note that, even in the limit in which  the barrier is very high, there is an exponentially small, but nevertheless {\em non-zero}, tunneling probability. Tunneling plays an important role in the physics
+of $\alpha$-decay and electron field emission. 
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Use the standard power law expansions, 
+\begin{eqnarray}
+{\rm e}^x &=& 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!}+\cdots,\nonumber\\[0.5ex]
+\sin x &=& x - \frac{x^3}{3!} + \frac{x^5}{5!}-\frac{x^7}{7!}+\cdots,\nonumber\\[0.5ex]
+\cos x &=&1-\frac{x^2}{2!} + \frac{x^4}{4!}-\frac{x^6}{6!}+\cdots,\nonumber
+\end{eqnarray}
+which are valid for complex $x$, 
+to prove de Moivre's theorem,
+$$
+{\rm e}^{\,{\rm i}\,\theta} = \cos\theta + {\rm i}\,\sin\theta,
+$$
+where $\theta$ is real.
+\item Equations~(\ref{e8.27}) and (\ref{e8.28}) can be combined with de Moivre's theorem to give
+$$
+\delta(k) = \frac{1}{2\pi}\int_{-\infty}^\infty {\rm e}^{\,{\rm i}\,k\,x}\,dx,
+$$
+where $\delta(k)$ is a Dirac delta function. 
+Use this result to prove Fourier's theorem: {\em i.e.}, if
+$$
+f(x) = \int_{-\infty}^{\infty} \bar{f}(k)\,{\rm e}^{\,{\rm i}\,k\,x}\,dk,
+$$
+then
+$$
+\bar{f}(k) = \frac{1}{2\pi}\int_{-\infty}^\infty f(x)\,{\rm e}^{-{\rm i}\,k\,x}\,dx.
+$$
+
+\item Derive Equation~(\ref{e12.113}).
+
+\item Consider a particle trapped in the finite potential well whose potential is given by Equation~(\ref{e12.100}). 
+Demonstrate that for a totally symmetric state the ratio of the probability  of finding the particle outside to the
+probability of finding the particle inside the well is
+$$
+\frac{P_{\rm out}}{P_{\rm in}}= \frac{\cos^3 y}{\sin y\,(y + \sin y\,\cos y)},
+$$
+where 
+$\sqrt{\lambda-y^2} = y\,\tan y$, and 
+$\lambda = V/E_0$. Hence, demonstrate that for a shallow well ({\em i.e.}, $\lambda\ll 1$) $P_{\rm out}\simeq 1 - 2\,\lambda$, 
+whereas for a deep well ({\em i.e.}, $\lambda\gg 1$) $P_{\rm out}\simeq (\pi^2/4) / \lambda^{3/2}$.
+
+\item Derive expression (\ref{e12.37f}) from Equations~(\ref{e12.126})--(\ref{e12.129}).
+
+\item Show that the coefficient of transmission of a particle of mass $m$ and energy $E$, incident on a square
+potential barrier of height $V<E$, and  width $a$, is
+$$
+|T|^{\,2} = \frac{4\,k^2\,q^2}{4\,k^2\,q^2 + (k^2-q^2)^{\,2}\,\sin^2(q\,a)},
+$$
+where $k=\sqrt{2\,m\,E/\hbar^2}$ and $q=\sqrt{2\,m\,(E-V)/\hbar^2}$. Demonstrate that the coefficient of transmission
+is unity ({\em i.e.}, there is no reflection from the barrier) when $q\,a=n\,\pi$, where $n$ is positive
+integer. 
+
+\item A He-Ne laser emits radiation of wavelength $\lambda =633\,{\rm nm}$. How many photons are emitted per second
+by a laser with a power of $1\,{\rm mW}$? What force does such a laser exert on a body which completely absorbs
+its radiation?
+\item The ionization energy of a hydrogen atom in its ground state is $E_{\rm ion}= 13.6\,{\rm eV}$. Calculate the
+frequency (in Hertz), wavelength, and wavenumber of the electromagnetic radiation which will just ionize the atom.
+\item The maximum energy of photoelectrons from aluminium is $2.3\,{\rm eV}$ for radiation of wavelength $200\,{\rm nm}$,
+and $0.90\,{\rm eV}$ for radiation of wavelength $258\,{\rm nm}$. Use this data to calculate Planck's
+constant (divided by $2\pi$) and the work function of aluminium.
+\item Show that the de Broglie wavelength of an electron accelerated across a potential difference $V$
+is given by
+$$
+\lambda = 1.29\times 10^{-9}\,V^{-1/2}\,{\rm m},
+$$
+where $V$ is measured in volts.
+\item If the atoms in a regular crystal are separated by $3\times 10^{-10}\,{\rm m}$ demonstrate that an accelerating
+voltage of about $3\,{\rm kV}$  would be required to produce an electron diffraction pattern from the crystal. 
+\item A particle of mass $m$ has a wavefunction
+$$
+\psi(x,t)= A\,\exp\left[-a\,(m\,x^2/\hbar+ {\rm i}\,t)\right],
+$$
+where $A$ and $a$ are positive real constants. For what potential $U(x)$ does $\psi(x,t)$ satisfy
+Schr\"{o}dinger's equation?
+\item Show that the wavefunction of a particle of mass $m$ trapped in a  one-dimensio\-nal square potential well of 
+of width $a$, and infinite depth, returns to its original form after a quantum revival time $T=4\,m\,a^2/\pi\,\hbar$. 
+\item Show that the normalization constant for the stationary wavefunction
+$$
+\psi(x,y,z) = A\,\sin\left(n_x\,\pi\,\frac{x}{a}\right)\sin\left(n_y\,\pi\,\frac{y}{b}\right)\sin\left(n_z\,\pi\,\frac{z}{c}\right)
+$$
+describing an electron trapped in a three-dimensional rectangular potential well of dimensions $a$, $b$, $c$, and
+infinite depth, is $A=(8/abc)^{1/2}$. Here, $n_x$, $n_y$, and
+$n_z$ are positive integers. 
+\item An electron of momentum $p$ passes through a slit of width $\Delta x$. Its diffraction as a wave can
+be regarded in terms of a change of its momentum $\Delta p$ in a direction parallel to the plane of the
+slit (the total momentum remaining constant). Show that the approximate position of the first maximum
+of the diffraction pattern is in accordance with Heisenberg's uncertainty principle. 
+\item The probability of a particle of mass $m$ penetrating a distance $x$ into a classically
+forbidden region is proportional to ${\rm e}^{-2\,\alpha\,x}$, where
+$$
+\alpha^2 = 2\,m\,(V-E)/\hbar^2.
+$$
+If $x=2\times 10^{-10}\,{\rm m}$ and $V-E = 1\,{\rm eV}$ show that ${\rm e}^{-2\,\alpha\,x}$ is equal to $0.1$
+for an electron, and $10^{-43}$ for a proton.
+\end{enumerate}
+}

@@ -1,0 +1,308 @@
+\chapter{Multi-Dimensional Waves}
+\section{Plane Waves}\label{s10.1}
+As we have already seen, a sinusoidal wave of amplitude $\psi_0>0$, wavenumber $k>0$, and  angular frequency $\omega>0$, 
+propagating in the positive $x$-direction,  can be  represented by a {\em wavefunction}\/ of the form
+\begin{equation}\label{e10.1}
+\psi(x,t)=\psi_0\,\cos(k\,x-\omega\,t).
+\end{equation}
+Now, the  above type of wave is conventionally termed  a {\em one-dimen\-sio\-nal plane wave}. It is {\em one-dimensional}\/
+because its associated wavefunction only depends on a single Cartesian coordinate. 
+Furthermore, it is a {\em plane wave}\/ because the wave maxima, which are located at
+\begin{equation}\label{e10.2}
+k\,x-\omega\,t  = j\,2\pi,
+\end{equation}
+where $j$ is an integer, consist of a series of {\em parallel planes},  normal to the $x$-axis, which are equally spaced a distance
+$\lambda=2\pi/k$ apart, and propagate along the
+$x$-axis at the fixed speed $v=\omega/k$. 
+These conclusions follow because Equation (\ref{e10.2}) can be re-written in the form
+\begin{equation}\label{e10.3}
+x= d,
+\end{equation}
+where $d=j\,\lambda + v\,t$. Moreover, (\ref{e10.3})
+is clearly the equation of a plane, normal to the $x$-axis,  whose distance of closest approach to the
+origin is $d$. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter10/fig01.eps}}
+\caption{\em The solution of ${\bf n}\cdot{\bf r} = d$ is a plane.}\label{f10.1}   
+\end{figure}
+
+The previous equation can also be written in the coordinate-free form
+\begin{equation}\label{e10.4}
+ {\bf n}\cdot{\bf r} = d,
+\end{equation}
+where  ${\bf n} = (1,\,0,\,0)$ is a unit
+vector directed along the $x$-axis, and ${\bf r}=(x,\,y,\,z)$ represents the vector displacement of a general point from the origin. Since there is nothing special about the $x$-direction, it follows that if ${\bf n}$ is re-interpreted as a 
+unit vector pointing in an {\em arbitrary}\/ direction then (\ref{e10.4}) can be re-interpreted as the general equation of a plane.
+As before, the plane is normal to
+${\bf n}$, and its distance of closest approach to the origin is $d$. See Figure~\ref{f10.1}. This observation allows us to write the three-dimensional
+equivalent to the wavefunction (\ref{e10.1}) as
+\begin{equation}\label{e10.5}
+\psi(x,y,z,t)=\psi_0\,\cos({\bf k}\cdot{\bf r}-\omega\,t),
+\end{equation}
+where the constant vector ${\bf k} = (k_x,\,k_y,\,k_z)=k\,{\bf n}$ is called the {\em wavevector}. The  wave represented above is conventionally termed 
+a {\em three-dimensional plane wave}. It is three-dimensio\-nal because its  wavefunction, $\psi(x,y,z,t)$, depends on all
+three Cartesian coordinates. Moreover, it is a plane wave because the wave maxima are located at
+\begin{equation}
+{\bf k}\cdot{\bf r} -\omega\,t = j\,2\pi,
+\end{equation}
+or
+\begin{equation}
+{\bf n}\cdot{\bf r} = j\,\lambda + v\,t,
+\end{equation}
+where  $\lambda=2\pi/k$,   and $v=\omega/k$. Note that the wavenumber, $k$, is the
+{\em magnitude}\/ of the wavevector, ${\bf k}$: {\em i.e.}, $k\equiv |{\bf k}|$. 
+It follows, by comparison with Equation~(\ref{e10.4}), that the
+wave maxima consist of a series of parallel planes,  normal to the wavevector, which are equally spaced a distance $\lambda$ apart, and propagate in the ${\bf k}$-direction  at the fixed speed $v$. See Figure~\ref{f10.2}. Hence, the direction of the wavevector specifies the  wave propagation direction, whereas its magnitude  determines the wavenumber, $k$, and, thus, the wavelength, $\lambda=2\pi/k$. 
+Actually, the most general expression for the wavefunction of a  plane wave is $\psi = \psi_0\,\cos(\phi+{\bf k}\cdot{\bf r}-\omega\,t)$, where
+$\phi$ is a constant {\em phase angle}. As is easily appreciated, the inclusion  of a non-zero phase angle in the wavefunction
+merely shifts all the wave maxima a distance $-(\phi/2\pi)\,\lambda$  in the ${\bf k}$-direction. In the following, whenever possible, $\phi$ is
+set to zero, for the sake of simplicity. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter10/fig02.eps}}
+\caption{\em Wave maxima associated with a plane wave.}\label{f10.2}   
+\end{figure}
+
+\section{Three-Dimensional Wave Equation}\label{s10.2}
+As is readily demonstrated (see Exercise 1), the one-dimensional plane wave solution (\ref{e10.1}) satisfies the {\em one-dimen\-sional wave equation},
+\begin{equation}\label{e10.8}
+\frac{\partial^2\psi}{\partial t^2} = v^2\,\frac{\partial^2\psi}{\partial x^2}.
+\end{equation}
+Likewise, the three-dimensional plane wave solution (\ref{e10.5}) satisfies the {\em three-dimensional
+wave equation}\/  (see Exercise 1),
+\begin{equation}\label{e10.9}
+\frac{\partial^2\psi}{\partial t^2} = v^2\left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\right)\psi.
+\end{equation}
+Note that both of these equations are {\em linear}, and, thus, have {\em superposable solutions}. 
+
+\section{Laws of Geometric Optics}\label{sgeo}
+Suppose that the region $z<0$ is occupied by a transparent dielectric medium of refractive index $n_1$, whereas
+the region $z>0$ is occupied by a second transparent dielectric medium of refractive index $n_2$. Let a plane light wave be launched, toward positive $z$,  from a
+light source of angular frequency $\omega$ located at  large negative $z$. Suppose that  this so-called {\em incident}\/ wave has a
+wavevector ${\bf k}_i$. Now, we would expect the incident wave to be {\em partially reflected}\/ and {\em partially
+transmitted}\/ at the interface between the two dielectric media. 
+Let the reflected and transmitted waves have the wavevectors 
+${\bf k}_r$ and ${\bf k}_t$, respectively. See Figure~\ref{f10.3}.  Hence, we can write
+\begin{equation}
+\psi(x,y,z,t)= \psi_i \,\cos({\bf k}_i\cdot{\bf r}-\omega\,t) + \psi_r\,\cos({\bf k}_r\cdot{\bf r}-\omega\,t)
+\end{equation}
+in the region $z<0$, and
+\begin{equation}
+\psi(x,y,z,t)= \psi_t\,\cos({\bf k}_t\cdot{\bf r}-\omega\,t)
+\end{equation}
+in the region $z>0$. Here, $\psi(x,y,z,t)$ represents the {\em magnetic}\/ component of the resultant light wave, $\psi_i$ the
+amplitude of the incident wave, $\psi_r$ the amplitude of the reflected wave, and $\psi_t$ the amplitude of the
+transmitted wave. Note that all of the component waves have the same angular frequency, $\omega$, since this property is
+ultimately determined by the wave source. Note, further, that, according to standard electromagnetic
+theory, if the magnetic component of an electromagnetic wave is specified then the electric
+component of the wave is fully determined, and can easily be calculated, and {\em vice versa}. 
+
+In general, the wavefunction, $\psi$, must be {\em continuous}\/ at $z=0$, since, according to standard electromagnetic theory,  there cannot be a discontinuity in either the
+normal or the tangential component of a magnetic field across an interface between two (non-magnetic) dielectric media. (Incidentally,
+the same is not true of an electric field, which can have a normal discontinuity across
+an interface between two dielectric media. This explains why we have chosen  $\psi$ to represent the magnetic, rather than the electric,
+component of the resultant light wave.) Thus, the matching condition at $z=0$ takes the form
+\begin{eqnarray}
+\psi_i\,\cos(k_{i\,x}\,x+k_{i\,y}\,y-\omega\,t)&&\nonumber\\[0.5ex] + \psi_r\,\cos(k_{r\,x}\,x+k_{r\,y}\,y-\omega\,t)&=&\psi_t\,\cos(k_{t\,x}\,x+k_{t\,y}\,y-\omega\,t).
+\end{eqnarray}
+Moreover, this condition must be satisfied at {\em all}\/ values of $x$, $y$, and $t$. Clearly, this is only possible if
+\begin{equation}\label{e10.13}
+k_{i\,x} = k_{r\,x} = k_{t\,x},
+\end{equation}
+and
+\begin{equation}\label{e10.14}
+k_{i\,y} = k_{r\,y} = k_{t\,y}.
+\end{equation}
+
+Suppose that the direction of propagation of the incident wave lies in the $x$-$z$ plane, so that $k_{i\,y}=0$. It immediately
+follows, from (\ref{e10.14}), that $k_{r\,y}=k_{t\,y}=0$. In other words, the directions of propagation of the reflected
+and the transmitted waves also lie in the $x$-$z$ plane.  This means that ${\bf k}_i$, ${\bf k}_r$ and ${\bf k}_t$ are 
+{\em co-planar}\/ vectors. Note that  this constraint is implicit in the well-known laws of
+geometric optics. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter10/fig03.eps}}
+\caption{\em Reflection and refraction of a plane wave at a plane boundary.}\label{f10.3}   
+\end{figure}
+
+Assuming that the above mentioned constraint is satisfied, let the incident, reflected, and transmitted waves subtend 
+angles $\theta_i$, $\theta_r$, and $\theta_t$ with the $z$-axis, respectively. See Figure~\ref{f10.3}. It follows that
+\begin{eqnarray}
+{\bf k}_i &=& n_1\,k_0\,(\sin\theta_i,\,0,\,\cos\theta_i),\\[0.5ex]
+{\bf k}_r &=&n_1\, k_0\,(\sin\theta_r,\,0,-\cos\theta_r),\\[0.5ex]
+{\bf k}_t &=&n_2\,k_0\,(\sin\theta_t,\,0,\,\cos\theta_t),
+\end{eqnarray}
+where $k_0=\omega/c$ is the vacuum wavenumber, and $c$ the velocity of light in vacuum.
+Here, we have made use of the fact that wavenumber ({\em i.e.}, the magnitude of the wavevector) of a light wave propagating through a dielectric medium of
+refractive index $n$ is $n\,k_0$.
+
+Now, according to Equation~(\ref{e10.13}), $k_{i\,x}= k_{r\,x}$, which yields
+\begin{equation}
+\sin\theta_i=\sin\theta_r,
+\end{equation}
+and $k_{i\,x}=k_{t\,x}$, which reduces to
+\begin{equation}
+n_1\,\sin\theta_i = n_2\,\sin\theta_t.
+\end{equation}
+The first of these relations states that the angle of incidence, $\theta_i$, is equal to the angle of reflection, $\theta_r$.  Of course, this is the
+familiar {\em law of reflection}. Moreover, the second relation corresponds to the equally familiar
+{\em law of refraction}, otherwise known as {\em Snell's law}. 
+
+Incidentally, the fact that a plane wave propagates through a uniform
+medium with a {\em constant}\/ wavevector, and, therefore, a {\em constant}\/ direction of propagation, is equivalent to the well known {\em law of rectilinear propagation}, which
+states that light propagates through a uniform medium in a {\em straight-line}. 
+
+It is clear, from the above discussion, that  the  laws of geometric optics ({\em i.e.}, the law
+of rectilinear propagation, the law of reflection, and the law of refraction) are  fully consistent with the 
+wave properties of light, despite the fact that they do not  appear to explicitly depend on these properties. 
+
+\section{Waveguides}
+As we saw in Section~\ref{s7.5}, transmission lines ({\em e.g.}, ethernet cables)  are used to carry high frequency electromagnetic signals over distances which are long compared to the signal wavelength, $\lambda = c/f$, where $c$ is the velocity of light and $f$ the signal frequency (in Hertz). 
+Unfortunately, conventional transmission lines are subject to {\em radiative losses}\/ (since the lines effectively act as antennas) 
+which increase as the {\em fourth power}\/ of the signal frequency. Above a certain critical  frequency, which typically
+lies in the microwave band, the radiative losses become intolerably large. Under these circumstances, the transmission line must be
+replaced by a device known as a {\em waveguide}. A {\em waveguide}\/ is basically a long  hollow metal box  within
+which electromagnetic signals propagate. Moreover, if the walls of the box are much thicker than the skin-depth (see Section~\ref{s9.3}) in the wall material then
+the signal is essentially isolated from the outside world, and the radiative losses are consequently negligible. 
+
+Consider an evacuated  waveguide of rectangular cross-section which runs along the $z$-direction, and is enclosed by perfectly conducting 
+({\em i.e.}, infinite conductivity) metal walls located at $x=0$, $x=a$, $y=0$, and $y=b$. Suppose that an electromagnetic
+wave propagates along the waveguide  in the $z$-direction. For the sake of simplicity, let there be no $y$-variation of the wave electric or magnetic fields.
+ Now, the wave propagation inside the waveguide is governed by the two-dimensional wave equation [{\em cf.}, Equation~(\ref{e10.9})]
+\begin{equation}\label{e10.20}
+\frac{\partial^2\psi}{\partial t^2} = c^2\left(\frac{\partial^2}{\partial x^2}+ \frac{\partial^2}{\partial z^2}\right)\psi,
+\end{equation}
+where $\psi(x,z,t)$ represents the {\em electric}\/ component of the wave, which is assumed to be everywhere parallel to the $y$-axis, 
+and $c$ is the velocity of light in vaccum. The appropriate boundary conditions are 
+\begin{eqnarray}\label{e10.21}
+\psi(0,z,t) &=&0,\\[0.5ex]
+\psi(a,z,t) &=&0,\label{e10.22}
+\end{eqnarray}
+since the electric field inside a perfect conductor is zero (otherwise, an infinite current would flow), and, according to standard electromagnetic
+theory,  there cannot be a  tangential discontinuity in the electric
+field at a conductor/vacuum boundary. (There can, however, be a normal discontinuity. This allows $\psi$ to be non-zero at $y=0$ and $y=b$.)
+
+Let us search for a separable solution of (\ref{e10.20})  of the form
+\begin{equation}\label{e10.23}
+\psi(x,z,t)= \psi_0\,\sin(k_x\,x)\,\cos(k\,z-\omega\,t),
+\end{equation}
+where $k$ represents the $z$-component of the wavevector (rather than its magnitude), and is the
+effective wavenumber  for propagation along the waveguide.
+The above solution automatically satisfies the boundary condition (\ref{e10.21}). The second boundary
+condition (\ref{e10.22}) is satisfied provided
+\begin{equation}
+k_x = j\,\frac{\pi}{a},
+\end{equation}
+where $j$ is a positive integer. Suppose that $j$ takes its smallest possible value $1$.
+(Of course, $j$ cannot be zero, since, in this case, $\psi=0$ everywhere.)
+Substitution of expression (\ref{e10.23}) into the wave equation (\ref{e10.20}) yields the dispersion relation
+\begin{equation}\label{e10.25}
+\omega^2 = k^2\,c^2+\omega_0^{\,2},
+\end{equation}
+where
+\begin{equation}
+\omega_0 = \frac{\pi\,c}{a}.
+\end{equation}
+Note that this dispersion relation is analogous in form to the dispersion relation (\ref{e9.26})
+for an electromagnetic wave propagating through a plasma, with the {\em cut-off frequency}, $\omega_0$,
+playing the role of the plasma frequency, $\omega_p$. The cut-off frequency is so-called because
+for $\omega<\omega_0$ the wavenumber is imaginary ({\em i.e.}, $k^2<0$), which implies that the
+wave does not propagate along the waveguide, but, instead, decays exponentially with increasing $z$. 
+On the other hand, for wave frequencies above the cut-off frequency the phase velocity, 
+\begin{equation}
+v_p = \frac{\omega}{k} = \frac{c}{\sqrt{1-\omega_0^{\,2}/\omega^2}},
+\end{equation}
+is superluminal. This is not a problem, however, since the group velocity, 
+\begin{equation}
+v_g= \frac{d\omega}{dk} = c\,\sqrt{1-\omega_0^{\,2}/\omega^2},
+\end{equation}
+which is the true signal velocity, remains subluminal. (Recall, from Section~\ref{s9.2}, that a high frequency electromagnetic
+wave propagating through a plasma exhibits similar behavior.) 
+Not surprisingly, the signal velocity
+goes to zero as $\omega\rightarrow \omega_0$, since the signal ceases to
+propagate at all when $\omega=\omega_0$. 
+
+It turns out that waveguides support many distinct modes of propagation. The type of mode
+discussed above is termed a TE (for transverse electric-field) mode, since the electric
+field is transverse to the direction of propagation. There are many different sorts of TE mode, corresponding, for instance, to
+different choices of the mode number, $j$. However, the $j=1$ mode has the lowest cut-off frequency.
+There are also
+TM (for transverse magnetic-field) modes, and TEM (for transverse electric- and magnetic-field) modes. 
+TM modes also only propagate when the wave frequency exceeds a cut-off frequency. On the other hand, TEM modes (which are the same type of mode as that supported by
+a conventional transmission line) propagate at all frequencies. Note, however, that TEM modes are only possible when the waveguide possesses an internal
+conductor running along its length. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter10/fig04.eps}}
+\caption{\em A cylindrical wave.}\label{f10.4}   
+\end{figure}
+
+\section{Cylindrical Waves}\label{s10.4}
+Consider a cylindrically symmetric wavefunction $\psi(\rho,t)$, where $\rho= \sqrt{x^2+y^2}$ is a conventional
+cylindrical polar coordinate. Assuming that this function satisfies the three-dimensional wave equation (\ref{e10.9}), which
+can be re-written (see Exercise 3)
+\begin{equation}
+\frac{\partial^2\psi}{\partial t^2} = v^2\left(\frac{\partial^2\psi}{\partial \rho^2} + \frac{1}{\rho}\,\frac{\partial\psi}{\partial\rho}\right),
+\end{equation}
+it is easily demonstrated that a sinusoidal cylindrical wave of phase angle $\phi$, wavenumber $k$, and angular frequency $\omega=k\,v$, takes the form (see Exercise 3)
+\begin{equation}\label{e10.30}
+\psi(\rho,t) \simeq \frac{\psi_0}{\rho^{1/2}}\,\cos(\phi+k\,\rho-\omega\,t)
+\end{equation}
+in the limit $k\,\rho\gg 1$. Here, $\psi_0/\rho^{1/2}$ is the amplitude of the wave. 
+In this case, the associated wavefronts ({\em i.e.}, surfaces of constant phase) are a set of concentric cylinders which
+propagate radially outward, from their common axis ($\rho=0$), at the phase velocity $v=\omega/k$. See Figure~\ref{f10.4}. Note that the wave amplitude attenuates as $\rho^{-1/2}$.
+Such behavior  can be understood as a  consequence of {\em energy conservation}, which requires the power flowing across the various $\rho={\rm const.}$ surfaces to be
+constant. (The areas of such surfaces scale as $A\propto \rho$.
+Moreover, the power flowing across them  is proportional to $\psi^2\,A$, since the  energy flux associated with
+a wave is generally proportional to $\psi^2$, and is directed normal to the wavefronts.)
+ The cylindrical wave specified in expression (\ref{e10.30}) is such as would be generated by
+a uniform {\em line source}\/ located at $\rho=0$. See Figure~\ref{f10.4}.
+
+\section{Exercises}
+{\small \begin{enumerate}
+\item Show that the one-dimensional plane wave (\ref{e10.1}) is a solution of the one-dimensional wave equation (\ref{e10.8})
+provided that 
+$$
+\omega=k\,v.
+$$
+Likewise, demonstrate that the three-dimensional plane wave (\ref{e10.5}) is a solution of the three-dimensional wave
+equation (\ref{e10.9}) as long as
+$$
+\omega = |{\bf k}|\,v.
+$$
+
+\item Consider a square waveguide of internal dimensions $5\times 10\,{\rm cm}$. What is the frequency
+(in MHz) of the lowest frequency TE mode which will propagate along the waveguide without attenuation?
+What are the phase and group velocities (expressed as multiples of $c$) for a TE mode whose
+frequency is $5/4$ times this cut-off frequency?
+
+\item Demonstrate that for a cylindrically symmetric wavefunction $\psi(\rho,t)$, where $\rho= \sqrt{x^2+y^2}$, the 
+three-dimensional wave equation (\ref{e10.9}) 
+can be re-written 
+$$
+\frac{\partial^2\psi}{\partial t^2} = v^2\left(\frac{\partial^2\psi}{\partial \rho^2} + \frac{1}{\rho}\,\frac{\partial\psi}{\partial\rho}\right).
+$$
+Show that 
+$$
+\psi(\rho,t) \simeq \frac{\psi_0}{\rho^{1/2}}\,\cos(\phi+k\,\rho-\omega\,t)
+$$
+is an approximate solution of this equation in  the limit $k\,\rho\gg 1$, where $v=\omega/k$. 
+
+\item Demonstrate that for a spherically symmetric wavefunction $\psi(r,t)$, where $r=\sqrt{x^2+y^2+z^2}$, the 
+three-dimensional wave equation (\ref{e10.9}) 
+can be re-written 
+$$
+\frac{\partial^2\psi}{\partial t^2} = v^2\left(\frac{\partial^2\psi}{\partial r^2} + \frac{2}{r}\,\frac{\partial\psi}{\partial r}\right).
+$$
+Show that
+$$
+\psi(r,t) =\frac{ \psi_0}{r}\,\cos(\phi+k\,r-\omega\,t)
+$$
+is a solution of this equation, where $v=\omega/k$. Explain why the wave amplitude attenuates as $r^{-1}$. What sort of wave source would be most likely to
+generate the above type of wave solution?
+\end{enumerate}}

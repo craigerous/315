@@ -1,0 +1,122 @@
+% OSCILLATIONS AND WAVES
+% A LOWER-DIVISION UNDERGRADUATE COURSE
+% BY RICHARD FITZPATRICK
+% PROFESSOR OF PHYSICS
+% THE UNIVERSITY OF TEXAS AT AUSTIN
+%
+% Email: rfitzp@farside.ph.utexas.edu
+
+%$$$$$$$$$$$$
+% Start preamble
+%$$$$$$$$$$$$
+
+\documentclass[12pt]{rfbook}
+\usepackage{fullpage}
+
+\setlength{\headsep}{10pt}
+\setlength{\headheight}{20pt}
+
+%%%%%%%%%%%
+% Needed for figures
+%%%%%%%%%%%
+\usepackage{epsf}
+
+%%%%%%%%%
+% Customize fonts
+%%%%%%%%%
+\usepackage{charter}
+\usepackage{euler}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Customize equation, figure, and table numbering
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\@addtoreset{equation}{chapter}
+\@addtoreset{figure}{chapter}
+\@addtoreset{table}{chapter}
+\def\theequation{\arabic{chapter}.\arabic{equation}}
+\def\thefigure{\arabic{chapter}.\arabic{figure}}
+\def\thetable{\arabic{chapter}.\arabic{table}}
+\makeatother
+
+%%%%%%%%%%%%%%%
+% Customize table of contents
+%%%%%%%%%%%%%%%
+\usepackage{rftocloft}
+\addtolength{\cftsubsecnumwidth}{1em}
+\addtolength{\cftsecnumwidth}{0.6em}
+
+%%%%%%%%%%%%%
+% Customize page headers
+%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+
+%%%%%%%%%%%%%
+% Define custom symbols
+%%%%%%%%%%%%%
+\newcommand {\ltapp}   {\stackrel {_{\normalsize<}}{_{\normalsize \sim}}}
+\newcommand {\gtapp}   {\stackrel {_{\normalsize>}}{_{\normalsize \sim}}}
+\newcommand {\btau}{\mbox{\boldmath$\tau$}}
+\newcommand {\bOmega}{\mbox{\boldmath$\Omega$}}
+\newcommand {\bomega}{\mbox{\boldmath$\omega$}}
+
+%$$$$$$$$$$$$
+% End preamble
+%$$$$$$$$$$$$
+
+%$$$$$$$$$$$
+% Start content
+%$$$$$$$$$$$
+\begin{document}
+
+%%%%%%%%%%
+% Set page headers
+%%%%%%%%%%
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\fancyhf{}
+\fancyhead[LO,RE]{\sl \leftmark}
+\fancyhead[LE,RO]{\sl \thepage}
+\fancyhead[RE]{\sl OSCILLATIONS AND WAVES}
+
+%%%%
+% Title
+%%%%
+\thispagestyle{empty}
+\begin{center}
+{\Huge\bf Oscillations and Waves}\\[1ex]
+~\\
+~\\
+~\\
+{\Large\em  Richard Fitzpatrick}\\[1.5ex]~\\[1.5ex]
+{\Large\sf  Professor  of Physics}\\[1.5ex]
+{\Large\sf  The University of Texas at Austin}\\[10ex]
+\end{center}
+
+%%%%%%%%%%
+% Table of contents
+%%%%%%%%%%
+\tableofcontents
+
+%%%%
+% Body
+%%%%
+\include{Chapter01/Chapter01}
+\include{Chapter02/Chapter02}
+\include{Chapter03/Chapter03}
+\include{Chapter04/Chapter04}
+\include{Chapter05/Chapter05}
+\include{Chapter06/Chapter06}
+\include{Chapter07/Chapter07}
+\include{Chapter08/Chapter08}
+\include{Chapter09/Chapter09}
+\include{Chapter10/Chapter10}
+\include{Chapter11/Chapter11}
+\include{Chapter12/Chapter12}
+\appendix
+\include{Chapter13/Chapter13}
+
+\end{document}
+%$$$$$$$$$$
+% End content
+%$$$$$$$$$$

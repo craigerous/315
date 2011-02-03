@@ -1,0 +1,602 @@
+\chapter{Simple Harmonic Oscillation}
+\section{Mass on a Spring}\label{s2.1}
+Consider a compact mass $m$ which slides over a  frictionless horizontal surface. Suppose that
+the mass is attached
+to one end of a light horizontal spring whose other end is anchored in an immovable wall. See
+Figure~\ref{f2.1}. At time $t$, let $x(t)$ be the extension of the spring: {\em i.e.}, the difference between
+the spring's actual length and its unstretched length. Obviously, $x(t)$ can also be used as
+a coordinate to determine the instantaneous horizontal displacement of the mass. 
+
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{Chapter02/fig01.eps}}
+\caption{\em Mass on a spring}\label{f2.1}   
+\end{figure}
+
+The equilibrium state of the system corresponds to the situation in which
+the mass is at rest, and the spring is unextended ({\em i.e.}, $x=\dot{x}=0$, where $\dot{}\equiv d/dt$).
+In this state, zero horizontal force acts on the mass, and so there is no reason for it to start to move.
+However, if the system is perturbed from its equilibrium state ({\em i.e.}, if the mass is displaced, so that the
+spring becomes extended) then the mass experiences a horizontal {\em restoring force}\/ given by {\em Hooke's law}:
+\begin{equation}
+f (x)= -k\,x.
+\end{equation}
+Here, $k>0$ is the so-called {\em force constant}\/ of the spring. The negative sign indicates that $f(x)$ is indeed a restoring force ({\em i.e.}, if the displacement is
+positive then the force is negative, and {\em vice versa}). 
+Note that the magnitude of the restoring
+force is {\em directly proportional}\/ to the displacement of the mass from its equilibrium 
+position 
+({\em i.e.}, $|f|\propto x$). Of course, Hooke's law only holds for relatively {\em small}\/ spring extensions.
+Hence, the displacement of the mass cannot be made too large.
+Incidentally, the motion of this particular dynamical system is representative of the
+motion of a wide variety of mechanical systems when they are {\em slightly}\/ disturbed from a stable equilibrium state (see Section~\ref{spen}).
+
+{\em Newton's second law of motion}\/ leads to the following time evolution equation for the system:
+\begin{equation}
+m\,\ddot{x} = - k\,x,\label{eshm}
+\end{equation}
+where $\ddot{}  \equiv d^2/dt^2$. 
+This {\em differential equation}\/ is known as the {\em simple harmonic oscillator equation}, and its solution has been known
+for centuries. In fact, the solution is
+\begin{equation}
+x(t) = a\,\cos(\omega\,t-\phi),\label{shm}
+\end{equation}
+where $a>0$, $\omega>0$, and $\phi$ are constants. We can demonstrate that Equation~(\ref{shm}) is indeed a
+solution of Equation~(\ref{eshm}) by direct substitution. Plugging the right-hand side of (\ref{shm}) into 
+Equation~(\ref{eshm}), and recalling from standard calculus that $d(\cos\theta)/d\theta = -\sin\theta$ and
+$d (\sin\theta)/d\theta = \cos\theta$, so that $\dot{x} = -\omega\,a\,\sin(\omega\,t-\phi)$ and $\ddot{x} = -\omega^2\,a\,\cos(\omega\,t-\phi)$, where use has been made of
+the {\em chain rule}, 
+\begin{equation}
+\frac{d}{dx}\left(f\left[g(x)\right]\right)\equiv \frac{df}{dg}\,\frac{dg}{dx},
+\end{equation}
+we obtain
+\begin{equation}
+-m\,\omega^2\,a\,\cos(\omega\,t-\phi) =- k\,a\,\cos(\omega\,t-\phi).
+\end{equation}
+It follows that Equation~(\ref{shm}) is the correct solution provided
+\begin{equation}\label{eomega}
+\omega = \sqrt{\frac{k}{m}}.
+\end{equation}
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter02/fig02.eps}}
+\caption{\em Simple harmonic oscillation.}\label{f2.2}  
+\end{figure}
+
+Figure~\ref{f2.2} shows a graph of $x$ versus $t$ obtained from Equation~(\ref{shm}). The type of behavior  displayed here is
+called {\em simple harmonic oscillation}.
+It can be seen that
+the displacement $x$ {\em oscillates}\/ between $x=-a$ and $x=+a$. Here, $a$ is termed the {\em amplitude}\/
+of the oscillation. Moreover, the motion is {\em repetitive}\/ in time ({\em i.e.}, it repeats exactly after
+a certain time period has elapsed). In fact, the {\em repetition period}\/ is
+\begin{equation}
+T = \frac{2\pi}{\omega}.
+\end{equation}
+This result is easily obtained from Equation~(\ref{shm}) by noting that $\cos\theta$ is a {\em periodic function}\/
+of $\theta$ with
+period $2\pi$: {\em i.e.}, $\cos(\theta+2\pi) \equiv \cos\theta$.  It follows that
+the motion repeats every time $\omega\,t$ increases by $2\pi$: {\em i.e.}, every time $t$ increases by $2\pi/\omega$.
+The {\em frequency}\/ of the motion ({\em i.e.}, the number of oscillations completed per
+second) is
+\begin{equation}
+f = \frac{1}{T} = \frac{\omega}{2\pi}.
+\end{equation}
+It can be seen that $\omega$ is the motion's {\em angular frequency}; {\em i.e.}, the frequency
+$f$ converted into radians per second. Of course, $f$ is measured in {\em Hertz}---otherwise
+known as {\em cycles per second}.
+Finally, the {\em phase angle}, $\phi$, determines the times at which the oscillation attains its maximum displacement,
+$x=a$. In fact, since the maxima of $\cos\theta$ occur at $\theta=n\,2\pi$, where
+$n$ is an arbitrary integer, the times of maximum displacement are
+\begin{equation}
+t_{\rm max} = T \left(n + \frac{\phi}{2\pi}\right).
+\end{equation}
+So, varying the phase angle simply shifts the pattern of oscillation backward and forward in time. See Figure~\ref{f2.3}. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter02/fig03.eps}}
+\caption{\em Simple harmonic oscillation. The
+solid, short-dashed, and long dashed-curves correspond to $\phi = 0$, $+\pi/4$, and $-\pi/4$, respectively.}\label{f2.3}   
+\end{figure}
+
+\begin{table}[b]\centering
+\begin{tabular}{c|cccc}\hline
+$\omega\,t-\phi$ & $0$ & $\pi/2$ & $\pi$ & $3\pi/2$\\[0.5ex]\hline
+$x$              & $+a$     & 0         & $-a$       & 0 \\[0.5ex]
+$\dot{x}$        & 0        & $-\omega\,a$ & 0 & $+\omega\,a$ \\[0.5ex]
+$\ddot{x}$       & $-\omega^2\,a$ &0& $+\omega^2\,a$ & 0
+\end{tabular}
+\caption{\em Simple harmonic oscillation.}\label{tshm}
+\end{table}
+
+Table~\ref{tshm} lists the displacement, velocity, and acceleration of the mass at various different phases of the
+simple harmonic oscillation cycle. The information contained in this table can easily be derived from Equation~(\ref{shm}). Note that all of the non-zero values
+shown in this table represent either the maximum or the minimum value taken by   the quantity in question during the
+oscillation  cycle.
+
+We have seen that when a mass on a spring is disturbed  it executes {\em simple harmonic
+oscillation}\/ about its equilibrium position. In physical terms, if the mass's initial displacement is positive ($x>0$) then the
+ restoring force is negative, and pulls the mass toward the equilibrium point ($x=0$). However,
+ when the  mass reaches this point it is moving, and its inertia thus carries it onward,
+ so that it acquires a negative displacement ($x<0$). The restoring force then becomes positive, and again pulls the mass toward the equilibrium point. However,  inertia again carries it past this point, and the mass   acquires a positive displacement.
+The motion subsequently repeats itself {\em ad infinitum}. 
+The angular frequency of the oscillation is determined by the spring stiffness, $k$,  and the system
+inertia, $m$,  via Equation~(\ref{eomega}). 
+On the other hand, the amplitude and phase angle of the oscillation are determined by the {\em initial conditions}. 
+To be more exact, suppose that the instantaneous displacement and velocity of the mass at $t=0$ are $x_0$ and $v_0$,
+respectively. It follows from Equation~(\ref{shm}) that
+\begin{eqnarray}
+x_0 &=& x(t=0) = a\,\cos\phi,\label{e2.9}\\[0.5ex]
+v_0 &=& \dot{x}(t=0) =a\,\omega\,\sin\phi.
+\end{eqnarray}
+Here, use has been made of the trigonometric identities $\cos(-\theta) \equiv\cos\theta$ and $\sin(-\theta)
+\equiv-\sin\theta$. Hence, we deduce that
+\begin{equation}
+a = \sqrt{x_0^{\,2} + (v_0/\omega)^2},
+\end{equation}
+and
+\begin{equation}\label{e2.12}
+\phi =\tan^{-1}\!\left(\frac{v_0}{\omega\,x_0}\right),
+\end{equation}
+since $\sin^2\theta+\cos^2\theta \equiv 1$ and $\tan\theta \equiv \sin\theta/\cos\theta$.
+
+The kinetic energy of the system, which is the same as the kinetic energy of the mass,  is written
+\begin{equation}
+K = \frac{1}{2}\,m\,\dot{x}^2 = \frac{1}{2}\,m\,a^2\,\omega^2\,\sin^2(\omega\,t-\phi).
+\end{equation}
+ The potential energy of the system, which is the same as the potential energy of the
+ spring, takes the form
+\begin{equation}
+U = \frac{1}{2}\,k\,x^2= \frac{1}{2}\,k\,a^2\,\cos^2(\omega\,t-\phi).
+\end{equation}
+Hence, the total energy is
+\begin{equation}\label{eosce}
+E = K + U =\frac{1}{2} \,k\,a^2= \frac{1}{2}\,m\,\omega^2\,a^2,
+\end{equation}
+since $m\,\omega^2 = k$ and $\sin^2\theta+\cos^2\theta \equiv 1$. Note that the
+total energy is a {\em constant of the motion}. Moreover,
+the energy is proportional to the {\em amplitude squared}\/ of the oscillation.
+It follows, from the above expressions, that the simple harmonic oscillation of a
+mass on a spring is characterized
+by a continual back and forth flow of energy between kinetic and potential components.
+The kinetic energy attains its maximum value, and the potential energy its minimum value,  when the displacement is zero ({\em i.e.}, when $x=0$). Likewise,
+the potential energy attains its maximum value, and the kinetic energy 
+its minimum value, when the displacement is maximal ({\em i.e.}, when $x=\pm a$). 
+Note that the minimum value of $K$ is {\em zero}, since the system is instantaneously at rest
+when the displacement is maximal.
+
+\section{Simple Harmonic Oscillator Equation}
+Suppose that a physical system possesing {\em one degree of freedom}---{\em i.e.}, a
+system whose instantaneous state at time $t$ is fully described by a {\em single dependent variable}, $s(t)$---obeys the following time evolution equation [{\em cf.}, Equation~(\ref{eshm})]:
+\begin{equation}\label{e2.16}
+\ddot{s}+ \omega^2\,s=0,
+\end{equation}
+where $\omega>0$ is a  constant.  As we have seen, this differential
+equation is called the {\em simple harmonic oscillator equation}, and has the
+following  solution
+\begin{equation}\label{e2.17}
+s(t) = a\,\cos(\omega\,t-\phi),
+\end{equation}
+where $a>0$ and $\phi$ are constants. Moreover, the above equation describes a type of oscillation
+characterized by a constant {\em amplitude}, $a$, and a constant {\em angular frequency}, $\omega$.
+The {\em phase angle}, $\phi$, determines the times at which the oscillation attains its
+maximum value. Finally, the frequency of the oscillation (in Hertz) is $f=\omega/2\pi$,
+and the period is $T=2\pi/\omega$. Note that the frequency and period of the
+oscillation are both determined by the constant $\omega$, which appears in the simple harmonic oscillator equation, whereas the amplitude, $a$, and phase angle, $\phi$, are both determined by the {\em initial conditions}---see Equations~(\ref{e2.9})--(\ref{e2.12}). In fact, $a$ and $\phi$ are the two {\em constants of integration}\/ of the
+{\em second-order ordinary differential equation}\/ (\ref{e2.16}). Recall, from standard differential equation theory, that the
+most general solution of an $n$th-order ordinary differential equation ({\em i.e.},
+an equation involving a single independent variable, and a single dependent variable, in which the highest derivative of the dependent  with respect to the
+independent variable is
+$n$th-order, and the lowest zeroth-order) involves $n$ arbitrary constants of integration. (Essentially, this is because
+we have to integrate the equation $n$ times with respect to the independent variable in order to reduce it to zeroth-order, and so
+obtain the solution. Furthermore, each integration introduces an arbitrary constant: {\em e.g.},
+the integral of $\dot{s}=a$, where $a$ is a known constant, is $s=a\,t+b$, where $b$ is an arbitrary constant.)
+
+Multiplying Equation~(\ref{e2.16}) by $\dot{s}$, we obtain
+\begin{equation}
+\dot{s}\,\ddot{s} + \omega^2\,\dot{s}\,s=0.
+\end{equation}
+However, this can also be written in the form
+\begin{equation}
+\frac{d}{dt}\!\left(\frac{1}{2}\,\dot{s}^{\,2}\right) +\frac{d}{dt}\!\left(
+\frac{1}{2}\,\omega^2\,s^2\right)=0,
+\end{equation}
+or
+\begin{equation}
+\frac{d{\cal E}}{dt} = 0,
+\end{equation}
+where
+\begin{equation}\label{e2.21}
+{\cal E} = \frac{1}{2}\,\dot{s}^{\,2} + \frac{1}{2}\,\omega^2\,s^2.
+\end{equation}
+Clearly, ${\cal E}$ is a {\em conserved quantity}: {\em i.e.}, it does not vary with time. In fact, this quantity is
+generally proportional to the overall energy of the system. For instance, ${\cal E}$ would be the energy divided by the mass in
+the mass-spring system discussed in Section~\ref{s2.1}. Note that ${\cal E}$ is either
+zero or positive, since neither of the terms on the right-hand side of Equation~(\ref{e2.21}) can be negative. Let us search for an {\em equilibrium state}. Such a state is
+characterized by $s= {\rm constant}$, so that $\dot{s}=\ddot{s}=0$. It follows
+from (\ref{e2.16}) that $s=0$, and from (\ref{e2.21}) that ${\cal E}=0$. We conclude that   the system  can only remain permanently at
+rest when ${\cal E}=0$.
+ Conversely,  the system can
+never permanently come to rest when ${\cal E}>0$,  and must, therefore, keep moving for ever. Furthermore, since the equilibrium state is characterized by $s=0$, it follows that
+$s$ represents a kind of  ``displacement'' of the system from this state.
+It is also apparent, from (\ref{e2.21}), that $s$ attains it maximum value when $\dot{s}=0$.
+In fact,
+\begin{equation}
+s_{\rm max} = \frac{\sqrt{2\,{\cal E}}}{\omega}.
+\end{equation}
+This, of course, is the amplitude of the oscillation: {\em i.e.}, $s_{\rm max}=a$. 
+Likewise, $\dot{s}$ attains its maximum value when $x=0$, and
+\begin{equation}
+\dot{s}_{\rm max} = \sqrt{2\,{\cal E}}.
+\end{equation}
+
+Note that the simple harmonic oscillation (\ref{e2.17}) can also
+be written in the form
+\begin{equation}\label{e2.24}
+s(t) = A\,\cos(\omega\,t) + B\,\sin(\omega\,t),
+\end{equation}
+where $A= a\,\cos\phi$ and $B=a\,\sin\phi$. Here, we have employed the trigonometric identity $\cos(x-y) \equiv \cos x\,\cos y+\sin x\,\sin y$. 
+Alternatively, (\ref{e2.17}) can be written
+\begin{equation}\label{e2.25}
+s(t) = a\,\sin(\omega\,t-\phi'),
+\end{equation}
+where $\phi'=\phi-\pi/2$, and use has been made of the trigonometric
+identity $\cos\theta \equiv \sin(\pi/2+\theta)$. Clearly, there are many different
+ways of representing a simple harmonic oscillation, but they all involve
+{\em linear}\/ combinations of sine and cosine functions whose arguments
+take the form $\omega\,t+c$, where $c$ is some constant. Note, however, that,
+whatever form it takes, 
+a {\em general}\/ solution to the simple harmonic oscillator equation must always contain {\em two}\/ arbitrary constants: {\em i.e.}, $A$ and $B$ in (\ref{e2.24}) or
+$a$ and $\phi'$ in (\ref{e2.25}).
+
+The simple harmonic oscillator equation, (\ref{e2.16}), is a {\em linear}\/ differential equation,
+which  means that
+if $s(t)$ is a solution  then so is $a\,s(t)$, where $a$ is
+an arbitrary constant. This can be verified by multiplying the equation by $a$,
+and then making use of the fact that $a\,d^2s/dt^2=d^2(a\,s)/dt^2$. Now, linear
+differential equations have a very important and useful property: {\em i.e.}, their
+solutions are {\em superposable}. This means that if $s_1(t)$ is a
+solution to Equation~(\ref{e2.16}), so
+that
+\begin{equation}
+\ddot{s}_1=-\omega^2\,s_1,
+\end{equation}
+and
+$s_2(t)$ is a different solution, so that
+\begin{equation}
+\ddot{s}_2=-\omega^2\,s_2,
+\end{equation}
+then $s_1(t)+s_2(t)$ is also a solution. This can be verified by adding the previous
+two equations, and making use of the fact that $d^2s_1/dt^2+d^2 s_2/dt^2=d^2(s_1+s_2)/dt^2$. Furthermore, it is easily demonstrated that {\em any linear combination}\/ of $s_1$ and $s_2$,
+such as $a\,s_1+b\,s_2$, where $a$ and $b$ are constants, is also a solution.
+It is very helpful to know this fact. 
+For instance, the special solution to the simple harmonic oscillator equation (\ref{e2.16}) with the simple initial
+conditions $s(0) = 1$ and $\dot{s}(0) = 0$ is easily shown to be
+\begin{equation}
+s_1(t) = \cos(\omega\,t).
+\end{equation}
+Likewise, the special solution with the simple initial conditions $s(0)=0$ and $\dot{s}(0)=1$ is clearly
+\begin{equation}
+s_2(t) = \omega^{-1}\,\sin(\omega\,t).
+\end{equation}
+Thus, since the solutions to the simple harmonic oscillator equation are superposable, the
+solution with the general initial conditions $s(0)=s_0$ and $\dot{s}(0)=\dot{s}_0$ is
+\begin{equation}
+ s(t)=s_0\,s_1(t) + \dot{s}_0\,s_2(t), 
+ \end{equation}
+ or
+\begin{equation}
+s(t) =  s_0\,\cos(\omega\,t)+ \frac{\dot{s}_0}{\omega}\,\sin(\omega\,t).
+\end{equation}
+
+\section{$LC$ Circuit}\label{slc}
+Consider an electrical circuit consisting of an inductor, of inductance $L$, connected
+in series with a capacitor, of capacitance $C$. See Figure~\ref{f2.4}. Such
+a circuit is known as an $LC$ circuit, for obvious reasons. Suppose that
+$I(t)$ is the instantaneous current flowing around the circuit. 
+ According to
+standard electrical circuit theory, the 
+potential difference across the inductor is $L\,\dot{I}$. 
+Again,  from standard electrical circuit theory,  the potential difference across the capacitor is $V=Q/C$, where
+$Q$ is the charge stored on the capacitor's positive plate. However,
+since electric charge is {\em conserved}, 
+the current flowing around the circuit is equal to the rate at which charge accumulates on the capacitor's 
+ positive plate: {\em i.e.}, $I = \dot{Q}$. 
+ Now, according to
+{\em Kirchhoff's second circuital law}, the sum of the potential differences across the
+various components of a closed circuit loop is equal to zero. In other words,
+\begin{equation}\label{e2.31}
+ L\,\dot{I}+Q/C = 0.
+\end{equation}
+Dividing by $L$, and differentiating with respect to $t$, we obtain
+\begin{equation}\label{e2.32}
+\ddot{I} +  \omega^2\,I = 0,
+\end{equation}
+where
+\begin{equation}\label{e2.33}
+\omega = \frac{1}{\sqrt{L\,C}}.
+\end{equation}
+Comparison with Equation~(\ref{e2.16}) reveals that (\ref{e2.32}) is a {\em simple harmonic oscillator equation}\/ with the associated angular oscillation frequency $\omega$. 
+We conclude that the current in an $LC$ circuit executes simple harmonic oscillations of the form
+\begin{equation}\label{e2.34}
+I(t) = I_0\,\cos(\omega\,t-\phi),
+\end{equation}
+where $I_0>0$ and $\phi$ are constants. 
+Now, according to Equation~(\ref{e2.31}), the potential difference, $V=Q/C$,  across the capacitor is minus that across the inductor, so that $V= -L\,\dot{I}$, giving
+\begin{equation}\label{e2.35}
+V(t) = \sqrt{\frac{L}{C}}\,I_0\,\sin (\omega\,t-\phi) = \sqrt{\frac{L}{C}}\,I_0\,\cos(\omega\,t-\phi-\pi/2).
+\end{equation}
+Here, use has been made of the trigonometric identity $\sin\theta\equiv \cos(\theta-\pi/2)$. 
+It follows that the voltage in an $LC$ circuit  oscillates at the {\em same
+frequency}\/ as the current, but with a {\em phase shift}\/ of $\pi/2$. In other words, the
+voltage is maximal when the current is zero, and {\em vice versa}. 
+The amplitude of the voltage oscillation is that of the current oscillation
+multiplied by $\sqrt{L/C}$. Thus, we can also write
+\begin{equation}\label{e2.36}
+V(t) = \sqrt{\frac{L}{C}}\,I(t-\omega^{-1}\,\pi/2).
+\end{equation}
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter02/fig04.eps}}
+\caption{\em An $LC$ circuit.}\label{f2.4}   
+\end{figure}
+
+Comparing with Equation~(\ref{e2.21}),  it is
+clear that
+\begin{equation}
+{\cal E} = \frac{1}{2}\,\dot{I}^{\,2} +\frac{1}{2}\, \omega^2\,I^2
+\end{equation}
+is a conserved quantity. However, $\omega^2=1/L\,C$, and $\dot{I} = -V/L$.  Thus, multiplying the
+above expression by $C\,L^2$, we obtain
+\begin{equation}\label{e2.37}
+E = \frac{1}{2}\,C\,V^2 + \frac{1}{2}\,L\,I^2.
+\end{equation}
+The first and second terms on the right-hand side of the above expression can be recognized as the instantaneous energies
+stored in the capacitor and the inductor, respectively. The former energy is stored in the
+electric field generated when the capacitor is charged, whereas the latter is stored in the
+magnetic field induced when current flows through the inductor. It follows that
+(\ref{e2.37}) is the total energy of the circuit, and that this
+energy is a {\em conserved quantity}.  Clearly, the oscillations
+of an $LC$ circuit can be understood as a cyclic interchange between
+electric energy stored in the capacitor and magnetic energy stored in the inductor, much as the oscillations of the mass-spring
+system studied in Section~\ref{s2.1} can be understood as a cyclic interchange
+between kinetic energy stored by the mass and  potential energy stored by the spring. 
+
+Suppose that at $t=0$  the capacitor is charged
+to a voltage $V_0$, and there is no current flowing through the inductor. In other
+words, the initial state is one in which all of the circuit energy resides in the
+capacitor. The initial conditions are $V(0)=-L\,\dot{I}(0)=V_0$ and $I(0) = 0$.
+It is easily demonstrated that the current evolves in time as
+\begin{equation}
+I(t) = -\frac{V_0}{\sqrt{L/C}}\,\sin(\omega\,t).
+\end{equation}
+Suppose that at $t=0$ the capacitor is fully discharged, and there is a current
+$I_0$ flowing through the inductor. In other words, the initial state is one in
+which all of the circuit energy resides in the inductor. The initial
+conditions are $V(0)=-L\,\dot{I}(0)=0$ and $I(0)=I_0$. It is easily demonstrated
+that the current evolves in time as
+\begin{equation}
+I(t) = I_0\,\cos(\omega\,t).
+\end{equation}
+Suppose, finally, that at $t=0$ the capacitor is charged to a voltage $V_0$,
+and the current flowing through the inductor is $I_0$. Since the solutions
+of the simple harmonic oscillator equation are superposable, it follows  that the
+current evolves in time as
+\begin{equation}\label{e2.41}
+I(t) =  -\frac{V_0}{\sqrt{L/C}}\,\sin(\omega\,t) +  I_0\,\cos(\omega\,t).
+\end{equation}
+Furthermore, according to Equation~(\ref{e2.36}),  the voltage evolves in time
+as
+\begin{equation}
+V(t)= - V_0\,\sin(\omega\,t-\pi/2) + \sqrt{\frac{L}{C}}\,I_0\,\cos(\omega\,t-\pi/2),
+\end{equation}
+or
+\begin{equation}\label{e2.43}
+V(t) = V_0\,\cos(\omega\,t) + \sqrt{\frac{L}{C}}\,I_0\,\sin(\omega\,t).
+\end{equation}
+Here, use has been made of the trigonometric identities $\sin (\theta-\pi/2)\equiv -\cos\theta$ and  $\cos(\theta-\pi/2)\equiv \sin\theta$. 
+
+The instantaneous electrical power absorption by the capacitor, which can easily be
+shown to be minus the instantaneous power absorption by the inductor,  is
+\begin{equation}
+P(t)=I(t)\,V(t) = I_0\,V_0\,\cos(2\,\omega\,t) + \frac{1}{2}\left(I_0^{\,2}\,\sqrt{\frac{L}{C}}- \frac{V_0^{\,2}}{\sqrt{L/C}}\right)\sin(2\,\omega\,t),
+\end{equation}
+where use has been made of Equations~(\ref{e2.41}) and (\ref{e2.43}), as well as the trigonometric identities $\cos(2\,\theta)\equiv \cos^2\theta-\sin^2\theta$ and $\sin(2\,\theta)\equiv 2\,\sin\theta\,\cos\theta$. Hence, the
+average power absorption during a cycle of the oscillation,
+\begin{equation}
+\langle P\rangle \equiv \frac{1}{T}\int_0^T P(t)\,dt,
+\end{equation}
+is  {\em zero}, since it is easily demonstrated that $\langle\cos(2\,\omega\,t)\rangle=\langle \sin(2\,\omega\,t)\rangle=0$.  In other words, any energy which the capacitor absorbs from the
+circuit during one part of the oscillation cycle is returned to the circuit without loss
+during another. The same goes for the inductor.
+
+\begin{figure}
+\epsfysize=2.75in
+\centerline{\epsffile{Chapter02/fig05.eps}}
+\caption{\em A simple pendulum.}\label{f2.5}  
+\end{figure}
+
+\section{Simple Pendulum}\label{spen}
+Consider a compact mass $m$ suspended from a light inextensible string of length $l$, such that the
+mass is free to swing from side to side in a vertical plane, as shown in 
+Figure~\ref{f2.5}.
+This setup is known as a {\em simple pendulum}. 
+ Let $\theta$ be the angle subtended between the string and
+the downward vertical. Obviously, the stable equilibrium state of the system corresponds to
+the situation in which the mass is stationary, and hangs vertically down ({\em 
+i.e.}, $\theta=\dot{\theta}=0$).
+The angular equation of motion of the pendulum is 
+\begin{equation}
+I\,\ddot{\theta} = \tau,
+\end{equation}
+where $I$ is the moment of inertia of the mass, and $\tau$ the torque acting 
+about the suspension point.
+For the
+case in hand, given that the mass is essentially a point particle, and is situated a distance $l$ from
+the axis of rotation ({\em i.e.}, the suspension point), it is easily seen that 
+$I=m\,l^2$. 
+
+The two forces acting on the mass are the downward gravitational force, $m\,g$, where $g$ is the acceleration due to gravity, 
+ and the tension, $T$, in the string.
+Note, however, that the tension makes no contribution to the torque, 
+since its line of action clearly passes
+through the suspension point. From elementary trigonometry, 
+the line of action of the gravitational force passes a perpendicular distance $l\,\sin\theta$ 
+from the
+suspension point. Hence, the magnitude of the gravitational torque is $m\,g\,l\,
+\sin\theta$.
+Moreover, the gravitational torque is  a {\em restoring torque}: {\em i.e.}, if 
+the mass is
+displaced slightly from its equilibrium position ({\em i.e.}, $\theta =0$) then the
+ gravitational torque clearly acts
+ to push the mass back towards that position. Thus, we can write
+\begin{equation}
+\tau = - m\,g\,l\,\sin\theta.
+\end{equation}
+Combining the previous two equations, we obtain the following  angular equation 
+of motion of the pendulum:
+\begin{equation}\label{epend}
+l\,\ddot{\theta} + g\,\sin\theta=0.
+\end{equation}
+Note that, unlike all of the other time evolution equations which we have
+examined so far in this chapter, the above equation is {\em nonlinear} [since $\sin(a\,\theta)\neq a\,\sin\theta$], which means that it is generally
+very difficult to solve.
+
+Suppose, however,  that the system does not stray very far from
+its equilibrium position ($\theta=0$). If this is the case then we
+can expand $\sin\theta$ in a Taylor series about $\theta=0$. We obtain
+\begin{equation}
+\sin\theta = \theta - \frac{\theta^3}{6} + \frac{\theta^5}{120} + {\cal O}(\theta^7).
+\end{equation}
+Now, if $|\theta|$ is sufficiently small then the series is dominated by its
+first term, and we can write $\sin\theta\simeq \theta$. This is known
+as the {\em small angle approximation}.
+Making use of this approximation, 
+the  equation of motion (\ref{epend}) simplifies to
+\begin{equation}\label{e2.47}
+\ddot{\theta} +\omega^2\,\theta\simeq 0,
+\end{equation}
+where 
+\begin{equation}
+\omega = \sqrt{\frac{g}{l}}.
+\end{equation}
+ Of course, (\ref{e2.47}) is just the
+{\em simple harmonic oscillator equation}. Hence, we can immediately write its solution
+in the form
+\begin{equation}\label{e4.64}
+\theta(t) = \theta_0\,\cos(\omega\,t-\phi),
+\end{equation}
+where $\theta_0>0$ and $\phi$ are constants. 
+We conclude that the pendulum swings back and forth at a fixed frequency, $\omega$, which depends on $l$ and $g$, but is {\em independent}\/ of the amplitude,
+$\theta_0$, of the motion. Actually, this result only holds as long as
+the small angle approximation remains valid. It turns out that $\sin\theta\simeq \theta$
+is a good approximation provided  $|\theta|\ltapp 6^\circ$. Hence, the period
+of a simple pendulum is only amplitude independent when the amplitude of the motion
+is less than about $6^\circ$. 
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+
+\item A mass stands on a platform which executes simple harmonic oscillation in a vertical
+direction at a frequency of $5\,{\rm Hz}$. Show that the mass loses contact with the platform
+when the displacement exceeds $10^{-2}\,{\rm m}$. 
+
+\item A small body rests on a horizontal diaphragm of a loudspeaker
+which is supplies with an alternating current of constant amplitude but variable
+frequency. If diaphragm executes simple harmonic oscillation in the vertical
+direction of amplitude $10\,\mu{\rm m}$, at all frequencies, find the greatest
+frequency for which the small body stays in contact with the diaphragm. 
+
+\item Two light springs have spring constants $k_1$ and $k_2$, respectively, and are used in a vertical
+orientation to support an object of mass $m$. Show that the angular frequency of small amplitude oscillations about the equilibrium state
+is $[(k_1+k_2)/m]^{1/2}$ if the springs are in parallel, and $[k_1\,k_2/(k_1+k_2)\,m]^{1/2}$
+if the springs are in series.
+
+\item A body of uniform cross-sectional area $A$ and mass density $\rho$ floats in a liquid
+of density $\rho_0$ (where $\rho<\rho_0$), and at equilibrium displaces a volume $V$. Making use of Archimedes principle (that the buoyancy force acting on a partially
+submerged body is equal to the mass of the displaced liquid), show
+that the period of small amplitude oscillations about the equilibrium position is
+$$
+T = 2\pi\,\sqrt{\frac{V}{g\,A}}.
+$$
+
+\item A particle of mass $m$ slides in a frictionless semi-circular depression in the
+ground
+of radius $R$. Find the angular frequency of small amplitude oscillations
+about the particle's equilibrium position, assuming that the oscillations
+are essentially one dimensional, so that the particle  passes through
+the lowest point of the depression during each oscillation cycle.
+
+\item If a thin wire is twisted through an angle $\theta$ then a restoring
+torque $\tau = - k\,\theta$ develops, where $k>0$ is known as the {\em torsional
+force constant}. Consider a so-called {\em torsional pendulum},
+which consists of a horizontal disk of mass $M$, and moment of inertia $I$, suspended at its
+center from a thin vertical wire of negligible mass and length $l$, whose other end is attached to a fixed
+support. The disk is free to rotate about a vertical axis passing through the suspension point, but such rotation twists the wire. Find the frequency of torsional oscillations of the disk about its
+equilibrium position.
+
+\item Suppose that a hole is drilled through a laminar ({\em i.e.}, flat) object
+of mass $M$, which is then suspended in a frictionless manner from a horizontal
+axis passing through the hole, such that it is free to rotate in a vertical plane.
+ Suppose that the moment of inertia of the object about the
+axis is $I$, and that the distance of the hole from the object's center of mass is $d$. 
+Find the frequency of small angle oscillations of the object about its
+equilibrium position. Hence, find the frequency of small angle oscillations of a {\em compound pendulum}\/
+consisting of a uniform
+rod of mass $M$ and length $l$ suspended vertically from a horizontal axis
+passing through one of its ends. 
+
+\item A pendulum consists of a uniform circular disk of radius $r$ which is
+free to turn about a horizontal axis perpendicular to its plane. Find the position
+of the axis for which the periodic time is a minimum. 
+
+\item A particle of mass $m$ executes one-dimensional simple harmonic oscillation  under the action of a
+conservative force such that its instantaneous $x$ coordinate is
+$$
+x(t) = a\,\cos(\omega\,t-\phi).
+$$
+Find the average values of $x$, $x^2$, $\dot{x}$, and $\dot{x}^2$ over a single cycle of the
+oscillation. Find the average values of the kinetic and potential energies of the
+particle over a single cycle of the oscillation.
+
+\item A particle executes two-dimensional simple harmonic oscillation such that its instantaneous coordinates in the $x$-$y$
+plane are
+\begin{eqnarray}
+x(t) &=&a\,\cos(\omega\,t),\nonumber\\[0.5ex]
+y(t) &=&a\,\cos(\omega\,t-\phi).\nonumber
+\end{eqnarray}
+Describe the motion when (a) $\phi=0$, (b) $\phi=\pi/2$, and (c) $\phi=-\pi/2$.
+In each case, plot the trajectory of the particle in the $x$-$y$ plane.
+
+\item An $LC$ circuit is such that at $t=0$ the capacitor is uncharged and a
+current $I_0$ flows through the inductor. Find an expression for the
+charge $Q$ stored on the positive plate of the capacitor as a function of time.
+
+\item A simple pendulum of mass $m$ and length $l$ is such that $\theta(0)=0$
+and $\dot{\theta}(0) = \omega_0$. Find the subsequent motion, $\theta(t)$, assuming that 
+its amplitude  remains small. Suppose, instead, that  $\theta(0)=\theta_0$ and
+$\dot{\theta}(0) = 0$. Find the subsequent motion. Suppose, finally, that
+$\theta(0)=\theta_0$ and $\dot{\theta}(0) = \omega_0$. Find the subsequent motion.
+
+\item Demonstrate that 
+$$
+E = \frac{1}{2}\,m\,l^2\,\dot{\theta}^{\,2} + m\,g\,l\,(\cos\theta-1)
+$$
+is a constant of the motion of a simple pendulum whose time evolution equation
+is given by (\ref{epend}). (Do not make the small angle approximation.) Hence, show
+that the amplitude of the motion, $\theta_0$, can be written
+$$
+\theta_0 = 2\,\sin^{-1}\left(\frac{E}{2\,m\,g\,l}\right)^{1/2}.
+$$
+Finally, demonstrate that the period of the motion is determined by
+$$
+\frac{T}{T_0} = \frac{1}{\pi}\int_0^{\theta_0}\frac{d\theta}{\sqrt{\sin^2(\theta_0/2)-\sin^2(\theta/2)}},
+$$
+where $T_0$ is the period of small angle oscillations. Verify that $T/T_0\rightarrow 1$
+as $\theta_0\rightarrow 0$. Does the period increase, or decrease, as the amplitude
+of the motion increases?
+\end{enumerate}
+}

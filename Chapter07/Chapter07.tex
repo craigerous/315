@@ -1,0 +1,1152 @@
+\chapter{Traveling Waves}\label{c7}
+\section{Standing Waves in a Finite Continuous Medium}\label{s7.1}
+We saw earlier, in Sections~\ref{s5.2}, \ref{e6.2}, and \ref{e6.3},
+that a small amplitude transverse wave on a uniform string, and a small amplitude longitudinal
+wave in an elastic solid or an ideal gas, are all governed by the
+{\em wave equation}, which (in one dimension) takes the general form
+\begin{equation}\label{e7.1}
+\frac{\partial^2\psi}{\partial t^2} = c^2\,\frac{\partial^2 \psi}{\partial x^2},
+\end{equation}
+where $\psi(x,t)$ represents the wave disturbance, and $c>0$  is a constant, with the dimensions
+of velocity, which is a property of the particular medium that supports the wave. Up to now, we have only considered  media of {\em finite length}: {\em e.g.}, media which extend from
+$x=0$ to $x=l$. Generally speaking, we have encountered two distinct types of physical
+constraint which hold at the boundaries of such media. Firstly, if a given boundary  is
+{\em fixed}\/ then the wave displacement is constrained to be zero there: {\em e.g.}, if the left boundary is fixed then $\psi(0,t)=0$. Secondly, if a given boundary is {\em free}\/ then the spatial derivative
+of the displacement (which usually corresponds to some sort of force) is constrained to be
+zero there: {\em e.g.}, if the right boundary is free then $\partial\psi(l,t)/\partial x=0$. It follows that a fixed boundary corresponds to a {\em node}---{\em i.e.},
+a point at which the amplitude of the wave disturbance is always {\em zero}---whereas a
+free boundary corresponds to an {\em anti-node}---{\em i.e.}, a point at which the
+amplitude of the wave disturbance is always {\em locally maximal}. Consequently, the 
+nodes and the anti-nodes of a wave, of definite wavelength, supported in a medium of finite length with stationary boundaries, which can be  either fixed or free, are constrained to be {\em stationary}. The only simple solution of the wave equation
+(\ref{e7.1}) which has stationary nodes and anti-nodes is a {\em standing wave}\/ of the general form
+\begin{equation}\label{e7.2}
+\psi(x,t) =[A\,\cos(k\,x)+B\,\sin(k\,x)]\,\cos(\omega\,t-\phi).
+\end{equation}
+The associated nodes are located at the values of $x$ that satisfy
+\begin{equation}
+A\,\cos(k\,x)+ B\,\sin(k\,x) = 0,
+\end{equation}
+which implies that they are indeed  stationary, and also evenly spaced a distance $\lambda/2$
+apart, where $\lambda=2\pi/k$ is the wavelength. Moreover, the anti-nodes
+are situated halfway between the nodes. For example, suppose that both boundaries
+of the medium
+are fixed boundaries. It follows that the points $x=0$ and $x=l$ must each correspond to a node. This is
+only possible if the length of the medium, $l$,  is a {\em half-integer}\/ number of wavelengths: {\em i.e.},
+ $l = n\,\lambda/2$, where $n$ is a positive integer. We conclude that, in this case, the possible
+wavenumbers of standing wave solutions to the wave equation are {\em quantized}\/ such that
+\begin{equation}
+k\,l = n\,\pi.
+\end{equation}
+Moreover, the same is true if both boundaries are free boundaries. Finally, if one boundary is free, and the
+other fixed, then the quantization of wavenumbers takes the slightly different form
+\begin{equation}
+k\,l = (n-1/2)\,\pi.
+\end{equation}
+Now, those standing wave solutions that satisfy the appropriate quantization criterion are known as the
+{\em normal modes}\/ of the system. Moreover, substitution of (\ref{e7.2})
+into the wave equation (\ref{e7.1}) yields the standing wave dispersion relation
+\begin{equation}\label{e7.6}
+\omega= k\,c.
+\end{equation}
+Thus, the fact that the   normal mode wavenumbers are  quantized immediately implies that the associated
+oscillation frequencies  are also quantized. Finally, since the
+wave equation is {\em linear}, the most general solution which satisfies the
+boundary conditions is a {\em linear superposition}\/ of all of the normal modes. Such a
+solution has the appropriate node or anti-node at each of the boundaries, but
+does not necessarily have any stationary nodes or anti-nodes in the interior of the medium. 
+
+\section{Traveling Waves in an Infinite Continuous Medium}\label{s7.2}
+Let us now consider solutions of the wave equation (\ref{e7.1}) in an {\em infinite}\/ medium. Such a medium does not possess any boundaries, and so  is not
+subject to  boundary conditions. Hence, there is no particular reason why a
+wave of definite wavelength should  have stationary nodes or anti-nodes. In other
+words, (\ref{e7.2}) may not be the only permissible type of wave solution in an
+infinite medium. What other kind of solution could we have? Well, suppose that
+\begin{equation}\label{e7.7}
+\psi(x,t) = A\,\cos(k\,x-\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. We would interpret
+this solution as a wave of amplitude $A$, wavenumber $k$, wavelength $\lambda=2\pi/k$, angular frequency $\omega$, frequency (in Hertz) $f=\omega/2\pi$, period $T=1/f$, and phase angle $\phi$. Note, in particular, that $\psi(x+\lambda,t)=\psi(x,t)$ and $\psi(x,t+T)=\psi(x,t)$
+for all $x$ and $t$: {\em i.e.}, the wave is periodic in space with period $\lambda$,
+and  periodic in time with period $T$. Now, a {\em wave maximum}\/ corresponds to
+a point at which $\cos(k\,x-\omega\,t-\phi)=1$. It follows, from the well known
+properties of the cosine function, that the various wave maxima are located at
+\begin{equation}
+k\,x-\omega\,t-\phi = n\,2\pi,
+\end{equation}
+where $n$ is an integer. Thus, differentiating the above expression with respect to $t$,
+and rearranging, the equation of motion of a particular maximum becomes
+\begin{equation}
+\frac{dx}{dt}=\frac{\omega}{k}.
+\end{equation}
+We conclude that the wave maximum in question {\em propagates}\/ along the $x$-axis at the
+velocity
+\begin{equation}
+v_p = \frac{\omega}{k}.
+\end{equation}
+It is easily demonstrated that the other wave maxima, as well as the wave minima and  the wave zeros, also propagate
+along the $x$-axis at the same velocity. In fact, the whole wave pattern
+propagates in the positive $x$-direction  {\em without changing shape}. The  characteristic propagation velocity $v_p$ is known as the {\em phase velocity}\/ of the wave, since
+it is the velocity with which points  of {\em constant phase}\/ in the wave disturbance ({\em i.e.}, points which satisfy $k\,x-\omega\,t-\phi = {\rm constant}$) move. For obvious reasons, the type of wave solution given in (\ref{e7.7}) is called a {\em traveling
+wave}. 
+
+Substitution of (\ref{e7.7}) into the wave equation (\ref{e7.1}) yields the familiar dispersion relation
+\begin{equation}\label{e7.11}
+\omega = k\,c.
+\end{equation}
+We immediately conclude that the traveling wave solution (\ref{e7.7}) satisfies the wave equation
+provided 
+\begin{equation}
+v_p = \frac{\omega}{k} = c:
+\end{equation}
+{\em i.e.}, provided that the phase velocity of the wave takes the fixed value $c$. 
+In other words, the constant $c^2$, which appears in the wave
+equation (\ref{e7.1}),  can be interpreted as the square of the velocity with which traveling waves propagate through the
+medium in question. It follows, from the discussion in Sections~\ref{s5.2}, \ref{e6.2}, and \ref{e6.3}, that transverse waves propagate along strings of tension $T$ and
+mass per unit length $\rho$ at the phase velocity $\sqrt{T/\rho}$, that longitudinal sound
+waves propagate through elastic media of Young's modulus $Y$ and mass density
+$\rho$ at the phase velocity $\sqrt{Y/\rho}$, and that sound waves propagate
+through ideal gases of pressure $p$,  mass density $\rho$, and ratio of specific heats $\gamma$, at the phase velocity $\sqrt{\gamma\,p/\rho}$. 
+
+\begin{table}
+\centering
+\begin{tabular}{lrrcr}
+Material & $Y \,({\rm N\,m}^{-2})$ & $\rho \,({\rm kg\,m}^{-3})$ & $\sqrt{Y/\rho}\, ({\rm m\,s}^{-1})$ & $v\,({\rm m\,s}^{-1})$\\\hline &&&&\\[-1.75ex]
+Aluminium & $6.0\times 10^{10}$ & $2.7\times 10^3$ & 4700 & 5100\\[0.5ex]
+Granite & $5.0\times 10^{10}$ & $2.7\times 10^3$ & 4300 & $\sim 5000$\\[0.5ex]
+Lead & $\sim 1.6\times 10^{10}$ & $11.4\times 10^3$ & 1190 & 1320\\[0.5ex]
+Nickel & $21.4\times 10^{10}$ & $8.9\times 10^3$ & 4900 & 4970\\[0.5ex]
+Pyrex & $6.1\times 10^{10}$ & $2.25\times 10^3$ & 5200 & 5500\\[0.5ex]
+Silver & $7.5\times 10^{10}$ & $10.4\times 10^3$ & 2680 & 2680\\[0.5ex]
+\end{tabular}
+\caption{\em Calculated versus measured sound velocities in various solid materials. [From {\em Vibrations and Waves}, A.P.~French (W.W. Norton \& Co., New York NY, 1971).]}\label{t7.1}
+\end{table}
+
+Table~\ref{t7.1} shows some data on the
+calculated and measured speeds of sound in various solid materials. It can
+be seen that the agreement between the two is fairly good. Actually, the
+formula $v=\sqrt{Y/\rho}$ is only valid if the material in question is free
+to (very slightly) expand and contract sideways as a wave of compression or
+decompression passes by. However, bulk material is not free to do this, and so its
+resistance to deformation is effectively increased. This, typically,  has the effect of
+raising the sound speed by about 15\%. 
+
+An {\em ideal gas}\/ of mass $m$ and molecular weight $M$ satisfies the
+{\em ideal gas equation  of state},
+\begin{equation}
+p\,V = \frac{m}{M}\,R\,T,
+\end{equation}
+where $p$ is the pressure, $V$ the volume, $R$ the gas constant, and $T$ the
+absolute temperature. Since the ratio $m/V$ is equal to the density, $\rho$, the expression
+for the sound speed, $v=\sqrt{\gamma\,p/\rho}$, yields
+\begin{equation}
+v = \left(\frac{\gamma\,R\,T}{M}\right)^{1/2}.
+\end{equation}
+We, thus, conclude that the speed of sound in an ideal gas is independent
+of the pressure or the density, proportional to the square root of the absolute temperature, 
+and inversely proportional to the square root of the molecular mass. All of these
+predictions are borne out in practice. 
+
+A comparison of Equations~(\ref{e7.6}) and (\ref{e7.11}) reveals that standing
+waves and traveling waves in a given medium  satisfy the {\em same}\/ dispersion relation. However, since traveling waves in infinite media are not subject to boundary conditions, it follows that there is {\em no restriction}\/ on the possible wavenumbers, or wavelengths,
+of such waves.  Hence, {\em any}\/ traveling wave solution whose wavenumber, $k$, and
+angular frequency, $\omega$, are related according to the dispersion relation
+(\ref{e7.11}) is a valid solution of the wave equation. Another way of putting this is that
+any traveling wave solution whose wavelength, $\lambda=2\pi/k$, and frequency, $f=\omega/2\pi$, are related according to
+\begin{equation}
+c = f\,\lambda
+\end{equation}
+is a valid solution of the wave equation. We, thus, conclude that high frequency traveling waves propagating through a given medium possess
+short wavelengths, and {\em vice versa}. 
+
+Consider the  alternative wave solution
+\begin{equation}\label{e7.15}
+\psi(x,t) = A\,\cos(k\,x+\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. As before, we would interpret
+this solution as a wave of amplitude $A$, wavenumber $k$, angular frequency $\omega$,
+and phase angle $\phi$. 
+However, the wave maxima are now located at
+\begin{equation}
+k\,x + \omega\,t-\phi = n\,2\pi,
+\end{equation}
+where $n$ is an integer, and thus have equations of motion of the form
+\begin{equation}
+\frac{dx}{dt} =-\frac{ \omega}{k}.
+\end{equation}
+Clearly,  (\ref{e7.15}) represents  a traveling wave that propagates in the {\em minus}\/
+$x$-direction at the  phase velocity $v_p = \omega/k$.
+Moreover, substitution of (\ref{e7.15}) into the wave equation (\ref{e7.1}) again
+yields the dispersion relation (\ref{e7.11}), which implies that $v_p=c$. 
+It follows that traveling wave solutions to
+the wave equation (\ref{e7.1}) can propagate in either the positive or the negative $x$-direction, as long as they always move at the fixed speed $c$. 
+
+\section{Wave Interference}\label{s7.3}
+But, what is the relationship between traveling wave and standing
+wave solutions to the wave equation (\ref{e7.1}) in an infinite medium? To help answer this question, let us form a superposition of two traveling wave solutions
+of equal amplitude $A$, and zero phase angle $\phi$, which have the same wavenumber 
+$k$,  but are moving in {\em opposite directions}. In other words,
+\begin{equation}
+\psi(x,t) = A\,\cos(k\,x-\omega\,t) + A\,\cos(k\,x+\omega\,t).
+\end{equation}
+Since the wave equation (\ref{e7.1}) is linear, it follows that the above superposition is a solution
+provided the two component waves are also solutions: {\em i.e.}, provided that $\omega=k\,c$, which we shall assume to be the case. However, making
+use of the trigonometric identity $\cos a + \cos b \equiv 2\,\cos[(a+b)/2]\,\cos[(a-b)/2]$,
+the above expression can also be written
+\begin{equation}
+\psi(x,t) = 2\,A\,\cos(k\,x)\,\cos(\omega\,t),
+\end{equation}
+which is clearly a standing wave [{\em cf.}, (\ref{e7.2})].  Evidently, a standing wave is a linear
+superposition of two, otherwise identical, traveling waves which propagate in opposite
+directions. The two waves completely cancel one another out at the nodes, which
+are situated at $k\,x=(n-1/2)\,\pi$, where $n$ is an integer. This process is known as
+{\em total destructive interference}. On the other hand, the waves reinforce one another
+at the anti-nodes, which are situated at $k\,x=n\,\pi$, generating a wave
+whose amplitude is twice that of the component waves. This process
+is known as {\em constructive interference}. 
+
+As a more general example of wave interference,  consider a superposition
+of two traveling waves of unequal amplitudes which again have the same wavenumber
+and zero phase angle,
+and are moving in opposite directions: {\em i.e.},
+\begin{equation}
+\psi(x,t) = A_1\,\cos(k\,x-\omega\,t) + A_2\,\cos(k\,x+\omega\,t),
+\end{equation}
+where $A_1, A_2>0$. 
+In this case, the trigonometric identities $\cos(a-b)\equiv \cos a\,\cos b+\sin a\,\sin b$
+and $\cos(a+b)\equiv \cos a\,\cos b-\sin a\,\sin b$ yield
+\begin{equation}
+\psi(x,t)= (A_1+A_2)\,\cos(k\,x)\,\cos(\omega\,t) + (A_1-A_2)\,\sin(k\,x)\,\sin(\omega\,t).
+\end{equation}
+Thus, the two waves interfere destructively at $k\,x=(n-1/2)\,\pi$ [{\em i.e.}, at points where $\cos(k\,x)=0$ and $|\sin(k\,x)|=1$]  to produce a minimum wave amplitude $|A_1-A_2|$, and interfere constructively
+at $k\,x=n\,\pi$ [{\em i.e.}, at points where $|\cos(k\,x)|=1$ and $\sin(k\,x)=0$]  to produce a maximum wave amplitude $A_1+A_2$. Note, however,
+that the destructive interference is incomplete unless $A_1=A_2$. Incidentally, it is a general
+result that when two waves of amplitude $A_1>0$ and $A_2>0$ interfere then
+the maximum and minimum possible values of the resulting wave amplitude are $A_1+A_2$ and 
+$|A_1-A_2|$, respectively. 
+
+\section{Energy Conservation}
+Consider a small amplitude transverse wave propagating along a uniform string of infinite length, tension
+$T$, and mass per unit length $\rho$. See Section~\ref{s5.2}. Let $x$ measure
+distance along the string, and let $y(x,t)$ be the transverse wave displacement.
+Of course, $y(x,t)$ satisfies the wave equation
+\begin{equation}\label{e7.22}
+\frac{\partial^2 y}{\partial t^2} = v^2\,\frac{\partial^2 y}{\partial x^2},
+\end{equation}
+where $v=\sqrt{T/\rho}$ is the phase velocity of traveling waves on the string.
+
+Consider a section of the string lying between $x=x_1$ and $x=x_2$. The
+{\em kinetic energy}\/ of this section is 
+\begin{equation}
+K = \int_{x_1}^{x_2}\frac{1}{2}\,\rho\left(\frac{\partial y}{\partial t}\right)^2 dx,
+\end{equation}
+since $\partial y/\partial t$ is the string's transverse velocity. The potential energy
+is simply the work done in stretching the section, which is $T\,\Delta s$, where
+$\Delta s$ is the difference between the section's stretched and unstretched lengths.
+Here, it is assumed that the tension remains approximately constant when the
+section is slowly stretched. Now, an element of length of the string is
+\begin{equation}
+ds = (dx^2+dy^2)^{1/2} = \left[1+ \left(\frac{\partial y}{\partial x}\right)^2\right]^{1/2} dx.
+\end{equation}
+Hence,
+\begin{equation}
+\Delta s = \int_{x_1}^{x_2}  \left\{\left[1+ \left(\frac{\partial y}{\partial x}\right)^2\right]^{1/2}-1\right\} dx\simeq \int_{x_1}^{x_2}\frac{1}{2}\left(\frac{\partial y}{\partial x}\right)^2 dx,
+\end{equation}
+since it is assumed that $|\partial y/\partial x|\ll 1$: {\em i.e.},  the transverse displacement is sufficiently small that  the string remains
+almost parallel to the $x$-axis. Thus, the potential energy of the section is
+$U=T\,\Delta s$, or
+\begin{equation}
+U = \int_{x_1}^{x_2}\frac{1}{2}\,T\left(\frac{\partial y}{\partial x}\right)^2 dx.
+\end{equation}
+It follows that the total energy of the section is
+\begin{equation}\label{e7.27}
+E = \int_{x_1}^{x_2}\frac{1}{2}\left[\rho\left(\frac{\partial y}{\partial t}\right)^2
++ T\left(\frac{\partial y}{\partial x}\right)^2\right] dx.
+\end{equation}
+
+Multiplying the wave equation  (\ref{e7.22}) by $\rho\,(\partial y/\partial t)$, 
+we obtain
+\begin{equation}
+\rho\,\frac{\partial y}{\partial t} \,\frac{\partial^2 y}{\partial t^2}= T \,\frac{\partial y}{\partial t}\,\frac{\partial^2 y}{\partial x^2},
+\end{equation}
+since $v^2=T/\rho$. 
+This expression yields
+\begin{equation}
+\rho\,\frac{\partial y}{\partial t} \,\frac{\partial^2 y}{\partial t^2} + T\,\frac{\partial y}{\partial x}\,\frac{\partial^2 y}{\partial t\,\partial x}= T \,\frac{\partial y}{\partial t}\,\frac{\partial^2 y}{\partial x^2}  + T\,\frac{\partial y}{\partial x}\,\frac{\partial^2 y}{\partial t\,\partial x},
+\end{equation}
+which can be written in the form
+\begin{equation}
+\frac{1}{2}\,\frac{\partial}{\partial t}\!\left[\rho\left(\frac{\partial y}{\partial t}\right)^2
++ T\left(\frac{\partial y}{\partial x}\right)^2\right] = \frac{\partial }{\partial x}\!\left(T\,\frac{\partial y}{\partial t}\,\frac{\partial y}{\partial x}\right),
+\end{equation}
+or
+\begin{equation}\label{e7.31}
+\frac{\partial {\cal E}}{\partial  t} + \frac{\partial {\cal I}}{\partial x} = 0,
+\end{equation}
+where
+\begin{equation}
+{\cal E}(x,t) = \frac{1}{2}\left[\rho \left(\frac{\partial y}{\partial t}\right)^2
++ T\left(\frac{\partial y}{\partial x}\right)^2\right] 
+\end{equation}
+is the {\em energy per unit length}\/ of the string, and
+\begin{equation}\label{e7.33}
+{\cal I}(x,t) = - T\,\frac{\partial y}{\partial t}\,\frac{\partial y}{\partial x}.
+\end{equation}
+Finally, integrating (\ref{e7.31}) in $x$ from $x_1$ to $x_2$, we obtain
+\begin{equation}
+\frac{d}{dt} \int_{x_1}^{x_2} {\cal E}\,dx + {\cal I}(x_2,t)-{\cal I}(x_1,t) = 0,
+\end{equation}
+or
+\begin{equation}
+\frac{d E}{dt} = {\cal I}(x_1,t)-{\cal I}(x_2,t).
+\end{equation}
+Here, $E(t)$ is the energy stored in the section of the string lying between $x=x_1$ and
+$x=x_2$ [see Equation~(\ref{e7.27})]. Now, if we interpret ${\cal I}(x,t)$ as the instantaneous {\em energy flux}\/ ({\em i.e.}, rate of energy flow)
+in the positive-$x$ direction, at position $x$ and time $t$, then the above equation
+can be recognized as a simple declaration of {\em energy conservation}. Basically, 
+the equation states that the
+rate of increase in the energy stored in the section of the string lying between $x=x_1$ and $x=x_2$, which is $dE/dt$,  is equal to the difference between the rate at which energy flows into
+the left end of the section, which is ${\cal I}(x_1,t)$,  and the rate at which it flows out of the right end, which is ${\cal I}(x_2,t)$. Note that the string {\em must}\/ conserve energy,
+since it lacks any mechanism for energy dissipation. The same is true of the
+other wave media discussed in this chapter. 
+
+Consider a  wave propagating in the positive $x$-direction of the form
+\begin{equation}
+y(x,t) = A\,\cos(k\,x-\omega\,t-\phi).
+\end{equation}
+According to Equation~(\ref{e7.33}), the energy flux associated with this
+wave is
+\begin{equation}
+{\cal I}(x,t) = T\,k\,\omega\,A^2\,\sin^2(k\,x-\omega\,t-\phi).
+\end{equation}
+Thus, the mean energy flux is written
+\begin{equation}\label{e7.38}
+\langle {\cal I}\rangle = \frac{1}{2}\,\omega^2\,Z\,A^2,
+\end{equation}
+where $\langle A \rangle(x) \equiv (\omega/2\pi)\int_t^{t+2\pi/\omega}A(x,t')\, dt'$ represents an average over a period of the wave oscillation. Here,  use
+has been made of $\omega/k=\sqrt{T/\rho}$, and the
+easily demonstrated result that $\langle \sin^2(\omega\,t+\theta)\rangle=1/2$ for all $\theta$.  Moreover, the quantity
+\begin{equation}
+Z = \sqrt{\rho\,T}
+\end{equation}
+is known as the characteristic {\em impedance}\/ of the string. The units of $Z$
+are force over velocity. Thus, the string impedance measures the
+typical tension required to produce a unit transverse velocity.
+Finally, according to Equation~(\ref{e7.38}), a traveling wave propagating in the positive $x$-direction
+is associated with a positive energy flux: {\em i.e.}, the wave {\em transports energy}\/
+in the positive $x$-direction. 
+
+Consider a wave propagating in the negative $x$-direction of the general form
+\begin{equation}
+y(x,t) = A\,\cos(k\,x+\omega\,t-\phi).
+\end{equation}
+It is easily demonstrated, from (\ref{e7.33}), that the mean energy flux
+associated with this wave is
+\begin{equation}
+\langle {\cal I}\rangle =- \frac{1}{2}\,\omega^2\,Z\,A^2.
+\end{equation}
+The fact that the energy flux is negative means that the wave transports energy in
+the negative $x$-direction. 
+
+Suppose that we have a superposition of a wave of amplitude $A_+$ propagating in the
+positive $x$-direction, and a wave of amplitude $A_-$ propagating
+in the negative $x$-direction, so that
+\begin{equation}
+y(x,t) = A_+\,\cos(k\,x-\omega\,t-\phi_+) + A_-\,\cos(k\,x+\omega\,t-\phi_-).
+\end{equation}
+According to (\ref{e7.33}), the instantaneous energy flux is written
+\begin{eqnarray}
+{\cal I}(x,t)&=& \omega^2\,Z\left[A_+\,\sin(k\,x-\omega\,t-\phi_+)+A_-\,\sin(k\,x+\omega\,t-\phi_-)\right]\nonumber\\[0.5ex] &&\left[A_+\,\sin(k\,x-\omega\,t-\phi_+)-A_-\,\sin(k\,x+\omega\,t-\phi_-)\right]\nonumber\\[0.5ex]
+&=& \omega^2\,Z\left[A_+^{\,2}\,\sin^2(k\,x-\omega\,t-\phi_+) - A_-^{\,2}\,\sin^2(k\,x+\omega\,t-\phi_-)\right].
+\end{eqnarray}
+Hence, the mean energy flux,
+\begin{equation}
+\langle {\cal I}\rangle = \frac{1}{2}\,\omega^2\,Z\,A_+^{\,2} - \frac{1}{2}\,\omega^2\,Z\,A_-^{\,2},
+\end{equation}
+is simply the difference between the mean fluxes associated with the waves traveling
+to the right ({\em i.e.}, in the positive $x$-direction) and to the left, calculated  separately. Recall, from the previous section, that a standing wave
+is a superposition of two traveling waves of {\em equal amplitude}, and frequency,
+propagating in opposite directions. It immediately follows, from the above expression,
+that a standing wave has {\em zero}\/ associated net energy flux. In other words,
+a standing wave does not give rise to net energy transport.
+
+Now, we saw earlier, in Section~\ref{s6.2}, that a small amplitude longitudinal wave in
+an elastic solid satisfies the wave equation,
+\begin{equation}\
+\frac{\partial^2 \psi}{\partial t^2} = c^2\,\frac{\partial^2 \psi}{\partial x^2},
+\end{equation}
+where $\psi(x,t)$ is the longitudinal wave displacement, $c=\sqrt{Y/\rho}$  the phase velocity of traveling waves in the solid, $Y$ the Young's modulus, and $\rho$ the
+mass density. Using similar analysis to that employed above, 
+we can derive an energy conservation equation of the form (\ref{e7.31}) from the
+above wave equation, where
+\begin{equation}
+{\cal E} = \frac{1}{2}\left[\rho\left(\frac{\partial\psi}{\partial t}\right)^2 + Y\left(\frac{\partial \psi}{\partial x}\right)^2\right]
+\end{equation}
+is the total wave energy per unit volume, and
+\begin{equation}
+{\cal I} = - Y\,\frac{\partial\psi}{\partial t}\,\frac{\partial\psi}{\partial x}
+\end{equation}
+the wave energy flux ({\em i.e.}, rate of energy flow per unit area) in the positive $x$-direction. 
+For a traveling wave of the form $\psi(x,t)= A\,\cos(k\,x-\omega\,t-\phi)$, the
+above expression yields
+\begin{equation}
+\langle {\cal I}\rangle =\frac{1}{2}\,\omega^2\,Z\,A^2,
+\end{equation}
+where
+\begin{equation}
+Z = \sqrt{\rho\,Y}
+\end{equation}
+is the  impedance of the solid. The units of $Z$ are pressure over velocity, so, in this
+case,  the
+impedance measures the typical pressure in the solid required to produce a
+unit longitudinal velocity. 
+Analogous arguments to the above reveal that the  impedance
+of an ideal gas of density $\rho$, pressure $p$, and ratio of specific heats $\gamma$,
+is (see Section~\ref{s6.3})
+\begin{equation}
+Z = \sqrt{\rho\,\gamma\,p}.
+\end{equation}
+
+\section{Transmission Lines}\label{s7.5}
+A {\em transmission line}\/ is typically used to carry high frequency electromagnetic
+signals over large distances: {\em i.e.}, distances sufficiently large  that the
+phase of the signal varies significantly along the line (which implies that the line is much longer than the
+wavelength of the signal). 
+A common example of a transmission line is an ethernet cable. 
+In its simplest form, a  transmission line consists of two parallel conductors
+which carry equal and opposite electrical currents $I(x,t)$, where $x$ measures
+distance along the line. Let $V(x,t)$ be the instantaneous voltage difference between the two
+conductors at position $x$. Consider a small section of the line lying
+between $x$ and $x+\delta x$.
+If $Q(t)$ is the electric charge on one of the conducting sections, and $-Q(t)$ the charge on the other, then charge
+conservation implies that $dQ/dt = I(x,t)-I(x+\delta x,t)$. However, according to
+standard electrical circuit theory,
+$Q(t) = {\cal C}\,\delta x\,V(x,t)$, where ${\cal C}$ is the {\em capacitance per unit length}\/
+of the line. Standard circuit theory also yields $V(x+\delta x,t)-V(x,t) = -{\cal L}\,\delta x\,\partial I(x,t)/\partial t$, where
+${\cal L}$ is the {\em inductance per unit length}\/ of the line.
+Taking the limit $\delta x\rightarrow 0$, we obtain
+the so-called {\em Telegrapher's equations}, 
+\begin{eqnarray}\label{e7.51}
+\frac{\partial V}{\partial t} &=& -\frac{1}{{\cal C}}\,\frac{\partial I}{\partial x},\\[0.5ex]
+\frac{\partial I}{\partial t} &=& -\frac{1}{{\cal L}}\,\frac{\partial V}{\partial x}.\label{e7.52}
+\end{eqnarray}
+These two equations can be combined to give
+\begin{equation}
+\frac{\partial^2 V}{\partial t^2} = \frac{1}{{\cal L}\,{\cal C}}\,\frac{\partial^2 V}{\partial x^2},
+\end{equation}
+together with an analogous  equation for $I$.
+In other words, $V(x,t)$ and $I(x,t)$ both
+obey a wave equation of the form (\ref{e7.22}}) in which the associated phase velocity
+is  $v=1/\sqrt{{\cal L}\,{\cal  C}}$.  
+Multiplying (\ref{e7.51}) by ${\cal C}\,V$,  (\ref{e7.52})
+by ${\cal L}\,I$, and then adding the two resulting expressions, we obtain the
+energy conservation equation
+\begin{equation}
+\frac{\partial {\cal E}}{\partial t} + \frac{\partial{\cal  I}}{\partial x} = 0,
+\end{equation}
+where
+\begin{equation}
+{\cal E} = \frac{1}{2}\,{\cal L}\,I^2 + \frac{1}{2}\,{\cal C}\,V^2
+\end{equation}
+is the electromagnetic {\em energy per unit length}\/ of the line, and
+\begin{equation}
+{\cal I} = I\,V
+\end{equation}
+is the electromagnetic {\em energy flux}\/ along the line  ({\em i.e.}, the energy per unit time which passes a given point) in the positive
+$x$-direction.
+Consider a signal propagating along the line, in the positive $x$-direction, whose associated current
+takes the form
+\begin{equation}
+I(x,t) = I_0\,\cos(k\,x-\omega\,t-\phi).
+\end{equation}
+It is easily demonstrated, from (\ref{e7.51}), that the corresponding voltage is 
+\begin{equation}
+V(x,t) = V_0\,\cos(k\,x-\omega\,t-\phi),
+\end{equation}
+where
+\begin{equation}
+V_0 = I_0\,Z.
+\end{equation}
+Here,
+\begin{equation}
+Z = \sqrt{\frac{{\cal L}}{{\cal C}}}
+\end{equation}
+is the characteristic {\em impedance}\/ of the line, and is measured in Ohms. It follows that the mean energy flux associated
+with the signal is written
+\begin{equation}
+\langle {\cal I}\rangle =\langle I\,V\rangle= \frac{1}{2}\,I_0\,V_0=  \frac{1}{2}\,Z\,I_0^{\,2} = \frac{1}{2}\,\frac{V_0^{\,2}}{Z}.
+\end{equation}
+Likewise, for a signal propagating along the line in the negative
+$x$-direction,
+\begin{eqnarray}
+I(x,t) &= &I_0\,\cos(k\,x+\omega\,t-\phi),\\[0.5ex]
+V(x,t) &=&-V_0\,\cos(k\,x+\omega\,t-\phi),
+\end{eqnarray}
+and
+the mean energy flux is
+\begin{equation}
+\langle {\cal I}\rangle =-\frac{1}{2}\,I_0\,V_0=  -\frac{1}{2}\,Z\,I_0^{\,2} =- \frac{1}{2}\,\frac{V_0^{\,2}}{Z}.
+\end{equation}
+
+As a specific example, consider a transmission line consisting of two uniform parallel conducting
+strips of width $w$ and perpendicular distance apart $d$, where $d\ll w$. It is
+easily demonstrated, using elementary electrostatic theory, that the capacitance
+per unit length of the line is
+\begin{equation}
+{\cal C} = \epsilon_0\,\frac{w}{d},
+\end{equation}
+where $\epsilon_0= 8.8542\times 10^{-12}\,{\rm C}^2\,{\rm N}^{-1}\,{\rm m}^{-2}$
+is the {\em electric permittivity of free space}. 
+Likewise, according to elementary magnetostatic theory, the line's inductance per
+unit length takes the form
+\begin{equation}
+{\cal L} = \mu_0\,\frac{d}{w},
+\end{equation}
+where $\mu_0 = 4\pi\times 10^{-7}\,{\rm N}\,{\rm A}^{-2}$ is the {\em magnetic
+permeability of free space}. 
+Thus, the phase velocity of a signal propagating down the line is
+\begin{equation}
+v = \frac{1}{\sqrt{{\cal L}\,{\cal C}}} = \frac{1}{\sqrt{\epsilon_0\,\mu_0}} = 2.998\times 10^8\,{\rm m}\,{\rm s}^{-1},
+\end{equation}
+which, of course, is the {\em velocity of light}\/ in vacuum [see Equation~(\ref{e7.111})]. Furthermore, the impedance of the line
+is
+\begin{equation}
+Z = \sqrt{\frac{{\cal L}}{{\cal C}}} =\frac{d}{w}\,Z_0,
+\end{equation}
+where the quantity
+\begin{equation}\label{e7.69x}
+Z_0 = \sqrt{\frac{\mu_0}{\epsilon_0}} =  376.73\,\Omega
+\end{equation}
+is known as the {\em impedance of free space}. 
+
+\section{Reflection and Transmission at Boundaries}\label{srefl}
+Consider two uniform semi-infinite strings which run along the $x$-axis, and are tied together at 
+$x=0$. Let the first string be of density per unit length $\rho_1$, and occupy the
+region $x<0$, and let the second string be of density per unit length $\rho_2$, and
+occupy the region $x>0$. Now, the tensions  in the two strings must
+be {\em equal}, otherwise the string interface would not be in force balance
+in the $x$-direction. So, let $T$ be the common tension. Suppose that a transverse wave of angular frequency $\omega$ is launched
+from a wave source at $x=-\infty$, and propagates towards the interface. Assuming that $\rho_1\neq \rho_2$, we would expect the
+wave incident on the interface to be partially {\em reflected}, and partially {\em transmitted}. Of course, the
+frequencies of the incident, reflected, and transmitted waves are all the {\em same}, since this
+property of the waves is ultimately determined by the oscillation frequency of the wave source. 
+Hence, in the region $x<0$, the wave displacement takes the form
+\begin{equation}
+y(x,t)= A_i\,\cos(k_1\,x-\omega\,t-\phi_i) + A_r\,\cos(k_1\,x+\omega\,t-\phi_r).
+\end{equation}
+ In other words, the displacement is a linear superposition
+of an {\em incident wave}\/ and a {\em reflected wave}. The incident wave propagates in the positive $x$-direction, and is of
+amplitude $A_i$,  wavenumber $k_1=\omega/v_1$, and 
+phase angle $\phi_i$.  The reflected wave  propagates in the negative $x$-direction, and is of
+amplitude $A_r$,  wavenumber $k_1=\omega/v_1$, and 
+phase angle $\phi_r$.
+Here, $v_1=\sqrt{T/\rho_1}$ is the phase velocity of traveling
+waves on the first string. 
+In the region $x>0$, the wave displacement takes the form
+\begin{equation}
+y(x,t)= A_t\,\cos(k_2\,x-\omega\,t-\phi_t).
+\end{equation}
+In other words, the displacement is solely due to a {\em transmitted wave}\/
+which propagates in the positive $x$-direction, and is of amplitude $A_t$,
+wavenumber $k_2=\omega/v_2$, and phase angle $\phi_t$. Here, $v_2=\sqrt{T/\rho_2}$
+is the phase velocity of traveling waves on the second string. 
+
+Let us now consider the matching conditions at the interface between the two
+strings: {\em i.e.}, at $x=0$. Firstly, since the two strings are tied together at $x=0$, their
+transverse displacements  at this point  must be equal to one another.
+In other words,
+\begin{equation}
+y(0_-,t) = y(0_+,t),
+\end{equation}
+or
+\begin{equation}
+A_i\,\cos(\omega\,t+\phi_i)  +A_r\,\cos(\omega\,t-\phi_r)=A_t\,\cos(\omega\,t+\phi_t).
+\end{equation}
+The only way in which the above equation can be satisfied for all values of $t$ is if $\phi_i=-\phi_r=\phi_t$. This being the case, the common $\cos(\omega\,t+\phi_i)$ factor
+cancels out, and we are left with
+\begin{equation}\label{e7.65}
+A_i + A_r = A_t.
+\end{equation}
+Secondly, since the two strings lack an energy dissipation
+mechanism, the energy flux into the interface must match that out of the
+interface. In other words,
+\begin{equation}
+\frac{1}{2}\,\omega^2\,Z_1\,(A_i^{\,2}-A_r^{\,2}) = \frac{1}{2}\,\omega^{\,2}\,Z_2\,A_t^{\,2},
+\end{equation}
+where $Z_1=\sqrt{\rho_1\,T}$ and $Z_2=\sqrt{\rho_2\,T}$ are the impedances of the
+first  and second strings, respectively. The above expression
+reduces to
+\begin{equation}
+Z_1\,(A_i+A_r)\,(A_i-A_r) = Z_2\,A_t^{\,2},
+\end{equation}
+which, when combined with Equation~(\ref{e7.65}), yields
+\begin{equation}\label{e7.68}
+Z_1\,(A_i-A_r) = Z_2\,A_t.
+\end{equation}
+Equations~(\ref{e7.65}) and (\ref{e7.68}) can be solved to give
+\begin{eqnarray}
+A_r &=&\left(\frac{Z_1-Z_2}{Z_1+Z_2}\right) A_i,\label{e7.69}\\[0.5ex]
+A_t &=& \left(\frac{2\,Z_1}{Z_1+Z_2}\right) A_i.\label{e7.70}
+\end{eqnarray}
+The {\em coefficient of reflection}, $R$, is defined as the ratio of the reflected to the incident
+energy flux: {\em i.e.}, 
+\begin{equation}\label{e7.71}
+R = \left(\frac{A_r}{A_i}\right)^2 = \left(\frac{Z_1-Z_2}{Z_1+Z_2}\right)^2.
+\end{equation}
+The {\em coefficient of transmission}, $T$, is defined as the ratio of the
+transmitted to the incident energy flux: {\em i.e.}, 
+\begin{equation}\label{e7.72}
+T = \frac{Z_2}{Z_1}\left(\frac{A_t}{A_i}\right)^2= \frac{4\,Z_1\,Z_2}{(Z_1+Z_2)^2}.
+\end{equation}
+Note that
+\begin{equation}
+R+T=1:
+\end{equation}
+{\em i.e.}, any incident wave energy which is not reflected is transmitted. 
+
+Suppose that the density per unit length of the second string, $\rho_2$,  tends to infinity, so that
+$Z_2=\sqrt{\rho_2\,T}\rightarrow\infty$. It follows from (\ref{e7.69}) and
+(\ref{e7.70}) that $A_r=-A_i$ and $A_t=0$. Likewise, (\ref{e7.71}) and (\ref{e7.72}) yield $R=1$ and $T=0$. Hence, the interface between the
+two strings is {\em stationary}\/ (since it oscillates with amplitude $A_t$), and there is no transmitted energy. In
+other words, the second string acts exactly like a {\em fixed boundary}. It follows that
+when a transverse wave on a string is incident on a fixed boundary then it is
+perfectly reflected with a  phase shift of $\pi$: {\em i.e.}, $A_r=-A_i$. 
+Thus, the resultant wave displacement on the string becomes
+\begin{eqnarray}
+y(x,t) &=& A_i\,\cos(k_1\,x-\omega\,t-\phi_i) -A_i\,\cos(k_1\,x+\omega\,t+\phi_i)\nonumber\\[0.5ex]
+&=&2\,A_i\,\sin(k_1\,x)\,\sin(\omega\,t+\phi_i),
+\end{eqnarray}
+where use has been made of the trigonometric identity $\cos a-\cos b \equiv 2\,\sin[(a+b)/2]\,\sin[(b-a)/2]$. We conclude that the incident and reflected waves interfere in such
+a manner as to produce a {\em standing wave}\/ with a {\em node}\/ at the fixed boundary.
+
+Suppose that the density per unit length of the second string, $\rho_2$,  tends to zero, so that
+$Z_2=\sqrt{\rho_2\,T}\rightarrow 0$. It follows from (\ref{e7.69}) and
+(\ref{e7.70}) that $A_r=A_i$ and $A_t=2\,A_i$. Likewise, (\ref{e7.71}) and (\ref{e7.72}) yield $R=1$ and $T=0$. Hence, the interface between the
+two strings oscillates at twice the amplitude of the incident wave ({\em i.e.}, the
+interface is a point of maximal amplitude oscillation), and there is no transmitted energy. In
+other words, the second string acts exactly like a {\em free boundary}. It follows that
+when a transverse wave on a string is incident on a free boundary then it is
+perfectly reflected with no phase shift: {\em i.e.}, $A_r=A_i$. 
+Thus, the resultant wave displacement on the string becomes
+\begin{eqnarray}
+y(x,t) &=& A_i\,\cos(k_1\,x-\omega\,t-\phi_i) +A_i\,\cos(k_1\,x+\omega\,t+\phi_i)\nonumber\\[0.5ex]
+&=&2\,A_i\,\cos(k_1\,x)\,\cos(\omega\,t+\phi_i),
+\end{eqnarray}
+where use has been made of the trigonometric identity $\cos a+\cos b\equiv 2\,\cos[(a+b)/2]\,\cos[(a-b)/2]$. We conclude that the incident and reflected waves interfere in such
+a manner as to produce a {\em standing wave}\/ with an {\em anti-node}\/ at the free boundary.
+
+Suppose that two strings of mass per unit length $\rho_1$ and $\rho_2$ are
+separated by a short section of string of mass per unit length $\rho_3$. Let all
+three strings have the common tension $T$. Suppose that the first and second strings occupy
+the regions $x<0$ and $x>a$, respectively. Thus, the middle string occupies the
+region $0\leq x\leq a$. Moreover, the interface between the first  and middle
+strings is at $x=0$, and  the interface between the middle and 
+second strings is at $x=a$. Suppose  that a  wave of angular frequency $\omega$ is launched
+from a wave source at $x=-\infty$, and propagates towards the two interfaces. We
+would expect this wave to be partially reflected and partially transmitted at the first
+interface ($x=0$), and the resulting transmitted wave to then be partially
+reflected and partially transmitted at the second interface ($x=a$). Thus, we can write the
+wave displacement in the region $x<0$ as
+\begin{equation}
+y(x,t) = A_i\,\cos(k_1\,x-\omega\,t) + A_r\,\cos(k_1\,x+\omega\,t),
+\end{equation}
+where $A_i$ is the amplitude of the incident wave, $A_r$ is the amplitude
+of the reflected wave, and $k_1=\omega/\sqrt{T/\rho_1}$. 
+Here, the phase angles of the two waves have been chosen so as to
+facilitate the matching process at $x=0$. 
+The wave displacement in the region $x>a$ takes the form
+\begin{equation}
+y(x,t) = A_t\,\cos(k_2\,x-\omega\,t-\phi_t),
+\end{equation}
+where $A_t$ is the amplitude of the final transmitted wave, and $k_2=\omega/\sqrt{T/\rho_2}$. Finally, the wave displacement in the region $0\leq x\leq a$ is written
+\begin{equation}
+y(x,t) = A_+\,\cos(k_3\,x-\omega\,t) + A_-\,\cos(k_3\,x+\omega\,t),
+\end{equation}
+where $A_+$ and $A_-$ are the amplitudes of the right and left moving waves on the
+middle string, respectively, and $k_3=\omega/\sqrt{T/\rho_3}$. Continuity of the
+transverse displacement at $x=0$ yields
+\begin{equation}\label{e7.79}
+A_i + A_r=A_+ + A_-,
+\end{equation}
+where a common factor $\cos(\omega\,t)$ has cancelled out.
+Continuity of the energy flux at $x=0$ gives
+\begin{equation}
+Z_1\,(A_i^{\,2}-A_r^{\,2}) = Z_3\,(A_+^{\,2}-A_-^{\,2}),
+\end{equation}
+so the previous two expressions can be combined to produce
+\begin{equation}\label{e7.81}
+Z_1\,(A_i-A_r)= Z_3\,(A_+-A_-).
+\end{equation}
+Continuity of the transverse displacement at $y=a$
+yields
+\begin{equation}
+A_+\,\cos(k_3\,a-\omega\,t)+ A_-\,\cos(k_3\,a+\omega\,t)=
+A_t\,\cos(k_2\,a-\omega\,t-\phi_t).
+\end{equation}
+Suppose that the length of the middle string is {\em one quarter of a wavelength}: {\em i.e.}, $k_3\,a=\pi/2$. Furthermore, let $\phi_t=k_2\,a-k_3\,a$. It follows that
+$\cos(k_3\,a-\omega\,t)= \sin(\omega\,t)$, $\cos(k_3\,a+\omega\,t)=-\sin(\omega\,t)$, and
+$\cos(k_2\,a-\omega\,t-\phi_t)=\sin(\omega\,t)$. Thus, canceling out a
+common factor $\sin(\omega\,t)$, the above expression yields
+\begin{equation}\label{e7.83}
+A_+-A_- = A_t.
+\end{equation}
+Continuity of the energy flux at $x=a$ gives
+\begin{equation}
+Z_3\,(A_+^{\,2}-A_-^{\,2}) = Z_2\,A_t^{\,2}.
+\end{equation}
+so the previous two equations can be combined to generate
+\begin{equation}\label{e7.85}
+Z_3\,(A_+ + A_-)= Z_2\,A_t.
+\end{equation}
+Equations (\ref{e7.79}) and (\ref{e7.85}) yield
+\begin{equation}
+A_i + A_r = \frac{Z_2}{Z_3}\,A_t,
+\end{equation}
+whereas Equations~(\ref{e7.81}) and (\ref{e7.83}) give
+\begin{equation}
+A_i-A_r=\frac{Z_3}{Z_1}\,A_t,
+\end{equation}
+so, combining the previous two expression, we obtain
+\begin{eqnarray}
+A_r &=& \left(\frac{Z_1\,Z_2-Z_3^{\,2}}{Z_1\,Z_2+Z_3^{\,2}}\right)A_i,\\[0.5ex]
+A_t &=&\left(\frac{2\,Z_1\,Z_3}{Z_1\,Z_2+Z_3^{\,2}}\right) A_i.
+\end{eqnarray}
+Finally, the overall coefficient of reflection is
+\begin{equation}
+R = \left(\frac{A_r}{A_i}\right)^2 = \left(\frac{Z_1\,Z_2-Z_3^{\,2}}{Z_1\,Z_2+Z_3^{\,2}}\right)^2,
+\end{equation}
+whereas the overall coefficient of transmission becomes
+\begin{equation}
+T = \frac{Z_2}{Z_1}\left(\frac{A_t}{A_i}\right)^2= \frac{4\,Z_1\,Z_2\,Z_3^{\,2}}{(Z_1\,Z_2+Z_3^{\,2})^2}=1-R.
+\end{equation}
+Now, suppose that the impedance of the middle string is the {\em geometric mean}\/ of
+the imped\-ances of the two outer strings: {\em i.e.}, $Z_3=\sqrt{Z_1\,Z_2}$.
+In this case, it is clear, from the above two equations, that $R=0$ and $T=1$. In
+other words, there is {\em no reflection}\/ of the incident wave, and all of the
+incident energy ends up being transmitted across the middle string from the leftmost to the
+rightmost string. Thus, if we wish to transmit transverse wave energy from a string
+of impedance $Z_1$ to a string of impedance  $Z_2$ (where $Z_2\neq Z_1$) in the most efficient manner
+possible---{\em i.e}, with no reflection of the incident energy flux---then we can
+do this by connecting the two strings via a short section of string whose length is
+one quarter of a wavelength, and whose impedance is $\sqrt{Z_1\,Z_2}$. 
+This procedure is known as {\em impedance matching}. 
+
+It should be reasonably clear that the above analysis of the reflection and transmission of
+transverse waves at a boundary between two strings is also applicable to the reflection
+and transmission of other types of wave incident on a boundary between two media of
+differing impedances. For example, consider  a {\em transmission line}, such
+as a co-axial cable. Suppose that the line occupies the region $x<0$, and is
+terminated (at $x=0$) by a load resistor of resistance $R_L$. Such a resistor might represent a
+radio antenna (which acts just like a resistor in an electrical circuit, except that
+the dissipated energy is radiated, rather than being converted into heat energy). 
+Suppose that a signal of angular frequency $\omega$ is sent down the line
+from a wave source at $x=-\infty$. The current and voltage on the line
+can be written
+\begin{eqnarray}
+I(x,t) &=& I_i\,\cos(k\,x-\omega\,t) + I_r\,\cos(k\,x+\omega\,t),\\[0.5ex]
+V(x,t) &=& I_i\,Z\,\cos(k\,x-\omega\,t) - Z\,I_r\,\cos(k\,x+\omega\,t),
+\end{eqnarray}
+where $I_i$ is the amplitude of the incident signal,  $I_r$ the amplitude
+of the signal reflected by the load, $Z$ the characteristic impedance of the line, and $k=\omega/v$.
+Here, $v$ is the characteristic phase velocity with which signals propagate down the line.
+See Section~\ref{s7.5}. Now, the resistor obeys Ohm's law,
+which yields
+\begin{equation}
+V(0,t) = I(0,t)\,R_L.
+\end{equation}
+It follows, from the three previous equations, that
+\begin{equation}
+I_r = \left(\frac{Z-R_L}{Z+R_L}\right) I_i.
+\end{equation}
+Hence, the coefficient of reflection, which is the ratio of the power reflected by the load to the power sent down the line, is
+\begin{equation}
+R = \left(\frac{I_r}{I_i}\right)^2=\left(\frac{Z-R_L}{Z+R_L}\right)^2.
+\end{equation}
+Furthermore, the coefficient of transmission, which is the ratio
+of the power absorbed by the load to the power sent down the line, 
+takes the form
+\begin{equation}
+T = 1-R = \frac{4\,Z\,R_L}{(Z+R_L)^2}.
+\end{equation}
+It can be seen, by comparison with Equations~(\ref{e7.71}) and (\ref{e7.72}),
+that the load terminating the line acts just like another  transmission line of imped\-ance $R_L$. Moreover, it is clear that power can only be efficiently sent down a transmission line, and transferred to a terminating load, when the impedan\-ce of the line matches the effective impedance
+of the load (which, in this case, is the same as the resistance of the load). In other words,
+when $Z=R_L$ there is no reflection of the signal sent down the line ({\em i.e.}, $R=0$),
+and all of the signal energy is therefore absorbed by the load ({\em i.e.}, $T=1$). As an example, a
+{\em half-wave antenna}\/ ({\em i.e.}, an antenna whose length is half the wavelength
+of the emitted radiation) has a characteristic impedance of $73\,\Omega$. Hence, a
+transmission line used to feed energy into such an antenna should also have
+a characteristic impedance of $73\,\Omega$. Suppose, however, that we encounter a situation in which the
+impedance of a transmission line, $Z_1$, does not match that of its
+terminating load, $Z_2$. Can anything be done to avoid  reflection of the signal sent down the line? It turns out,
+by analogy with the analysis presented above, that if the line is connected
+to the load via a short section of transmission line whose length is one quarter
+of the wavelength of the signal, and whose characteristic impedance is
+$Z_3=\sqrt{Z_1\,Z_2}$, then there is no reflection of the signal: {\em i.e.}, all of the signal power is absorbed by the
+load. A short section of transmission line used in this manner is known as a
+{\em quarter wave transformer}. 
+
+\section{Electromagnetic Waves}\label{s7.7}
+Consider a {\em plane electromagnetic wave}\/ propagating through a vacuum in the $z$-direction. Electromagnetic waves are, incidentally, the only
+commonly occurring waves which do not require a medium through which to
+propagate. 
+Suppose that the wave is {\em polarized in the $x$-direction}: {\em i.e.}, its electric
+component  oscillates in the $x$-direction. It follows that the magnetic
+component of the wave oscillates in the $y$-direction. According to standard electromagnetic theory, the wave is
+described by the following pair of coupled partial differential equations:
+\begin{eqnarray}\label{e7.107}
+\frac{\partial E_x}{\partial t} &=& - \frac{1}{\epsilon_0}\,\frac{\partial H_y}{\partial z},\label{e7.101}\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=& -\frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z},\label{e7.108}
+\end{eqnarray}
+where $E_x(z,t)$ is the {\em electric field-strength}, and $H_y(z,t)$ is the
+{\em magnetic intensity}\/ ({\em i.e.}, the magnetic field-strength divided by
+$\mu_0$). Observe that Equations~(\ref{e7.107}) and (\ref{e7.108}), which govern
+the propagation of electromagnetic waves through a vacuum, are analogous 
+to Equations~(\ref{e7.51}) and (\ref{e7.52}), which govern the propagation of
+electromagnetic signals down a transmission line. In particular, $E_x$ has units of
+voltage over length, $H_y$ has units of current over length, $\epsilon_0$ has
+units of capacitance per unit length, and $\mu_0$ has units of
+inductance per unit length. 
+
+Equations~(\ref{e7.107}) and (\ref{e7.108}) can be combined to give
+\begin{eqnarray}
+\frac{\partial^2 E_x}{\partial t^2}&=&\frac{1}{\epsilon_0\,\mu_0}\,\frac{\partial^2 E_x}{\partial z^2},\label{e7.103}\\[0.5ex]
+\frac{\partial^2 H_y}{\partial t^2}&=&\frac{1}{\epsilon_0\,\mu_0}\,\frac{\partial^2 H_y}{\partial z^2}.
+\end{eqnarray}
+It follows that  the electric and the magnetic components of an electromagnetic wave 
+propagating through a vacuum both separately satisfy
+a wave equation of the form (\ref{e7.1}). Furthermore,  the phase velocity of the
+wave  is clearly
+\begin{equation}\label{e7.111}
+c = \frac{1}{\sqrt{\epsilon_0\,\mu_0}}=2.998\times 10^8\,{\rm m\,s}^{-1}.
+\end{equation}
+
+Let us search for a traveling wave solution of (\ref{e7.107}) and (\ref{e7.108}), propagating in the
+positive $z$-direction, whose electric component has the form
+\begin{equation}\label{e7.112}
+E_x(z,t)=E_0\,\cos(k\,z-\omega\,t-\phi).
+\end{equation}
+As is easily demonstrated, this is a valid solution provided that $\omega=k\,c$. According to 
+(\ref{e7.101}), the magnetic component of the wave is written
+\begin{equation}\label{e7.113}
+H_y(z,t)=Z^{-1}\,E_0\,\cos(k\,z-\omega\,t-\phi),
+\end{equation}
+where
+\begin{equation}
+Z= Z_0 \equiv \sqrt{\frac{\mu_0}{\epsilon_0}},
+\end{equation}
+and $Z_0$ is the {\em impedance of free space}\/ [see Equation~(\ref{e7.69x})].
+Thus, the electric and magnetic components of an electromagnetic wave propagating through a vacuum are {\em mutually perpendicular},
+and also {\em perpendicular to the direction of propagation}. Moreover, the two components
+oscillate {\em in phase}\/ ({\em i.e}, they have simultaneous maxima and zeros), and
+the amplitude of the magnetic component is that of the electric component
+divided by the impedance of free space. 
+
+Multiplying (\ref{e7.107}) by $\epsilon_0\,E_x$, (\ref{e7.108})
+by $\mu_0\,H_y$, and adding the two resulting expressions, we obtain the
+energy conservation equation
+\begin{equation}
+\frac{\partial{\cal E}}{\partial t} + \frac{\partial{\cal I}}{\partial z} =0,
+\end{equation}
+where 
+\begin{equation}
+{\cal E} = \frac{1}{2}\left(\epsilon_0\,E_x^{\,2} + \mu_0\,H_y^{\,2}\right)
+\end{equation}
+is the {\em electromagnetic energy per unit volume} of the wave, whereas 
+\begin{equation}
+{\cal I} = E_x\,H_y
+\end{equation}
+is the wave {\em electromagnetic energy flux}\/ ({\em i.e.}, power per unit area) in the positive $z$-direction. The mean energy flux associated with the  $z$-directed electromagnetic wave specified
+in Equations~(\ref{e7.112}) and (\ref{e7.113}) is thus
+\begin{equation}\label{e7.117}
+\langle {\cal I} \rangle = \frac{1}{2}\,\frac{E_0^{\,2}}{Z}.
+\end{equation}
+For a similar wave propagating in the negative $z$-direction, it is easily
+demonstrated that
+\begin{eqnarray}
+E_x(z,t)&=&E_0\,\cos(k\,z+\omega\,t-\phi),\\[0.5ex]
+H_y(z,t)&=&-Z^{-1}\,E_0\,\cos(k\,z+\omega\,t-\phi),
+\end{eqnarray}
+and
+\begin{equation}
+\langle {\cal I} \rangle =- \frac{1}{2}\,\frac{E_0^{\,2}}{Z}.
+\end{equation}
+
+Consider a plane electromagnetic wave, polarized in the $x$-direction, which
+ propagates in the $z$-direction through a {\em transparent dielectric medium}, such as glass or water. As is well known, the electric component of the wave causes the neutral molecules making
+up the medium to {\em polarize}: {\em i.e.}, it causes a small separation to develop between the mean positions of the positively
+and negatively charged constituents of the molecules ({\em i.e.}, the atomic nuclii and the
+electrons). (Incidentally, it is easily
+shown that the magnetic component of the wave has a negligible influence on the 
+molecules, provided that the wave amplitude is sufficiently small that the wave electric
+field does not cause the electrons and nuclii to move with relativistic velocities.) Now, if the mean position of the positively charged
+constituents  of a given molecule, of net charge $+q$, develops a vector displacement
+${\bf d}$ with respect to the mean position of the negatively charged constituents, of net charge $-q$, in response to a wave electric field ${\bf E}$ then the
+associated {\em electric dipole moment}\/ is ${\bf p} = q\,{\bf d}$, where
+${\bf d}$ is generally parallel to ${\bf E}$.  Furthermore, if there are $N$
+such molecules per unit volume then the {\em dipole moment per unit volume}\/
+is written ${\bf P} = N\,q\,{\bf d}$. Now, in a conventional dielectric medium,
+\begin{equation}\label{e7.122}
+{\bf P} = \epsilon_0\,(\epsilon-1)\,{\bf E},
+\end{equation}
+where $\epsilon>1$ is a dimensionless quantity, known as the {\em relative dielectric
+constant}, which is a property of the medium in question. In the presence of a
+dielectric medium, Equations~(\ref{e7.107}) and (\ref{e7.108}) generalize to give
+\begin{eqnarray}
+\frac{\partial E_x}{\partial t} &=& - \frac{1}{\epsilon_0}\left(\frac{\partial P_x}{\partial t}+\frac{\partial H_y}{\partial z}\right),\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=& -\frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z}.
+\end{eqnarray}
+When combined with Equation~(\ref{e7.122}), these expressions yield
+\begin{eqnarray}
+\frac{\partial E_x}{\partial t} &=& - \frac{1}{\epsilon\,\epsilon_0}\,\frac{\partial H_y}{\partial z},\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=& -\frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z}.
+\end{eqnarray}
+It can be seen that the above equations are just like the corresponding vacuum equations,
+(\ref{e7.107}) and (\ref{e7.108}), except that $\epsilon_0$ has been replaced by
+$\epsilon\,\epsilon_0$. It immediately follows that the {\em phase velocity}\/ of an
+electromagnetic wave propagating through a dielectric medium is
+\begin{equation}
+v = \frac{1}{\sqrt{\epsilon\,\epsilon_0\,\mu_0}} = \frac{c}{n},
+\end{equation}
+where $c=1/\sqrt{\epsilon_0\,\mu_0}$ is the velocity of light in vacuum, and
+the quantity
+\begin{equation}
+n = \sqrt{\epsilon}
+\end{equation}
+is known as the {\em refractive index}\/ of the medium. Thus, an electromagnetic
+wave propagating through a transparent dielectric medium does so at a
+phase velocity which is {\em less}\/ than the velocity of light in vacuum by a
+factor $n$ (where $n>1$). Furthermore, the {\em impedance}\/ of a transparent dielectric medium becomes
+\begin{equation}
+Z = \sqrt{\frac{\mu_0}{\epsilon\,\epsilon_0}} = \frac{Z_0}{n},
+\end{equation}
+where $Z_0$ is the impedance of free space.
+
+Suppose that the plane $z=0$ forms the boundary between two transparent dielectric
+media of refractive indices $n_1$ and $n_2$. Let the first medium occupy the
+region $z<0$, and the second the region $z>0$. Suppose that a plane electromagnetic
+wave, polarized in the $x$-direction, and propagating in the positive $z$-direction, is launched toward the boundary
+from a wave source of angular frequency $\omega$ situated at $z=-\infty$. Of course, we expect the
+wave incident on the boundary to be partly reflected, and partly transmitted. 
+The wave electric and magnetic fields in the region $z<0$ are written
+\begin{eqnarray}
+E_x(z,t) &=& E_i\,\cos(k_1\,z-\omega\,t) + E_r\,\cos(k_1\,z+\omega\,t),\\[0.5ex]
+H_y(z,t) &=&Z_1^{-1}\,E_i\,\cos(k_1\,z-\omega\,t)- Z_1^{-1}\,E_r\,\cos(k_1\,z+\omega\,t),
+\end{eqnarray}
+where $E_i$ is the amplitude of (the electric component of) the incident wave, $E_r$ the amplitude of the reflected wave, $k_1=n_1\,\omega/c$, and $Z_1=Z_0/n_1$. 
+The wave electric and magnetic fields in the region $z>0$ take the form
+\begin{eqnarray}
+E_x(z,t) &=& E_t\,\cos(k_2\,z-\omega\,t),\\[0.5ex]
+H_y(z,t) &=&Z_2^{-1}\,E_t\,\cos(k_2\,z-\omega\,t),
+\end{eqnarray}
+where $E_t$ is the amplitude of the transmitted wave, $k_2=n_2\,\omega/c$, and
+$Z_2=Z_0/n_2$. 
+According to standard electromagnetic theory, the appropriate matching conditions at the
+boundary ($z=0$) are simply that $E_x$ and $H_y$ both be {\em continuous}. Thus,
+continuity of $E_x$ yields
+\begin{equation}
+E_i + E_r = E_t,
+\end{equation}
+whereas continuity of $H_y$ gives
+\begin{equation}
+n_1\,(E_i-E_r) = n_2\,E_t,
+\end{equation}
+since $Z^{-1}\propto n$. 
+It follows that
+\begin{eqnarray}\label{e7.137}
+E_r &=&\left(\frac{n_1-n_2}{n_1+n_2}\right)E_i,\\[0.5ex]
+E_t &=&\left(\frac{2\,n_1}{n_1+n_2}\right)E_i.
+\end{eqnarray}
+The coefficient of reflection, $R$,  is defined as the ratio of the reflected to the incident energy
+flux, so that
+\begin{equation}
+R = \left(\frac{E_r}{E_i}\right)^2 = \left(\frac{n_1-n_2}{n_1+n_2}\right)^2.
+\end{equation}
+Likewise, the coefficient of transmission, $T$, is the ratio of the
+transmitted to the incident energy flux, so that
+\begin{equation}
+T = \frac{Z_2^{-1}}{Z_1^{-1}}\left(\frac{E_t}{E_i}\right)^2= \frac{n_2}{n_1}\left(\frac{E_t}{E_i}\right)^2 = \frac{4\,n_1\,n_2}{(n_1+n_2)^2} = 1-R.\label{e7.140}
+\end{equation}
+
+It can be seen, first of all, that if $n_1=n_2$ then $E_r=0$ and $E_t=E_i$.
+In other words, if the two media have the same indices of refraction then
+there is no reflection  at the boundary between them, and the transmitted
+wave is consequently equal in amplitude to the incident wave. On the other
+hand, if $n_1\neq n_2$ then there is always some reflection at the boundary. Indeed,
+the amplitude of the reflected wave is roughly proportional to the difference between $n_1$ and $n_2$. This has  important practical consequences.
+We can only see a clean pane of glass in a window because some of the light incident
+on an air/glass boundary is reflected, due to the different refractive indicies
+of air and glass. As is well known, it is a lot more difficult to see glass when it is submerged in water. This is because the refractive indices of glass and water are quite similar, and so there is very little reflection of light
+incident on a water/glass boundary.
+
+According to Equation~(\ref{e7.137}), $E_r/E_i<0$ when $n_2> n_1$. 
+The negative sign indicates a $\pi$ radian  phase shift of the (electric component of the) reflected wave, with
+respect to the incident wave. We conclude that there is a $\pi$ radian phase shift of the reflected wave, relative to the incident wave, on reflection from a boundary with a
+medium of {\em greater}\/ refractive index. Conversely, there is no 
+ phase shift
+on reflection from a boundary with a medium of {\em lesser}\/ refractive index.
+
+Note that Equations~(\ref{e7.137})--(\ref{e7.140}) are analogous to Equations~(\ref{e7.69})--(\ref{e7.72}), with refractive index playing the role of
+impedance. This suggests, by analogy with earlier analysis, that we
+can prevent  reflection of an electromagnetic wave normally incident at a boundary between two
+transparent dielectric media of different refractive indices by separating the media
+by a thin transparent layer whose thickness is one quarter of a wavelength, and whose
+refractive index is the geometric mean of the refractive indices of the two
+media. This is the physical principle behind the {\em non-reflective lens coatings}\/ used
+in high-quality optical instruments. 
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Write the traveling wave $\psi(x,t)= A\,\cos(k\,x-\omega\,t)$ as a
+superposition of two standing waves. Write the standing wave $\psi(x,t)=A\,\cos(k\,x)\,\cos(\omega\,t)$ as a superposition of two traveling waves propagating in
+opposite directions. Show that the following superposition of
+traveling waves,
+$$
+\psi(x,t)= A\,\cos(k\,x-\omega\,t)+ A\,R\,\cos(k\,x+\omega\,t),
+$$
+can be written as the following superposition of standing waves,
+$$
+\psi(x,t) = A\,(1+R)\,\cos(k\,x)\,\cos(\omega\,t) + A\,(1-R)\,\sin(k\,x)\,\sin(\omega\,t).
+$$
+
+\item Demonstrate that for a transverse traveling wave propagating on a stretched
+string
+$$
+\langle {\cal I}\rangle = v\,\langle {\cal E}\rangle,
+$$
+where $\langle {\cal I}\rangle$ is the mean energy flux along the string due to the
+wave, $\langle {\cal E}\rangle$ is the mean wave energy per unit length, and $v$ is the
+phase velocity of the wave. Show that the same relation holds for a longitudinal traveling wave in an elastic solid. 
+
+\item A transmission line of characteristic impedance $Z$ occupies the region $x<0$, and is terminated at $x=0$. 
+Suppose that the current carried by the line takes the form
+$$
+I(x,t) = I_i\,\cos(k\,x-\omega\,t)+ I_r\,\cos(k\,x+\omega\,t)
+$$
+for $x\leq 0$,
+where $I_i$ is the amplitude of the incident signal, and $I_r$ the amplitude
+of the signal reflected at the end of the line. Let the end
+of the line be {\em open circuited}, such that the line is effectively terminated by an
+infinite resistance. Find the relationship between $I_r$ and $I_i$.
+Show that the current and voltage oscillate $\pi/2$ radians  out of phase everywhere along the line. Demonstrate that there is zero net flux of
+electromagnetic energy along the line. 
+
+\item Suppose that the transmission line in the previous exercise is {\em short
+circuited}, such that the line is effectively terminated by a negligible resistance.
+Find the relationship between $I_r$ and $I_i$. Show that the current and voltage oscillate $\pi/2$ radians out of phase everywhere along the line. Demonstrate that there is zero net flux of
+electromagnetic energy along the line. 
+
+\item Suppose that the transmission line of Exercise~3 is terminated
+by an inductor of inductance $L$, such that
+$$
+V(0,t)=L\,\frac{\partial  I(0,t)}{\partial t}.
+$$
+Find the relationship between $I_r$ and $I_i$. Obtain expressions for the current, $I(x,t)$, and the voltage, $V(x,t)$, along the line
+(which only involve $I_i$). Demonstrate that  the incident and the reflected
+wave both have zero net associated energy flux. 
+
+ \item Suppose that the transmission line of Exercise~3 is terminated
+by a capacitor of capacitance $C$. Find the relationship between $I_r$ and $I_i$. Obtain expressions for the current, $I(x,t)$, and the voltage, $V(x,t)$, along the line
+(which only involve $I_i$). Demonstrate that  the incident and the reflected
+wave both have zero net associated energy flux. 
+
+\item A lossy transmission line  has a resistance per unit length ${\cal R}$,
+in addition to an inductance per unit length ${\cal L}$, and a capacitance
+per unit length ${\cal C}$. The resistance can be considered to be in series with the
+inductance. Demonstrate that the Telegrapher's equations generalize to
+\begin{eqnarray}
+\frac{\partial V}{\partial t} &=&-\frac{1}{{\cal C}}\,\frac{\partial I}{\partial x},\nonumber\\[0.5ex]
+\frac{\partial I}{\partial t} &=&-\frac{{\cal R}}{{\cal L}}\,I - \frac{1}{\cal L}\,\frac{\partial V}{\partial x}\nonumber,
+\end{eqnarray}
+where $I(x,t)$ and $V(x,t)$ are the voltage and current along the line. 
+Derive an energy conservation equation of the form
+$$
+\frac{\partial{\cal E}}{\partial t} + \frac{\partial {\cal I}}{\partial x} =- {\cal R}\,I^2,
+$$
+where ${\cal E}$ is the energy per unit length along the line, and ${\cal I}$ the energy flux. 
+Give expressions for ${\cal E}$ and ${\cal I}$. What does the right-hand side of the
+above equation represent? Show that the current obeys the wave-diffusion equation
+$$
+\frac{\partial^2 I}{\partial t^2}+ \frac{{\cal R}}{{\cal L}}\,\frac{\partial I}{\partial t} = \frac{1}{{\cal L}\,{\cal C}}\,\frac{\partial^2 I}{\partial x^2}.
+$$
+ Consider the low resistance, high frequency limit $\omega\gg {\cal R}/{\cal L}$.
+ Demonstrate that a signal propagating down the line varies
+as
+\begin{eqnarray}
+I(x,t)& \simeq& I_0\,\cos[k\,(x-v\,t)]\,{\rm e}^{-x/\delta},\nonumber\\[0.5ex]
+V(x,t)&\simeq &Z\,I_0\,\cos[k\,(x-v\,t)+1/(k\,\delta)]\,{\rm e}^{-x/\delta},\nonumber
+\end{eqnarray}
+where $k=\omega/v$, $v=1/\sqrt{{\cal L}\,{\cal C}}$, $\delta = 2\,Z/{\cal R}$, and
+$Z=\sqrt{{\cal L}/{\cal C}}$. Show that $k\,\delta \gg 1$: {\em i.e.}, that the
+decay length of the signal is much longer than its wavelength. Estimate the
+maximum useful length of a low resistance, high frequency, lossy transmission line.
+
+\item Suppose that a transmission line consisting of two uniform parallel
+conducting strips of width $w$ and perpendicular distance apart $d$, where
+$d\ll w$, is terminated by a strip of material of uniform resistance per square
+meter $\sqrt{\mu_0/\epsilon_0}\,=376.73\,\Omega$. Such material is known
+as {\em spacecloth}. Demonstrate that a signal sent down the line is
+completely absorbed, with no reflection, by the spacecloth. Incidentally, the
+resistance of a uniform strip of material is proportional to its length, and
+inversely proportional to its cross-sectional area.
+
+\item At normal incidence, the mean radiant power from the Sun illuminating one square meter  of the Earth's surface is $1.35$\,kW. Show that the amplitude of the
+electric component of solar electromagnetic radiation at the
+Earth's surface is $1010\,{\rm V}\,{\rm m}^{-1}$. Demonstrate that the
+corresponding amplitude of the magnetic component is $2.7\,{\rm A}\,{\rm m}^{-1}$. 
+
+\item According to Einstein's famous formula, $E=m\,c^2$, where $E$ is energy,
+$m$ is mass, and $c$ is the velocity of light in vacuum. This formula implies that
+anything that possesses energy also has an effective mass. Use this idea to show
+that an electromagnetic wave of mean intensity (energy per unit time per unit area)
+$\langle {\cal I}\rangle$ has an associated mean pressure (momentum per unit
+time per unit area) $\langle {\cal P}\rangle = \langle {\cal I}\rangle/c$. Hence,
+estimate the pressure due to sunlight at the Earth's surface. 
+
+\item A glass lens is coated with a non-reflecting coating of thickness
+one quarter of a wavelength (in the coating)  of light whose 
+wavelength in air is $\lambda_0$. The index of refraction of the glass is $n$, and that
+of the coating is $\sqrt{n}$. The refractive index of air can be taken to be unity. Show that the coefficient of reflection for light normally incident on the lens from air is
+$$
+R \simeq 4\left(\frac{1-\sqrt{n}}{1+\sqrt{n}}\right)^2\sin^2\left(\frac{\pi}{2}\left[\frac{\lambda_0}{\lambda}-1\right]\right),
+$$
+where $\lambda$ is the wavelength of the incident light in air. Assume that $n=1.5$, and  that this value remains approximately constant for light whose wavelengths lie in  the visible band.
+Suppose that $\lambda_0 = 550\,{\rm nm}$, which corresponds to green light.
+It follows that $R=0$ for green light. What is $R$ for blue light of wavelength
+$\lambda=450\,{\rm nm}$, and for red light of wavelength $650\,{\rm nm}$? Comment
+on how effective the coating is at suppressing unwanted reflection of visible light incident
+on the lens.
+
+\item A glass lens is coated with a non-reflective coating whose thickness is one quarter of
+a wavelength (in the coating) of light whose frequency is $f_0$. Demonstrate that the
+coating also suppresses reflection from light whose frequency is $3\,f_0$, $5\,f_0$, {\em etc.}, assuming that the
+refractive index of the coating and the glass is frequency independent.
+
+\item An plane electromagnetic wave, polarized in the $x$-direction, and propagating in the $z$-direction though a
+conducting medium of conductivity $\sigma$ is governed by
+\begin{eqnarray}
+\frac{\partial E_x}{\partial t} &=&-\frac{\sigma}{\epsilon_0}\,E_x -\frac{1}{\epsilon_0}\,\frac{\partial H_y}{\partial z},\nonumber\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=& - \frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z}\nonumber,
+\end{eqnarray}
+where $E_x(z,t)$ and $H_y(z,t)$ are the electric and magnetic components
+of the wave.
+Derive an energy conservation equation of the form
+$$
+\frac{\partial{\cal E}}{\partial t} + \frac{\partial {\cal I}}{\partial z} =- \sigma\,E_x^{\,2},
+$$
+where ${\cal E}$ is the electromagnetic energy per unit volume, and ${\cal I}$ the electromagnetic energy flux. 
+Give expressions for ${\cal E}$ and ${\cal I}$. What does the right-hand side of the
+above equation represent? Demonstrate that $E_x$ obeys the wave-diffusion
+equation
+$$
+\frac{\partial^2 E_x}{\partial t^2} + \frac{\sigma}{\epsilon_0}\,\frac{\partial E_x}{\partial t}= c^2\,\frac{\partial^2 E_x}{\partial z^2},
+$$
+where $c=1/\sqrt{\epsilon_0\,\mu_0}$. In the high frequency, low conductivity limit
+$\omega\gg \sigma/\epsilon_0$, show that the above equation has the approximate solution
+$$
+E_x(z,t)\simeq E_0\,\cos[k\,(z-c\,t)]\,{\rm e}^{-z/\delta},
+$$
+where $k=\omega/c$, $\delta = 2/(Z_0\,\sigma)$, and $Z_0=\sqrt{\mu_0/\epsilon_0}$. 
+What is the corresponding solution for $H_y(z,t)$? Demonstrate that $k\,\delta \ll 1$: {\em i.e.}, that the wave penetrates many wavelengths into the medium.
+Estimate how far a high frequency electromagnetic wave penetrates into a low conductivity conducting medium.
+\end{enumerate}}

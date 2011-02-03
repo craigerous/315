@@ -1,0 +1,805 @@
+\chapter{Dispersive Waves}
+\section{Pulse Propagation}\label{s9.1}
+Consider a one-dimensional  wave pulse,
+\begin{equation}\label{e9.1}
+\psi(x,t) = \int_{-\infty}^\infty C(k)\,\cos(k\,x-\omega\,t)\,dk,
+\end{equation}
+ made up of a linear superposition of cosine waves, with a range of different wavenumbers, all
+traveling in the positive $x$-direction. The angular frequency, $\omega$,
+ of each of these waves is related to its wavenumber, $k$, via the so-called
+{\em dispersion relation}, which can be written schematically as
+\begin{equation}
+\omega = \omega(k).
+\end{equation}
+In general, this relation is derivable from the wave disturbance's equation of motion. 
+Up to now, we have only considered sinusoidal waves which have {\em linear}\/ dispersion
+relations  of the form
+\begin{equation}\label{e9.3}
+\omega = k\,v,
+\end{equation}
+where $v$ is a constant. The above expression immediately implies that  the waves all have the same {\em phase velocity},
+\begin{equation}
+v_p = \frac{\omega}{k} = v.
+\end{equation}
+ Substituting (\ref{e9.3}) into (\ref{e9.1}),
+we obtain
+\begin{equation}
+\psi(x,t)=\int_{-\infty}^\infty C(k)\,\cos[k\,(x-v\,t)]\,dk,
+\end{equation}
+which is clearly the equation of a wave pulse that propagates in the positive
+$x$-direction, at the fixed speed $v$, {\em without changing shape}\/ (see Chapter~\ref{c8}). The above analysis would
+seem to suggest that arbitrarily shaped  wave pulses generally propagate at the same speed as sinusoidal
+waves, and do so without dispersing or, otherwise, changing shape. In fact,
+these statements are only true of pulses made up of superpositions of sinusoidal waves with {\em linear}\/ dispersion
+relations. There are, however, many types of sinusoidal wave whose dispersion relations
+are {\em nonlinear}. For instance, the dispersion relation of sinusoidal
+electromagnetic waves propagating through an unmagnetized plasma is (see Section~\ref{s9.2})
+\begin{equation}\label{e9.6}
+\omega = \sqrt{k^2\,c^2 + \omega_p^{\,2}},
+\end{equation}
+where $c$ is the speed of light in vacuum, and $\omega_p$ is a
+constant, known as the {\em plasma frequency}, which depends on the properties of
+the plasma [see Equation~(\ref{e9.27})]. Moreover, 
+the dispersion relation of sinusoidal surface waves in deep
+water is (see Section~\ref{s9.4})
+\begin{equation}\label{e9.7}
+\omega = \sqrt{g\,k+ \frac{T}{\rho}\,k^3},
+\end{equation}
+where $g$ is the acceleration due to gravity, $T$ the surface tension, and $\rho$
+the mass density. Sinusoidal waves which satisfy nonlinear dispersion relations, such as (\ref{e9.6}) and (\ref{e9.7}), are known
+as {\em dispersive waves}, as opposed to waves which satisfy linear
+dispersion relations, such as (\ref{e9.3}), which are known as {\em non-dispersive}\/ waves. As we saw above, a wave pulse made up of a linear superposition of non-dispersive sinusoidal waves,
+all traveling in the same direction, propagates at the common phase velocity
+of these waves, without changing shape. But, how does a wave pulse
+made up of a linear superposition of dispersive sinusoidal waves evolve in time?
+
+Suppose that
+\begin{equation}
+C(k) = \frac{1}{\sqrt{2\pi\,\sigma_k^{\,2}}}\,\exp\left(-\frac{(k-k_0)^2}{2\,\sigma_k^{\,2}}\right):
+\end{equation}
+{\em i.e.}, the  function $C(k)$ in (\ref{e9.1}) is a {\em Gaussian}, of characteristic width $\sigma_k$, centered on wavenumber $k=k_0$. It follows, from the properties of the
+Gaussian function, that $C(k)$ is negligible for $|k-k_0|\gtapp 3\,\sigma_k$. 
+Thus, the only significant contributions to the wave 
+integral
+\begin{equation}\label{e9.9}
+\psi(x,t) = \int_{-\infty}^\infty\frac{1}{\sqrt{2\pi\,\sigma_k^{\,2}}}\,\exp\left(-\frac{(k-k_0)^2}{2\,\sigma_k^{\,2}}\right)\cos(k\,x-\omega\,t)\,dk
+\end{equation}
+come from a small region of $k$-space centered on $k=k_0$. Let us
+Taylor expand the dispersion relation, $\omega=\omega(k)$, about $k=k_0$.
+Neglecting second-order terms in the expansion, we obtain
+\begin{equation}\label{e9.11}
+\omega \simeq \omega(k_0) + (k-k_0)\,\frac{d\omega(k_0)}{dk}.
+\end{equation}
+It follows that
+\begin{equation}\label{e9.12}
+k\,x-\omega\,t \simeq  k_0\,x-\omega_0\,t + (k-k_0)\,(x-v_g\,t),
+\end{equation}
+where $\omega_0=\omega(k_0)$, and
+\begin{equation}\label{e9.12a}
+v_g = \frac{d\omega(k_0)}{dk}
+\end{equation}
+is a constant with the dimensions of velocity. 
+Now, if $\sigma_k$ is sufficiently small then the neglect of second-order terms in the expansion (\ref{e9.12}) is a good approximation,  and  expression (\ref{e9.9}) becomes
+\begin{eqnarray}
+\psi(x,t) &\simeq&  \frac{\cos(k_0\,x-\omega_0\,t)}{\sqrt{2\pi\,\sigma_k^{\,2}}}\int_{-\infty}^\infty
+\exp\left(-\frac{(k-k_0)^2}{2\,\sigma_k^{\,2}}\right)\,\cos[(k-k_0)\,(x-v_g\,t)]\,dk\nonumber\\[0.5ex]
+&&-  \frac{\sin(k_0\,x-\omega_0\,t)}{\sqrt{2\pi\,\sigma_k^{\,2}}}\int_{-\infty}^\infty
+\exp\left(-\frac{(k-k_0)^2}{2\,\sigma_k^{\,2}}\right)\,\sin[(k-k_0)\,(x-v_g\,t)]\,dk,\nonumber\\[0.5ex]&&\label{e9.13}
+\end{eqnarray}
+where use has been made of a standard trigonometric identity. 
+The integral involving $\sin[(k-k_0)\,(x-v_g\,t)]$ is zero, by symmetry. Moreover,
+an examination of Equations~(\ref{e8.15})--(\ref{e8.18}) reveals that
+\begin{equation}
+ \frac{1}{\sqrt{2\pi\,\sigma_k^{\,2}}}\int_{-\infty}^\infty
+\exp\left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right)\,\cos(k\,x)\,dk=
+\exp\left(-\frac{x^2}{2\,\sigma_x^{\,2}}\right),
+\end{equation}
+where $\sigma_x=1/\sigma_k$. Hence, by analogy with the above expression, (\ref{e9.13}) reduces to
+\begin{equation}\label{e9.15}
+\psi(x,t)\simeq \exp\left(-\frac{(x-v_g\,t)^2}{2\,\sigma_x^{\,2}}\right)\,\cos(k_0\,x-\omega_0\,t).
+\end{equation}
+This is clearly the equation of a wave pulse, of wavenumber $k_0$ and angular frequency $\omega_0$,
+with a {\em Gaussian envelope,} of characteristic width $\sigma_x$, whose peak (which is located by setting the argument of the exponential to zero) has the
+equation of motion
+\begin{equation}
+x = v_g\,t.
+\end{equation}
+In other words, the  pulse peak---and, hence, the pulse itself---propagates at
+the velocity $v_g$, which is known as the {\em group velocity}. Of course, in the case of non-dispersive waves, the group
+velocity is the same as the phase velocity (since, if $\omega=k\,v$ then $\omega/k=d\omega/dk = v$). However, for the case of dispersive waves, the two velocities are, in general,
+{\em different}. 
+
+Equation~(\ref{e9.15}) indicates that, as the wave pulse propagates, its envelope
+remains the same shape. Actually, this result is misleading, and is only  obtained because
+of the neglect of second-order terms in  the  expansion (\ref{e9.12}). If we keep more terms in this expansion then we can show that the wave pulse
+does actually change shape as it propagates. However, this demonstration is most readily effected  by means of the
+following simple argument. The pulse extends in Fourier space from $k_0-\Delta k/2$ to
+$k_0+\Delta k/2$, where $\Delta k \sim \sigma_k$. Thus, part of the pulse
+propagates at the velocity $v_g(k_0-\Delta k/2)$, and part at the
+velocity $v_g(k_0+\Delta k/2)$. Consequently,  the pulse {\em spreads out}\/ as it propagates, since some parts of it move faster than others. 
+Roughly speaking, the spatial extent of the pulse in real space grows as
+\begin{equation}
+\Delta x\sim (\Delta x)_0+ \left[v_g(k_0+\Delta k/2)-v_g(k_0-\Delta k/2)\right] t\sim
+(\Delta x)_0+\frac{dv_g(k_0)}{dk}\,\Delta k\,t,
+\end{equation}
+where $(\Delta x)_0\sim \sigma_x=\sigma_k^{-1}$ is the extent of the pulse at $t=0$.
+Hence, from (\ref{e9.12a}),
+\begin{equation}
+\Delta x \sim (\Delta x)_0 + \frac{d^2\omega(k_0)}{dk^2}\,\frac{t}{(\Delta x)_0}.
+\end{equation}
+We, thus, conclude that the spatial extent of the pulse grows {\em linearly}\/ in time, at a rate
+proportional to the second derivative of the dispersion relation with respect to $k$ (evaluated at the pulse's central wavenumber). This effect is
+known as  {\em pulse  dispersion}. In summary, a wave pulse made up of a linear superposition
+of dispersive sinusoidal waves, with a range of  different wavenumbers, propagates at the {\em group velocity}, and also {\em gradually disperses}\/ as time progresses. 
+
+\section{Electromagnetic Wave Propagation in Plasmas}\label{s9.2}
+Consider a point particle of mass $m$ and electric charge $q$ interacting with a sinusoidal
+electromagnetic wave propagating in the $z$-direction. Provided that the wave amplitude is not sufficiently large to
+cause the particle to move at relativistic speeds, the electric
+component of the wave exerts a much greater force on the particle than the magnetic
+component. (This follows, from standard electrodynamics, because the ratio of the magnetic to the electric force is of order $B_0\,v/E_0$,
+where $E_0$ is the amplitude of the wave electric field-strength, $B_0=E_0/c$ the amplitude of the
+wave magnetic field-strength,  $v$ the particle velocity, and $c$ the velocity of light in vacuum. Hence, the ratio of the forces is approximately $v/c$.) Suppose that the electric component of the wave oscillates in the $x$-direction, and takes the form
+\begin{equation}\label{e9.19}
+E_x(z,t) = E_0\,\cos(k\,z-\omega\,t),
+\end{equation}
+where $k$ is the wavenumber, and $\omega$ the angular frequency.
+The equation of motion of the particle is thus
+\begin{equation}\label{e9.20}
+m\,\frac{d^2 x}{dt^2} = q\,E_x,
+\end{equation}
+where $x$ measures its wave-induced displacement in the $x$-direction.
+The above equation can easily be solved to give
+\begin{equation}\label{e9.21}
+x = -\frac{q\,E_0}{m\,\omega^2}\,\cos(k\,z-\omega\,t).
+\end{equation}
+Thus, the wave causes the particle to execute sympathetic simple harmonic
+oscillations, in the $x$-direction, with an amplitude which is directly proportional to  its charge,
+and inversely proportional to its mass.
+
+Suppose that the wave is actually propagating through an unmagnetized electrically neutral  {\em plasma}\/ consisting
+of free electrons, of mass $m_e$ and charge $-e$, and free ions, of mass $m_i$
+and charge $+e$. Since the plasma is assumed to be electrically neutral, each species must have the same equilibrium number density, 
+$n_e$. Now, given that the electrons are much less massive than the ions ({\em i.e.}, $m_e\ll m_i$), but have the same charge (modulo a sign), it follows from (\ref{e9.21}) that the wave-induced oscillations of the electrons
+are of much higher amplitude than those of the ions. In fact, to a first approximation,
+we can say that the electrons oscillate whilst the ions remain stationary. 
+Assuming that the electrons and ions are  evenly distributed throughout the
+plasma, the wave-induced displacement of an individual electron generates an effective {\em electric
+dipole moment}\/ in the $x$-direction of the form $p_x = -e\,x$ (the other component of  the dipole is
+a stationary ion of charge $+e$ located at $x=0$).  
+Hence, the $x$-directed
+{\em electric dipole moment per unit volume}\/ is
+\begin{equation}\label{e9.22a}
+P_x = n_e\,p_x = -n_e\,e\,x.
+\end{equation}
+Given that all of the
+electrons oscillate according to Equation~(\ref{e9.21}) (with $q=-e$ and $m=m_e$),
+we obtain
+\begin{equation}\label{e9.22}
+ P_x= - \frac{n_e\,e^2\,E_0}{m_e\,\omega^2}\,\cos(k\,z-\omega\,t).
+\end{equation}
+
+Now, we saw earlier, in Section~\ref{e7.7}, that the $z$-directed propagation of an electromagnetic
+wave, polarized in the $x$-direction ({\em i.e.}, with its electric component
+oscillating in the $x$-direction), through a dielectric medium is
+governed by
+\begin{eqnarray}\label{e9.23}
+\frac{\partial E_x}{\partial t}  &=&-\frac{1}{\epsilon_0}\left(\frac{\partial P_x}{\partial t} + \frac{\partial H_y}{\partial z}\right),\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=&-\frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z}.\label{e9.24}
+\end{eqnarray}
+Thus, writing $E_x$ in the form (\ref{e9.19}), $H_y$ in the form
+\begin{equation}
+H_y(z,t) = Z^{-1}\,E_0\,\cos(k\,z-\omega\,t),
+\end{equation}
+where $Z$ is the effective {\em impedance}\/ of the plasma, and $P_x$ in the form (\ref{e9.22}),
+Equations (\ref{e9.23}) and (\ref{e9.24})  can easily be shown to yield the nonlinear dispersion relation (see Exercise 1)
+\begin{equation}\label{e9.26}
+\omega^2 = k^2\,c^2+\omega_p^{\,2},
+\end{equation}
+where $c=1/\sqrt{\epsilon_0\,\mu_0}$ is the velocity of light in vacuum, and the
+so-called {\em plasma frequency}, 
+\begin{equation}\label{e9.27}
+\omega_p = \left(\frac{n_e\,e^2}{\epsilon_0\,m_e}\right)^{1/2},
+\end{equation}
+ is the characteristic frequency of
+{\em collective}\/ electron oscillations in the plasma. Equations~(\ref{e9.23}) and (\ref{e9.24}) also yield
+\begin{equation}\label{e9.28}
+Z = \frac{Z_0}{n},
+\end{equation}
+where $Z_0=\sqrt{\mu_0/\epsilon_0}$ is the impedance of free space, and
+\begin{equation}\label{e9.29}
+n = \frac{k\,c}{\omega} = \left(1-\frac{\omega_p^{\,2}}{\omega^2}\right)^{1/2}
+\end{equation}
+ the effective {\em refractive index}\/ of the plasma. We, thus, conclude that sinusoidal electromagnetic
+waves propagating through a plasma have a {\em nonlinear}\/ dispersion relation.
+Moreover, it is clear  that this nonlinearity arises because the effective refractive index of the plasma is {\em frequency dependent}. 
+
+The expression (\ref{e9.29}) for the refractive index of a plasma has some rather
+unusual properties. For wave frequencies lying above the plasma frequency ({\em i.e.}, $\omega>\omega_p$),  it yields a real refractive index which is
+{\em less than unity}. On the other hand, for wave frequencies lying below the plasma
+frequency ({\em i.e.}, $\omega<\omega_p$),  it yields an {\em imaginary}\/ refractive index. Neither of these results  makes much sense. The former result is problematic because if the
+refractive index is less than unity then the wave {\em phase velocity}, $v_p=\omega/k = c/n$, becomes
+{\em superluminal}\/ ({\em i.e.}, $v_p>c$),  and superluminal velocities are generally thought to be unphysical. 
+The latter result is problematic because an imaginary refractive index implies an
+imaginary phase velocity, which seems utterly meaningless. Let us investigate further.
+
+Consider, first of all,  the  high frequency limit, $\omega>\omega_p$. According to
+(\ref{e9.29}),   a sinusoidal electromagnetic wave of angular frequency $\omega>\omega_p$ propagates through the plasma
+at the superluminal phase velocity
+\begin{equation}\label{e9.30}
+v_p = \frac{\omega}{k} = \frac{c}{n}=\frac{c}{(1-\omega_p^{\,2}/\omega^2)^{1/2}}.
+\end{equation}
+ But, is this really unphysical? 
+As is well-known, Einstein's theory of relativity forbids {\em information}\/ from traveling faster
+than the velocity of light in vacuum, since this would violate {\em causality}\/ ({\em i.e.}, it would be possible to transform to a valid frame of reference in which an effect occurs prior to its cause.) However, a sinusoidal wave with a unique
+frequency, and an infinite spatial extent, does not transmit any information. (Recall, for
+instance, from Section~\ref{s8.3}, that the carrier wave in an AM radio signal transmits no information.) So, at what speed do electromagnetic waves in a plasma transmit information? Well,
+the most obvious way of using such waves to transmit information  would be to send a message via {\em Morse code}. In other words, we could
+transmit a message by means of short {\em wave pulses}, of varying lengths and interpulse spacings, which are made to propagate through the plasma. The pulses in question would definitely transmit information, so the velocity of information propagation must be the same as that of the pulses: {\em i.e.}, the {\em group velocity}, $v_g=d\omega/dk$. Differentiating the dispersion relation (\ref{e9.26}) with respect to
+$k$, we obtain
+\begin{equation}
+2\,\omega\,\frac{d\omega}{dk} = 2\,k\,c^2,
+\end{equation}
+or
+\begin{equation}
+\frac{\omega}{k}\,\frac{d\omega}{dk }= v_p\,v_g = c^2.
+\end{equation}
+Thus, it follows, from (\ref{e9.30}), that the group velocity of high frequency electromagnetic waves in a plasma is
+\begin{equation}\label{e9.33}
+v_g = n\,c=(1-\omega_p^{\,2}/\omega^2)^{1/2}\,c.
+\end{equation}
+Note that the group velocity is {\em subluminal} ({\em i.e.}, $v_g<c$). Hence, as
+long as we accept that high frequency electromagnetic waves transmit information through a plasma at
+the group velocity, rather than the phase velocity, then there is no problem with causality. 
+Incidentally, it should be clear, from this discussion, that the phase velocity of dispersive 
+waves has very little physical significance. It is the group velocity which matters. For instance, according to Equations~(\ref{e7.117}), (\ref{e9.28}), (\ref{e9.29}), and (\ref{e9.33}), the mean flux of electromagnetic energy in
+the $z$-direction due to a high frequency sinusoidal wave propagating through a plasma is given by
+\begin{equation}
+\langle {\cal I}\rangle = \frac{1}{2}\,\epsilon_0\,E_0^{\,2}\,n\,c = \frac{1}{2}\,\epsilon_0\,E_0^{\,2}\,v_g,
+\end{equation}
+since $Z_0=\sqrt{\mu_0/\epsilon_0}$ and $c=1/\sqrt{\epsilon_0\,\mu_0}$. 
+Thus, if the group velocity is zero, as is the case when $\omega = \omega_p$, then there is zero energy flux associated with the wave.
+
+The fact that the energy flux and the group velocity of a sinusoidal wave propagating through a plasma both go to zero when $\omega=\omega_p$
+suggests that the wave ceases to propagate at all in the low frequency limit, $\omega<\omega_p$. This observation leads us to search for
+spatially decaying standing wave solutions to (\ref{e9.23}) and (\ref{e9.24}) of the form,
+\begin{eqnarray}\label{e9.35}
+E_x(z,t) &=& E_0\,{\rm e}^{-k\,z}\,\cos(\omega\,t),\\[0.5ex]
+H_y(z,t)&=&Z^{-1}\,E_0\,{\rm e}^{-k\,z}\,\sin(\omega\,t).\label{e9.36}
+\end{eqnarray}
+It follows from (\ref{e9.20}) and (\ref{e9.22a}) that
+\begin{equation}\label{e9.37}
+P_x = - \frac{n_e\,e^2\,E_0}{m_e\,\omega^2}\,{\rm e}^{-k\,z}\,\cos(\omega\,t).
+\end{equation}
+Substitution into Equations~(\ref{e9.23}) and (\ref{e9.24})  reveals that
+(\ref{e9.35}) and (\ref{e9.36}) are indeed the correct solutions when $\omega<\omega_p$ (see Exercise 2), and also yields
+\begin{equation}\label{e9.38}
+k\,c=\sqrt{\omega_p^{\,2}-\omega^2},
+\end{equation}
+as well as
+\begin{equation}\label{e9.39}
+Z = Z_0\,\frac{\omega}{k\,c}= Z_0\,(\omega_p^{\,2}/\omega^2-1)^{-1/2}.
+\end{equation}
+Furthermore, the mean $z$-directed electromagnetic energy flux becomes
+\begin{equation}
+\langle {\cal I}\rangle =\langle E_x\,H_y\rangle = E_0^{\,2}\,Z^{-1}\,{\rm e}^{-2\,k\,z}\,\langle\cos(\omega\,t)\,\sin(\omega\,t)\rangle=0.
+\end{equation}
+The above analysis demonstrates  that a sinusoidal electromagnetic wave cannot propagate through a plasma when its frequency lies below the plasma frequency. Instead, the amplitude of the wave {\em decays exponentially}\/
+into the plasma. Moreover, the electric and magnetic components of the
+wave oscillate in {\em phase quadrature}\/ ({\em i.e.}, $\pi/2$ radians out of phase), and
+the wave consequentially has {\em zero}\/ associated net energy flux. This suggests that a
+plasma {\em reflects}, rather than {\rm absorbs}, an incident electromagnetic wave whose frequency is less than the plasma frequency (since if the wave were absorbed
+then there would be a net flux of energy into the plasma). Let us investigate what happens
+when a low frequency electromagnetic wave is normally incident on a plasma in more detail.
+
+Suppose that the region $z<0$ is a vacuum, and the region $z>0$ is
+occupied by a plasma of plasma frequency $\omega_p$. Let the wave electric and
+magnetic fields in the vacuum region take the form
+\begin{eqnarray}\label{e9.41}
+E_x(z,t) &=& E_i\,\cos[(\omega/c)\,(z-c\,t)] + E_r\,\cos[(\omega/c)\,(z+c\,t)+\phi_r],\\[0.5ex]
+H_y(z,t) &=& E_i\,Z_0^{-1}\,\cos[(\omega/c)\,(z-c\,t)] - E_r\,Z_0^{-1}\,\cos[(\omega/c)\,(z+c\,t)+\phi_r].\label{e9.42}
+\end{eqnarray}
+Here, $E_i$ is the amplitude of an electromagnetic wave of frequency $\omega<\omega_p$ which is incident on the plasma, whereas $E_r$ is the amplitude
+of the reflected wave, and $\phi_r$ the phase  of this wave with respect to the
+incident wave. Moreover, we have made use of the vacuum dispersion relation $\omega=k\,c$. 
+The wave electric and magnetic fields in the plasma are written
+\begin{eqnarray}
+E_x(z,t) &=& E_t\,{\rm e}^{-(\omega/c)\,\alpha\,z}\,\cos(\omega\,t+\phi_t),\\[0.5ex]
+H_y(z,t) &=& E_t\,Z_0^{-1}\,\alpha\,{\rm e}^{-(\omega/c)\,\alpha\,z}\,\sin(\omega\,t+\phi_t),
+\end{eqnarray}
+where $E_t$ is the amplitude of the decaying wave which penetrates into the
+plasma, $\phi_t$ is the phase of this wave with respect to the incident wave,
+and
+\begin{equation}
+\alpha = \left(\frac{\omega_p^{\,2}}{\omega^2}-1\right)^{1/2}.
+\end{equation}
+The appropriate matching conditions are the continuity of $E_x$ and $H_y$ at $z=0$:
+{\em i.e.},
+\begin{eqnarray}\label{e9.46}
+E_i\,\cos(\omega\,t) + E_r\,\cos(\omega\,t+\phi_r) &=& E_t\,\cos(\omega\,t+\phi_t),\\[0.5ex]
+E_i\,\cos(\omega\,t) - E_r\,\cos(\omega\,t+\phi_r) &=& E_t\,\alpha\,\sin(\omega\,t+\phi_t).\label{e9.47}
+\end{eqnarray}
+These two equations, which must be satisfied at all times, can be solved to give (see Exercise 3)
+\begin{eqnarray}
+E_r &=& E_i,\label{e9.48}\\[0.5ex]
+\tan\phi_r &=& \frac{2\,\alpha}{1-\alpha^2},\\[0.5ex]
+E_t &=& \frac{2\,E_i}{(1+\alpha^2)^{1/2}},\\[0.5ex]
+\tan\phi_t &=& \alpha.\label{e9.51}
+\end{eqnarray}
+Thus, the coefficient of reflection,
+\begin{equation}
+R = \left(\frac{E_r}{E_i}\right)^2  =1,
+\end{equation}
+is {\em unity}, which implies that all of the incident wave energy is reflected
+by the plasma, and there is no energy absorption. The relative phase
+of the reflected wave varies from 0 (when $\omega=\omega_p$) to
+$\pi$  (when $\omega\ll \omega_p$) radians.
+
+The outer regions of the Earth's atmosphere consist of a tenuous gas which is
+{\em partially ionized}\/ by ultraviolet and X-ray radiation from the Sun, as well as by cosmic rays incident from outer space. This
+region, which is known as the {\em ionosphere}, acts like a plasma
+as far as its interaction with radio waves is concerned. The ionosphere
+consists of many layers. The two most important, as far as radio
+wave propagation is concerned, are the {\em E layer}, which lies at an altitude of 
+about 90 to 120 km above the Earth's surface, and the {\em F layer}, which
+lies at an altitude of about 120 to 400 km. The plasma frequency in the
+F layer is generally larger than that in the E layer, because of the greater
+density of free electrons in the former (recall that $\omega_p\propto \sqrt{n_e}$).
+The free electron number density in the
+E layer drops steeply after sunset, due to the lack of solar ionization combined with the gradual recombination of free electrons
+and ions. Consequently, the plasma frequency in the E layer also drops steeply after sunset. Recombination in the F layer occurs at a much slower rate, so there is nothing like
+as great a reduction in the plasma frequency of this layer at night.
+Very High Frequency (VHF) radio signals ({\em i.e.}, signals with frequencies greater than 30 MHz), which include FM radio and TV signals, have frequencies well in excess
+of the plasma frequencies of both the E and the F layers, and thus pass straight through
+the ionosphere. Short Wave (SW) radio signals ({\em i.e.}, signals with frequencies in the
+range 3 to 30 MHz) have frequencies in excess of the plasma
+frequency of the E layer, but not of the F layer. Hence, SW signals pass through the
+E layer, but are reflected by the F layer. 
+ Finally, Medium Wave (MW) radio signals ({\em i.e.}, signals with frequencies in the range
+$0.5$ to 3 MHz) have frequencies which lie below the plasma frequency of the F layer,
+and also lie below the plasma frequency of the E layer during daytime, but not
+during nighttime. Thus, MW signals are reflected by the E layer during the day,
+but pass through the E layer, and are reflected by the F layer, during the night.
+
+\begin{figure}
+\epsfysize=2.2in
+\centerline{\epsffile{Chapter09/fig01.eps}}
+\caption{\em Reflection and transmission of radio waves by the ionosphere.}\label{f9.1}   
+\end{figure}
+
+The reflection and transmission of the various different types of radio wave by the
+ionosphere is shown schematically in Figure~\ref{f9.1}. This diagram
+explains many of the features of radio reception. For instance, due to the curvature of the Earth's surface, VHF reception
+is only possible when the receiving antenna is in the line of sight of the transmitting antenna, and is consequently fairly local in nature. 
+MW reception is possible over much larger distances, because the signal is reflected
+by the ionosphere back towards the Earth's surface. Moreover, long range MW reception improves at night, since
+the signal is reflected at a higher altitude. Finally, SW radio reception is possible
+over very large distances, because the signal is reflected at extremely high altitudes. 
+
+\section{Electromagnetic Wave Propagation in Conductors}\label{s9.3}
+A so-called {\em Ohmic conductor}\/ is a medium that satisfies {\em Ohm's law}, which can be
+written in the form
+\begin{equation}
+j = \sigma\,E,
+\end{equation}
+where $j$ is the current density ({\em i.e.}, the current per unit area), $E$ the
+electric field-strength, and $\sigma$ a constant known as the {\em conductivity}\/
+of the medium in question. (Of course, the current generally flows in the same direction as the
+electric field.)
+The $z$-directed propagation of an electromagnetic
+wave, polarized in the $x$-direction, through an Ohmic conductor of conductivity $\sigma$ is
+governed by
+\begin{eqnarray}\label{e9.53}
+\frac{\partial E_x}{\partial t} +\frac{\sigma}{\epsilon_0}\,E_x &=&-\frac{1}{\epsilon_0}\, \frac{\partial H_y}{\partial z},\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=&-\frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z},
+\end{eqnarray}
+For a so-called {\em good conductor}, which satisfies the inequality $\sigma\gg \epsilon_0\,\omega$, the first term on the 
+left-hand side of Equation~(\ref{e9.53}) is negligible with respect to the
+second term, and the above two equations can be shown to reduce to
+\begin{eqnarray}\label{e9.56}
+\frac{\partial E_x}{\partial t} &=&\frac{1}{\mu_0\,\sigma}\,\frac{\partial^2 E_x}{\partial z^2},\\[0.5ex]
+\frac{\partial H_y}{\partial t} &=& -\frac{1}{\mu_0}\,\frac{\partial E_x}{\partial z}.\label{e9.57}
+\end{eqnarray}
+These equations can be solved to give (see Exercise 4)
+\begin{eqnarray}\label{e9.58}
+E_x(z,t) &=& E_0\,{\rm e}^{-z/d}\,\cos(\omega\,t-z/d),\\[0.5ex]
+H_y(z,t) &=& E_0\,Z^{-1}\,{\rm e}^{-z/d}\,\cos(\omega\,t-z/d-\pi/4),\label{e9.59}
+\end{eqnarray}
+where 
+\begin{equation}
+d = \left(\frac{2}{\mu_0\,\sigma\,\omega}\right)^{1/2},
+\end{equation}
+and
+\begin{equation}\label{e9.61}
+Z = \left(\frac{\omega\,\mu_0}{\sigma}\right)^{1/2} = \left(\frac{\omega\,\epsilon_0}{\sigma}\right)^{1/2}\,Z_0.
+\end{equation}
+Equations~(\ref{e9.58}) and (\ref{e9.59}) indicate that the amplitude of an electromagnetic
+wave propagating through a conductor {\em decays exponentially}\/ on a characteristic lengthscale,
+$d$, which is known as the {\em skin-depth}. Consequently, an electromagnetic wave
+cannot penetrate more than a few skin-depths into a conducting medium. Note that the skin-depth
+is smaller at higher frequencies. This implies that high frequency waves penetrate
+a shorter distance into a conductor than low frequency waves.
+
+Consider a typical metallic conductor such as copper, whose electrical
+conductivity at room temperature  is about $6\times
+10^{7}\,(\Omega\,{\rm m})^{-1}$. Copper, therefore, acts as a good
+conductor for all electromagnetic waves of frequency below about
+$10^{18}\,{\rm Hz}$. The skin-depth in copper for such waves is thus
+\begin{equation}
+d = \sqrt{\frac{2}{\mu_0\,\sigma\,\omega}} \simeq \frac{6}{\sqrt{f({\rm Hz})}}\,{\rm cm}.
+\end{equation}
+It follows that the skin-depth is about $6\,{\rm cm}$ at 1\,Hz, but only about
+2\,mm at 1\,kHz. This gives rise to the so-called {\em skin-effect}\/ in copper wires, by which an oscillating electromagnetic
+signal of increasing frequency, transmitted along such a wire,  is confined
+to an increasingly narrow layer (whose thickness is of order the skin-depth)
+on the surface of the wire.
+
+The conductivity of sea-water is only about $\sigma\simeq 5\,(\Omega\,{\rm m})^{-1}$. However, this is still sufficiently high for sea-water to act as
+a good conductor for all radio frequency electromagnetic waves ({\em i.e.}, $f=\omega/2\pi < 1$\,GHz). The skin-depth at 1\,MHz ($\lambda\sim 300$\,m)
+is about $0.2$\,m, whereas that at 1\,kHz ($\lambda\sim 300$\,km)
+is still only about 7\,m. This obviously poses quite severe restrictions for
+radio communication with submerged submarines. Either the submarines
+have to come quite close to the surface to communicate (which is dangerous), or the communication must be performed with extremely low frequency (ELF) waves ({\em i.e.}, $f< 100$\,Hz). Unfortunately, such waves have very large wavelengths ($\lambda > 3000\,{\rm km}$), which means
+that they can only be efficiently generated by gigantic
+antennas. 
+
+According to Equation~(\ref{e9.59}), the phase of the magnetic component of an
+electromagnetic wave propagating through a good conductor lags that of the
+electric component by $\pi/4$ radians. It follows that the mean energy flux into
+the conductor takes the form
+\begin{eqnarray}
+\langle{\cal I}\rangle &=& \langle E_x\,H_y\rangle = |E_x|^2\,Z^{-1}\,\langle \cos(\omega\,t-z/d)\,\cos(\omega\,t-z/d-\pi/4)\rangle \nonumber\\[0.5ex] &=& \frac{|E_x|^2}{\sqrt{8}\,Z},
+\end{eqnarray}
+where $|E_x| = E_0\,{\rm e}^{-z/d}$ is the amplitude of the electric component of the
+wave. The fact that the mean energy flux is {\em positive}\/ indicates that part of the
+wave energy is absorbed by the conductor. In fact, the absorbed energy corresponds
+to the energy lost due to Ohmic heating in the conductor (see Exercise 5).
+
+Note, from (\ref{e9.61}), that the impedance of a good conductor is far less than
+that of a vacuum ({\em i.e.}, $Z\ll Z_0$). This  implies that the ratio of the magnetic
+to the electric components of an electromagnetic wave propagating through  a good conductor is far larger than that of a wave propagating through a vacuum.
+
+Suppose that the region $z<0$ is a vacuum, and the region $z>0$ is
+occupied by a good conductor of conductivity $\sigma$. Let the wave electric and
+magnetic fields in the vacuum region take the form of the incident and reflected waves specified in (\ref{e9.41}) and (\ref{e9.42}).
+The wave electric and magnetic fields in the conductor are written
+\begin{eqnarray}
+E_x(z,t) &=& E_t\,{\rm e}^{-z/d}\,\cos(\omega\,t-z/d+\phi_t),\\[0.5ex]
+H_y(z,t) &=& E_t\,Z_0^{-1}\,\alpha^{-1}\,{\rm e}^{-z/d}\,\cos(\omega\,t-z/d-\pi/4+\phi_t),
+\end{eqnarray}
+where $E_t$ is the amplitude of the decaying wave which penetrates into the
+conductor, $\phi_t$ is the phase of this wave with respect to the incident wave,
+and
+\begin{equation}
+\alpha = \frac{Z}{Z_0}=\left(\frac{\epsilon_0\,\omega}{\sigma}\right)^{1/2}\ll 1.
+\end{equation}
+The appropriate matching conditions are the continuity of $E_x$ and $H_y$ at $z=0$:
+{\em i.e.},
+\begin{eqnarray}\label{e9.67}
+E_i\,\cos(\omega\,t) + E_r\,\cos(\omega\,t+\phi_r) &=& E_t\,\cos(\omega\,t+\phi_t),\\[0.5ex]
+\alpha\left[E_i\,\cos(\omega\,t) - E_r\,\cos(\omega\,t+\phi_r)\right]&=&E_t\,\cos(\omega\,t-\pi/4+\phi_t).\label{e9.68}
+\end{eqnarray}
+Equations~(\ref{e9.67}) and (\ref{e9.68}), which must be satisfied at all times, 
+can be solved, in the limit $\alpha\ll 1$,  to give (see Exercise 6)
+\begin{eqnarray}\label{e9.69}
+E_r &\simeq&-(1-\sqrt{2}\,\alpha)\,E_i,\\[0.5ex]
+\phi_r &\simeq& - \sqrt{2}\,\alpha,\\[0.5ex]
+E_t&\simeq & 2\,\alpha\,E_i,\\[0.5ex]
+\phi_t&\simeq & \pi/4.\label{e9.72}
+\end{eqnarray}
+Hence, the coefficient of reflection becomes
+\begin{equation}\label{e9.73}
+R \simeq\left(\frac{E_r}{E_i}\right)^2\simeq 1-2\,\sqrt{2}\,\alpha =1- \left(\frac{8\,\epsilon_0\,\omega}{\sigma}\right)^{1/2}.
+\end{equation}
+
+According to the above analysis, a good conductor reflects a  normally incident
+electromagnetic wave with a phase shift of almost $\pi$ radians ({\em i.e.}, $E_r\simeq -E_i$). The coefficient of reflection is just less than unity, indicating that, whilst most
+of the incident energy is reflected by the conductor, a small fraction of it
+is absorbed. 
+
+High-quality metallic mirrors are generally coated in silver, whose conductivity
+is $6.3\times 10^7\,(\Omega\,{\rm m})^{-1}$. It follows, from (\ref{e9.73}), that  at optical
+frequencies ($\omega = 4\times 10^{15}\,{\rm rad./s}$) the coefficient
+of reflection of a silvered mirror is $R\simeq 93.3\%$. This implies that
+about $7\%$ of the light incident on  the mirror is absorbed, rather than being reflected. This rather severe light loss can be
+problematic in instruments, such as astronomical telescopes, which are used to
+view faint objects.
+
+\section{Surface Wave Propagation in Water}\label{s9.4}
+Consider a stationary body of water, of uniform depth $d$, located on the surface of the Earth. Let us
+find the dispersion relation of a   wave propagating across the water's surface. Suppose that the Cartesian coordinate $x$ measures horizontal distance,
+whilst the coordinate $z$ measures vertical height, with $z=0$ corresponding to the unperturbed surface of the water. 
+Let there be no variation in the $y$-direction: {\em i.e.}, let the wavefronts of the wave all be parallel to the $y$-axis. Finally, let $v_x(x,z,t)$ and $v_z(x,z,t)$ be the perturbed horizontal and
+vertical velocity fields of the water due to the wave. It is assumed that there is no
+motion in the $y$-direction. 
+
+Now, water is essentially {\em incompressible}. Thus, any wave disturbance in water is
+constrained to preserve the volume of a co-moving volume element. Equivalently, the inflow  rate of water  into a stationary volume element must match the outflow rate.
+Consider a stationary
+cubic volume element lying between $x$ and $x+dx$, $y$ and $y+dy$, and $z$ and $z+dz$. The element has two faces, of area $dy\,dz$, perpendicular to the $x$-axis, located at
+$x$ and $x+dx$. Water flows into the element through the former face
+at the rate $v_x(x,z,t)\,dy\,dz$ ({\em i.e.}, the product of the area of the face and the
+normal velocity), and out of the element though the
+latter face at the rate $v_x(x+dx,z,t)\,dy\,dz$. The element also has two
+faces perpendicular to the $y$-axis, but there is no flow through these faces, since
+$v_y=0$. Finally, the element has two faces, of area $dx\,dy$, perpendicular to the $z$-axis, located at
+$z$ and $z+dz$. Water flows into the element through the former face
+at the rate $v_z(x,z,t)\,dx\,dy$, and out of the element though the
+latter face at the rate $v_z(x,z+dz,t)\,dx\,dy$.
+Thus, the net rate at which water flows into the element is $v_x(x,z,t)\,dy\,dz + v_z(x,z,t)\,dx\,dy$.
+Likewise, the net rate at which water flows out of the element is
+$v_x(x+dx,z,t)\,dy\,dz + v_z(x,z+dz,t)\,dx\,dy$. If the water is to remain incompressible
+then the inflow and outflow rates must match: {\em i.e.}, 
+\begin{equation}
+v_x(x,z,t)\,dy\,dz + v_z(x,z,t)\,dx\,dy = v_x(x+dx,z,t)\,dy\,dz + v_z(x,z+dz,t)\,dx\,dy,
+\end{equation}
+or
+\begin{equation}
+\left(\frac{v_x(x+dx,z,t)-v_x(x,z,t)}{dx} + \frac{v_z(x,z+dz,t)-v_z(x,z,t)}{dz} \right)dx\,dy\,dz=0.
+\end{equation}
+Hence,  the incompressibility constraint reduces to
+\begin{equation}\label{e9.76}
+\frac{\partial v_x}{\partial x} + \frac{\partial v_z}{\partial z} = 0.
+\end{equation}
+
+Consider the equation of motion of a small volume element of water  lying between $x$ and $x+dx$, $y$ and $y+dy$, and $z$ and $z+dz$. The mass of this element is
+$\rho\,dx\,dy\,dz$, where $\rho$ is the uniform mass density of water. Suppose
+that $p(x,z,t)$ is the {\em pressure}\/ in the water, which is assumed to be {\em isotropic}. 
+The net horizontal force on the element is $p(x,z,t)\,dy\,dz -
+ p(x+dx,z,t)\,dy\,dz$ (since force is pressure times area, and the external pressure forces
+ acting on the element act inward across its surface). Hence, the element's horizontal equation of motion is
+ \begin{equation}
+ \rho\,dx\,dy\,dz\,\frac{\partial v_x(x,z,t)}{\partial t} = -\left(\frac{p(x+dx,z,t)-p(x,z,t)}{dx}\right)dx\,dy\,dz,
+ \end{equation}
+ which reduces to
+ \begin{equation}\label{e9.78}
+ \rho\,\frac{\partial v_x}{\partial t} = - \frac{\partial p}{\partial x}.
+ \end{equation}
+ The vertical equation of motion is similar, except that the element is subject to
+ a downward acceleration, $g$, due to gravity. Hence, we obtain
+ \begin{equation}\label{e9.79}
+ \rho\,\frac{\partial v_z}{\partial t} = -\frac{\partial p}{\partial z} - \rho\,g.
+ \end{equation}
+ 
+ Now, we can write
+ \begin{equation}\label{e9.80}
+ p = p_0-\rho\,g\,z+p_1,
+ \end{equation}
+ where $p_0$ is atmospheric pressure ({\em i.e.}, the pressure at the surface of the water), and $p_1$ is the pressure perturbation due to the wave. Of course, in the absence of
+ the wave, the water pressure at a depth $h$ below the surface is $p_0+\rho\,g\,h$. 
+ Substitution into (\ref{e9.78}) and (\ref{e9.79}) yields
+ \begin{eqnarray}\label{e9.81}
+ \rho\,\frac{\partial v_x}{\partial t}& =& - \frac{\partial p_1}{\partial x},\\[0.5ex]
+  \rho\,\frac{\partial v_z}{\partial t}& =& - \frac{\partial p_1}{\partial z}.\label{e9.82}
+  \end{eqnarray}
+  It follows that
+  \begin{equation}
+  \rho\,\frac{\partial^2 v_x}{\partial z\,\partial t} -\rho\,\frac{\partial^2 v_z}{\partial x\,\partial t} = -\frac{\partial^2 p_1}{\partial z\,\partial x} + \frac{\partial^2 p_1}{\partial x\,\partial z} = 0,
+  \end{equation}
+  which implies that
+  \begin{equation}
+  \rho\,\frac{\partial}{\partial t}\!\left(\frac{\partial v_x}{\partial z} -\frac{\partial v_z}{\partial x}\right) = 0,
+  \end{equation}
+  or
+  \begin{equation}\label{e9.84}
+  \frac{\partial v_x}{\partial z} -\frac{\partial v_z}{\partial x} = 0.
+  \end{equation}
+  (Actually, the above quantity could be non-zero and constant in time, but this is
+  not consistent with an oscillating wave-like solution.)
+  
+  Equation~(\ref{e9.84}) is automatically satisfied if
+  \begin{eqnarray}
+  v_x&=&\frac{\partial \phi}{\partial x},\\[0.5ex]
+  v_z &=&\frac{\partial \phi}{\partial z}.
+  \end{eqnarray}
+  Equation~(\ref{e9.76}) then gives
+  \begin{equation}\label{e9.87}
+  \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial z^2} = 0.
+  \end{equation}
+  Finally, Equations~(\ref{e9.81}) and (\ref{e9.82}) yield
+  \begin{equation}\label{e9.88}
+  p_1 = -\rho\,\frac{\partial \phi}{\partial t}.
+  \end{equation}
+
+As we have just seen, surface waves in  water are governed by Equation (\ref{e9.87}),
+which is known as {\em Laplace's equation}. We next need to derive the physical
+constraints which must be satisfied by the solution to this equation at
+the water's upper and lower boundaries. Now, the water is bounded from below by a
+ solid surface located at $z=-d$. Assuming that the water always remains in contact
+ with this surface, the appropriate physical constraint at the lower boundary is $v_z(x,-d,t)=0$ ({\em i.e.}, there is no vertical motion of the water at the lower boundary), or
+ \begin{equation}\label{e9.89}
+ \left.\frac{\partial \phi}{\partial z}\right|_{z=-d} = 0.
+ \end{equation}
+ The physical constraint at the water's upper boundary is a little more complicated, since this boundary is a free surface. 
+ Let $\zeta(x,t)$ represent the vertical displacement of the water's surface. It
+ follows that
+ \begin{equation}\label{e9.90}
+ \frac{\partial \zeta}{\partial t} = \left.v_z\right|_{z=0}=\left.\frac{\partial \phi}{\partial z}\right|_{z=0}.
+ \end{equation}
+Now, the physical constraint at the surface is that the water pressure be equal to atmospheric
+pressure, since there cannot be a pressure discontinuity across a free surface. 
+Thus, it follows from (\ref{e9.80}) that
+\begin{equation}\label{e9.91}
+p_0 = p_0 -\rho\,g\,\zeta(x,t) + p_1(x,0,t).
+\end{equation}
+Finally, differentiating with respect to $t$, and making use of Equations~(\ref{e9.88}) and (\ref{e9.90}), we obtain
+\begin{equation}\label{e9.92}
+\left.\frac{\partial \phi}{\partial z}\right|_{z=0} = -g^{-1}\left.\frac{\partial^2\phi}{\partial t^2}\right|_{z=0}.
+\end{equation}
+Hence, the problem boils down to solving Laplace's equation, (\ref{e9.87}), subject
+to the physical constraints (\ref{e9.89}) and (\ref{e9.92}).
+
+Let us search for a propagating wave-like solution of (\ref{e9.87}) of the form
+\begin{equation}
+\phi(x,z,t) = F(z)\,\cos(k\,x-\omega\,t).
+\end{equation}
+Substitution into (\ref{e9.87}) yields
+\begin{equation}
+\frac{d^2 F}{dz^2} - k^2\,F= 0,
+\end{equation}
+whose independent solutions are $\exp(+k\,z)$ and $\exp(-k\,z)$.
+Hence, the most general wavelike solution to Laplace's equation takes the form
+\begin{equation}
+\phi(x,z,t) = A\,{\rm e}^{k\,z}\,\cos(k\,x-\omega\,t) + B\,{\rm e}^{-k\,z}\,\cos(k\,x-\omega\,t),
+\end{equation}
+where $A$ and $B$ are arbitrary constants. The boundary condition (\ref{e9.89})
+is satisfied provided that $B = A\,\exp(-2\,k\,d)$, giving
+\begin{equation}\label{e9.96}
+\phi(x,z,t) = A\left[{\rm e}^{k\,z}\ + {\rm e}^{-k\,(z+2d)}\right]\cos(k\,x-\omega\,t),
+\end{equation}
+The boundary condition (\ref{e9.92}) yields
+\begin{equation}
+A\,k\left[1-{\rm e}^{-2\,k\,d}\right]\cos(k\,x-\omega\,t) = A\,\frac{\omega^2}{g}\left[1+{\rm e}^{-2\,k\,d}\right]\cos(k\,x-\omega\,t),
+\end{equation}
+which reduces to the dispersion relation 
+\begin{equation}\label{e9.98}
+\omega^2 = g\,k\,\tanh(k\,d),
+\end{equation}
+where the function
+\begin{equation}
+\tanh x \equiv \frac{{\rm e}^x- {\rm e}^{-x}}{{\rm e}^{x}+ {\rm e}^{-x}}
+\end{equation}
+is known as a {\em hyperbolic tangent}.
+
+In {\em shallow water}\/ ({\em i.e.}, $k\,d\ll 1$), Equation~(\ref{e9.98}) reduces to
+the linear dispersion relation
+\begin{equation}
+\omega = k\,\sqrt{g\,d}.
+\end{equation}
+Here, use has been made of the small argument expansion $\tanh x\simeq x$ for $|x|\ll 1$. 
+We, thus, conclude that surface waves in shallow water are {\em non-dispersive}\/ in nature, and
+propagate at the phase velocity $\sqrt{g\,d}$. On the other hand, in {\em deep water}\/ ({\em i.e.}, $k\,d\gg 1$), Equation~(\ref{e9.98}) reduces to
+the nonlinear dispersion relation
+\begin{equation}
+\omega = \sqrt{k\,g}.
+\end{equation}
+Here, use has been made of the large argument expansion $\tanh x\simeq 1$ for $x\gg 1$. 
+Hence, we conclude that surface waves in deep water are {\em dispersive}\/ in nature. The
+phase velocity of the waves is $v_p=\omega/k = \sqrt{g/k}$, whereas the
+group velocity is $v_g=d\omega/dk = (1/2)\,\sqrt{g/k}= v_p/2$. In other
+words, the group velocity is {\em half}\/ the phase velocity, and is largest for long wavelength
+({\em i.e.}, small $k$) waves. 
+
+Water in contact with air actually possesses a {\em surface tension}\/ $T\simeq 7\times 10^{-2}\,{\rm N\,m}^{-1}$ which allows there to be a small pressure discontinuity
+across a free surface that is curved. In fact,
+\begin{equation}
+[p]_{z=0_-}^{z=0_+} = - T\,\frac{\partial^2 \zeta}{\partial x^2}.
+\end{equation}
+Here, $(\partial\zeta/\partial x^2)^{-1}$ is the {\em radius of curvature}\/ of the surface.
+Thus, in the presence of surface tension, the boundary condition (\ref{e9.91})
+takes the modified form
+\begin{equation}
+-T\,\frac{\partial^2\zeta}{\partial x^2} = -\rho\,g\,\zeta+ \left. p_1\right|_{z=0},
+\end{equation}
+which reduces to
+\begin{equation}
+\left.\frac{\partial \phi}{\partial z}\right|_{z=0} = \frac{T}{\rho\,g}\left.\frac{\partial^3\phi}{\partial x^2\,\partial z}\right|_{z=0} -\frac{1}{g}\left.\frac{\partial^2\phi}{\partial t^2}\right|_{z=0}.
+\end{equation}
+This boundary condition can be combined with the solution (\ref{e9.96}), in the
+deep water limit $k\,d\gg 1$, to give the modified deep water dispersion
+relation
+\begin{equation}\label{e9.105}
+\omega = \sqrt{g\,k + \frac{T}{\rho}\,k^3}.
+\end{equation}
+Hence, the phase velocity of the waves takes the form
+\begin{equation}
+v_p = \frac{\omega}{k} = \sqrt{\frac{g}{k} + \frac{T}{\rho}\,k},
+\end{equation}
+and the ratio of the group velocity to the phase velocity can be shown to
+be
+\begin{equation}
+\frac{v_g}{v_p} = \frac{1}{2}\left[\frac{1+3\,T\,k^2/(\rho\,g)}{1+T\,k^2/(\rho\,g)}\right].
+\end{equation}
+Thus, the phase velocity attains a minimum value of $\sqrt{2}\,(g\,T/\rho)^{1/4}\sim 0.2\,{\rm m\,s}^{-1}$
+when $k=k_0\equiv (\rho\,g/T)^{1/2}$, which corresponds to $\lambda\sim 2\,{\rm cm}$. The group velocity equals the phase velocity at this wavelength. For long wavelength waves ({\em i.e.}, 
+$k\ll k_0$), gravity dominates surface tension, the phase velocity scales as $k^{-1/2}$,
+and the group velocity is half the phase velocity. On the other hand, for
+short wavelength waves ({\em i.e.}, $k\gg k_0$), surface tension dominates gravity, the
+phase velocity scales as $k^{1/2}$, and the group velocity is $3/2$ times the
+phase velocity. The fact that the phase velocity and the group velocity both
+attain minimum values when  $\lambda\sim 2\,{\rm cm}$ means that when a
+wave disturbance containing a wide spectrum of wavelengths, such as might be
+generated by throwing a rock into the water, travels
+across the surface of a lake, and reaches the shore, the short and long wavelength components of the disturbance generally arrive before the components of intermediate wavelength.
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Derive expressions (\ref{e9.26}) and (\ref{e9.28}) for propagating  electromagnetic waves in a plasma from Equations~(\ref{e9.20}), (\ref{e9.22a}), (\ref{e9.23}), and (\ref{e9.24}).
+
+\item Derive expressions (\ref{e9.38}) and (\ref{e9.39}) for evanescent electromagnetic
+waves in a plasma from Equations~(\ref{e9.20}), (\ref{e9.22a}), (\ref{e9.23}), and (\ref{e9.24}).
+
+\item Derive Equations~(\ref{e9.48})--(\ref{e9.51}) from Equations~(\ref{e9.46}) and
+(\ref{e9.47}).
+
+\item Derive Equations~(\ref{e9.58})--(\ref{e9.61}) from Equations~(\ref{e9.56}) and
+(\ref{e9.57}).
+
+\item Consider an electromagnetic wave propagating in the positive $z$-direction
+through a conducting medium of conductivity $\sigma$. Suppose that the
+wave electric field is
+$$
+E_x(z,t) = E_0\,{\rm e}^{-z/d}\,\cos(\omega\,t-z/d),
+$$
+where $d$ is the skin-depth. Demonstrate that the mean electromagnetic energy
+flux across the plane $z=0$ matches the mean rate at which electromagnetic
+energy is dissipated, per unit area, due to Ohmic heating in the region $z>0$. (The rate
+of ohmic heating per unit volume is $\sigma\,E_x^{\,2}$).
+
+\item Derive Equations~(\ref{e9.69})--(\ref{e9.72}) from Equations~(\ref{e9.67}) and
+(\ref{e9.68}), in the limit $\alpha\ll 1$. 
+
+\item Demonstrate that the phase
+velocity of traveling waves on  an infinitely long beaded string is
+$$
+v_p = v_0\,\frac{\sin(k\,a/2)}{(k\,a/2)},
+$$
+where $v_0= \sqrt{T\,a/m}$, $T$ is the tension in the string, $a$ the
+spacing between the beads, $m$ the mass of the beads, and $k$ the wavenumber
+of the wave. What is the group velocity?
+
+\item The number density of free electrons in the ionosphere, $n_e$, as a
+function of vertical height, $z$, is measured by timing how long it takes a radio pulse
+launched vertically upward from the ground ($z=0$) to return to ground level again, after
+reflection by the ionosphere, as a function of the pulse frequency, $\omega$. 
+It is conventional to define the {\em equivalent height}, $h(\omega)$, of the reflection layer
+as the height it would need to have off the ground if the pulse always traveled
+at the velocity of light in vacuum. Demonstrate that
+$$
+h(\omega) = \int_0^{z_0}\frac{dz}{[1-\omega_p^{\,2}(z)/\omega^2]^{1/2}},
+$$
+where $\omega_p^{\,2}(z)= n_e(z)\,e^2/(\epsilon_0\,m_e)$, and $\omega_p^{\,2}(z_0)=\omega^2$. Show that if $n_e\propto z^p$ then $h\propto \omega^{2/p}$. 
+
+\item A uniform rope of mass per unit length $\rho$ and length $L$ hangs vertically.
+Determine the tension $T$ in the rope as a function of height from the bottom
+of the rope. Show that the time required for a transverse wave pulse to
+travel from the bottom to the top of the rope is $2\,\sqrt{L/g}$. 
+
+\item The aluminium foil  used in cooking has an electrical conductivity $\sigma=3.5\times 10^7\,(\Omega\,{\rm m})^{-1}$,
+and a typical thickness $\delta=2\times 10^{-4}\,{\rm m}$. Show that such foil can be used to shield a region from electromagnetic
+waves of a given frequency, provided that the skin-depth of the waves in the foil is less than about a third of its thickness. 
+Since skin-depth increases as frequency decreases, it follows that the foil can only shield waves whose frequency exceeds a critical
+value. 
+Estimate this critical frequency (in Hertz). What is the corresponding wavelength?
+
+\item A sinusoidal surface wave travels from deep water toward the shore. Does its
+wavelength increase, decrease, or stay the same, as it approaches the shore? Explain.
+
+\item Demonstrate that the dispersion relation (\ref{e9.105}) for surface water waves generalizes to
+$$
+\omega^2 =  \left(g\,k + \frac{T}{\rho}\,k^3\right)\tanh(k\,d)
+$$
+in water of arbitrary depth. 
+
+\item Demonstrate that a  small amplitude surface wave, of angular frequency $\omega$ and wavenumber $k$, traveling over the surface of a lake of uniform depth $d$ causes an individual water volume element located at a depth $h$ below the surface to execute a non-propagating elliptical orbit
+whose major and minor axes are horizontal and vertical, respectively. Show that
+the  variation of the major and minor radii of the orbit with depth is $A\,\cosh[k\,(d-h)]$
+and $A\,\sinh[k\,(d-h)]$, respectively, where $A$ is a constant. Demonstrate that
+the volume elements are moving horizontally in the same direction as the wave
+at the top of their orbits, and in the opposite direction at the bottom. 
+Show that a surface wave traveling over the surface of a very deep lake causes water volume elements to execute
+non-propagating circular orbits whose radii decrease exponentially with depth. 
+
+\end{enumerate}
+}

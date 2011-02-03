@@ -1,0 +1,506 @@
+\chapter{Coupled Oscillations}
+\section{Two Spring-Coupled Masses}\label{s4.1}
+Consider a mechanical system consisting of two identical masses $m$
+which are free to slide over a frictionless horizontal surface. Suppose that
+the masses are attached to  one another, and to two immovable
+walls, by means of three identical light horizontal springs of spring constant $k$, as
+shown in Figure~\ref{f4.1}. The instantaneous state of the system
+is conveniently specified by the displacements of the left and
+right masses, $x_1(t)$ and $x_2(t)$, respectively. The extensions
+of the left, middle, and right springs are  $x_1$, $x_2-x_1$, and $-x_2$,
+respectively, assuming that   $x_1=x_2=0$ corresponds to the equilibrium configuration in which the springs are all
+unextended. The equations of motion of the two masses
+are thus
+\begin{eqnarray}\label{e4.1}
+m\,\ddot{x}_1 &=&  -k\,x_1 +k\,(x_2-x_1),\\[0.5ex]
+m\,\ddot{x}_2 &=&  -k\,(x_2-x_1) +k\,(-x_2).\label{e4.2}
+\end{eqnarray}
+Here, we have made use of the fact that a mass attached to the left end of a
+spring of extension $x$ and spring constant $k$ experiences a horizontal force $+k\,x$,
+whereas a mass attached to the right end of the same spring experiences an
+equal and opposite force $-k\,x$. 
+
+\begin{figure}
+\epsfysize=1.4in
+\centerline{\epsffile{Chapter04/fig01.eps}}
+\caption{\em Two degree of freedom mass-spring system.}\label{f4.1}   
+\end{figure}
+
+Equations~(\ref{e4.1})--(\ref{e4.2}) can be rewritten in the form
+\begin{eqnarray}\label{e4.3}
+\ddot{x}_1 &=& -2\,\omega_0^{\,2}\,x_1+ \omega_0^{\,2}\,x_2,\\[0.5ex]
+\ddot{x}_2&=& \omega_0^{\,2}\,x_1 - 2\,\omega_0^{\,2}\,x_2,\label{e4.4}
+\end{eqnarray}
+where $\omega_0=\sqrt{k/m}$. Let us search for a solution in which the two
+masses oscillate {\em in phase}\/ at the {\em same angular frequency}, $\omega$. In other words,
+\begin{eqnarray}\label{e4.5}
+x_1(t) &=& \hat{x}_1\,\cos(\omega\,t-\phi),\\[0.5ex]
+x_2(t) &=&\hat{x}_2\,\cos(\omega\,t-\phi),\label{e4.6}
+\end{eqnarray}
+where $\hat{x}_1$, $\hat{x}_2$, and $\phi$ are constants. Equations~(\ref{e4.3}) and
+(\ref{e4.4}) yield
+\begin{eqnarray}
+-\omega^2\,\hat{x}_1\,\cos(\omega\,t-\phi) &=&\left( -2\,\omega_0^{\,2}\,\hat{x}_1+ \omega_0^{\,2}\,\hat{x}_2\right)\,\cos(\omega\,t-\phi),\\[0.5ex]
+-\omega^2\,\hat{x}_2\,\cos(\omega\,t-\phi) &=&\left( \omega_0^{\,2}\,\hat{x}_1-2\,\omega_0^{\,2}\,\hat{x}_2\right)\,\cos(\omega\,t-\phi),
+\end{eqnarray}
+or
+\begin{eqnarray}\label{e4.9}
+(\hat{\omega}^{\,2}-2)\,\hat{x}_1 +\hat{x}_2 &=&0,\\[0.5ex]
+\hat{x}_1 + (\hat{\omega}^{\,2}-2)\,\hat{x}_2&=&0,\label{e4.10}
+\end{eqnarray}
+where $\hat{\omega}=\omega/\omega_0$. Note that by searching for a solution
+of the form (\ref{e4.5})--(\ref{e4.6}) we have effectively converted the system of two coupled
+ {\em linear differential equations}\/ (\ref{e4.3})--(\ref{e4.4}) into the  much simpler system of two coupled  {\em linear algebraic
+equations}\/ (\ref{e4.9})--(\ref{e4.10}). The latter equations have the trivial solutions $\hat{x}_1=\hat{x}_2=0$, but also yield
+\begin{equation}\label{e4.11}
+\frac{\hat{x}_1}{\hat{x}_2}=-\frac{1}{(\hat{\omega}^{\,2}-2)} =-( \hat{\omega}^{\,2}-2).
+\end{equation}
+Hence, the condition for a nontrivial solution is 
+\begin{equation}\label{e4.12}
+(\hat{\omega}^{\,2}-2)\,(\hat{\omega}^{\,2}-2)-1 = 0.
+\end{equation}
+In fact, if we write Equations~(\ref{e4.9})--(\ref{e4.10}) in the form of a homogenous ({\em i.e.}, with a null right-hand side) $2\times 2$ matrix equation, so that
+\begin{equation}
+\left(
+\begin{array}{cc}
+\hat{\omega}^{\,2}-2 & 1\\[0.5ex]
+1&\hat{\omega}^{\,2}-2
+\end{array}\right)\left(
+\begin{array}{c}
+\hat{x}_1\\[0.5ex] \hat{x}_2
+\end{array}\right) = \left(
+\begin{array}{c}
+0\\[0.5ex] 0
+\end{array}\right) ,
+\end{equation}
+then it becomes apparent  that the criterion (\ref{e4.12}) can also be obtained by
+setting the {\em determinant}\/ of the associated $2\times 2$ matrix to {\em zero}.
+
+Equation~(\ref{e4.12}) can be rewritten
+\begin{equation}\label{e4.14}
+\hat{\omega}^{\,4} - 4\,\hat{\omega}^2+3 = (\hat{\omega}^{\,2}-1)\,(\hat{\omega}^{\,2}-3)=0.
+\end{equation}
+It follows that
+\begin{equation}
+\hat{\omega} = 1 \mbox{~or~~} \sqrt{3}.
+\end{equation}
+ Here, we have neglected
+the two  negative frequency roots of (\ref{e4.14})---{\em i.e.}, $\hat{\omega}=-1$ and $\hat{\omega}=-\sqrt{3}$---since a negative frequency oscillation
+is equivalent to an oscillation with an equal and opposite positive frequency, and
+an equal and opposite phase: {\em i.e.},
+$\cos(\omega\,t-\phi)\equiv \cos(-\omega\,t+\phi)$. 
+ It is thus apparent that
+the dynamical system  pictured in Figure~\ref{e4.1} has {\em two}\/  unique  frequencies of oscillation: {\em i.e.},  $\omega=\omega_0$
+and $\omega=\sqrt{3}\,\omega_0$. These are called the {\em normal frequencies}\/ of the
+system.
+Since the system possesses {\em two degrees of
+freedom}\/ ({\em i.e.}, two independent coordinates are needed to specify its
+instantaneous configuration) it is not entirely surprising that it possesses {\em two}\/
+ normal frequencies. In fact, it is a general rule that a dynamical system
+with $N$ degrees of freedom possesses $N$  normal frequencies. 
+
+The patterns of motion associated with the two normal frequencies 
+can easily be deduced  from Equation~(\ref{e4.11}). Thus, for $\omega=\omega_0$ ({\em i.e.}, $\hat{\omega}=1$), we
+get $\hat{x}_1=\hat{x}_2$, so that
+\begin{eqnarray}\label{e4.16}
+x_1(t) &=& \hat{\eta}_1\,\cos(\omega_0\,t-\phi_1),\\[0.5ex]
+x_2(t)&=&\hat{\eta}_1\,\cos(\omega_0\,t-\phi_1),\label{e4.17}
+\end{eqnarray}
+where $\hat{\eta}_1$ and $\phi_1$ are constants. This first pattern of motion corresponds to the two masses
+ executing simple harmonic oscillation with the {\em same amplitude and phase}. 
+Note that such an oscillation does not stretch the middle spring.  
+On the other hand, for
+$\omega=\sqrt{3}\,\omega_0$ ({\em i.e.}, $\hat{\omega}=\sqrt{3}$), we get $\hat{x}_1=-\hat{x}_2$, so that
+\begin{eqnarray}\label{e4.18}
+x_1(t) &=& \hat{\eta}_2\,\cos\left(\sqrt{3}\,\omega_0\,t-\phi_2\right),\\[0.5ex]
+x_2(t)&=&-\hat{\eta}_2\,\cos\left(\sqrt{3}\,\omega_0\,t-\phi_2\right),\label{e4.19}
+\end{eqnarray}
+where $\hat{\eta}_2$ and $\phi_2$ are constants. This second pattern of motion
+corresponds to the two masses executing simple harmonic oscillation with the
+{\em same amplitude but in anti-phase}: {\em i.e.}, with a phase shift of $\pi$ radians. Such oscillations do stretch the
+middle spring, implying that the  restoring force associated with
+similar amplitude displacements is greater for the second
+pattern of motion than for the first. This accounts for the higher
+oscillation frequency in the second case.  (The inertia is the same in both cases, so the
+oscillation frequency is proportional to the square root of the restoring force
+associated with similar amplitude displacements.) The two distinctive
+patterns of motion which we have found are called the {\em normal modes of
+oscillation}\/ of the system. Incidentally, it is a general rule that a dynamical system
+possessing $N$ degrees of freedom has $N$ unique normal modes of oscillation.
+
+Now, the most general motion of the system is a
+{\em linear combination}\/ of the two normal modes. This immediately follows because 
+Equations~(\ref{e4.1}) and ({\ref{e4.2}) are {\em linear equations}. [In other
+words, if $x_1(t)$ and $x_2(t)$ are solutions then so are $a\,x_1(t)$ and $a\,x_2(t)$,
+where $a$ is an arbitrary constant.] Thus, we can write
+\begin{eqnarray}\label{e4.20}
+x_1(t) &=& \hat{\eta}_1\,\cos(\omega_0\,t-\phi_1)+ \hat{\eta}_2\,\cos\left(\sqrt{3}\,\omega_0\,t-\phi_2\right),\\[0.5ex]
+x_2(t) &=&  \hat{\eta}_1\,\cos(\omega_0\,t-\phi_1)-\hat{ \eta}_2\,\cos\left(\sqrt{3}\,\omega_0\,t-\phi_2\right).\label{e4.21}
+\end{eqnarray}
+Note that we can be sure that this represents the most general solution
+to Equations~(\ref{e4.1}) and (\ref{e4.2}) because it contains {\em four}\/
+arbitrary constants: {\em i.e.}, $\hat{\eta}_1$, $\phi_1$, $\hat{\eta}_2$, and $\phi_2$. (In general,
+we expect the solution of a second-order ordinary differential equation to
+contain two arbitrary constants. It, thus, follows that the solution of a system of two
+coupled ordinary differential equations should contain four arbitrary constants.)
+Of course, these constants are determined by the {\em initial conditions}. 
+
+For instance, suppose that $x_1=a$, $\dot{x}_1=0$, $x_2=0$, and $\dot{x}_2=0$
+at $t=0$. It follows, from (\ref{e4.20}) and (\ref{e4.21}), that
+\begin{eqnarray}
+a &=&\hat{\eta}_1\,\cos\phi_1 + \hat{\eta}_2\,\cos\phi_2,\\[0.5ex]
+0&=&\hat{\eta}_1\,\sin\phi_1+\sqrt{3}\,\hat{\eta}_2\,\sin\phi_2,\\[0.5ex]
+0&=&\hat{\eta}_1\,\cos\phi_1 -\hat{\eta}_2\,\cos\phi_2,\\[0.5ex]
+0&=&\hat{\eta}_1\,\sin\phi_1-\sqrt{3}\,\hat{\eta}_2\,\sin\phi_2,
+\end{eqnarray}
+which implies that $\phi_1=\phi_2=0$ and $\hat{\eta}_1=\hat{\eta}_2=a/2$. Thus, the
+system evolves in time as 
+\begin{eqnarray}
+x_1(t)&=& a\,\cos(\omega_-\,t)\,\cos(\omega_+\,t),\\[0.5ex]
+x_2(t)&=&a\,\sin(\omega_-\,t)\,\sin(\omega_+\,t),
+\end{eqnarray}
+where $\omega_\pm = [(\sqrt{3}\pm 1)/2]\,\omega_0$, and
+use has been made of the trigonometric identities $\cos a + \cos b\equiv 2\,\cos[(a+b)/2]\,\cos[(a-b)/2]$ and $\cos a - \cos b \equiv -2\,\sin[(a+b)/2]\,\sin[(a-b)/2]$. This evolution is
+illustrated in Figure~\ref{f4.2}. [Here, $T_0=2\pi/\omega_0$. The solid curve
+corresponds to $x_1$, and the dashed curve to $x_2$.]
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter04/fig02.eps}}
+\caption{\em Coupled oscillations in a two degree of freedom mass-spring system.}\label{f4.2}   
+\end{figure}
+
+Finally, let us  define the so-called {\em normal coordinates},
+\begin{eqnarray}
+\eta_1(t) &=& [x_1(t) + x_2(t)]/2,\\[0.5ex]
+\eta_2(t) &=& [x_1(t)-x_2(t)]/2.
+\end{eqnarray}
+It follows from (\ref{e4.20}) and (\ref{e4.21}) that, in the presence of both normal
+modes, 
+\begin{eqnarray}\label{e4.30}
+\eta_1(t) &=&\hat{\eta}_1\,\cos(\omega_0\,t-\phi_1),\\[0.5ex]
+\eta_2(t) &=&\hat{\eta}_2\,\cos(\sqrt{3}\,\omega_0\,t-\phi_2).\label{e4.31}
+\end{eqnarray}
+Thus, in general, the two normal coordinates oscillate sinusoidally with 
+{\em unique frequencies}, unlike the regular coordinates, $x_1(t)$ and $x_2(t)$---see Figure~\ref{f4.2}. 
+This suggests that the equations of motion of the system should look particularly simple when expressed in terms of the normal coordinates. In fact, it is easily seen that the
+sum of Equations~(\ref{e4.3}) and (\ref{e4.4}) reduces to
+\begin{equation}\label{e4.32}
+\ddot{\eta}_1 = -\omega_0^{\,2}\,\eta_1,
+\end{equation}
+whereas the difference gives
+\begin{equation}\label{e4.33}
+\ddot{\eta}_2 = -3\,\omega_0^{\,2}\,\eta_2.
+\end{equation}
+Thus, when expressed in terms of the normal coordinates, the equations of motion
+of the system reduce to two {\em uncoupled}\/ simple harmonic oscillator
+equations. 
+Of course, the most general solution to Equation~(\ref{e4.32}) is (\ref{e4.30}),
+whereas the most  general solution to Equation~(\ref{e4.33}) is (\ref{e4.31}). 
+Hence, if we can guess the normal coordinates of a coupled oscillatory
+system then the determination of the normal modes of oscillation is considerably simplified. 
+
+\section{Two Coupled $LC$ Circuits}
+Consider the $LC$ circuit pictured in Figure~\ref{f4.3}. Let $I_1(t)$, $I_2(t)$,
+and $I_3(t)$ be the currents flowing in the three legs of the circuit, which meet
+at junctions $A$ and $B$.
+ According to
+{\em Kirchhoff's first circuital law}, the net current flowing into
+each junction  is zero. It follows that $I_3=-(I_1+I_2)$. Hence, this
+is a {\em two degree of freedom}\/ system whose instantaneous configuration is
+specified by the two independent variables $I_1(t)$ and $I_2(t)$. It follows that there
+are {\em two}\/ independent normal modes of oscillation. 
+Now, the potential differences across the left, middle, and right legs of the circuit  are $Q_1/C+L\,\dot{I}_1$, $Q_3/C'$, and $Q_2/C+L\,\dot{I}_2$,
+respectively, where $\dot{Q}_1=I_1$, $\dot{Q}_2=I_2$, and $Q_3=-(Q_1+Q_2)$. 
+However, since the
+three legs are connected in {\em parallel},  the potential differences must
+all be equal, so that
+\begin{eqnarray}
+Q_1/C + L\,\dot{I}_1 &=& Q_3/C' = -(Q_1+Q_2)/C',\\[0.5ex]
+Q_2/C+L\,\dot{I}_2 &=& Q_3/C' = -(Q_1+Q_2)/C'.
+\end{eqnarray}
+Differentiating with respect to $t$, and dividing by $L$,  we obtain the coupled time evolution
+equations of the system:
+\begin{eqnarray}\label{e4.36}
+\ddot{I}_1 + \omega_0^{\,2}\,(1+\alpha)\,I_1+\omega_0^{\,2}\, \alpha\,I_2&=&0,\\[0.5ex]
+\ddot{I}_2 + \omega_0^{\,2}\,(1+\alpha)\,I_2+ \omega_0^{\,2}\,\alpha\,I_1&=&0,\label{e4.37}
+\end{eqnarray}
+where $\omega_0=1/\sqrt{L\,C}$ and $\alpha=C/C'$. 
+
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{Chapter04/fig03.eps}}
+\caption{\em Two degree of freedom $LC$ circuit.}\label{f4.3}   
+\end{figure}
+
+It is fairly easy to guess that the normal coordinates of the system are
+\begin{eqnarray}
+\eta_1 &=&(I_1+I_2)/2,\\[0.5ex]
+\eta_2&=&(I_1-I_2)/2.
+\end{eqnarray}
+Forming the sum and difference of Equations~(\ref{e4.36})
+and (\ref{e4.37}), we obtain the evolution equations for the two
+independent normal modes of oscillation:
+\begin{eqnarray}
+\ddot{\eta}_1+\omega_0^{\,2}\,(1+2\,\alpha)\,\eta_1 &=&0,\\[0.5ex]
+\ddot{\eta}_2+\omega_0^{\,2}\,\eta_2 &=&0.
+\end{eqnarray}
+These equations can readily  be solved to give
+\begin{eqnarray}
+\eta_1(t)&=&\hat{\eta}_1\,\cos(\omega_1\,t-\phi_1),\\[0.5ex]
+\eta_2(t)&=&\hat{\eta}_2\,\cos(\omega_0\,t-\phi_2),
+\end{eqnarray}
+where $\omega_1=(1+2\,\alpha)^{1/2}\,\omega_0$. Here, $\hat{\eta}_1$, $\phi_1$, $\hat{\eta}_2$, and $\phi_2$ are 
+constants determined by the initial conditions. 
+It follows that 
+\begin{eqnarray}\label{e4.44}
+I_1(t)&=&\eta_1(t)+\eta_2(t) = \hat{\eta}_1\,\cos(\omega_1\,t-\phi_1)+\hat{\eta}_2\,\cos(\omega_0\,t-\phi_2),\\[0.5ex]
+I_2(t) &=& \eta_1(t)-\eta_2(t) = \hat{\eta}_1\,\cos(\omega_1\,t-\phi_1)-\hat{\eta}_2\,\cos(\omega_0\,t-\phi_2).\label{e4.45}
+\end{eqnarray}
+As an example, suppose that $\phi_1=\phi_2=0$ and $\hat{\eta}_1=\hat{\eta}_2= I_0/2$. 
+We obtain
+\begin{eqnarray}
+I_1(t) &=& I_0\,\cos(\omega_-\,t)\,\cos(\omega_+\,t),\\[0.5ex]
+I_2(t) &=& I_0\,\sin (\omega_-\,t)\,\sin(\omega_+\,t),
+\end{eqnarray}
+where $\omega_\pm = (\omega_0\pm \omega_1)/2$. This solution is illustrated
+in Figure~\ref{f4.4}. [Here, $T_0=2\pi/\omega_0$ and $\alpha=0.2$.
+Thus, the two normal frequencies are $\omega_0$ and $1.18\,\omega_0$.] Note the
+{\em beats}\/ generated by the superposition of two normal modes with similar
+normal frequencies. 
+
+\begin{figure}
+\epsfysize=2.2in
+\centerline{\epsffile{Chapter04/fig04.eps}}
+\caption{\em Coupled oscillations in a two degree of freedom  $LC$ circuit.}\label{f4.4}   
+\end{figure}
+
+We can also solve the problem in a more systematic manner by specifically
+searching for a normal mode of the form
+\begin{eqnarray}
+I_1(t) &=&\hat{I}_1\,\cos(\omega\,t-\phi),\\[0.5ex]
+I_2(t) &=&\hat{I}_2\,\cos(\omega\,t-\phi).
+\end{eqnarray}
+Substitution into the time evolution equations (\ref{e4.36}) and (\ref{e4.37})
+yields the matrix equation
+\begin{equation}
+\left(
+\begin{array}{cc}
+\hat{\omega}^2-(1+\alpha) & -\alpha\\[0.5ex]
+-\alpha&\hat{\omega}^{\,2}-(1+\alpha)
+\end{array}\right)\left(
+\begin{array}{c}
+\hat{I}_1\\[0.5ex] \hat{I}_2
+\end{array}\right) = \left(
+\begin{array}{c}
+0\\[0.5ex] 0
+\end{array}\right),\label{e4.50}
+\end{equation}
+where $\hat{\omega}=\omega/\omega_0$. The normal frequencies are
+determined by setting the determinant of the matrix to zero. This gives
+\begin{equation}
+\left[\hat{\omega}^2-(1+\alpha)\right]^2-\alpha^2 = 0,
+\end{equation}
+or 
+\begin{equation}
+\hat{\omega}^{\,4} - 2\,(1+\alpha)\,\hat{\omega}^{\,2}+1+2\,\alpha
+=\left(\hat{\omega}^{\,2}-1\right)\left(\hat{\omega}^{\,2}-[1+2\,\alpha]\right)=0.
+\end{equation}
+The roots of the above equation
+are $\hat{\omega}=1$ and $\hat{\omega}=(1+2\,\alpha)^{1/2}$. (Again, we neglect the
+negative frequency roots, since they generate the same patterns of motion as the
+corresponding positive frequency roots.)
+Hence, the two
+normal frequencies are $\omega_0$ and $(1+2\,\alpha)^{1/2}\,\omega_0$.
+The characteristic patterns of motion associated with the normal modes
+can be calculated from the first row of the matrix equation (\ref{e4.50}),
+which can be rearranged to give
+\begin{equation}
+\frac{\hat{I}_1}{\hat{I}_2}= \frac{\alpha}{\hat{\omega}^{\,2}-(1+\alpha)}.
+\end{equation}
+It follows that $\hat{I}_1=-\hat{I}_2$ for the normal mode with $\hat{\omega}=1$,
+and $\hat{I}_1=\hat{I}_2$ for the normal mode with $\hat{\omega}=(1+2\,\alpha)^{1/2}$. We are thus led to Equations~(\ref{e4.44}) and (\ref{e4.45}), where
+$\hat{\eta}_1$ and $\phi_1$ are the amplitude and phase of the higher frequency
+normal mode, whereas $\hat{\eta}_2$ and $\phi_2$ are the amplitude and phase of the lower frequency
+ mode.
+ 
+\section{Three Spring Coupled Masses}
+Consider a generalized version of the mechanical system discussed in Section~\ref{s4.1}
+that consists of {\em three}\/ identical masses $m$ which slide over a
+frictionless horizontal surface, and are  connected by identical
+light horizontal springs of spring constant $k$. As before, the outermost masses are  attached to immovable
+walls by springs of spring constant $k$. The instantaneous configuration of
+the system is specified by the horizontal displacements of the
+three masses from their equilibrium positions: {\em i.e.},  $x_1(t)$, $x_2(t)$, and $x_3(t)$.
+Clearly, this is  a {\em three degree of freedom system}. We, therefore, 
+expect it to possesses
+{\em three}\/ independent normal modes of oscillation. Equations~(\ref{e4.1})--(\ref{e4.2})
+generalize to
+\begin{eqnarray}\label{e4.54}
+m\,\ddot{x}_1&=&-k\,x_1 + k\,(x_2-x_1),\\[0.5ex]
+m\,\ddot{x}_2&=&-k\,(x_2-x_1)+k\,(x_3-x_2),\\[0.5ex]
+m\,\ddot{x}_3&=&-k\,(x_3-x_2)+k\,(-x_3).\label{e4.56}
+\end{eqnarray}
+These equations can be rewritten
+\begin{eqnarray}\label{e4.57}
+\ddot{x}_1&=&-2\,\omega_0^{\,2}\,x_1 + \omega_0^{\,2}\,x_2,\\[0.5ex]
+\ddot{x}_2&=&\omega_0^{\,2}\,x_1-2\,\omega_0^{\,2}\,x_2+\omega_0^{\,2}\,x_3,\\[0.5ex]
+\ddot{x}_3 &=&\omega_0^{\,2}\,x_2-2\,\omega_0^{\,2}\,x_3,\label{e4.60}
+\end{eqnarray}
+where $\omega_0=\sqrt{k/m}$.
+Let us search for a normal mode  solution of the form
+\begin{eqnarray}
+x_1(t)&=&\hat{x}_1\,\cos(\omega\,t-\phi),\\[0.5ex]
+x_2(t)&=&\hat{x}_2\,\cos(\omega\,t-\phi),\\[0.5ex]
+x_3(t)&=&\hat{x}_3\,\cos(\omega\,t-\phi).\label{e4.62}
+\end{eqnarray}
+Equations~(\ref{e4.57})--(\ref{e4.62}) can be combined to give  the $3\times 3$ homogeneous matrix equation
+\begin{equation}
+\left(\begin{array}{ccc}
+\hat{\omega}^{\,2}-2 & 1 & 0\\[0.5ex]
+1 & \hat{\omega}^{\,2}-2 & 1\\[0.5ex]
+0 & 1 & \hat{\omega}^{\,2}-2
+\end{array}\right)
+\left(\begin{array}{c}\hat{x}_1\\[0.5ex] \hat{x}_2 \\[0.5ex] \hat{x}_3\end{array}\right)
+=\left(\begin{array}{c}0\\[0.5ex] 0 \\[0.5ex] 0\end{array}\right),\label{e4.63}
+\end{equation}
+where $\hat{\omega}=\omega/\omega_0$. 
+The normal frequencies  are determined by setting the determinant of the matrix
+to zero: {\em i.e.}, 
+\begin{equation}
+(\hat{\omega}^{\,2}-2)\left[(\hat{\omega}^{\,2}-2)^2-1\right]-(\hat{\omega}^{\,2}-2)=0,
+\end{equation}
+or
+\begin{equation}
+(\hat{\omega}^{\,2}-2)\,\left[\hat{\omega}^{\,2}-2-\sqrt{2}\right]\,\left[
+\hat{\omega}^{\,2}-2+\sqrt{2}\right]=0.
+\end{equation}
+Thus, the normal frequencies are
+$\hat{\omega}= \sqrt{2}\,(1-1/\sqrt{2})^{1/2}$, $\sqrt{2}$, and
+$\sqrt{2}\,(1+1/\sqrt{2})^{1/2}$.  According to the first and third rows
+of Equation~(\ref{e4.63}), 
+\begin{equation}
+\hat{x}_1:\hat{x}_2:\hat{x}_3 :: 1:2- \hat{\omega}^{\,2}:1,
+\end{equation}
+provided $\hat{\omega}^{\,2}\neq 2$. According to the second row,
+\begin{equation}
+\hat{x}_1:\hat{x}_2:\hat{x}_3 :: -1:0:1
+\end{equation}
+when $\hat{\omega}^{\,2} = 2$. 
+Note that we can only determine the  {\em ratios}\/ of $\hat{x}_1$, $\hat{x}_2$, and
+$\hat{x}_3$, rather
+than the absolute values of these quantities. In other words, only the direction of the vector $\hat{\bf x}= (\hat{x}_1,\hat{x}_2,\hat{x}_3)$ is well-defined. [This follows
+because the most general solution, (\ref{e4.70}), is undetermined to an arbitrary multiplicative constant.
+That is, if ${\bf x}(t)=(x_1(t),x_2(t),x_3(t))$ is a solution to the dynamical equations (\ref{e4.57})--(\ref{e4.60}) then so is $a\,{\bf x}(t)$, where $a$ is an arbitrary constant. This, in turn,
+follows because the dynamical equations are linear.]
+Let us
+arbitrarily set the magnitude of $\hat{\bf x}$ to unity. It follows that 
+the normal mode  associated with the  normal frequency $\hat{\omega}_1=\sqrt{2}\,(1-1/\sqrt{2})^{1/2}$
+is 
+\begin{equation}
+\hat{\bf x}_1 = \left(\frac{1}{2},\,\frac{1}{\sqrt{2}},\,\frac{1}{2}\right).
+\end{equation}
+Likewise, the normal mode  associated with the  normal frequency $\hat{\omega}_2=\sqrt{2}$
+is 
+\begin{equation}
+\hat{\bf x}_2 = \left(-\frac{1}{\sqrt{2}},\,0,\,\frac{1}{\sqrt{2}}\right).
+\end{equation}
+Finally, the 
+normal mode  associated with the  normal frequency $\hat{\omega}_3=\sqrt{2}(1+1/\sqrt{2})^{1/2}$
+is 
+\begin{equation}
+\hat{\bf x}_3 =\left(\frac{1}{2},-\frac{1}{\sqrt{2}},\,\frac{1}{2}\right). 
+\end{equation}
+Note that the vectors $\hat{\bf x}_1$, $\hat{\bf x}_2$, and $\hat{\bf x}_3$ are {\em mutually perpendicular}: {\em i.e.},
+they are {\em normal vectors.} Hence, the name ``normal'' mode. 
+
+
+Let ${\bf x}=(x_1,x_2,x_2)$. It follows that the most general solution to the problem is
+\begin{equation}\label{e4.70}
+{\bf x}(t) = \eta_1(t)\,\hat{\bf x}_1 + \eta_2(t)\,\hat{\bf x}_2+\eta_3(t)\,\hat{\bf x}_3,
+\end{equation}
+where
+\begin{eqnarray}
+\eta_1(t) &=&\hat{\eta}_1\,\cos(\hat{\omega}_1\,t-\phi_1),\\[0.5ex]
+\eta_2(t) &=&\hat{\eta}_2\,\cos(\hat{\omega}_2\,t-\phi_2),\\[0.5ex]
+\eta_3(t) &=&\hat{\eta}_3\,\cos(\hat{\omega}_3\,t-\phi_3).
+\end{eqnarray}
+Here, $\hat{\eta}_{1,2,3}$ and $\phi_{1,2,3}$ are constants. Incidentally, we need to introduce the arbitrary amplitudes
+$\hat{\eta}_{1,2,3}$ to make up for the fact that we arbitrarily set the magnitudes of the vectors $\hat{\bf x}_{1,2,3}$ to unity.
+Equation~(\ref{e4.70}) yields
+\begin{equation}
+\left(\begin{array}{c}x_1\\[0.5ex]x_2\\[0.5ex]x_3\end{array}\right)
+=
+\left(\begin{array}{ccc}
+1/2&-1/\sqrt{2}&1/2\\[0.5ex]
+1/\sqrt{2}&0&-1/\sqrt{2}\\[0.5ex]
+1/2&1/\sqrt{2}&1/2
+\end{array}\right)\left(\begin{array}{c}\eta_1\\[0.5ex]\eta_2\\[0.5ex]\eta_3\end{array}\right)
+\end{equation}
+The above equation can easily be inverted by noting that the matrix
+is {\em unitary}: {\em i.e.}, its transpose is equal to its inverse. 
+Thus, we obtain
+\begin{equation}
+\left(\begin{array}{c}\eta_1\\[0.5ex]\eta_2\\[0.5ex]\eta_3\end{array}\right)
+=
+\left(\begin{array}{ccc}
+1/2&1/\sqrt{2}&1/2\\[0.5ex]
+-1/\sqrt{2}&0&1/\sqrt{2}\\[0.5ex]
+1/2&-1/\sqrt{2}&1/2
+\end{array}\right)\left(\begin{array}{c}x_1\\[0.5ex]x_2\\[0.5ex]x_3\end{array}\right)
+\end{equation}
+This equation determines the three normal coordinates, $\eta_1$, $\eta_2$, $\eta_3$,
+in terms of the three conventional coordinates, $x_1$, $x_2$, $x_3$. Note that, in general, 
+the normal coordinates are undetermined to arbitrary multiplicative constants.
+Incidentally, the above matrix equation can also be obtained directly from (\ref{e4.70}), which yields
+$\eta_{1,2,3}={\bf x}\cdot\hat{\bf x}_{1,2,3}$ (since $\hat{\bf x}_{1,2,3}$ are mutually perpendicular unit
+vectors). 
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item A particle of mass $m$ is attached to a rigid support by means of a spring of
+spring constant $k$. At equilibrium, the spring hangs vertically
+downward. An identical oscillator is added to this system, the
+spring of the former being attached to the mass of the latter.
+Calculate the normal frequencies for one-dimensional vertical
+oscillations {\em about the equilibrium}, and describe the associated normal modes.
+
+\item Consider a mass-spring system of the general form shown
+in Figure~\ref{f4.1} in which the two masses are of mass $m$, the two outer springs have spring constant
+$k$, and the middle spring has spring constant $k'$. Find the normal
+frequencies and normal modes in terms of $\omega_0=\sqrt{k/m}$ and
+$\alpha=k'/k$. 
+
+\item Consider a mass-spring system of the general form shown
+in Figure~\ref{f4.1} in which the springs all have spring constant $k$, and the
+left and right masses are of mass $m$ and $m'$, respectively. Find the normal
+frequencies and normal modes in terms of $\omega_0=\sqrt{k/m}$ and
+$\alpha=m'/m$. 
+
+\item Consider two simple pendula with the same
+length, $l$, but different bob masses, $m_1$ and $m_2$. Suppose
+that the pendula are connected by a spring of spring constant $k$. 
+Let the spring be unextended when the two bobs are in their equilibrium
+positions. Demonstrate that the equations of motion of the system (for small
+amplitude oscillations) are
+\begin{eqnarray}
+m_1\,\ddot{\theta}_1&=&-m_1\,\frac{g}{l}\,\theta_1+ k\,(\theta_2-\theta_1),\nonumber\\[0.5ex]
+m_2\,\ddot{\theta}_2&=&-m_2\,\frac{g}{l}\,\theta_2+ k\,(\theta_1-\theta_2),\nonumber
+\end{eqnarray}
+where $\theta_1$ and $\theta_2$ are the angular displacements of the respective
+pendula from their equilibrium positions. Show that the
+normal coordinates are $\eta_1=(m_1\,\theta_1+m_2\,\theta_2)/(m_1+m_2)$ and
+$\eta_2=\theta_1-\theta_2$. Find the normal frequencies and normal
+modes. Find a superposition of the two modes such that at $t=0$ the
+two pendula are stationary, with  $\theta_1=\theta_0$, and $\theta_2=0$. 
+
+\begin{figure}[h]
+\epsfysize=1.6in
+\centerline{\epsffile{Chapter04/fig05.eps}}
+\end{figure}
+
+\item Find the normal frequencies and normal modes of the coupled $LC$ circuit
+shown above in terms of $\omega_0=1/\sqrt{L\,C}$ and $\alpha=L'/L$.
+\end{enumerate}
+}

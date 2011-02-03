@@ -1,0 +1,844 @@
+\chapter{Transverse Standing Waves}\label{c5}
+\section{Normal Modes of a Beaded String}\label{s5.1}
+Consider a mechanical system consisting of a taut string which is stretched
+between two immovable walls. Suppose that $N$ identical beads of
+mass $m$ are attached to the string in such a manner that they cannot slide along it. Let the beads be equally
+spaced a  distance $a$ apart, and let the distance between the first and the last beads and
+the neighboring walls also be $a$. See Figure~\ref{f5.1}. Consider {\em transverse}\/ 
+oscillations of the string: {\em i.e.}, oscillations in which the string
+moves from side to side ({\em i.e.}, in the $y$-direction). 
+It is assumed that the inertia of the string
+is negligible with respect to that of the beads. It follows that the sections of the string
+between neighboring beads, and between the outermost beads and the walls,
+are {\em straight}. (Otherwise, there would be a net tension force acting on the sections, and
+they would consequently suffer an infinite acceleration.) In fact, we expect the instantaneous configuration of the string to be a
+set of continuous straight-line segments of varying inclinations, as shown in the figure. Finally, assuming that
+the transverse displacement of the string is {\em relatively small}, it is
+reasonable to suppose that each section of the string possesses the
+{\em same}\/ tension, $T$. 
+
+\begin{figure}
+\epsfysize=1.6in
+\centerline{\epsffile{Chapter05/fig01.eps}}
+\caption{\em A beaded string.}\label{f5.1}   
+\end{figure}
+
+It is convenient to introduce a Cartesian coordinate system such  that $x$
+measure distance along the string from the left wall, and
+$y$ measures the transverse displacement of the string from its
+equilibrium position. See Figure~\ref{f5.1}. Thus, when the string is in its equilibrium position
+it runs along the $x$-axis. We can define
+\begin{equation}
+x_i = i\,a,\label{e5.1}
+\end{equation}
+where $i=1,2,\cdots, N$. Here, $x_1$ is the $x$-coordinate of the
+closest bead to the left wall, $x_2$ the
+$x$-coordinate of the second closest bead, {\em etc.} The $x$-coordinates of the beads
+are assumed to remain {\em constant}\/ during the transverse oscillations. 
+We can also define $x_0=0$
+and $x_{N+1}= (N+1)\,a$ as the $x$-coordinates of the left
+and right ends of the string. Let the transverse displacement
+of the $i$th bead be $y_i(t)$, for $i=1,N$. Since each displacement
+can vary independently, we are clearly dealing with an $N$ degree of freedom system. 
+We would, therefore, expect such a system to possess $N$ unique normal modes of
+oscillation. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter05/fig02.eps}}
+\caption{\em A short section of a beaded string.}\label{f5.2}   
+\end{figure}
+
+Consider the section of the
+string lying between the $i-1$th and $i+1$th beads, as shown in Figure~\ref{f5.2}.
+Here, $x_{i-1}=x_i-a$, $x_i$, and $x_{i+1}=x_i+a$ are the distances of the $i-1$th, $i$th, and
+$i+1$th beads, respectively, 
+from the left  wall, whereas $y_{i-1}$, $y_i$, and
+$y_{i+1}$ are the corresponding transverse displacements of these beads. 
+The  two sections of the string which are attached to the $i$th
+bead subtend angles $\theta_i$ and $\theta_{i+1}$ with the $x$-axis, as illustrated
+in the figure. Simple trigonometry reveals that
+\begin{equation}
+\tan\theta_i = \frac{y_i-y_{i-1}}{x_i-x_{i-1}} = \frac{y_i-y_{i-1}}{a},
+\end{equation}
+and
+\begin{equation}
+\tan\theta_{i+1} =   \frac{y_{i+1}-y_{i}}{a}.
+\end{equation}
+However, if the transverse displacement of the string is
+relatively small---{\em i.e.}, if $|y_i|\ll a$ for all $i$---which we shall assume to be
+the case, then $\theta_i$ and $\theta_{i+1}$ are both {\em small}\/ angles. Now, it is
+well known that $\tan\theta\simeq \theta$ when $|\theta|\ll 1$. It follows that
+\begin{eqnarray}\label{e5.4}
+\theta_i &\simeq & \frac{y_i-y_{i-1}}{a},\\[0.5ex]
+\theta_{i+1} &\simeq &  \frac{y_{i+1}-y_{i}}{a}.\label{e5.5}
+\end{eqnarray}
+
+Let us find the {\em transverse}\/ equation of motion of the $i$th bead. This
+bead is subject to two forces: {\em i.e.}, the tensions in the sections
+of the string to the left and to the right of it. (Incidentally, we are neglecting any gravitational forces
+acting on the beads compared to the tension forces.) These tensions are of
+magnitude $T$, and are directed parallel to the associated string sections, as shown
+in Figure~\ref{f5.2}. Thus, the transverse ({\em i.e.}, $y$-directed) components of
+these two tensions are $-T\,\sin\theta_i$  and $T\,\sin\theta_{i+1}$, respectively. 
+Hence, the transverse equation of motion of the $i$th bead becomes
+\begin{equation}
+m\,\ddot{y}_i = -T\,\sin\theta_i + T\,\sin\theta_{i+1}.
+\end{equation}
+However, since $\theta_i$ and $\theta_{i+1}$ are both small angles, we
+can employ the small angle approximation $\sin\theta\simeq \theta$. 
+It follows that
+\begin{equation}
+\ddot{y}_i\simeq \frac{T}{m}\left(\theta_{i+1}-\theta_i\right).
+\end{equation}
+Finally, making use of Equations~(\ref{e5.4}) and (\ref{e5.5}),
+we obtain
+\begin{equation}\label{e5.8}
+\ddot{y}_i = \omega_0^{\,2}\left(y_{i-1}-2\,y_i+y_{i+1}\right),
+\end{equation}
+where $\omega_0 = \sqrt{T/ m\,a}$. Since there is nothing special
+about the $i$th bead, we deduce that the above equation of motion
+applies to all $N$ beads: {\em i.e.}, it is valid for $i=1,N$. Of course,
+the first ($i=1$) and last ($i=N$) beads are special cases, since there
+is no bead corresponding to $i=0$ or $i=N+1$.  In fact, $i=0$ and $i=N+1$
+correspond to the left and  right ends of the string, respectively. However,
+Equation~(\ref{e5.8}) still applies to the first and last beads as long as
+we set $y_0=0$ and $y_{N+1}=0$. What we are effectively demanding
+ is that the two ends of the string, which are attached to the left and right walls, must both have {\em zero transverse
+displacement}. 
+
+Incidentally, we can prove that the tensions in the two sections of the string shown in Figure~\ref{f5.2} must be
+equal by considering the {\em longitudinal}\/ equation of motion of the $i$th bead. This equation takes the
+form
+\begin{equation}
+m\,\ddot{x}_i=-T_i\,\cos\theta_i +T_{i+1}\,\cos\theta_{i+1},
+\end{equation}
+where $T_i$ and $T_{i+1}$ are the, supposedly different, tensions in the sections of the string to the
+immediate left and right of the $i$th bead, respectively. Now, we are assuming that the motion
+of the beads is purely transverse: {\em i.e.}, all of the $x_i$ are constants. Thus, it follows from the
+above equation that
+\begin{equation}
+T_i\,\cos\theta_i = T_{i+1}\,\cos\theta_{i+1}.
+\end{equation}
+However, if the transverse displacement of the string is sufficiently small that all of the $\theta_i$ are small,
+the we can make use of the small angle approximation $\cos\theta_i\simeq 1$. Hence, we
+obtain
+\begin{equation}
+T_i\simeq T_{i+1}.
+\end{equation}
+A simple extension of this argument reveals that the tension is the same in all sections of the string. 
+
+Let us search for a normal mode solution to Equation~(\ref{e5.8}) which
+takes the form
+\begin{equation}\label{e5.9}
+y_i(t) = A\,\sin(k\,x_i)\,\cos(\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. 
+This particular type of solution is such that all of the  beads execute transverse simple harmonic oscillations {\em in phase}\/
+with one another. See Figure~\ref{f5.4}. Moreover, the oscillations have an amplitude $A\,\sin(k\,x_i)$
+which {\em varies sinusoidally}\/ along the length of the string ({\em i.e.}, in the $x$-direction). The  pattern of oscillations is thus {\em periodic in space}. The spatial repetition period, which is usually known as the {\em wavelength}, is $\lambda=2\pi/k$. [This follows from (\ref{e5.9}) because $\sin\theta$ is a periodic function with period
+$2\pi$: {\em i.e.}, $\sin(\theta+2\pi)\equiv \sin\theta$.] The constant $k$, which determines the wavelength, is usually referred to as the {\em wavenumber}.  Thus, a
+small wavenumber corresponds to a long wavelength, and {\em vice versa}. 
+The type of solution specified in (\ref{e5.9}) is generally
+known as a {\em standing wave}.  It is a {\em wave}\/ because it is periodic
+in both space and time. (An oscillation is periodic in time only.) It is
+a {\em standing}\/ wave, rather than a traveling wave, because the points
+of maximum and minimum amplitude oscillation are stationary (in $x$). See Figure~\ref{f5.4}.
+
+Substituting (\ref{e5.9}) into (\ref{e5.8}), we obtain
+\begin{eqnarray}
+-\omega^2\,A\,\sin(k\,x_i)\,\cos(\omega\,t-\phi)
+&=&\omega_0^{\,2}\,A\left[\sin(k\,x_{i-1})-2\,\sin(k\,x_i)\right.\nonumber\\[0.5ex]
+&&\left.+\sin(k\,x_{i+1})\right]\,\cos(\omega\,t-\phi),
+\end{eqnarray}
+which yields
+\begin{equation}
+-\omega^2\,\sin(k\,x_i)=\omega_0^{\,2}\left(\sin[k\,(x_i-a)] -2\,\sin(k\,x_i)
++\sin[k\,(x_i+a)]\right).
+\end{equation}
+However, since $\sin(a+b)\equiv \sin a\,\cos b + \cos a\,\sin b$, we get
+\begin{eqnarray}
+-\omega^2\,\sin(k\,x_i)=\omega_0^{\,2}\left[\cos(k\,a)-2+\cos(k\,a)\right]\sin(k\,x_i),
+\end{eqnarray}
+which gives
+\begin{equation}\label{e5.13}
+\omega = 2\,\omega_0\,\sin(k\,a/2),
+\end{equation}
+where use has been made of the trigonometric identity $1-\cos\theta \equiv 2\,\sin^2(\theta/2)$. Note that an expression, such as (\ref{e5.13}), which determines the angular frequency, $\omega$, of
+a wave in terms of its wavenumber, $k$, is generally known as a {\em dispersion relation}.
+
+Now, the solution (\ref{e5.9}) is only physical provided $y_0=y_{N+1}=0$: {\em i.e.},
+provided that the two ends of the string remain stationary. The first constraint
+is automatically satisfied, since $x_0=0$ [see (\ref{e5.1})]. The second constraint
+implies that
+\begin{equation}
+\sin(k\,x_{N+1}) = \sin[(N+1)\,k\,a] = 0.
+\end{equation}
+This condition can only be  satisfied if
+\begin{equation}\label{e5.15}
+k = \frac{n}{N+1}\,\frac{\pi}{a},
+\end{equation}
+where the integer $n$ is  known as the {\em mode number}. Clearly, a small mode number translates to a small wavenumber, and, hence, to a
+long wavelength, and {\em vice versa}. We conclude that the possible wavenumbers, $k$, of the normal modes of the system are
+{\em quantized}\/ such that they are integer multiples of $\pi/[(N+1)\,a]$. 
+Thus, the $n$th normal mode  is
+associated with the characteristic pattern of bead displacements
+\begin{equation}\label{e5.16}
+y_{n,i}(t)=A_n\,\sin\left(\frac{n\,i}{N+1}\,\pi\right)\,\cos(\omega_n\,t-\phi_n),
+\end{equation}
+where
+\begin{equation}\label{e5.17}
+\omega_n = 2\,\omega_0\,\sin\left(\frac{n}{N+1}\,\frac{\pi}{2}\right).
+\end{equation}
+Here, the integer $i=1,N$ indexes the beads, whereas the mode number $n$ indexes the normal modes. Furthermore,
+$A_n$ and $\phi_n$ are arbitrary constants determined by the initial conditions. 
+Of course, $A_n$ is the {\em peak amplitude}\/ of the $n$th normal mode, whereas $\phi_n$
+is the associated {\em phase angle}.
+
+So, how many unique normal modes does the system possess? At first sight, it
+might seem that there are an infinite number of normal modes, corresponding to the
+infinite number of possible values that the integer $n$ can take. However, this is not
+the case. For instance, if $n=0$ or $n=N+1$ then all of the $y_{n,i}$ are zero.
+Clearly, these cases are not real normal modes. Moreover, it is easily
+demonstrated that
+\begin{eqnarray}
+\omega_{-n} &=&-\omega_n,\\[0.5ex]
+y_{-n,i}(t) &=& y_{n,i}(t),
+\end{eqnarray}
+provided $A_{-n}=-A_n$ and $\phi_{-n}=-\phi_n$, as well as
+\begin{eqnarray}
+\omega_{N+1+n} &=&\omega_{N+1-n},\\[0.5ex]
+y_{N+1+n,i}(t) &=&y_{N+1-n,i}(t),
+\end{eqnarray}
+provided $A_{N+1+n}=-A_{N+1-n}$ and $\phi_{N+1+n}=\phi_{N+1-n}$. We,
+thus, conclude that only those normal modes which have $n$ in the
+range $1$ to $N$ correspond to unique  modes. Modes with $n$ values lying outside
+this range are either null modes, or modes that are identical to other  modes
+with  $n$ values lying within  the prescribed range. It follows  that
+there are $N$ unique normal modes of the form (\ref{e5.16}). Hence, given that we are dealing with an $N$ degree of
+freedom system, which we would expect to only possess $N$ unique normal modes, we can be sure that we have found {\em all}\/ of the normal modes of the system. 
+
+\begin{figure}
+\epsfysize=7in
+\centerline{\epsffile{Chapter05/fig03.eps}}
+\caption{\em Normal modes of a beaded string with eight equally spaced
+beads.}\label{f5.3}   
+\end{figure}
+
+Figure~\ref{f5.3} illustrates the  spatial variation of the normal modes of a beaded string possessing eight
+beads: {\em i.e.}, an $N=8$ system. The modes are all
+shown at the instances in time at which they attain their maximum amplitudes: {\em i.e.},
+at $\omega_n\,t-\phi_n=0$. It can be seen that the low-$n$---{\em i.e.}, long wavelength---modes cause the string to oscillate in a
+fairly smoothly varying (in $x$) sine wave pattern. On the other hand, the high-$n$---{\em i.e.}, short
+wavelength---modes cause the string to oscillate in a
+rapidly varying zig-zag pattern which bears little resemblance to a sine wave.
+The crucial distinction between the two different types of mode is that the
+wavelength of the oscillation (in the $x$-direction) is much larger
+than the bead spacing in the former case, whilst it is similar to
+the bead spacing in the latter. For instance, $\lambda=18\,a$ for the $n=1$ mode,
+$\lambda = 9\,a$ for the $n=2$ mode, but $\lambda  = 2.25\,a$ for the $n=8$ mode.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig04.eps}}
+\caption{\em Time evolution of the $n=2$ normal mode of a beaded string with eight equally spaced
+beads.}\label{f5.4}   
+\end{figure}
+
+Figure~\ref{f5.5}  displays the temporal variation of the $n=2$ normal mode of
+an $N=8$  beaded string. The mode is shown at $\omega_2\,t-\phi_2=0$, $\pi/8$, $\pi/4$, $3\pi/8$, $\pi/2$, $5\pi/8$, $3\pi/2$, $7\pi/8$ and $\pi$. It can be seen
+that the beads oscillate {\em in phase}\/ with one another: {\em i.e.}, they all attain their maximal
+transverse displacements, and pass through zero displacement, {\em simultaneously}. 
+Note that the mid-way point of the string always remains stationary. Such a point is
+known as a {\em node}. The $n=1$ normal mode has two nodes (counting the
+stationary points at each end of the string as nodes), the $n=2$
+mode has three nodes, the $n=2$ mode four nodes, {\em etc.} In fact, the existence
+of nodes is one of the distinguishing features of a standing wave.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig05.eps}}
+\caption{\em Normal frequencies of a beaded
+string with eight equally spaced beads.}\label{f5.5}   
+\end{figure}
+
+Figure~\ref{f5.5} shows the normal frequencies  of an $N=8$
+beaded string  plotted  as a function of the normalized wavenumber. Recall that, for an $N=8$
+system,
+the relationship between the normalized wavenumber, $k\,a$, and the
+mode number, $n$, is $k\,a =  (n/9)\,\pi$.
+It can be seen that the angular frequency  increases as the  wavenumber
+ increases, which implies that shorter wavelength  modes  have
+higher oscillation frequencies. Note that the dependence of the angular frequency
+on the normalized wave\-number, $k\,a$, is approximately {\em linear}\/ when $k\,a\ll 1$. Indeed, it can be seen from  Equation~(\ref{e5.17}) that if $k\,a\ll 1$ then the small
+angle approximation $\sin\theta\simeq \theta$ yields a linear dispersion relation
+of the form
+\begin{equation}\label{e5.22}
+\omega_n \simeq (k\,a)\,\omega_0 = \left(\frac{n}{N+1}\right)\pi\,\omega_0.
+\end{equation}
+We, thus, conclude that those normal modes of a uniformly beaded string whose wavelengths greatly
+exceed the bead spacing ({\em i.e.}, modes with $k\,a\ll 1$) have approximately {\em linear dispersion
+relations}\/ in which their angular frequencies are directly proportional
+to their mode numbers. However, it is evident from the figure that this linear relationship
+breaks down as $k\,a\rightarrow 1$, and the mode wavelength consequently becomes
+similar to the bead spacing. 
+
+\section{Normal Modes of a Uniform String}\label{s5.2}
+Consider a uniformly beaded string in the limit in which the number of beads, $N$,
+becomes increasingly large, whilst the spacing, $a$, and the individual mass, $m$, of the beads becomes increasingly small.  Let the
+limit be  taken in such 
+a manner that the length, $l=(N+1)\,a$, and the average mass per unit length, $\rho=m/a$, 
+of the string both remain constant. Clearly, as $N$ increases, and becomes very large, such a string will more and
+more closely approximate a {\em uniform string}\/ of length $l$ and
+mass per unit length $\rho$. What can we guess about the normal modes of
+a uniform string from the analysis contained in the previous section? Well, first of all,
+we would guess that a uniform string is an {\em infinite}\/ degree of freedom system,
+with an infinite number of unique normal modes of oscillation. This follows because a uniform string is the $N\rightarrow\infty$ limit of a beaded string, and
+a beaded string possesses $N$ unique normal modes.   Next, we  would
+guess that the normal modes of a uniform string exhibit {\em smooth sinusoidal spatial variation}\/ in the $x$-direction, and that the angular frequency of the modes is {\em directly proportional}\/ to
+their wavenumber. These last two conclusions follow because all of the normal modes of a beaded string are characterized by $k\,a\ll 1$ in the limit in which the spacing between the beads becomes zero. Let us now investigate whether these guesses are correct.
+
+Consider the transverse oscillations of a uniform string of length $l$ and mass
+per unit length $\rho$ which is stretched between two immovable walls.  
+It is again convenient to define a Cartesian coordinate system in which $x$
+measures distance along the string from the left  wall, and $y$ measures
+the transverse displacement of the string. Thus, the instantaneous state of the
+system at time $t$ is determined by the function $y(x,t)$ for $0\leq x\leq l$. 
+Of course, this function consists of an infinite number of different $y$ values,
+corresponding to the infinite number of different $x$ values in the range $0$ to $l$.
+Moreover, all of these $y$ values are free to vary {\em independently}\/ of one another.
+It follows that we are indeed dealing with a dynamical system possessing an {\em infinite}\/ number
+of degrees of freedom.
+
+Let us try to reuse some of the analysis of the previous section. We can reinterpret
+$y_i(t)$ as $y(x,t)$, $y_{i-1}(t)$ as $y(x-\delta x,t)$, and $y_{i+1}(t)$ as
+$y(x+\delta x,t)$, assuming that $x_i=x$ and $a=\delta x$. Moreover, $\ddot{y}_i(t)$
+becomes $\partial^2 y(x,t)/\partial t^2$: {\em i.e.}, a second derivative of
+$y(x,t)$ with respect to $t$ at {\em constant}\/ $x$. Finally, $\omega_0^{\,2}= T/(m\,a)$, where
+$T$ is the tension in the string, can be rewritten as $T/[\rho\,(\delta x)^2]$, since $\rho=m/\delta x$. Incidentally, we are again assuming that the transverse displacement of the
+string remains sufficiently small that the tension is approximately constant in $x$. 
+Thus,  the equation of motion of the beaded string, (\ref{e5.8}),  transforms into
+\begin{equation}\label{e5.23}
+\frac{\partial^2 y(x,t)}{\partial t^2} = \frac{T}{\rho}\left[\frac{y(x-\delta x,t)-2\,y(x,t)+y(x+\delta x,t)}{(\delta x)^2}\right].
+\end{equation}
+However, Taylor expanding $y(x+\delta x,t)$ in $x$ at constant $t$, we obtain
+\begin{equation}
+y(x+\delta x,t) = y(x,t) + \frac{\partial y(x,t)}{\partial x}\,\delta x + \frac{1}{2}\,\frac{\partial^2 y(x,t)}{\partial x^2}\,(\delta x)^2 + {\cal O}(\delta x)^3.
+\end{equation}
+Likewise,
+ \begin{equation}
+y(x-\delta x,t) = y(x,t) - \frac{\partial y(x,t)}{\partial x}\,\delta x + \frac{1}{2}\,\frac{\partial^2 y(x,t)}{\partial x^2}\,(\delta x)^2 + {\cal O}(\delta x)^3.
+\end{equation}
+It follows that
+\begin{equation}
+\left[\frac{y(x-\delta x,t)-2\,y(x,t)+y(x+\delta x,t)}{(\delta x)^2}\right]
+=\frac{\partial^2 y(x,t)}{\partial x^2} + {\cal O}(\delta x).
+\end{equation}
+Thus, in the limit that $\delta x\rightarrow 0$, Equation~(\ref{e5.23}) reduces
+to
+\begin{equation}\label{e5.28}
+\frac{\partial^2 y}{\partial t^2} = v^2\,\frac{\partial^2 y}{\partial x^2},
+\end{equation}
+where
+\begin{equation}
+v = \sqrt{\frac{T}{\rho}}
+\end{equation}
+is a quantity having the dimensions of {\em velocity}. Equation~(\ref{e5.28}), which is
+the transverse equation of motion of the string, is an example of a very famous partial differential
+equation known as the
+{\em wave equation}. The quantity $v$ turns out to the the propagation
+velocity of transverse waves along the string. See Section~\ref{s7.1}.
+
+By analogy with Equation~(\ref{e5.9}), let us search for a solution of the wave
+equation of the form
+\begin{equation}\label{e5.29}
+y(x,t) = A\,\sin(k\,x)\,\cos(\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. We would interpret such
+a solution as a {\em standing wave}\/ of wavenumber $k$, wavelength $\lambda=2\pi/k$, angular frequency $\omega$,
+peak amplitude $A$, and phase angle $\phi$. Substitution of the above
+expression into Equation~(\ref{e5.28}) yields the {\em dispersion relation}\/
+[{\em cf.}, (\ref{e5.13})]
+\begin{equation}
+\omega = k\,v.
+\end{equation}
+
+Now, the standing wave solution (\ref{e5.29}) is subject to the physical constraint that the two ends of the string, which are attached to immovable walls, 
+remain {\em stationary}.  This leads directly to the {\em boundary conditions}
+\begin{eqnarray}
+y(0, t)&=& 0,\label{e5.31}\\[0.5ex]
+y(l,t) &=&0.\label{e5.32}
+\end{eqnarray}
+It can be seen that the solution (\ref{e5.29}) automatically satisfies the first boundary
+condition. However, the second boundary condition is only satisfied when $\sin(k\,l)=0$,
+which immediately implies that
+\begin{equation}
+k = n\,\frac{\pi}{l},
+\end{equation}
+where the mode number, $n$, is an integer. We, thus, conclude that the
+possible normal modes of a taut string, of length $l$ and
+fixed ends,  have wavenumbers which are {\em quantized}\/ such that they
+are integer multiples of $\pi/l$. Moreover, it is clear  that this quantization is a direct
+consequence of the imposition of the physical boundary
+conditions at the two ends of the string.
+
+It follows, from the above analysis, that the $n$th normal mode of the string
+is associated with the pattern of motion
+\begin{equation}\label{e5.34}
+y_n(x,t) = A_n\,\sin\left(n\,\pi\,\frac{x}{l}\right)\,\cos(\omega_n\,t-\phi_n),
+\end{equation}
+where
+\begin{equation}\label{e5.35}
+\omega_n = n\,\frac{\pi\,v}{l}.
+\end{equation}
+Here, $A_n$ and $\phi_n$ are constants which are determined
+by the initial conditions. See Section~\ref{s5.3}. So, how many unique normal modes are there? Well,
+the choice $n=0$ yields $y_0(x,t)=0$ for all $x$ and $t$, so this is not a real normal mode. Moreover,
+\begin{eqnarray}
+\omega_{-n}&=&-\omega_n,\\[0.5ex]
+y_{-n}(x,t) &=& y_n(x,t),
+\end{eqnarray}
+provided that $A_{-n}= - A_n$ and $\phi_{-n}=-\phi_n$. We, thus,  conclude that
+modes with negative mode numbers give rise to the same patterns of motion
+as modes with corresponding positive mode numbers. However, the modes with
+positive mode numbers each correspond to unique patterns of motion which
+oscillate at unique frequencies. It follows that the string possesses an {\em infinite}\/ number
+of normal modes, corresponding to the mode numbers $n=1,2,3,$ {\em etc.}
+Recall that we are dealing with an infinite degree of freedom system, which
+we would  expect to possess an infinite number of  unique normal modes. The fact that
+we have actually found an infinite number of such modes suggests that we have found {\em all}\/
+of the normal modes of the system. 
+
+\begin{figure}
+\epsfysize=7in
+\centerline{\epsffile{Chapter05/fig06.eps}}
+\caption{\em First eight normal modes of a uniform string.}\label{f5.6}   
+\end{figure}
+
+Figure~\ref{f5.6} illustrates the  spatial variation of the first eight normal modes of 
+a uniform string with fixed ends. The modes are all
+shown at the instances in time at which they attain their maximum amplitudes: {\em i.e.},
+at $\omega_n\,t-\phi_n=0$. It can be seen that  the modes are all smoothly
+varying sine waves. The low mode number ({\em i.e.}, long wavelength) modes are actually quite similar in form
+to the corresponding normal modes of a uniformly beaded string. See Figure~\ref{f5.3}.
+However, the high mode number modes are substantially different.
+We conclude that the normal modes of a beaded string are similar to those of
+a uniform string, with the same length and mass per unit length, provided that the wavelength of the mode is much larger
+than the spacing between the beads. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig07.eps}}
+\caption{\em Time evolution of the $n=4$ normal mode of a uniform string.}\label{f5.7}   
+\end{figure}
+
+Figure~\ref{f5.7}  illustrates the temporal variation of the $n=4$ normal mode of
+a uniform string. The mode is shown at $\omega_4\,t-\phi_4=0$, $\pi/8$, $\pi/4$, $3\pi/8$, $\pi/2$, $5\pi/8$, $3\pi/2$, $7\pi/8$ and $\pi$. It can be seen
+that all points on the string attain their maximal
+transverse displacements, and pass through zero displacement, {\em simultaneously}. 
+Note that the $n=4$ mode possesses {\em five}\/ nodes, at which the string remains stationary. Two of these
+are located at the ends of the string, and three  in the middle. In fact, it is
+clear from Equation~(\ref{e5.34}) that the nodes correspond to points at which
+$\sin [n\,(x/l)\,\pi]=0$. Hence, the nodes are located at
+\begin{equation}
+x_{n,j} = \left(\frac{j}{n}\right)l,
+\end{equation}
+where $j$ is an integer lying in the range $0$ to $n$. Here, $n$ indexes the normal mode,
+and $j$ the node. Thus, the $j=0$ node lies at the left end of the string, the
+$j=1$ node is the next node to the right, {\em etc.} It is apparent,  from the above
+formula, that the $n$th normal mode has $n+1$ nodes which are {\em uniformly
+spaced}\/ a distance $l/n$ apart.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig08.eps}}
+\caption{\em Normal frequencies of the first eight normal modes of a uniform string.}\label{f5.8}   
+\end{figure}
+
+Finally, Figure~\ref{f5.8} shows the first eight normal frequencies  of a uniform string  with fixed ends, plotted  as a function of the mode number. 
+It can be seen that the angular frequency  of oscillation increases {\em linearly}\/
+with the mode number.  Recall that the low mode number ({\em i.e.}, long wavelength)
+normal modes of a beaded string also exhibit a linear relationship between normal
+frequency and mode number of the form [see Equation~(\ref{e5.22})]
+\begin{equation}
+\omega_n = \frac{n\,\pi}{N+1}\,\omega_0= \frac{n\,\pi}{N+1}\left(\frac{T}{m\,a}\right)^{1/2}.
+\end{equation}
+However, $m=\rho\,a$ and $l=(N+1)\,a$, so we obtain
+\begin{equation}
+\omega_n = \frac{n\,\pi}{l}\left(\frac{T}{\rho}\right)^{1/2} =n\, \frac{\pi\,v}{l},
+\end{equation}
+which is identical to Equation~(\ref{e5.35}). We, thus, conclude that the normal
+frequencies of a uniformly beaded string are similar to those of a  uniform
+string, with the same length and mass per unit length, as long as the wavelength of the associated normal mode is much larger than the spacing
+between the beads.
+
+\section{General Time Evolution of a Uniform String}\label{s5.3}
+In the previous section, we found the normal modes of a uniform string of length $l$, both ends of
+which are attached to immovable walls. These modes are spatially periodic solutions of the
+wave equation (\ref{e5.28}) which oscillate at unique frequencies and
+satisfy the boundary conditions (\ref{e5.31}) and (\ref{e5.32}). Since the wave equation is obviously {\em linear}\/ [{\em i.e.},
+if $y(x,t)$ is a solution then so is $a\,y(x,t)$, where $a$ is an arbitrary constant], 
+it follows that its most general solution is a {\em linear combination}\/ of all of the normal modes. 
+In other words, 
+\begin{equation}\label{e5.41}
+y(x,t) = \sum_{n'=1,\infty}y_{n'}(x,t) = \sum_{n'=1,\infty} A_{n'}\,\sin\left(n'\,\pi\,\frac{x}{l}\right)\,\cos\left(n'\,\pi\,\frac{v\,t}{l}-\phi_{n'}\right),
+\end{equation}
+where use has been made of (\ref{e5.34}) and (\ref{e5.35}).
+Note that this expression is obviously a solution of (\ref{e5.28}), and also
+automatically satisfies the boundary conditions (\ref{e5.31}) and (\ref{e5.32}).
+As we have already mentioned, the constants $A_n$ and $\phi_n$ are determined
+by the {\em initial conditions}. Let us see how this comes about in more detail.
+
+Suppose that the initial displacement of the string at $t=0$ is
+\begin{equation}
+y_0(x) \equiv y(x,0).
+\end{equation}
+Likewise, let the initial velocity of the string be
+\begin{equation}
+v_0(x) \equiv \frac{\partial y(x,0)}{\partial t}.
+\end{equation}
+Obviously, for consistency with the boundary conditions, we must have
+$y_0(0)=y_0(l)=v_0(0)=v_0(l)=0$. 
+It follows from Equation~(\ref{e5.41}) that
+\begin{eqnarray}
+y_0(x) &=& \sum_{n'=1,\infty} A_{n'}\,\cos\phi_{n'}\,\sin\left(n'\,\pi\,\frac{x}{l}\right)\label{e5.44},\\[0.5ex]
+v_0(x) &=& \frac{v}{l}\sum_{n'=1,\infty} n'\,\pi\,A_{n'}\,\sin\phi_{n'}\,\sin\left(n'\,\pi\,\frac{x}{l}\right).\label{e5.45}
+\end{eqnarray}
+
+Now, it is readily demonstrated that
+\begin{eqnarray}
+\frac{2}{l}\int_0^l\sin\left(n\,\pi\,\frac{x}{l}\right)\,\sin\left(n'\,\pi\,\frac{x}{l}\right)dx&=&\frac{2}{\pi}\int_0^\pi \sin\left(n\,\theta\right)\,\sin\left(n'\,\theta\right)d\theta\nonumber\\[0.5ex]
+&=&
+\frac{1}{\pi}\int_0^\pi \cos\left[(n-n')\,\theta\right]d\theta-\frac{1}{\pi}\int_0^\pi\cos\left[(n+n')\,\theta\right] d\theta\nonumber\\[0.5ex]
+&=&\frac{1}{\pi}\left[\frac{\sin\left[(n-n')\,\theta\right]}{n-n'}\right.-\left.
+\frac{\sin\left[(n+n')\,\theta\right]}{n+n'}\right]_0^{\pi}\nonumber\\[0.5ex]
+&=&\frac{\sin\left[(n-n')\,\pi\right]}{(n-n')\,\pi}-
+\frac{\sin\left[(n+n')\,\pi\right]}{(n+n')\,\pi},\label{e5.46}
+\end{eqnarray}
+where $n$ and $n'$ are (possibly different) positive integers, $\theta=\pi\,x/l$,
+and use has been made of the trigonometric identity $2\,\sin a\,\sin b \equiv \cos(a-b)-\cos(a+b)$.   Furthermore, it is easily seen that if $k$ is a {\em non-zero}\/ integer then
+\begin{equation}
+\frac{\sin(k\,\pi)}{k\,\pi} =0.
+\end{equation}
+On the other hand, $k=0$ is a special case, since both the
+numerator and the denominator  in the above expression become zero simultaneously.  However, application of  {\em l`Hopital's rule}\/ yields
+\begin{equation}
+\lim_{x\rightarrow 0} \frac{\sin x}{x} = \lim_{x\rightarrow 0} \frac{d(\sin x)/dx}{dx/dx}
+= \lim_{x\rightarrow 0} \frac{\cos x}{1} = 1.
+\end{equation}
+It follows that
+\begin{equation}
+\frac{\sin(k\,\pi)}{k\,\pi} = \left\{
+\begin{array}{ccc}
+1 &\mbox{\hspace{0.5cm}}&k=0\\[0.5ex]
+0&&k\neq 0
+\end{array}\right.,
+\end{equation}
+where $k$ is {\em any}\/ integer. This result can be combined with Equation~(\ref{e5.46}),
+recalling that $n$ and $n'$ are both {\em positive}\/ integers, to give
+\begin{equation}\label{e5.50}
+\frac{2}{l}\int_0^l\sin\left(n\,\pi\,\frac{x}{l}\right)\,\sin\left(n'\,\pi\,\frac{x}{l}\right)dx
+= \delta_{n,n'}.
+\end{equation}
+Here, the quantity
+\begin{equation}\label{e5.51}
+\delta_{n,n'} = \left\{
+\begin{array}{ccc}
+1 &\mbox{\hspace{0.5cm}}&n=n'\\[0.5ex]
+0&&n\neq n'
+\end{array}\right.,
+\end{equation}
+where $n$ and $n'$ are integers, is known as the {\em Kronecker delta function}.
+
+Let us multiply Equation~(\ref{e5.44}) by $(2/l)\,\sin (n\,\pi\,x/l)$ and integrate over $x$
+from $0$ to $l$. We obtain
+\begin{eqnarray}
+\frac{2}{l}\int_0^l y_0(x)\,\sin\left(n\,\pi\,\frac{x}{l}\right)dx
+&=&\sum_{n'=1,\infty} \!\!\!A_{n'}\,\cos\phi_{n'}\,\frac{2}{l}\int_0^\pi\sin\left(n'\,\pi\,\frac{x}{l}\right)\,\sin\left(n\,\pi\,\frac{x}{l}\right)dx\nonumber\\[0.5ex]
+&=&\sum_{n'=1,\infty} A_{n'}\,\cos\phi_{n'}\,\delta_{n,n'}
+= A_n\cos\phi_n,
+\end{eqnarray}
+where use has been made of Equations~(\ref{e5.50}) and (\ref{e5.51}). 
+Similarly, Equation (\ref{e5.45}) yields
+\begin{equation}
+\frac{2}{v}\int_0^l v_0(x)\,\sin\left(n\,\pi\,\frac{x}{l}\right)dx = n\,\pi \,A_n\,\sin\phi_n.
+\end{equation}
+Thus, defining the integrals
+\begin{eqnarray}\label{e5.54}
+C_n &=& \frac{2}{l}\int_0^l y_0(x)\,\sin\left(n\,\pi\,\frac{x}{l}\right)dx,\\[0.5ex]
+S_n &=& \frac{2}{n\,\pi\,v}\int_0^l v_0(x)\,\sin\left(n\,\pi\,\frac{x}{l}\right)dx,\label{e5.55}
+\end{eqnarray}
+for $n=1,\infty$, we obtain
+\begin{eqnarray}
+C_n &=& A_n\,\cos\phi_n,\\[0.5ex]
+S_n &=& A_n\,\sin\phi_n,
+\end{eqnarray}
+and, hence, 
+\begin{eqnarray}\label{e5.58}
+A_n &=& (C_n^{\,2} + S_n^{\,2})^{1/2},\\[0.5ex]
+\phi_n &=& \tan^{-1}(S_n/C_n).\label{e5.59}
+\end{eqnarray}
+Thus, the constants $A_n$ and $\phi_n$, appearing in the general expression (\ref{e5.41}) for the time evolution of a uniform string with fixed ends, are
+ultimately
+determined by integrals over the string's initial displacement and velocity which are of the form
+(\ref{e5.54}) and (\ref{e5.55}).
+
+As an example, suppose that the string is initially {\em at rest}, so that 
+\begin{equation}
+v_0(x) = 0,\label{e5.60}
+\end{equation}
+ but
+has the initial displacement
+\begin{equation}
+y_0(x) = 2\,A\left\{
+\begin{array}{ccc}
+x/l&\mbox{\hspace{0.5cm}}&0\leq x < l/2\\[0.5ex]
+1-x/l &&l/2\leq x\leq l
+\end{array}
+\right. .\label{e5.61}
+\end{equation}
+This {\em triangular}\/  pattern is zero at both ends of the string,  rising {\em linearly}\/ to a
+peak value of $A$ halfway along the string, and is designed to
+mimic the initial displacement of a guitar string which is plucked at its
+mid-point. See Figure~\ref{f5.10}.
+A comparison of Equations~(\ref{e5.55}) and (\ref{e5.60}) reveals that, in this particular example, all of the $S_n$ coefficients
+are zero. Hence, from (\ref{e5.58}) and (\ref{e5.59}), $A_n = C_n$ and $\phi_n=0$
+for all $n$. Thus, making use of Equations~(\ref{e5.41}),  (\ref{e5.54}), and  (\ref{e5.61}), the
+time evolution of the string is governed by
+\begin{equation}\label{e5.62}
+y(x,t) = \sum_{n=1,\infty}A_n\,\sin\left(n\,\pi\,\frac{x}{l}\right)\,\cos\left(n\,2\pi\,\frac{t}{\tau}\right),
+\end{equation}
+where $\tau= 2\,l/v$ is the oscillation period of the $n=1$ normal mode, and
+\begin{equation}
+A_n = \frac{2}{l}\int_0^{l/2}2\,A\,\frac{x}{l}\,\sin\left(n\,\pi\,\frac{x}{l}\right)\,dx
++\frac{2}{l}\int_{l/2}^{l}2\,A\left(1-\frac{x}{l}\right)\sin\left(n\,\pi\,\frac{x}{l}\right)\,dx.
+\end{equation}
+The above expression transforms to
+\begin{equation}
+A_n = A\left(\frac{2}{\pi}\right)^2\left\{
+\int_0^{\pi/2}\theta\,\sin(n\,\theta)\,d\theta + \int_{\pi/2}^\pi(\pi-\theta)\,\sin(n\,\theta)\,d\theta\right\},
+\end{equation}
+where $\theta=\pi\,x/l$. Integration by parts yields
+\begin{equation}\label{e5.65}
+A_n = 2\,A\,\frac{\sin(n\,\pi/2)}{(n\,\pi/2)^2}.
+\end{equation}
+Note that $A_n=0$ whenever $n$ is even. We conclude that the triangular initial displacement pattern (\ref{e5.61})  only excites normal modes with {\em odd}\/
+mode numbers. 
+
+Now, when a stringed
+instrument, such as a guitar, is  sounded a characteristic pattern of normal
+mode oscillations is excited on the plucked string. These oscillations then generate 
+sound waves of the same frequency, which are audible to a listener. 
+The  normal mode (of appreciable amplitude) with the {\em lowest oscillation
+frequency}\/ is called the {\em fundamental harmonic}, and  determines the
+{\em pitch}\/ of the musical note which is heard by the listener. For instance, a fundamental
+harmonic which oscillates at $261.6$ Hz would correspond to ``middle C''. Those normal
+modes (of appreciable amplitude) with higher oscillation frequencies than the
+fundamental harmonic are called {\em overtone harmonics}, since their
+ frequencies are {\em integer multiples}\/ of the fundamental frequency.  In general, the
+amplitudes of the overtone harmonics are much smaller than the amplitude of the fundamental. Nevertheless, when a stringed instrument is sounded, the particular mix of overtone harmonics which accompanies the
+fundamental  determines
+the {\em timbre}\/ of the musical note heard by the listener. For instance, when middle C
+is played on a piano and a harpsichord the same frequency fundamental harmonic is excited 
+in both cases. However, the mix of excited overtone harmonics  is quite different. This
+accounts for the fact that middle C played on a piano is easily distinguishable from middle C
+played on a harpsichord. 
+
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig09.eps}}
+\caption{\em Relative amplitudes of the overtone harmonics of a uniform guitar string
+plucked at its mid-point.}\label{f5.9}   
+\end{figure}
+
+Figure~\ref{f5.9} shows the ratio $A_n/A_1$ for the first ten overtone harmonics
+of a uniform guitar string plucked at its midpoint: {\em i.e.}, the ratio $A_n/A_1$
+for odd-$n$ modes with $n>1$, calculated from Equation~(\ref{e5.65}).  It can be seen that the amplitudes
+of the overtone harmonics are all small compared to the amplitude of the
+fundamental. Moreover, the amplitudes  decrease rapidly in magnitude with increasing
+mode number, $n$.
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig10.eps}}
+\caption{\em Reconstruction of the initial displacement of a uniform guitar
+string plucked at its mid-point.}\label{f5.10}   
+\end{figure}
+
+In principle, we must include all of the normal modes in the sum on the right-hand side of Equation~(\ref{e5.62}). In practice, given that the amplitudes of the normal
+modes decrease rapidly in magnitude as $n$ increases, we can {\em truncate}\/ the 
+sum, by neglecting high-$n$ normal modes, without introducing significant error
+into our calculation. Figure~\ref{f5.11} illustrates the effect of such a truncation. 
+In fact, this figure shows the reconstruction of $y_0(x)$, obtained by setting $t=0$
+in Equation~(\ref{e5.62}), made with various different numbers of normal modes.
+The long-dashed line shows a reconstruction made with only the largest amplitude normal mode, the
+short dashed-line shows a reconstruction made with the four largest amplitude
+normal modes, and the solid line shows a reconstruction made with the
+sixteen largest amplitude normal modes. It can be seen that sixteen normal
+modes is sufficient to very accurately reconstruct the triangular
+initial displacement pattern. Indeed, a reconstruction made with only four
+normal modes is surprisingly accurate. On the other hand, a reconstruction made
+with only one normal mode is fairly inaccurate. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter05/fig11.eps}}
+\caption{\em Time evolution of a uniform guitar
+string plucked at its mid-point.}\label{f5.11}   
+\end{figure}
+
+Figure~\ref{f5.11} shows the time evolution of a uniform guitar
+string plucked at its mid-point. This evolution is reconstructed from expression (\ref{e5.62}) using the sixteen
+largest amplitude normal modes of the string. The upper solid, upper short-dashed, upper long-dashed, upper dot-short-dashed,
+dot-long-dashed, lower dot-short-dashed, lower long-dashed, lower short-dashed,
+and lower solid curves correspond to $t/\tau = 0$, $1/16$, $1/8$, $3/16$, $1/4$, $5/16$, 
+$3/8$, $7/16$, and $1/2$, respectively. It can be seen that the string oscillates in
+a rather strange fashion. The initial kink in the string at $x=l/2$ splits into two
+equal kinks which propagate in opposite directions along the string at the velocity $v$.
+The string remains straight and parallel to the $x$-axis between the kinks, and straight and inclined to the $x$-axis between each kink and the closest wall. When the two
+kinks reach the wall the string is instantaneously found in its undisturbed position. The
+kinks then reflect off the two walls, with a phase change of $\pi$ radians. When the
+two kinks meet again at $x=l/2$ the string is instantaneously found in a state which is an inverted form of its
+initial state. The kinks subsequently pass through one another, reflect off the walls, with another phase change of $\pi$ radians, and meet for a second time at $x=l/2$. At this
+instant, the string is again found in its initial position. The pattern of motion then repeats itself {\em ad infinitum}. The period of the oscillation is the time required for a kink to propagate
+two string lengths, which is $\tau = 2\,l/v$. This, of course, is also the oscillation period of the
+$n=1$ normal mode.
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Consider a uniformly beaded string with $N$ beads which is similar
+to that pictured in Figure~\ref{f5.1}, except that each end of the string
+is attached to a massless ring which slides (in the $y$-direction)
+ on a frictionless rod.
+Demonstrate that the normal modes of the system take the form
+$$
+y_{n,i}(t) = A_n\,\cos\left[\frac{n\,(i-1/2)}{N}\,\pi\right]\,\cos(\omega_n\,t-\phi_n),
+$$
+where
+$$
+\omega_n = 2\,\omega_0\,\sin\left(\frac{n}{N}\,\frac{\pi}{2}\right),
+$$
+$\omega_0$ is as defined in Section~\ref{s5.1},  $A_n$ and $\phi_n$ are constants, the integer $i=1,N$ indexes the beads, and the mode number $n$ indexes the
+modes.  How
+many unique normal modes does the system possess, and what are their mode numbers?
+Show that the lowest frequency mode has an infinite wavelength and zero frequency. 
+Explain this peculiar result. Plot the normal modes and normal frequencies
+of an $N=8$ beaded string in a similar fashion to Figures~\ref{f5.3} and \ref{f5.5}.
+
+\item Consider a uniformly beaded string with $N$ beads which is similar
+to that pictured in Figure~\ref{f5.1}, except that the left end of the string is
+fixed, and the right  end  is attached to a massless ring which slides (in the $y$-direction)
+on a frictionless rod.  Find the normal
+modes and normal frequencies of the system. Plot the normal modes and normal frequencies
+of an $N=8$ beaded string in a similar fashion to Figures~\ref{f5.3} and \ref{f5.5}.
+
+\begin{figure}[h]
+\epsfysize=0.9in
+\centerline{\epsffile{Chapter05/fig12.eps}}
+\end{figure}
+\item The above figure  shows the left and right extremities of a linear $LC$ network consisting of $N$ identical inductors of inductance $L$, and $N+1$
+identical capacitors of capacitance $C$. Let the instantaneous current
+flowing through the $i$th inductor be $I_i(t)$, for $i=1,N$. Demonstrate from
+Kirchhoff's circuital laws that the currents evolve in time according to the
+coupled equations
+$$
+\ddot{I}_i = \omega_0^{\,2}\,(I_{i-1}-2\,I_i+I_{i+1}),
+$$
+for $i=1,N$, where $\omega_0=1/\sqrt{L\,C}$, and $I_0=I_{N+1}=0$. 
+Find the normal frequencies of the system.
+
+\item Suppose that the outermost two capacitors in the circuit considered in the previous exercise  are short-circuited. Find the new normal frequencies of the system.
+
+\item A uniform string of length $l$, tension $T$, and mass per unit length
+$\rho$, is stretched between two immovable walls. Suppose that the string is
+initially in its equilibrium state. At $t=0$ it is
+struck by a hammer in such a manner as to impart an impulsive
+velocity $u_0$ to a small segment of length $a<l$ centered on the mid-point.
+Find an expression for the subsequent motion of the string. Plot the motion
+as a function of time  in a similar fashion to Figure~\ref{f5.11}, assuming that
+$a=l/10$. 
+
+\item A uniform string of length $l$, tension $T$, and mass per unit length
+$\rho$, is stretched between two massless rings, attached to its ends, which
+slide (in the $y$-direction) along frictionless rods.  Demonstrate that, in this case,
+the most general solution to the wave equation takes the form
+$$
+y(x,t) = Y_0 + V_0\,t + \sum_{n>0} A_n\,\cos\left(n\,\pi\,\frac{x}{l}\right)\cos\left(n\,\pi\,\frac{v\,t}{l}-\phi_n\right),
+$$
+where $v=\sqrt{T/\rho}$, and $Y_0$, $V_0$, $A_n$, and $\phi_n$ are arbitrary constants. 
+Show that
+$$
+\frac{2}{l}\int_0^l\cos\left(n\,\pi\,\frac{x}{l}\right)\cos\left(n'\,\pi\frac{x}{l}\right)dx=\delta_{n,n'},
+$$
+where $n$ and $n'$ are integers. Use this result to demonstrate that the arbitrary
+constants in the above solution can be determined from the initial conditions 
+as follows:
+\begin{eqnarray}
+Y_0 &=&\frac{2}{l}\int_0^l y_0(x)\,dx,\nonumber\\[0.5ex]
+V_0 &=&\frac{2}{l}\int_0^l v_0(x)\,dx,\nonumber\\[0.5ex]
+A_n &=& (C_n^{\,2}+S_n^{\,2})^{1/2},\nonumber\\[0.5ex]
+\phi_n &=&\tan^{-1}(S_n/C_n),\nonumber
+\end{eqnarray}
+where $y_0(x)\equiv y(x,0)$, $v_0(x)\equiv \partial y(x,0)/\partial t$, and
+\begin{eqnarray}
+C_n&=& \frac{2}{l}\int_0^l y_0(x)\,\cos\left(n\,\pi\,\frac{x}{l}\right) dx,\nonumber\\[0.5ex]
+S_n &=&  \frac{2}{l}\int_0^l v_0(x)\,\cos\left(n\,\pi\,\frac{x}{l}\right) dx.\nonumber
+\end{eqnarray}
+Suppose that the string is
+initially in its equilibrium state. At $t=0$ it is
+struck by a hammer in such a manner as to impart an impulsive
+velocity $u_0$ to a small segment of length $a<l$ centered on the mid-point.
+Find an expression for the subsequent motion of the string. Plot the motion
+as a function of time  in a similar fashion to Figure~\ref{f5.11}, assuming that
+$a=l/10$. 
+
+\item The linear $LC$ circuit considered in Exercise 3 can be thought of as a discrete 
+model of a uniform lossless transmission line: {\em e.g.}, a co-axial cable. In this interpretation,
+$I_i(t)$ represents $I(x_i,t)$, where $x_i=i\,\delta x$. Moreover, $C={\cal C}\,\delta x$, and
+$L={\cal L}\,\delta x$, where ${\cal C}$ and ${\cal L}$ are the capacitance per unit length and the
+inductance per unit length of the line, respectively. Show that, in the limit $\delta x\rightarrow 0$,
+the evolution equation for the coupled currents given in Exercise 3 reduces to
+the wave equation
+$$
+\frac{\partial^2 I}{\partial t^2} = v^2\,\frac{\partial^2 I}{\partial x^2},
+$$
+where $I=I(x,t)$, $x$ measures distance along the line, and $v=1/\sqrt{{\cal L}\,{\cal C}}$. 
+If $V_i(t)$ is the potential difference (measured from the top to the bottom) across the $i+1$th capacitor (from the left) in the
+circuit shown in Exercise 3, and $V(x,t)$ is the corresponding voltage in the transmission line, show that the discrete circuit equations relating the $I_i(t)$ and $V_i(t)$
+reduce to 
+\begin{eqnarray}
+\frac{\partial V}{\partial t} &=&-\frac{1}{{\cal C}}\,\frac{\partial I}{\partial x},\nonumber\\[0.5ex]
+\frac{\partial I}{\partial t} &=& - \frac{1}{{\cal L}}\,\frac{\partial V}{\partial x},\nonumber
+\end{eqnarray}
+in the transmission line limit. Hence, demonstrate that the voltage in a transmission
+line satisfies the wave equation
+$$
+\frac{\partial^2 V}{\partial t^2} = v^2\,\frac{\partial^2 V}{\partial x^2}.
+$$
+
+\item Consider a uniform string of length $l$, tension $T$, and mass per unit length $\rho$ which is stretched between two immovable walls. Show that the total energy
+of the string, which is the sum of its kinetic and potential energies, is
+$$
+E = \frac{1}{2}\int_0^l\left[\rho\left(\frac{\partial y}{\partial t}\right)^2
++ T\left(\frac{\partial y}{\partial x}\right)^2\right] dx,
+$$
+where $y(x,t)$ is the string's (relatively small) transverse displacement. Now, the general motion of
+the string can be represented as a linear superposition of the normal modes:
+$$
+y(x,t) = \sum_{n=1,\infty}A_n\,\sin\left(n\,\pi\,\frac{x}{l}\right)\cos\left(n\,\pi\,\frac{v\,t}{l}-\phi_n\right),
+$$
+where $v=\sqrt{T/\rho}$. Demonstrate that
+$$
+E = \sum_{n=1,\infty} E_n,
+$$
+where
+$$
+E_n = \frac{1}{4}\,m\,\omega_n^{\,2}\,A_n^{\,2}
+$$
+is the energy of the $n$th normal mode. Here, $m=\rho\,l$ is the mass of the
+string, and $\omega_n = n\,\pi\,v/l$ the angular frequency of the $n$th normal
+mode.
+
+\end{enumerate}}

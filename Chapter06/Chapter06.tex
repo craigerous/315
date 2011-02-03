@@ -1,0 +1,701 @@
+\chapter{Longitudinal Standing Waves}\label{c6}
+\section{Spring Coupled Masses}
+Consider a mechanical system consisting of a linear array of $N$ identical masses, $m$,
+which are free to slide in one dimension over a frictionless
+horizontal surface. Suppose that the masses are coupled to their immediate neighbors via
+identical light springs of unstretched length $a$, and force constant $K$. (Here, we use the symbol $K$ to
+denote the spring force constant, rather than $k$, since $k$ is already being used to denote wavenumber.) Let $x$
+measure distance along the array (from the left to the right). So, if  the array is in its equilibrium configuration then the $x$-coordinate
+of the $i$th mass is $x_i=i\,a$, for $i=1,N$. Consider {\em longitudinal}\/ oscillations
+of the masses: {\em i.e.}, oscillations such that the $x$-coordinate of the $i$th mass becomes
+\begin{equation}
+x_i = i\,a + \psi_i(t),
+\end{equation}
+where $\psi_i(t)$ represents the mass's  longitudinal displacement from equilibrium. It is assumed that all of the displacements are relatively small: {\em i.e.},  $|\psi_i|\ll a$, for
+$i=1,N$. 
+
+\begin{figure}
+\epsfysize=1.7in
+\centerline{\epsffile{Chapter06/fig01.eps}}
+\caption{\em Detail of a system of spring coupled masses.}\label{f6.1}   
+\end{figure}
+
+Consider the equation of motion of the $i$th mass. See Figure~\ref{f6.1}. The
+extensions of the springs to the immediate left and  right of the mass are
+$\psi_i-\psi_{i-1}$ and $\psi_{i+1}-\psi_i$, respectively. Thus, the $x$-directed
+forces that these springs exert on the  mass are $-K\,(\psi_i-\psi_{i-1})$ and
+$K\,(\psi_{i+1}-\psi_i)$, respectively, and its equation of
+motion is easily shown to be
+\begin{equation}\label{e6.2}
+\ddot{\psi}_i = \omega_0^{\,2}\,(\psi_{i-1} -2\,\psi_i+ \psi_{i+1}),
+\end{equation}
+where $\omega_0=\sqrt{K/m}$. Since there is nothing special about the $i$th mass, the
+above equation is assumed to hold  for all $N$ masses: {\em i.e.}, for $i=1,N$.
+Note that Equation~(\ref{e6.2}), which governs the {\em longitudinal}\/ oscillations of a linear array of spring coupled masses, is analogous in
+form to Equation~(\ref{e5.8}), which governs the {\em transverse}\/ oscillations
+of a beaded string. This observation suggests that longitudinal and transverse waves in discrete dynamical systems ({\em i.e.},  systems with  a finite number of degrees
+of freedom)
+can be described using the {\em same}\/ mathematical equations.
+
+\begin{figure}
+\epsfysize=7in
+\centerline{\epsffile{Chapter06/fig02.eps}}
+\caption{\em Normal modes of a system of eight spring coupled masses.}\label{f6.2}   
+\end{figure}
+
+We can interpret the quantities $\psi_0$ and $\psi_{N+1}$, which appear
+in the equations of motion for $\psi_1$ and $\psi_N$,  respectively, as the longitudinal displacements of
+the left and right  extremities of  springs which are attached to the outermost masses in such a manner as to form the left and right boundaries of the array.
+The respective equilibrium positions of these  extremities are $x_0=0$ and $x_{N+1}=(N+1)\,a$. 
+Now, the end displacements, $\psi_0$ and $\psi_{N+1}$, must be {\em prescribed}, otherwise Equations (\ref{e6.2})
+do not constitute a complete set of equations: {\em i.e.}, there are more  unknowns  than equations.  
+The particular choice of $\psi_0$ and $\psi_{N+1}$ depends on the nature of the physical
+{\em boundary conditions}\/ at the two ends of the array. Suppose that the
+left extremity of the leftmost spring  is anchored in an
+immovable wall. This implies that $\psi_0=0$: {\em i.e.}, the left extremity of the
+spring cannot move. Suppose, on the other hand, that the left extremity of the leftmost spring  is not attached to anything. In this case, there is no reason for the spring
+to become extended, which implies  that $\psi_0=\psi_1$. In other words, if the left
+end of the array is {\em fixed}\/ ({\em i.e.}, attached to an immovable object) then $\psi_0=0$, and if the left end is
+{\em free}\/  ({\em i.e.}, not attached to anything) then $\psi_0=\psi_1$. Likewise, if the right end of the array
+is fixed then $\psi_{N+1}=0$, and if the right  end is free then
+$\psi_{N+1}=\psi_N$. 
+
+Suppose, for the sake of argument, that the left end of the array is
+free, and the right end is fixed. It follows that $\psi_0=\psi_1$, and 
+$\psi_{N+1}=0$. 
+Let us search for  normal
+modes of the general form
+\begin{equation}\label{e6.3}
+\psi_i(t) = A\,\cos[k\,(x_i-a/2)]\,\cos(\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. 
+Note that the above expression automatically satisfies the  boundary condition $\psi_0=\psi_1$. This follows because
+$x_0=0$ and $x_1=a$, and, consequently, $\cos[k\,(x_0-a/2)]=\cos(-k\,a/2)=\cos(k\,a/2)=\cos[k\,(x_1-a/2)]$. The other boundary condition, $\psi_{N+1}=0$,  is satisfied provided
+\begin{equation}
+\cos[k\,(x_{N+1}-a/2)] = \cos[(N+1/2)\,k\,a] = 0,
+\end{equation}
+which yields [{\em cf.}, (\ref{e5.15})]
+\begin{equation}\label{e6.5}
+k\,a = \frac{(n-1/2)\,\pi}{N+1/2},
+\end{equation}
+where $n$ is an integer. As before, the imposition of the boundary conditions
+causes a quantization of the  possible mode wavenumbers (see Section~\ref{s5.1}). 
+ Finally, substitution of (\ref{e6.3}) into (\ref{e6.2}) gives the
+dispersion relation [{\em cf.}, (\ref{e5.13})]
+\begin{equation}\label{e6.6}
+\omega = 2\,\omega_0\,\sin(k\,a/2).
+\end{equation}
+
+It follows, from the above analysis,  that the longitudinal normal modes  of a linear array of spring coupled masses, the left end of which is free, and the right end fixed, are associated with  the following characteristic displacement patterns:
+\begin{equation}\label{e6.7}
+\psi_{n,i} (t) = A_n\,\cos\left[\frac{(n-1/2)\,(i-1/2)}{N+1/2}\,\pi\right]\cos(\omega_n-\phi_n),
+\end{equation}
+where
+\begin{equation}\label{e6.8}
+\omega_n = 2\,\omega_0\,\sin\left(\frac{n-1/2}{N+1/2}\,\frac{\pi}{2}\right),
+\end{equation}
+and the $A_n$ and $\phi_n$ are arbitrary constants determined by the initial conditions.
+Here, the integer $i=1,N$ indexes the masses, and the mode number $n$ indexes the normal modes. It is easily
+demonstrated that there are only $N$ unique normal
+modes, corresponding to mode numbers in the range 1 to $N$. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter06/fig03.eps}}
+\caption{\em Normal frequencies of a system of eight spring coupled
+masses.}\label{f6.3}   
+\end{figure}
+
+Figures~\ref{f6.2} and \ref{e6.3} display the normal modes and normal
+frequencies of a linear array of eight  spring coupled masses, the left end of which is free, and
+the right end fixed. The data shown in these figures is obtained from Equations~(\ref{e6.7}) and (\ref{e6.8}), respectively, with $N=8$.
+The modes in Figure~\ref{f6.2} are all plotted at the instances in time at which they
+attain their maximum amplitudes: {\em i.e.}, when $\cos(\omega_n\,t-\phi_n)=1$. 
+It can be seen that
+normal modes with small wavenumbers---{\em i.e.}, $k\,a\ll 1$, so that $n\ll N$---have  displacements
+which vary in  a fairly smooth sinusoidal manner from mass to mass, and oscillations frequencies
+which increase approximately linearly with  increasing wavenumber.  
+On the
+other hand, normal modes with large wavenumbers---{\em i.e.}, $k\,a\sim 1$, so that $n\sim N$---have
+displacements which exhibit large variations from mass to mass, and
+ oscillation frequencies which do not depend linearly on wavenumber. We conclude that
+ the longitudinal normal modes of an array of spring coupled masses have analogous  properties 
+ to the transverse normal modes of a beaded string. See Section~\ref{s5.1}.
+
+The dynamical system pictured in Figure~\ref{f6.1} can be used to model the effect of a  planar {\em sound wave}\/   ({\em i.e.}, a longitudinal
+oscillation in position which is periodic in space in one dimension) on a {\em crystal lattice}. In this application, the masses represent parallel planes of atoms, the springs represent the interatomic forces acting between these planes, and the
+longitudinal oscillations  represent the sound wave. Of course, a macroscopic crystal
+contains a great many atomic planes, so we would expect $N$ to be very large.
+Note, however,  from Equations~(\ref{e6.5}) and (\ref{e6.8}), that,
+no matter how large $N$ becomes, $k\,a$ cannot exceed $\pi$ (since $n$ cannot exceed $N$), and $\omega_n$
+cannot exceed $2\,\omega_0$. In other words, there is a {\em minimum wavelength}\/ that 
+a sound wave  in a crystal lattice can have, which turns out to be twice the
+interatomic spacing, and  a corresponding {\em maximum oscillation frequency}.
+For waves whose wavelengths are much greater than the interatomic spacing ({\em i.e.}, $k\,a\ll 1$), the dispersion relation (\ref{e6.6}) reduces to
+\begin{equation}\label{e6.9}
+\omega\simeq k\,c
+\end{equation}
+where $c=\omega_0\,a=\sqrt{K/m}\,a$ is a constant which has the dimensions of velocity.
+It seems plausible that (\ref{e6.9}) is the dispersion
+relation for sound waves in a {\em continuous}\/ elastic medium. Let us investigate such waves.
+
+\section{Sound Waves in an Elastic Solid}\label{s6.2}
+Consider a thin uniform elastic rod of length $l$ and cross-sectional area $A$. 
+Let us examine the longitudinal oscillations of such a rod. These oscillations
+are usually, somewhat loosely,  referred to as {\em sound waves}. It is again convenient to
+let $x$ denote position along the rod. Thus, in equilibrium, the
+two ends of the rod lie at $x=0$ and $x=l$. Suppose that a sound wave
+causes an $x$-directed displacement $\psi(x,t)$  of the various elements of the rod from their equilibrium positions. Consider a thin section of the rod, of length $\delta x$,  lying between
+$x-\delta x/2$ and $x+\delta x/2$. The displacements of the left and right boundaries
+of the section are $\psi(x-\delta x/2,t)$ and $\psi(x+\delta x/2,t)$, respectively. Thus, the
+change in length of the section, due to the action of the sound wave,  is $\psi(x+\delta x/2,t)-\psi(x-\delta x/2,t)$. Now,
+{\em strain}\/ in an elastic rod is defined as {\em change in length over unperturbed
+length}. Thus, the strain in the section of the rod under consideration is
+\begin{equation}
+\epsilon(x,t) = \frac{ \psi(x+\delta x/2,t)-\psi(x-\delta x/2,t)}{\delta x}.
+\end{equation}
+In the limit $\delta x\rightarrow 0$, this becomes
+\begin{equation}\label{e6.11}
+\epsilon(x,t) = \frac{\partial \psi(x,t)}{\partial x}.
+\end{equation}
+Of course, it is assumed that the strain is small: {\em i.e.}, $|\epsilon|\ll 1$.
+ {\em Stress}, $\sigma(x,t)$,  in an elastic rod is defined as the {\em elastic force
+per unit cross-sectional area}. In a conventional elastic material, the relationship
+between stress and strain (for small strains) takes the simple form
+\begin{equation}\label{e6.12}
+\sigma = Y\,\epsilon.
+\end{equation}
+Here, $Y$ is a constant, with the dimensions of pressure, which is known as the 
+{\em Young's modulus}. Note that if the strain in a given element is positive then the stress acts to lengthen the
+element, and {\em vice versa}. (Similarly, in the spring coupled mass
+system investigated in the previous section, the external forces exerted on an
+individual spring act to lengthen it when its extension is positive, and {\em vice versa}.)
+
+Consider the motion of a thin section of the rod lying between $x-\delta x/2$ and $x+\delta x/2$. If $\rho$ is the mass density of the rod then the  section's mass
+is $\rho\,A\,\delta x$. The stress acting on the left boundary of the section
+is $\sigma(x-\delta x/2) = Y\,\epsilon(x-\delta x/2)$. Since stress is force per
+unit area, the force acting on the left boundary is $A\,Y\,\epsilon(x-\delta x/2)$.
+This force is directed in the minus $x$-direction, assuming that the strain is positive ({\em i.e.}, the force acts to lengthen the section). Likewise, the force acting
+on the right boundary of the section is $A\,Y\,\epsilon(x+\delta x/2)$, and
+is directed in the positive $x$-direction, assuming that the strain is positive ({\em i.e.}, the force again acts to lengthen the section). Finally, the mean longitudinal ({\em i.e.}, $x$-directed) acceleration of the
+section is $\partial^2\psi(x,t)/\partial t^2$. Hence, the section's longitudinal equation of motion
+ becomes
+\begin{equation}
+\rho\,A\,\delta x\,\frac{\partial^2\psi(x,t)}{\partial t^2} = A\,Y\left[\epsilon(x+\delta x/2,t)-\epsilon(x-\delta x/2)\right].
+\end{equation}
+In the limit $\delta x\rightarrow 0$, this expression reduces to
+\begin{equation}
+\rho\,\frac{\partial^2\psi(x,t)}{\partial t^2} = Y\,\frac{\partial\epsilon(x,t)}{\partial x},
+\end{equation}
+or
+\begin{equation}\label{e6.15}
+\frac{\partial^2\psi}{\partial t^2} = c^2\,\frac{\partial^2\psi}{\partial x^2},
+\end{equation}
+where $c=\sqrt{Y/\rho}$ is a constant having the dimensions of velocity, which turns
+out to be the speed of sound in the rod (see Section~\ref{s7.1}), and
+use has been made of Equation~(\ref{e6.11}). Of course, (\ref{e6.15}) is a
+{\em wave equation}. As such, it has  the same form as Equation~(\ref{e5.28}), which
+governs the motion of transverse waves on a uniform string. This suggests that
+longitudinal and transverse waves in  continuous dynamical systems ({\em i.e.}, systems with an infinite number of degrees of freedom) can be described using the {\em same}\/ mathematical
+equations. 
+
+In order to solve (\ref{e6.15}), we need to specify {\em boundary conditions}\/ at the
+two ends of the rod. Suppose that the left end of the rod is {\em fixed}: {\em i.e.}, it
+is clamped in place so that it
+cannot move. This implies that $\psi(0,t)=0$. Suppose, on the other hand, that
+the left end of the rod is {\em free}: {\em i.e.}, it is not attached to anything. 
+This implies that $\sigma(0,t)=0$, since there is nothing that the end can exert a force (or a stress) on, and {\em vice versa}. It follows from (\ref{e6.11}) and (\ref{e6.12}) that
+$\partial\psi(0,t)/\partial x=0$. Likewise, if the right end of the rod is
+fixed then $\psi(l,t)=0$, and if the right end is free then $\partial\psi(l,t)/\partial x=0$. 
+
+Suppose, for the sake of argument, that the left end of the rod is free, and the right
+end is fixed. It follows that $\partial\psi(0,t)/\partial x=0$, and $\psi(l,t)=0$. 
+Let us search for normal modes of the form
+\begin{equation}\label{e6.16}
+\psi(x,t) = A\,\cos(k\,x)\,\cos(\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. Note that the
+above expression automatically satisfies the boundary condition $\partial\psi(0,t)/\partial x=0$. The other boundary condition is satisfied provided 
+\begin{equation}
+\cos(k\,l) = 0,
+\end{equation}
+which yields
+\begin{equation}
+k\,l = (n-1/2)\,\pi,
+\end{equation}
+where $n$ is an integer. As usual, the imposition of the boundary conditions leads
+to a quantization of the possible mode wavenumbers.
+Substitution of (\ref{e6.16}) into the equation of motion (\ref{e6.15}) yields the normal mode dispersion relation
+\begin{equation}
+\omega = k\,c = k\,\sqrt{\frac{Y}{\rho}}.
+\end{equation}
+Note that this dispersion relation is consistent with the previously derived dispersion relation  (\ref{e6.9}), since $m=\rho\,A\,a$
+and $K=A\,Y/a$. Here, $a$ is the interatomic spacing, $m$ the mass of a section
+of the rod containing a single plane of atoms, and $K$ the effective force constant
+between neighboring atomic planes. 
+
+It follows, from the above analysis, that the $n$th longitudinal normal mode of an elastic rod, of length $l$, whose left end is free, and whose
+right end is fixed, is
+associated with the characteristic displacement pattern 
+\begin{equation}\label{e6.20}
+\psi_n(x,t) = A_n\,\cos\left[(n-1/2)\,\pi\,\frac{x}{l}\right]\cos(\omega_n\,t-\phi_n),
+\end{equation}
+where
+\begin{equation}\label{e6.21}
+\omega_n = (n-1/2)\,\frac{\pi\,c}{l}.
+\end{equation}
+Here, $A_n$ and $\phi_n$ are constants which are determined by the initial conditions. 
+It is easily demonstrated that only those  normal modes whose  mode numbers  are {\em positive integers}\/ yield unique displacement patterns: {\em i.e.}, $n>0$.
+Equation~(\ref{e6.20}) describes a {\em standing wave}\/ whose nodes ({\em i.e.}, points at which $\psi=0$ for all $t$) are evenly spaced
+a distance $l/(n-1/2)$ apart. Of course, the boundary condition $\psi(l,t)=0$ ensures that the right end of the rod is always coincident with a node.
+On the other hand, the boundary condition $\partial\psi(0,t)/\partial x=0$
+ensures that the left hand of the rod is always coincident with a point of
+maximum amplitude oscillation [{\em i.e.}, a point at which $\cos(k\,x)=\pm 1$].
+Such a point is known as an {\em anti-node}. It is easily demonstrated that
+the anti-nodes associated with a given normal mode lie {\em halfway}\/ between the corresponding nodes. 
+ Note, from (\ref{e6.21}), that the normal mode oscillation frequencies depend {\em linearly}\/ on
+mode number. Finally, it is easily demonstrated that, in the long wavelength limit $k\,a\ll 1$, the normal modes and normal frequencies of a uniform elastic
+rod specified in Equations~(\ref{e6.20}) and (\ref{e6.21}) are analagous
+to the normal modes and normal frequencies of a linear array of identical spring coupled masses specified in Equations~(\ref{e6.7}) and (\ref{e6.8}), and  pictured in
+Figures~\ref{f6.2} and \ref{f6.3}. 
+
+\begin{figure}
+\epsfysize=7in
+\centerline{\epsffile{Chapter06/fig04.eps}}
+\caption{\em Time evolution of the normalized displacement of an elastic rod.}\label{f6.4}   
+\end{figure}
+
+Since Equation~(\ref{e6.15}) is obviously linear, its most general solution
+is a {\em linear combination}\/ of all of the normal modes: {\em i.e.}, 
+\begin{equation}
+\psi(x,t) = \sum_{n'=1,\infty} A_{n'}\,\cos\left[(n'-1/2)\,\pi\,\frac{x}{l}\right]\,\cos\left[(n'-1/2)\,\pi\,\frac{c\,t}{l}-\phi_{n'}\right].
+\end{equation}
+The constants $A_n$ and $\phi_n$ are determined from the initial
+displacement,
+\begin{equation}\label{e6.23}
+\psi(x,0) = \sum_{n'=1,\infty} A_{n'}\,\cos \phi_{n'}\,\cos\left[(n'-1/2)\,\pi\,\frac{x}{l}\right],
+\end{equation}
+and the initial velocity,
+\begin{equation}\label{e6.24}
+\dot{\psi}(x,0) = \frac{\pi\,c}{l}\sum_{n'=1,\infty} (n'-1/2)\,A_{n'}\,\sin \phi_{n'}\,\cos\left[(n'-1/2)\,\pi\,\frac{x}{l}\right].
+\end{equation}
+Now, it is easily demonstrated that [{\em cf.}, (\ref{e5.50})]
+\begin{equation}\label{e6.25}
+\frac{2}{l}\int_0^l \cos\left[(n-1/2)\,\pi\,\frac{x}{l}\right]\,\cos\left[(n'-1/2)\,\pi\,\frac{x}{l}\right]dx = \delta_{n,n'}.
+\end{equation}
+Thus, multiplying (\ref{e6.23}) by $(2/l)\,\cos[(n-1/2)\,\pi\,x/l]$, and then integrating
+over $x$ from $0$ to $l$, we obtain
+\begin{equation}
+C_n \equiv \frac{2}{l} \int_0^l\psi(x,0)\,\cos\left[(n-1/2)\,\pi\,\frac{x}{l}\right]dx = A_n\,\cos\phi_n,
+\end{equation}
+where use has been made of (\ref{e6.25}) and (\ref{e5.51}).
+Likewise, (\ref{e6.24}) gives
+\begin{equation}
+S_n \equiv \frac{2}{c\,(n-1/2)\,\pi} \int_0^l\dot{\psi}(x,0)\,\cos\left[(n-1/2)\,\pi\,\frac{x}{l}\right]dx = A_n\,\sin\phi_n.
+\end{equation}
+Finally, $A_n = (C_n^{\,2}+S_n^{\,2})^{1/2}$ and
+$\phi_n=\tan^{-1}(S_n/C_n)$. 
+
+Suppose, for the sake of example, that the rod is initially at rest, and that its left end is hit with a hammer at
+$t=0$ in such a manner that a section of the rod lying between $x=0$ and $x=a$ (where $a<l$)
+acquires an instantaneous velocity $V_0$. It follows that $\psi(0,t)=0$.
+Furthermore, $\dot{\psi}(0,t)=V_0$ if $0\leq x\leq a$, and $\dot{\psi}(0,t)=0$ otherwise.
+It is easily demonstrated that these initial conditions yield $C_n=0$, $\phi_n=\pi/2$, 
+\begin{equation}
+A_n  =S_n= \frac{V_0\,a}{c}\,\frac{2}{\pi}\,\frac{\sin[(n-1/2)\,\pi\,a/l]}{(n-1/2)^2\,\pi\,a/l},
+\end{equation}
+and
+\begin{equation}
+\psi(x,t) = \sum_{n=1,\infty} A_n\,\cos\left[(n-1/2)\,\pi\,\frac{x}{l}\right]\sin\left[(n-1/2)\,\pi\,\frac{t}{\tau}\right],
+\end{equation}
+where $\tau=l/c$. Figure~\ref{f6.4} shows the time evolution of the normalized rod
+displacement, $\hat{\psi}(x,t)= (c/V_0\,a)\,\psi(x,t)$, calculated from the above equations using the first 100 normal modes ({\em i.e.}, $n=1,100$), and choosing $a/l=0.1$. 
+The top-left, top-right, middle-left, middle-right, bottom-left, and bottom-right
+panels correspond to $t/\tau=0.01$, $0.02$, $0.04$, $0.08$, $0.16$, $0.32$, $0.64$,
+and $1.28$, respectively. It can be seen that the hammer blow
+generates a  displacement wave  that initially develops at the free end of the rod ($x/l=0$),  which is
+the end that is struck, propagates along the rod at the velocity $c$, and reflects off the fixed end  ($x/l=1$) at time  $t/\tau=1$ with
+no phase shift.
+
+\section{Sound Waves in an Ideal Gas}\label{s6.3}
+Consider a  uniform ideal gas of equilibrium mass density $\rho$ and equilibrium pressure $p$. Let us
+investigate the longitudinal oscillations of such a gas. Of course, these oscillations
+are usually referred to as {\em sound waves}. Generally speaking, a sound wave
+in an ideal gas
+oscillates sufficiently rapidly that heat is unable to flow fast enough to smooth out any
+temperature perturbations generated by the wave. Under these circumstances,
+the gas obeys the {\em adiabatic gas law},
+\begin{equation}\label{e6.30}
+p\,V^\gamma = {\rm constant},
+\end{equation}
+where $p$ is the pressure, $V$ the volume, and $\gamma$ the {\em ratio of specific
+heats}\/ ({\em i.e.}, the ratio of the gas's specific heat at constant pressure to its
+specific heat at constant volume). This ratio is approximately $1.4$ for ordinary air.
+
+Consider a sound wave in a column of gas of cross-sectional area $A$. Let $x$
+measure distance along the column. Suppose that the wave generates an
+$x$-directed displacement of the column, $\psi(x,t)$. Consider a small section of
+the column lying between $x-\delta x/2$ and $x+\delta x/2$. The change in volume
+of the section is $\delta V = A\,[\psi(x+\delta x/2,t)-\psi(x-\delta x/2,t)]$. 
+Hence, the relative change in volume, which is assumed to be small, is
+\begin{equation}
+\frac{\delta V}{V} = \frac{A\,[\psi(x+\delta x/2,t)-\psi(x-\delta x/2,t)]}{A\,\delta x}.
+\end{equation}
+In the limit $\delta x\rightarrow 0$, this becomes
+\begin{equation}\label{e6.32}
+\frac{\delta V(x,t)}{V} = \frac{\partial\psi(x,t)}{\partial x}.
+\end{equation}
+The  pressure perturbation $\delta p(x,t)$ associated with the volume perturbation $\delta V(x,t)$ follows
+from (\ref{e6.30}), which yields
+\begin{equation}
+(p+\delta p)\,(V+\delta V)^\gamma = p\,V^\gamma,
+\end{equation}
+or
+\begin{equation}
+(1+\delta p/p)\,(1+\delta V/V)^\gamma \simeq 1+ \delta p/p + \gamma\,\delta V/V=1,
+\end{equation}
+giving
+\begin{equation}\label{e6.35}
+\delta p = - \gamma\,p\,\frac{\delta V}{V}= -\gamma\,p\,\frac{\partial\psi}{\partial x},
+\end{equation}
+where use has been made of  (\ref{e6.32}).
+
+Consider a section of the gas column lying between $x-\delta x/2$ and
+$x+\delta x/2$. The mass of this section  is $\rho\,A\,\delta x$. The $x$-directed
+force acting on its left boundary is $A\,[p+\delta p(x-\delta x/2,t)]$, whereas the
+$x$-directed force acting on its right boundary is $-A\,[p+\delta p(x+\delta x/2,t)]$.
+Finally, the average longitudinal ({\em i.e.}, $x$-directed) acceleration of the section is $\partial^2\psi(x,t)/\partial t^2$. 
+Thus, the section's longitudinal equation of motion  is written
+\begin{equation}
+\rho\,A\,\delta x\,\frac{\partial^2\psi(x,t)}{\partial t^2} = -A\left[\delta p(x+\delta x/2,t)-\delta p(x-\delta x/2,t)\right].
+\end{equation}
+In the limit $\delta x\rightarrow 0$, this equation reduces to
+\begin{equation}
+\rho\,\frac{\partial^2\psi(x,t)}{\partial t^2} = - \frac{\partial\delta p(x,t)}{\partial x}.
+\end{equation}
+Finally, (\ref{e6.35}) yields
+\begin{equation}\label{e6.38}
+\frac{\partial^2\psi}{\partial t^2} = c^2\,\frac{\partial^2\psi}{\partial x^2},
+\end{equation}
+where $c=\sqrt{\gamma\,p/\rho}$ is a constant with the dimensions of velocity, which
+turns out to be the sound speed in the gas (see Section~\ref{s7.1}).
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter06/fig05.eps}}
+\caption{\em First three normal modes of an organ pipe.}\label{f6.5}   
+\end{figure}
+
+As an example, suppose that a standing wave is excited in a uniform organ pipe of length $l$.
+Let the closed end of the pipe lie at $x=0$, and the open end  at $x=l$. 
+The standing wave satisfies the wave equation (\ref{e6.38}), where $c$ represents the
+speed of sound in air. The boundary conditions are that $\psi(0,t)=0$---{\em i.e.}, there is
+zero longitudinal  displacement of the air at the closed end of the pipe---and $\partial\psi(l,t)/\partial x=0$---{\em i.e.}, there is zero pressure perturbation at the open end of the pipe (since the small pressure perturbation in the pipe is not
+intense enough to modify the pressure of the air external to the pipe). 
+Let us write the displacement pattern associated with the standing wave in the form
+\begin{equation}\label{e6.39}
+\psi(x,t) = A\,\sin(k\,x)\,\cos(\omega\,t-\phi),
+\end{equation}
+where $A>0$, $k>0$, $\omega>0$, and $\phi$ are constants. 
+This expression automatically satisfies the boundary condition $\psi(0,t)=0$. 
+The other boundary condition is satisfied provided
+\begin{equation}
+\cos(k\,l)=0,
+\end{equation}
+which yields
+\begin{equation}
+k\,l = (n-1/2)\,\pi,
+\end{equation}
+where the mode number $n$ is a  positive integer. Equations~(\ref{e6.38}) and (\ref{e6.39}) yield the dispersion relation 
+\begin{equation}
+\omega = k\,c.
+\end{equation}
+Hence, the $n$th normal mode has a wavelength
+\begin{equation}
+\lambda_n =\frac{4\,l}{2n-1},
+\end{equation}
+and an oscillation frequency (in Hertz)
+\begin{equation}
+f_n = (2n-1)\,f_1,
+\end{equation}
+where $f_1=c/4\,l$ is the frequency of the fundamental harmonic ({\em i.e.}, the normal
+mode with the lowest oscillation frequency). Figure~\ref{f6.5} shows the
+characteristic displacement patterns (which are pictured as transverse displacements, for the sake
+of clarity)  and oscillation frequencies of the pipe's first
+three normal modes ({\em i.e.}, $n=1, 2$, and 3). It can be seen that  the modes all
+have a node at the closed end of the pipe, and an anti-node at the open end. The
+fundamental harmonic has a wavelength which is four times the length of the pipe. 
+The first overtone harmonic has a wavelength which is $4/3$rds the length of the pipe, and a frequency which is three times that of the fundamental. Finally, the second overtone
+has a wavelength which is $4/5$ths the length of the pipe, and a frequency
+which is five times that of the fundamental. By contrast, the normal modes
+of a guitar string have nodes at either end of the string. See Figure~\ref{f5.6}. 
+Thus, as is easily demonstrated, the fundamental harmonic has a wavelength which
+is twice the length of the string. The first overtone harmonic has a wavelength which
+is the length of the string, and a frequency which is twice that of the fundamental. Finally, the second overtone harmonic has a wavelength which is $2/3$rds the length of the
+string, and a frequency which is three times that of the fundamental.
+
+\section{Fourier Analysis}\label{s6.4}
+Playing a  musical instrument, such as a guitar or an organ, generates
+a set of standing waves which cause a sympathetic oscillation in the surrounding air. Such an oscillation consists of a fundamental harmonic,
+whose frequency determines the pitch of the musical note heard by the listener, 
+accompanied by a set of overtone harmonics which determine the timbre of the note. By definition, the oscillation frequencies of the overtone harmonics are
+{\em integer multiples}\/ of that of the fundamental.
+Thus, we expect the pressure perturbation generated in a listener's ear when a musical instrument
+is played to have the general form
+\begin{equation}
+\delta p(t) = \sum_{n=1,\infty} A_{n}\,\cos(n\,\omega\,t-\phi_{n}),
+\end{equation}
+where $\omega$ is the angular frequency of the fundamental ({\em i.e.}, $n=1$) harmonic, and the $A_n$ and $\phi_n$ are the amplitudes and phases of the
+various harmonics. The above expression can also be written
+\begin{equation}\label{e6.46}
+\delta p(t) = \sum_{n=1,\infty} \left[C_{n}\,\cos(n\,\omega\,t)+ S_{n}\,\sin(n\,\omega\,t)\right],
+\end{equation}
+where $C_n=A_n\,\cos\phi_n$ and $S_n=A_n\,\sin\phi_n$.  Note that $\delta p(t)$ is
+{\em periodic in time}\/ with period $\tau=2\pi/\omega$. In other words,
+$\delta p(t+\tau)=\delta p(t)$ for all $t$.
+This follows because $\cos(\theta+n\,2\pi)=\cos\theta$ and $\sin(\theta+n\,2\pi)=\sin\theta$ for all angles, $\theta$, and for all integers, $n$.  [Moreover, there is no $\tau'<\tau$ for which
+$\delta p(t+\tau')=\delta p(t)$ for all $t$.]
+So, the question arises, can any periodic waveform be represented as a linear superposition of sine and cosine waveforms, whose periods are integer subdivisions of that of the waveform, such as that shown in Equation~(\ref{e6.46})? To put it another way, given an arbitrary periodic
+waveform $\delta p(t)$, can we uniquely determine the constants $C_n$ and $S_n$
+appearing in expression (\ref{e6.46})? Actually,  it turns out that we can. Incidentally, the decomposition of
+a periodic waveform into a linear superposition of sinusoidal waveforms is commonly known
+as {\em Fourier analysis}. Let examine this topic in a little more detail.
+
+The problem under investigation is as follows. Given a periodic waveform $y(t)$,
+where $y(t+\tau)=y(t)$ for all $t$, we need to determine the constants $C_n$ and $S_n$ in the
+expansion
+\begin{equation}\label{e6.47}
+y(t) = \sum_{n'=1,\infty} \left[C_{n'}\,\cos(n'\,\omega\,t)+ S_{n'}\,\sin(n'\,\omega\,t)\right],
+\end{equation}
+where $\omega=2\pi/\tau$. 
+Now, it is easily demonstrated that [{\em cf.}, (\ref{e5.50})]
+\begin{eqnarray}\label{e6.48}
+\frac{2}{\tau} \int_0^\tau \cos(n\,\omega\,t)\,\cos(n'\,\omega\,t)\,dt &=& \delta_{n,n'},\\[0.5ex]
+\frac{2}{\tau} \int_0^\tau \sin(n\,\omega\,t)\,\sin(n'\,\omega\,t)\,dt &=& \delta_{n,n'},\\[0.5ex]
+\frac{2}{\tau} \int_0^\tau \cos(n\,\omega\,t)\,\sin(n'\,\omega\,t)\,dt &=& 0,\label{e6.50}
+\end{eqnarray}
+where $n$ and $n'$ are positive integers. Thus, multiplying Equation (\ref{e6.47}) by
+$(2/\tau)\,\cos(n\,\omega\,t)$, and then integrating over $t$ from $0$ to $\tau$, we obtain
+\begin{equation}\label{e6.51}
+C_n = \frac{2}{\tau}\int_0^\tau y(t)\,\cos(n\,\omega\,t)\,dt,
+\end{equation}
+where use has been made of (\ref{e6.48})--(\ref{e6.50}),  as well as (\ref{e5.51}). Likewise, multiplying
+(\ref{e6.47}) by $(2/\tau)\,\sin(n\,\omega\,t)$, and  then integrating over $t$ from $0$ to $\tau$, we obtain
+\begin{equation}\label{e6.52}
+S_n = \frac{2}{\tau}\int_0^\tau y(t)\,\sin(n\,\omega\,t)\,dt.
+\end{equation}
+Thus, we have uniquely determined the constants $C_n$ and $S_n$ in the expansion (\ref{e6.47}). These constants are generally known as {\em Fourier coefficients},
+whereas the expansion itself  is known
+as either a {\em Fourier expansion}\/  or a {\em Fourier series}. 
+
+\begin{figure}
+\epsfysize=4in
+\centerline{\epsffile{Chapter06/fig06.eps}}
+\caption{\em Fourier reconstruction of a periodic sawtooth waveform.}\label{f6.6}   
+\end{figure}
+
+In principle, there is no restriction on the waveform $y(t)$ in the above analysis, other
+than the requirement that it be periodic in time. In other words, we ought to be able
+to Fourier analyze any periodic waveform. Let us see how this works. Consider
+the periodic sawtooth waveform (see Figure~\ref{f6.6})
+\begin{equation}
+y(t) = A\,(2\,t/\tau-1) \mbox{\hspace{0.5cm}$0\leq t/\tau \leq 1$},
+\end{equation}
+with $y(t+\tau)=y(t)$ for all $t$. This waveform rises linearly from an initial
+value $-A$ at $t=0$ to a final value $+A$ at $t=\tau$, discontinuously jumps
+back to its initial value, and then repeats {\em ad infinitum}. 
+According to Equations~(\ref{e6.51}) and
+(\ref{e6.52}), the Fourier harmonics of the waveform are
+\begin{eqnarray}
+C_n &=& \frac{2}{\tau}\int_0^\tau A\,(2\,t/\tau-1)\,\cos(n\,\omega\,t)\,dt = \frac{A}{\pi^2}\int_0^{2\pi} (\theta-\pi)\,\cos(n\,\theta)\,d\theta,\\[0.5ex]
+S_n &=& \frac{2}{\tau}\int_0^\tau A\,(2\,t/\tau-1)\,\sin(n\,\omega\,t)\,dt = \frac{A}{\pi^2}\int_0^{2\pi} (\theta-\pi)\,\sin(n\,\theta)\,d\theta,
+\end{eqnarray}
+where $\theta=\omega\,t$. 
+Integration by parts yields
+\begin{eqnarray}
+C_n &=& 0,\\[0.5ex]
+S_n &=& - \frac{2\,A}{n\,\pi}.
+\end{eqnarray}
+Hence, the Fourier reconstruction of the waveform is written
+\begin{equation}
+y(t) = - \frac{2\,A}{\pi}\sum_{n=1,\infty} \frac{\sin(n\,2\pi\,t/\tau)}{n}.
+\end{equation}
+Given that the Fourier coefficients fall off like $1/n$, as $n$ increases, it seems plausible that the above
+series can be {\em truncated}, after a finite number of terms, without unduly affecting the reconstructed waveform. Figure~\ref{f6.6} shows
+the result of truncating the series after 4, 8,  16, and 32 terms (these cases correspond  the top-left, top-right,
+bottom-left, and bottom-right panels, respectively). It can be seen that the reconstruction
+becomes increasingly accurate as the number of terms retained in the series increases. 
+The annoying oscillations in the reconstructed waveform at $t=0$, $\tau$, and $2\tau$ are
+known as {\em Gibbs phenomena}, and are the inevitable consequence of trying
+to represent a {\em discontinuous}\/ waveform as a Fourier series. In fact, it can be demonstrated
+mathematically that, no matter how many terms are retained in the series, the Gibbs
+phenomena never entirely go away. 
+
+We can slightly generalize the Fourier series (\ref{e6.47}) by including an $n=0$
+term. In other words,
+\begin{equation}
+y(t) = C_0+ \sum_{n'=1,\infty} \left[C_{n'}\,\cos(n'\,\omega\,t)+ S_{n'}\,\sin(n'\,\omega\,t)\right],
+\end{equation}
+which allows the waveform to have a non-zero average.
+Of course, there is no term involving $S_0$, since $\sin (n\,\omega\,t)=0$ when $n=0$. 
+Now, it is easily demonstrated that 
+\begin{eqnarray}
+\frac{2}{\tau} \int_0^\tau \cos(n\,\omega\,t)\,dt &=& 0,\\[0.5ex]
+\frac{2}{\tau} \int_0^\tau \sin(n\,\omega\,t)\,\,dt &=& 0,
+\end{eqnarray}
+where $\omega=2\pi/\tau$, and $n$ is a positive integer. Thus, making use of these expressions, as
+well as Equations~(\ref{e6.48})--(\ref{e6.50}), we can easily show that
+\begin{equation}\label{e6.62}
+C_0 = \frac{1}{\tau}\int y(t)\,dt,
+\end{equation}
+and that Equations~(\ref{e6.51}) and (\ref{e6.52}) still hold for $n>0$. 
+
+\begin{figure}
+\epsfysize=4in
+\centerline{\epsffile{Chapter06/fig07.eps}}
+\caption{\em Fourier reconstruction of a periodic ``tent'' waveform.}\label{f6.7}   
+\end{figure}
+
+As an example, consider the periodic ``tent'' waveform (see Figure~\ref{f6.7})
+\begin{equation}\label{e6.63}
+y(t) = 2\,A\left\{
+\begin{array}{ccc}
+t/\tau&\mbox{\hspace{0.5cm}}&0\leq t/\tau\leq 1/2\\[0.5ex]
+1-t/\tau &&1/2< t/\tau \leq 1
+\end{array}\right.,
+\end{equation}
+where $y(t+\tau)=y(t)$ for all $t$. This waveform rises linearly from  zero at $t=0$, reaches  a peak value $A$ at $t=\tau/2$,   falls
+linearly, becomes zero again at $t=\tau$, and  repeats
+{\em ad infinitum}. Moreover, the waveform clearly has a non-zero average. 
+It is easily demonstrated, from Equations~(\ref{e6.51}), (\ref{e6.52}), (\ref{e6.62}), and (\ref{e6.63}), that
+\begin{equation}
+C_0 = \frac{A}{2},
+\end{equation}
+and
+\begin{equation}
+C_n = - A\,\frac{\sin^2(n\,\pi/2)}{(n\,\pi/2)^2}
+\end{equation}
+for $n>1$, with $S_n=0$ for $n>1$. Note that only the odd-$n$ Fourier harmonics
+are non-zero. 
+Figure~\ref{f6.7} shows
+a Fourier reconstruction of the ``tent'' waveform using the first 1, 2,  4, and 8 terms (in addition to the $C_0$ term) in the Fourier series (these cases correspond to the top-left, top-right,
+bottom-left, and bottom-right panels, respectively). It can be seen that the reconstruction
+becomes increasingly accurate as the number of terms  in the series increases.
+Moreover, in this example, there is no sign of Gibbs phenomena,
+since the tent waveform is completely continuous. 
+
+Now, in our first example---{\em i.e.}, the sawtooth waveform---all of the
+$C_n$ Fourier coefficients are zero, whereas in our second example---{\em i.e.}, the
+tent waveform---all of the $S_n$ coefficients are zero. It is easily
+demonstrated that  this occurs because the sawtooth waveform is {\em odd}\/ in $t$---{\em i.e.},
+$y(-t)=-y(t)$ for all $t$---whereas the tent waveform is {\em even}---{\em i.e.},
+$y(-t)=y(t)$ for all $t$. In fact, it is a general rule that  waveforms which are even in $t$ only
+have cosines in their Fourier series, whereas  waveforms which are odd only have sines. Of course, waveforms
+which are neither even nor odd in $t$ have both cosines and sines in their Fourier
+series. 
+
+Fourier series arise quite naturally in the theory of standing waves, since the normal
+modes of oscillation of any uniform continuous system possessing linear equations of motion
+({\em e.g.}, a uniform string, an elastic solid, an ideal gas) take the form of spatial cosine and
+sine waves whose wavelengths are rational fractions of one another. Thus, the  instantaneous spatial waveform of such a system can always
+be represented as a linear superposition of cosine and sine waves: {\em i.e.}, a Fourier
+series in space, rather than in time. In fact, we can easily appreciate that the
+process of determining the amplitudes and phases of the normal modes of oscillation 
+from the
+initial conditions is essentially equivalent to Fourier analyzing the initial conditions
+in space---see Sections~\ref{s5.3} and \ref{s6.2}.
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Estimate the highest possible frequency (in Hertz), and the smallest possible wavelength, of a sound wave in aluminium,  due to the discrete atomic structure of this material. The mass density, Young's modulus, and atomic weight
+of aluminium are $2.7\times 10^3\,{\rm kg\,m}^{-3}$, $6\times 10^{10}\,{\rm N\,m}^{-2}$, and
+$27$, respectively. 
+
+
+\item Consider a linear array of $N$ identical simple pendulums of mass $m$ and
+length $l$ which are suspended from equal height points  that are evenly
+spaced a distance $a$ apart. Suppose that each pendulum bob is attached to
+its two immediate neighbors by means of light springs of unstretched
+length $a$ and spring constant $K$. The figure shows a small part of
+such an array. Let $x_i=i\,a$ be the equilibrium position of the $i$th bob, for
+$i=1,N$, and let $\psi_i(t)$ be its horizontal displacement. It is assumed that $|\psi_i|/a\ll 1$ for
+all $i$. Demonstrate that the equation of motion of the $i$th pendulum bob is
+$$
+\ddot{\psi}_i = - \frac{g}{l}\,\psi_i + \frac{K}{m}\,(\psi_{i-1}-2\,\psi_i+\psi_{i+1}).
+$$
+Consider a general normal mode of the form
+$$
+\psi_i(t) = [A\,\sin (k\,x_i)+ B\,\cos(k\,x_i)]\,\cos(\omega\,t-\phi).
+$$
+Show that the associated dispersion relation is
+$$
+\omega^2= \frac{g}{l} + \frac{4\,K}{m}\,\sin^2(k\,a/2).
+$$
+Suppose that the first and last pendulums in the array are attached to immovable
+walls, located a horizontal distance $a$ away, by means of light springs of unstretched length $a$
+and spring constant $K$. Find the normal modes of the system. 
+Suppose, on the other hand, that the first and last pendulums are not attached to anything on their
+outer sides. Find the normal modes of the system. 
+\begin{figure}[h]
+\epsfysize=2in
+\centerline{\epsffile{Chapter06/fig08.eps}}
+\end{figure}
+
+\item Find the system of coupled inductors and capacitors which is analogous 
+to the system of coupled pendulums considered in the previous exercise, in the sense that
+the time evolution equation for the current flowing through the $i$th inductor
+has the same form as the equation of motion of the $i$th pendulum. Consider
+both types of boundary condition discussed above. Find the
+dispersion relation. 
+
+\item Consider a periodic waveform $y(t)$ of period $\tau$, where $y(t+\tau)=y(t)$ for
+all $t$, which is represented as a Fourier series:
+$$
+y(t) = C_0 + \sum_{n>1}\left[C_n\,\cos(n\,\omega\,t) + S_n\,\sin(n\,\omega\,t)\right],
+$$
+where $\omega=2\pi/\tau$. Demonstrate that
+$$
+y(-t) = C_0 + \sum_{n>1}\left[C_n'\,\cos(n\,\omega\,t) + S_n'\,\sin(n\,\omega\,t)\right],
+$$
+where $C_n'=C_n$ and $S_n'=-S_n$, and
+$$
+y(t+T) = C_0 + \sum_{n>1}\left[C_n''\,\cos(n\,\omega\,t) + S_n''\,\sin(n\,\omega\,t)\right],
+$$
+where
+\begin{eqnarray}
+C_n'' &=& C_n\,\cos(n\,\omega\,T) + S_n\,\sin(n\,\omega\,T),\nonumber\\[0.5ex]
+S_n'' &=& S_n\,\cos(n\,\omega\,T) - C_n\,\sin(n\,\omega\,T).\nonumber
+\end{eqnarray}
+
+\item Demonstrate that the periodic square-wave
+$$
+y(t)=A\left\{\begin{array}{ccc}
+-1&\mbox{\hspace{1cm}}&0\leq t/\tau\leq 1/2\\[0.5ex]
++1 &&1/2<t/\tau \leq 1
+\end{array}
+\right.,
+$$
+where $y(t+\tau)=y(t)$ for all $t$, has the Fourier representation
+$$
+y(t) = -\frac{4\,A}{\pi}\left[\frac{\sin(\omega\,t)}{1}+ \frac{\sin(3\,\omega\,t)}{3}+ \frac{\sin(5\,\omega\,t)}{5}+\cdots\right].
+$$
+Here, $\omega=2\pi/\tau$. Plot the reconstructed waveform, retaining the first 4, 8, 16, and
+32 terms in the Fourier series.
+\item Show that the periodically repeated pulse waveform
+$$
+y(t)=A\left\{\begin{array}{ccc}
+1&\mbox{\hspace{1cm}}&|t-T/2|\leq  \tau/2\\[0.5ex]
+0 &&\mbox{otherwise}
+\end{array}
+\right.,
+$$
+where $y(t+T)=y(t)$ for all $t$, and $\tau < T$, has the Fourier representation
+$$
+y(t) =A\,\frac{\tau}{T} +\frac{2\,A}{\pi}\sum_{n=1,\infty} (-1)^n\,\frac{\sin (n\,\pi\,\tau/T)}{n}\,\cos(n\,2\pi\,t/T)
+$$
+Demonstrate that if $\tau\ll T$ then the most significant terms in the above series have
+frequencies (in Hertz) which range from the fundamental frequency $1/T$ to a frequency
+of order $1/\tau$. 
+
+\end{enumerate}}

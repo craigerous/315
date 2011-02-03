@@ -1,0 +1,642 @@
+\chapter{Wave Pulses}\label{c8}
+\section{Fourier Transforms}\label{s8.1}
+Consider a function $F(x)$ which is {\em periodic}\/ in $x$ with period $L$. In other
+words,
+\begin{equation}\label{e8.1}
+F(x+L) = F(x)
+\end{equation}
+for all $x$. Recall, from Section~\ref{s6.4}, that we can
+represent such a function as a {\em Fourier series}: {\em i.e.}, 
+\begin{equation}\label{e8.2}
+F(x)= \sum_{n=1,\infty} \left[C_n\,\cos(n\,\delta k\,x) + S_n\,\sin(n\,\delta k\,x)\right],
+\end{equation}
+where 
+\begin{equation}
+\delta k = \frac{2\pi}{L}.
+\end{equation}
+[Note that we have neglected the $n=0$ term in (\ref{e8.2}), for the sake of convenience.] 
+The  expression (\ref{e8.2}) {\em automatically}\/ satisfies the periodicity constraint (\ref{e8.1}), since $\cos(\theta+n\,2\pi)=\cos\theta$ and $\sin(\theta+n\,2\pi)=\sin\theta$
+for all $\theta$ and $n$ (with the proviso that $n$ is integer). 
+The so-called {\em Fourier coefficients},  $C_n$ and $S_n$, appearing in (\ref{e8.2}), can
+be determined from the function $F(x)$ by means  of the following easily demonstrated
+results (see Exercise 1):
+\begin{eqnarray}\label{e8.4}
+\frac{2}{L}\int_{-L/2}^{L/2}\cos(n\,\delta k\,x)\,\cos(n'\,\delta k \,x)\,dx &=&\delta_{n,n'},\\[0.5ex]
+\frac{2}{L}\int_{-L/2}^{L/2}\sin(n\,\delta k\,x)\,\sin(n'\,\delta k \,x)\,dx &=&\delta_{n,n'},\\[0.5ex]
+\frac{2}{L}\int_{-L/2}^{L/2}\cos(n\,\delta k\,x)\,\sin(n'\,\delta k \,x)\,dx &=&0,\label{e8.6}
+\end{eqnarray}
+where $n$, $n'$ are positive integers. Here, $\delta_{n,n'}=1$ if $n=n'$, and
+$\delta_{n,n'}=0$ otherwise. 
+In fact (see Exercise 1),
+\begin{eqnarray}\label{e8.7}
+C_n &=&\frac{2}{L}\int_{-L/2}^{L/2} F(x)\,\cos(n\,\delta k\,x)\,dx,\\[0.5ex]
+S_n &=&\frac{2}{L}\int_{-L/2}^{L/2} F(x)\,\sin(n\,\delta k\,x)\,dx.\label{e8.8}
+\end{eqnarray}
+Note, finally, that {\em any}\/ periodic function of $x$ can be represented as a
+Fourier series. 
+
+Suppose, however, that we are dealing with a function $F(x)$ which is {\em not}\/ periodic in $x$. 
+Actually, we can think of such a function as one which is periodic in $x$ with a period $L$ that
+tends to infinity. Does this mean that we can still represent $F(x)$ as a Fourier series?
+Consider what happens to the series (\ref{e8.2}) in the limit that $L\rightarrow\infty$, or, equivalently, $\delta k\rightarrow 0$. Now, the series is basically a weighted sum of sinusoidal functions
+whose wavenumbers take the {\em quantized}\/ values $k_n=n\,\delta k$.  Moreover, as
+$\delta k\rightarrow 0$, these values become more and more closely
+spaced. In fact, we can write
+\begin{equation}
+F(x) = \sum_{n=1,\infty} \frac{C_n}{\delta k}\,\cos(n\,\delta k\,x)\,\delta k+ \sum_{n=1,\infty} \frac{S_n}{\delta k} \,\sin(n\,\delta k\,x)\,\delta k.
+\end{equation}
+In the continuum limit, $\delta k\rightarrow 0$, the {\em summations}\/ in the above expression become {\em integrals}, and
+we obtain
+\begin{equation}\label{e8.10}
+F(x)=\int_{-\infty}^\infty C(k)\,\cos(k\,x)\,dk + \int_{-\infty}^\infty S(k)\,\sin(k\,x)\,dk,
+\end{equation}
+where $k=n\,\delta k$, $C(k)=C(-k)= C_n/(2\,\delta k)$, and $S(k)=-S(-k)=S_n/(2\,\delta k)$. 
+Thus, for the case of an aperiodic function, the {\em Fourier series}\/ (\ref{e8.2}) morphs into the so-called {\em Fourier transform}\/ (\ref{e8.10}). This transform can be inverted using the continuum limit ({\em i.e.}, the  limit $\delta k\rightarrow 0$) of Equations~(\ref{e8.7}) and (\ref{e8.8}), which are easily be shown to be
+\begin{eqnarray}\label{e8.11}
+C(k) &=& \frac{1}{2\pi}\int_{-\infty}^\infty F(x)\,\cos(k\,x)\,dx,\\[0.5ex]
+S(k) &=&\frac{1}{2\pi}\int_{-\infty}^\infty F(x)\,\sin(k\,x)\,dx.\label{e8.12}
+\end{eqnarray}
+Incidentally, it is clear, from the above equations, that $C(-k)=C(k)$ and $S(-k)=-S(k)$. 
+The {\em Fourier space}\/ ({\em i.e.}, $k$-space) functions $C(k)$ and $S(k)$ are known as the {\em cosine Fourier transform}\/ and
+the {\em sine Fourier transform}\/ of the {\em real space}\/ ({\em i.e.}, $x$-space) function $F(x)$, respectively. 
+Furthermore, since we already know that any periodic function can be represented as a Fourier series, it seems
+plausible that any aperiodic function can be represented as a Fourier transform. This is indeed the case. Note that Equations~(\ref{e8.10})--(\ref{e8.12}) effectively enable us to  represent a general function as a linear superposition of sine and cosine functions. 
+Let us now consider some examples. 
+
+\begin{figure}
+\epsfysize=2.2in
+\centerline{\epsffile{Chapter08/fig01.eps}}
+\caption{\em Fourier transform of a top-hat function.}\label{f8.1}   
+\end{figure}
+
+Consider the {\em top-hat}\/ function (see Figure~\ref{f8.1})
+\begin{equation}\label{e8.13}
+F(x)=\left\{
+\begin{array}{ccc}
+1 &\mbox{\hspace{1cm}}& |x|\leq l/2\\
+0 && |x|>l/2
+\end{array}\right..
+\end{equation}
+Now, given that $\cos(-k\,x)=\cos(k\,x)$ and $\sin(-k\,x)=-\sin(k\,x)$, it is
+apparent, from (\ref{e8.11}) and (\ref{e8.12}), that if $F(x)$ is {\em even}\/ in $x$, so that $F(-x)=F(x)$, then $S(k)=0$, and
+if $F(x)$ is {\em odd}\/ in $x$, so that $F(-x)=-F(x)$, then $C(k)=0$. Hence, since the top-hat function (\ref{e8.13})
+is clearly even in $x$, its sine Fourier transform is automatically zero. On the other hand,
+its cosine Fourier transform takes the form
+\begin{equation}
+C(k) = \frac{1}{2\pi}\int_{-l/2}^{l/2}\,\cos(k\, x)\,dx = \frac{l}{2\pi}\,\frac{\sin(k\,l/2)}{k\,l/2}.
+\end{equation}
+Figure~\ref{f8.1} shows the function $F(x)$, together with its associated cosine transform, $C(k)$. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter08/fig02.eps}}
+\caption{\em A Gaussian function.}\label{f8.2}   
+\end{figure}
+
+As a second example, consider the {\em Gaussian}\/ function 
+\begin{equation}\label{e8.15}
+F(x) =\exp\left(-\frac{x^2}{2\,\sigma_x^{\,2}}\right).
+\end{equation}
+As illustrated in Figure~\ref{f8.2}, this is a smoothly varying  even function of $x$ which attains
+its peak value $1$ at $x=0$, and becomes completely negligible when $|x|\gtapp 3\,\sigma_x$. Thus, $\sigma_x$ is a measure of the ``width'' of the function in real  space.
+By symmetry, the sine Fourier transform of the above function is zero. On the
+other hand, the cosine Fourier transform is easily shown to be (see Exercise 2)
+\begin{equation}\label{e8.16}
+C(k) = \frac{1}{(2\pi\,\sigma_k^{\,2})^{1/2}}\,\exp\left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right),
+\end{equation}
+where
+\begin{equation}
+\sigma_k=\frac{1}{\sigma_x}.
+\end{equation}
+Note that this function is a {\em Gaussian}\/ in Fourier space of characteristic width $\sigma_k=1/\sigma_x$. 
+In fact, the Gaussian is the only mathematical function which is its
+own Fourier transform. Now, the original function $F(x)$ can be reconstructed from
+its Fourier transform using
+\begin{equation}\label{e8.18}
+F(x)=\int_{-\infty}^\infty C(k)\,\cos(k\,x)\,dk.
+\end{equation}
+This reconstruction is simply a linear superposition of cosine waves of differing wavenumbers. Moreover, $C(k)$ can be interpreted as  the amplitude of waves of wavenumber $k$ within  this superposition. The fact that $C(k)$ is a Gaussian of
+characteristic width $\sigma_k=1/\sigma_x$ [which means that $C(k)$ is negligible for $|k|\gtapp 3\,\sigma_k$] implies that in order to reconstruct a real space function whose
+width in real space is approximately $\sigma_x$ it is necessary to combine sinusoidal functions
+with a range of different wavenumbers which is approximately $\sigma_k=1/\sigma_x$ in extent. To be slightly more exact, the real-space Gaussian function $F(x)$ falls to
+{\em half}\/ of its peak value when $|x|\simeq \sqrt{\pi/2}\,\sigma_x$. Hence, the {\em full width at half maximum}\/ of the function is $\Delta x = 2\,\sqrt{\pi/2}\,\sigma_x=\sqrt{2\pi}\,\sigma_x$. Likewise, the full width at half maximum of the Fourier space Gaussian function $C(k)$ is $\Delta k =\sqrt{2\,\pi}\,\sigma_k$. 
+Thus, 
+\begin{equation}
+\Delta x\,\Delta k = 2\pi,
+\end{equation}
+since $\sigma_k\,\sigma_x=1$. 
+Thus, a function which is highly localized in real space has a transform which is
+highly delocalized in Fourier space, and {\em vice versa}. Note, finally, that (see Exercise 3)
+\begin{equation}\label{e8.20}
+\int_{-\infty}^\infty \frac{1}{(2\pi\,\sigma_k^{\,2})^{1/2}}\,\exp\left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right) dk = 1.
+\end{equation}
+In other words, a Gaussian function in real space, of {\em unit}\/ height and characteristic width $\sigma_x$, has a cosine Fourier transform
+which is a Gaussian in Fourier space, of characteristic width $\sigma_k=1/\sigma_x$, whose integral over all
+$k$-space is {\em unity}.
+
+Consider what happens to the above mentioned real space Gaussian, and its Fourier transform, in the limit $\sigma_x\rightarrow \infty$, or, equivalently, $\sigma_k\rightarrow 0$. There is no difficulty in seeing, from Equation~(\ref{e8.15}), that
+\begin{equation}
+F(x)\rightarrow 1.
+\end{equation}
+In other words, the real space Gaussian morphs into a function which takes the
+constant value unity everywhere. The Fourier transform is more problematic. In the
+limit $\sigma_k\rightarrow 0$, Equation~(\ref{e8.16}) yields a $k$-space function which
+is zero everywhere apart from $k=0$ (since the function is negligible for $|k|\gtapp \sigma_k$), where it is infinite [since the function takes the value $(2\pi\,\sigma_k)^{-1/2}$ at $k=0$]. Moreover, according to
+Equation~(\ref{e8.20}), the integral of the function over all $k$ remains unity. Thus, the
+Fourier transform of the uniform function $F(x)=1$ is a sort of integrable ``spike''
+located at $k=0$. This strange function is known as the {\em Dirac delta function}, and
+is denoted $\delta (k)$. Thus, one definition of a delta function is
+\begin{equation}
+\delta (k)\equiv \lim_{\sigma_k\rightarrow 0}\frac{1}{(2\pi\,\sigma_k^{\,2})^{1/2}}\,\exp\left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right).
+\end{equation}
+As has already been mentioned, $\delta(k)=0$ for $k\neq 0$, and $\delta(0)=\infty$.
+Moreover,
+\begin{equation}\label{e8.23}
+\int_{-\infty}^\infty\delta (k)\,dk = 1.
+\end{equation}
+
+Consider the integral
+\begin{equation}
+\int_{-\infty}^\infty F(k)\,\delta(k)\,dk,
+\end{equation}
+where $F(k)$ is an arbitrary function. 
+Because of the peculiar properties of the delta function, the only contribution
+to the above integral comes from the region in $k$-space in the immediate vicinity of $k=0$. Furthermore, provided $F(k)$
+is well-behaved in this region, we can write
+\begin{equation}
+\int_{-\infty}^{\infty} F(k)\,\delta(k)\,dk = \int_{-\infty}^\infty F(0)\,\delta (k)\,dk=F(0)\,\int_{-\infty}^{\infty} \delta(k)\,dk = F(0),
+\end{equation}
+where use has been made of Equation~(\ref{e8.23}). 
+
+A simple change of variables allows us to define $\delta(k-k')$, which is a
+``spike'' function centered on $k=k'$. The above result can easily be generalized
+to give
+\begin{equation}\label{e8.26}
+\int_{-\infty}^{\infty} F(k)\,\delta(k-k')\,dk = F(k'),
+\end{equation}
+for all $F(k)$. 
+Indeed, this expression can be thought of as an alternative definition of a
+delta function. 
+
+Now, we have seen that the delta function $\delta(k)$ is the cosine Fourier transform of
+the uniform function $F(x)=1$. It, thus, follows from (\ref{e8.11}) that
+\begin{equation}\label{e8.27}
+\delta (k) = \frac{1}{2\pi}\int_{-\infty}^{\infty} \cos(k\,x)\,dx.
+\end{equation}
+This result represents yet another definition of the delta function. By symmetry,
+ we also have
+\begin{equation}\label{e8.28}
+0 = \frac{1}{2\pi}\int_{-\infty}^{\infty} \sin(k\,x)\,dx.
+\end{equation}
+It follows that
+\begin{eqnarray}
+\frac{1}{2\pi}\int_{-\infty}^\infty \cos(k\,x)\,\cos(k'\,x)\,dx
+&=& \frac{1}{4\pi} \int_{-\infty}^\infty\left\{\cos\left[(k-k')\,x\right]+\cos\left[(k+k')\,x\right]\right\}dx\nonumber\\[0.5ex]
+&=& \frac{1}{2}\left[\delta(k-k') + \delta(k+k')\right],\label{e8.29}
+\end{eqnarray}
+where use has been made of (\ref{e8.27}) and a standard trigonometric identity. Likewise (see Exercise 4),
+\begin{eqnarray}\label{e8.30}
+\frac{1}{2\pi}\int_{-\infty}^\infty \sin(k\,x)\,\sin(k'\,x)\,dx
+&=& \frac{1}{2}\left[\delta(k-k') - \delta(k+k')\right],\\[0.5ex]
+\frac{1}{2\pi}\int_{-\infty}^\infty \cos(k\,x)\,\sin(k'\,x)\,dx &=&0.\label{e8.31}
+\end{eqnarray}
+Incidentally, Equations~(\ref{e8.29})--(\ref{e8.31}) can be used to derive Equations~(\ref{e8.11}) and (\ref{e8.12}) directly from Equation~(\ref{e8.10}) (see Exercise 5).
+
+\section{General Solution of the Wave Equation}
+Consider the one dimensional wave equation
+\begin{equation}\label{e8.32}
+\frac{\partial^2\psi}{\partial t^2} = v^2\,\frac{\partial^2\psi}{\partial x^2},
+\end{equation}
+where $\psi(x,t)$ is the wave amplitude, and $v$ the characteristic phase velocity. We have seen a number of
+particular solutions of this equation. For instance,
+\begin{equation}\label{e8.33}
+\psi(x,t) = A\,\cos(k\,x-\omega\,t-\phi)
+\end{equation}
+represents a traveling wave of amplitude $A$, wavenumber $k$, angular frequency $\omega$, and phase angle $\phi$, which propagates in the positive $x$-direction. 
+The above expression is a solution of the wave equation  (\ref{e8.32}) provided 
+that it satisfies the {\em dispersion relation}
+\begin{equation}
+\omega = k\,v:
+\end{equation}
+{\em i.e.}, provided that the wave propagates with the fixed phase velocity $v$. 
+We can also write the solution (\ref{e8.33}) as
+\begin{equation}
+\psi(x,t) = C_+\,\cos[k\,(x-v\,t)] + S_+\,\sin[k\,(x-v\,t)],
+\end{equation}
+where $C_+=A\,\cos\phi$, $S_+=A\,\sin\phi$, and we have explicitly incorporated the dispersion relation 
+$\omega=k\,v$ into the solution. The above expression can be regarded as the most general
+form for a traveling wave of wavenumber $k$ propagating in the positive $x$-direction.
+Likewise, the most general form for a traveling wave of wavenumber $k$ propagating
+in the negative $x$-direction is
+\begin{equation}
+\psi(x,t) = C_-\,\cos[k\,(x+v\,t)] + S_-\,\sin[k\,(x+v\,t)].
+\end{equation}
+Of course, we have also encountered standing wave solutions of (\ref{e8.32}). 
+However, as we have seen, these can  be regarded as linear superpositions of traveling waves,  of equal
+amplitude and wavenumber, propagating in opposite directions. 
+In other words, standing waves are not fundamentally different to traveling waves.
+
+Now, the wave equation (\ref{e8.32}) is {\em linear}. This suggests that its most
+general solution can be written as a {\em linear superposition}\/ of all of its valid
+wavelike solutions. In the absence of specific boundary
+conditions, there is no restriction on the possible wavenumbers of such solutions.
+Thus, it is plausible that the most general solution of (\ref{e8.32}) can be written
+\begin{eqnarray}
+\psi(x,t) &=& \int_{-\infty}^{\infty} C_+(k)\,\cos[k\,(x-v\,t)]\,dk+ \int_{-\infty}^{\infty} S_+(k)\,\sin[k\,(x-v\,t)]\,dk
+\nonumber\\[0.5ex]
+&&+ \int_{-\infty}^{\infty} C_-(k)\,\cos[k\,(x+v\,t)]\,dk+ \int_{-\infty}^{\infty} S_-(k)\,\sin[k\,(x+v\,t)]\,dk:\label{e8.37}
+\end{eqnarray}
+{\em i.e.}, as a linear superposition of traveling waves propagating to the
+right ({\em i.e.}, in the positive $x$-direction) and to the left. Here, $C_+(k)$
+represents the amplitude of right-propagating cosine waves of wavenumber $k$ in this
+superposition. Moreover, $S_+(k)$ represents the amplitude of right-propagating sine waves of wavenumber $k$, $C_-(k)$ the amplitude of left-propagating cosine waves,
+and $S_-(k)$ the amplitude of left-propagating sine waves. Since each of these
+waves is individually a solution of (\ref{e8.32}), we are guaranteed, from the
+linear nature of this equation, that the above superposition is also a solution.
+
+But, how can we prove that (\ref{e8.37}) is the {\em most general}\/ solution of the
+wave equation (\ref{e8.32})? Well, our understanding of Newtonian dynamics
+tells us that if we know the initial wave amplitude $\psi(x,0)$, and its
+time derivative $\dot{\psi}(x,0)$, then this should constitute  sufficient information to uniqu\-ely
+specify the solution of (\ref{e8.32}) at all subsequent times. Hence, if
+(\ref{e8.37}) is the most general solution of (\ref{e8.32}) then it must 
+be consistent with {\em any}\/ initial wave amplitude, and {\em any}\/ initial wave velocity. In
+other words, given any $\psi(x,0)$ and $\dot{\psi}(x,0)$, we should be
+able to uniquely determine the functions $C_+(k)$, $S_+(k)$, $C_-(k)$, and
+$S_-(k)$ appearing in (\ref{e8.37}). Let us see if this is the case.
+
+Now, from (\ref{e8.37}),
+\begin{eqnarray}
+\psi(x,0) &=& \int_{-\infty}^{\infty}\left[C_+(k)+C_-(k)\right]\,\cos(k\,x)\,dk+  \int_{-\infty}^{\infty}\left[S_+(k)+S_-(k)\right]\,\sin(k\,x)\,dk.\nonumber\\[0.5ex]&&
+\end{eqnarray}
+However, this is just a Fourier transform of the form (\ref{e8.10}). Moreover,
+Equations~(\ref{e8.11}) and (\ref{e8.12}) allow us to uniquely invert this
+transform. In fact,
+\begin{eqnarray}
+C_+(k) + C_-(k) &=& \frac{1}{2\pi}\int_{-\infty}^{\infty} \psi(x,0)\,\cos(k\,x)\,dx,\\[0.5ex]
+S_+(k) + S_-(k) &=&  \frac{1}{2\pi}\int_{-\infty}^{\infty} \psi(x,0)\,\sin(k\,x)\,dx.
+\end{eqnarray}
+Equation~(\ref{e8.37}) also yields
+\begin{eqnarray}
+\dot{\psi}(x,0) &=& \int_{-\infty}^{\infty}k\,v\left[C_+(k)-C_-(k)\right]\,\sin(k\,x)\,dk\nonumber\\[0.5ex]
+&&- \int_{-\infty}^{\infty}k\,v\left[S_+(k)-S_-(k)\right]\,\cos(k\,x)\,dk.
+\end{eqnarray}
+This is, again, a Fourier transform which can be inverted to give
+\begin{eqnarray}
+k\,v\,[C_+(k) - C_-(k)]&=& \frac{1}{2\pi}\int_{-\infty}^{\infty} \dot{\psi}(x,0)\,\sin(k\,x)\,dx,\\[0.5ex]
+k\,v\,[S_-(k) - S_+(k)] &=&  \frac{1}{2\pi}\int_{-\infty}^{\infty} \dot{\psi}(x,0)\,\cos(k\,x)\,dx.
+\end{eqnarray}
+Hence,
+\begin{eqnarray}
+C_+(k)&=&\frac{1}{4\pi}\left[\int_{-\infty}^{\infty}\psi(x,0)\,\cos(k\,x)\,dx
++ \int_{-\infty}^\infty \frac{\dot{\psi}(x,0)}{k\,v}\,\sin(k\,x)\,dx\right],\\[0.5ex]
+C_-(k)&=&\frac{1}{4\pi}\left[\int_{-\infty}^{\infty}\psi(x,0)\,\cos(k\,x)\,dx
+- \int_{-\infty}^\infty \frac{\dot{\psi}(x,0)}{k\,v}\,\sin(k\,x)\,dx\right],\\[0.5ex]
+S_+(k)&=&\frac{1}{4\pi}\left[\int_{-\infty}^{\infty}\psi(x,0)\,\sin(k\,x)\,dx
+- \int_{-\infty}^\infty \frac{\dot{\psi}(x,0)}{k\,v}\,\cos(k\,x)\,dx\right],\\[0.5ex]
+S_-(k)&=&\frac{1}{4\pi}\left[\int_{-\infty}^{\infty}\psi(x,0)\,\sin(k\,x)\,dx
++\int_{-\infty}^\infty \frac{\dot{\psi}(x,0)}{k\,v}\,\cos(k\,x)\,dx\right].
+\end{eqnarray}
+It follows that we can indeed uniquely determine the functions $C_+(k)$, $C_-(k)$,
+$S_+(k)$, and $S_-(k)$, appearing in expression (\ref{e8.37}), for any $\psi(x,0)$ and $\dot{\psi}(x,0)$. This proves that (\ref{e8.37}) is the most general
+solution of the wave equation (\ref{e8.32}).
+
+Let us examine our solution in more detail. Equation~(\ref{e8.37}) can be
+written (see Exercise 6)
+\begin{equation}\label{e8.45}
+\psi(x,t) = F(x-v\,t)+ G(x+v\,t),
+\end{equation}
+where 
+\begin{eqnarray}\label{e8.46}
+F(x) &=& \int_{-\infty}^\infty\left[C_+(k)\,\cos(k\,x)+ S_+(k)\,\sin(k\,x)\right] dk,\\[0.5ex]
+G(x) &=& \int_{-\infty}^\infty\left[C_-(k)\,\cos(k\,x)+ S_-(k)\,\sin(k\,x)\right] dk.\label{e8.47}
+\end{eqnarray}
+What does the expression (\ref{e8.45}) signify? Well, $F(x-v\,t)$ represents a wave disturbance  of {\em arbitrary
+shape}\/ which propagates in the {\em positive}\/ $x$-direction, at the fixed speed $v$,   {\em without changing shape}. This should be clear, since a  point with a given amplitude on the
+wave, $F(x-v\,t)=c$, has an equation of motion $x-v\,t=F^{-1}(c)={\rm constant}$, and thus
+propagates in the positive $x$-direction at the  velocity $v$. Moreover,
+since all points on the wave propagate in the same direction at the same velocity
+it follows that the wave does not change shape as it moves. Of course,
+$G(x+v\,t)$ represents a wave disturbance of arbitrary shape which propagates in the
+{\em negative}\/ $x$-direction, at the fixed speed $v$, without changing shape. Thus,
+we conclude that the most general solution to the wave equation  (\ref{e8.32}) is
+a superposition of two wave disturbances of arbitrary shapes which propagate
+in opposite directions, at the fixed speed $v$, without changing shape. Such
+solutions are generally termed {\em wave pulses}. So, what is the relationship
+between a general wave pulse and the sinusoidal traveling wave solutions to the
+wave equation that we found previously. Well, as is clear from Equations~(\ref{e8.46}) and (\ref{e8.47}), a wave pulse can be thought of as a superposition of sinusoidal
+traveling waves propagating in the same direction as the pulse. Moreover, the amplitude of cosine
+waves of wavenumber $k$ in this superposition is simply equal to the cosine Fourier
+transform of the pulse shape evaluated at wavenumber $k$. Likewise,
+the amplitude of sine waves of wavenumber $k$ in the superposition is equal to the sine Fourier
+transform of the pulse shape evaluated at wavenumber $k$.
+
+\begin{figure}
+\epsfysize=2.2in
+\centerline{\epsffile{Chapter08/fig03.eps}}
+\caption{\em Fourier transform of a triangular wave pulse.}\label{f8.3}   
+\end{figure}
+
+For instance, suppose that we have a triangular wave pulse of the form (see Figure~\ref{f8.3})
+\begin{equation}
+F(x) = \left\{
+\begin{array}{ccc}
+1 -2\,|x|/l&\mbox{\hspace{1cm}}& |x|\leq l/2\\[0.5ex]
+0 &&|x|>l/2
+\end{array}\right..
+\end{equation}
+The sine Fourier transform of this pulse shape is zero by symmetry. However, the
+cosine Fourier transform is (see Exercise 7)
+\begin{equation}\label{e8.49}
+C(k)=\frac{1}{2\pi}\int_{-\infty}^\infty F(x)\,\cos(k\,x)\,dx = \frac{l}{4\pi}\,\frac{\sin^2(k\,l/4)}{(k\,l/4)^2}.
+\end{equation}
+The functions $F(x)$ and $C(k)$ are shown in Figure~\ref{f8.3}. 
+It follows that the right-propagating triangular wave pulse
+\begin{equation}
+\psi(x,t)= \left\{
+\begin{array}{ccc}
+1 -2\,|x-v\,t|/l&\mbox{\hspace{1cm}}& |x-v\,t|\leq l/2\\[0.5ex]
+0 &&|x-v\,t|>l/2
+\end{array}\right.
+\end{equation}
+can be written as the following superposition of right-propagating cosine waves:
+\begin{equation}
+\psi(x,t) =\frac{1}{4\pi} \int_{-\infty}^\infty \frac{\sin^2(k\,l/4)}{(k\,l/4)^2}\,\cos[k\,(x-v\,t)]\,l\,dk.
+\end{equation}
+Likewise, the left-propagating triangular wave pulse
+\begin{equation}
+\psi(x,t)= \left\{
+\begin{array}{ccc}
+1 -2\,|x+v\,t|/l&\mbox{\hspace{1cm}}& |x+v\,t|\leq l/2\\[0.5ex]
+0 &&|x+v\,t|>l/2
+\end{array}\right.
+\end{equation}
+becomes
+\begin{equation}
+\psi(x,t) =\frac{1}{4\pi} \int_{-\infty}^\infty \frac{\sin^2(k\,l/4)}{(k\,l/4)^2}\,\cos[k\,(x+v\,t)]\,l\,dk.
+\end{equation}
+
+\section{Bandwidth}\label{s8.3}
+It is possible to 
+Fourier transform in time, as well as in space. Thus, a general temporal waveform $F(t)$
+can be written as a superposition of sinusoidal waveforms of various angular
+frequencies, $\omega$: {\em i.e.}, 
+\begin{equation}
+F(t) = \int_{-\infty}^\infty C(\omega)\,\cos(\omega\,t)\,d\omega + \int_{-\infty}^{\infty}
+S(\omega)\,\sin(\omega\,t)\,d\omega,
+\end{equation}
+where $C(\omega)$ and $S(\omega)$ are the temporal cosine and sine Fourier
+transforms of the waveform, respectively. By analogy with Equations~(\ref{e8.10})--(\ref{e8.12}), we can invert the above expression to give
+\begin{eqnarray}
+C(\omega)&=&\frac{1}{2\pi}\int_{-\infty}^\infty F(t)\,\cos(\omega\,t)\,dt,\\[0.5ex]
+S(\omega)&=&\frac{1}{2\pi}\int_{-\infty}^\infty F(t)\,\sin(\omega\,t)\,dt.
+\end{eqnarray}
+These equations make it clear that $C(-\omega)=C(\omega)$, and $S(-\omega)=-S(\omega)$. Moreover, it is apparent that if $F(t)$ is an even function of $t$ then
+$S(\omega)=0$, but if it is an odd function then $C(\omega)=0$. 
+
+The current in the antenna of an amplitude-modulated (AM) radio transmitter
+is driven by a voltage signal which oscillates sinusoidally at a frequency, $\omega_0$, 
+which is known as the {\em carrier frequency}. In fact, in commercial (medium wave) AM radio,
+each station is assigned a single carrier frequency which lies somewhere between
+about 500\,kHz and 1600\,kHz. However, the voltage signal fed to the antenna does not have
+a constant amplitude. Rather, it has a {\em modulated amplitude}\/ which can be expressed,
+somewhat schematically, as a Fourier series:
+\begin{equation}
+A(t) = A_0 + \sum_{n>0} A_n\,\cos(\omega_n\,t-\phi_n),
+\end{equation}
+where $A(t)-A_0$ represents the information being transmitted. Typically,
+this information is speech or music which is picked up by a microphone, and
+converted into an electrical signal.
+Note that the constant amplitude $A_0$ is present even when the transmitter is
+transmitting no information. The remaining terms in the above expression
+are due to the signal picked up by the microphone. The modulation
+frequencies, $\omega_n$, are thus the frequencies of audible sound waves: {\em i.e.}, they are so-called {\em audio frequencies}\/ lying between about 20\,Hz and 20\,kHz. 
+Of course, this implies that the modulation frequencies are much smaller than the carrier frequency:
+{\em i.e.}, $\omega_n\ll \omega_0$ for all $n>0$. Furthermore, the modulation
+amplitudes $A_n$ are all generally smaller than the carrier amplitude $A_0$. 
+
+The signal transmitted by an AM station, and received by an AM receiver, is  an
+amplitude modulated sinusoidal oscillation of the form
+\begin{eqnarray}
+\psi(t) &=& A(t)\,\cos(\omega_0\,t)\nonumber\\[0.5ex]
+&=&A_0\,\cos(\omega_0\,t)+\sum_{n>0} A_n\,\cos(\omega_n\,t-\phi_n)\,\cos(\omega_0\,t),
+\end{eqnarray}
+which, with the help of some standard trigonometric identities, can also be written
+\begin{eqnarray}
+\psi(t) &=&A_0\,\cos(\omega_0\,t)+\frac{1}{2}\sum_{n>0}A_n\,\cos[(\omega_0+\omega_n)\,t-\phi_n)]\nonumber\\[0.5ex]&&
++ \frac{1}{2}\sum_{n>0}A_n\,\cos[(\omega_0-\omega_n)\,t+\phi_n)]\nonumber\\[0.5ex]
+&=&A_0\,\cos(\omega_0\,t)+\frac{1}{2}\sum_{n>0}A_n\,\cos\phi_n\,\cos[(\omega_0+\omega_n)\,t]\nonumber\\[0.5ex]&&
++\frac{1}{2}\sum_{n>0}A_n\,\sin\phi_n\,\sin[(\omega_0+\omega_n)\,t]+\frac{1}{2}\sum_{n>0}A_n\,\cos\phi_n\,\cos[(\omega_0-\omega_n)\,t]\nonumber\\[0.5ex]&&
+-\frac{1}{2}\sum_{n>0}A_n\,\sin\phi_n\,\sin[(\omega_0-\omega_n)\,t].
+\end{eqnarray}
+We can calculate the cosine and sine Fourier transforms of the signal,
+\begin{eqnarray}
+C(\omega) &=& \frac{1}{2\pi}\int_{-\infty}^\infty \psi(t)\,\cos(\omega\,t)\,dt,\\[0.5ex]
+S(\omega) &=& \frac{1}{2\pi}\int_{-\infty}^\infty \psi(t)\,\sin(\omega\,t)\,dt,
+\end{eqnarray}
+by making use of the standard results [{\em cf.}, (\ref{e8.29})--(\ref{e8.31})]
+\begin{eqnarray}
+\frac{1}{2\pi}\int_{-\infty}^\infty \cos(\omega\,t)\,\cos(\omega'\,t)\,dt&=&
+\frac{1}{2}\left[\delta(\omega-\omega') + \delta (\omega+\omega')\right],\\[0.5ex]
+\frac{1}{2\pi}\int_{-\infty}^\infty \sin(\omega\,t)\,\sin(\omega'\,t)\,dt&=&
+\frac{1}{2}\left[\delta(\omega-\omega') - \delta (\omega+\omega')\right],\\[0.5ex]
+\frac{1}{2\pi}\int_{-\infty}^\infty \cos(\omega\,t)\,\sin(\omega'\,t)\,dt&=&
+0.
+\end{eqnarray}
+It thus follows that
+\begin{eqnarray}\label{e8.65}
+C(\omega>0)& =& \frac{1}{2}\,A_0\,\delta(\omega-\omega_0)\nonumber \\[0.5ex]
+&&+ \frac{1}{4}\sum_{n>0} A_n\,\cos\phi_n\left[\delta(\omega-\omega_0-\omega_n) + \delta(\omega-\omega_0+\omega_n)\right],\\[0.5ex]
+S(\omega>0) &=& \frac{1}{4}\sum_{n>0} A_n\,\sin\phi_n\left[\delta(\omega-\omega_0-\omega_n) - \delta(\omega-\omega_0+\omega_n)\right].\label{e8.66}
+\end{eqnarray}
+Here, we have only shown the positive frequency components of $C(\omega)$ and
+$S(\omega)$, since we know that $C(-\omega)=C(\omega)$ and $S(-\omega)=-S(\omega)$.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter08/fig04.eps}}
+\caption{\em Frequency spectrum of an AM radio signal.}\label{f8.4}   
+\end{figure}
+
+The AM frequency spectrum specified in Equations~(\ref{e8.65}) and (\ref{e8.66})
+is shown, somewhat schematically, in Figure~\ref{f8.4}. The spectrum consists of
+a series of delta function spikes. The largest spike corresponds to the carrier frequency,
+$\omega_0$. However, this spike carries {\em no information}. Indeed, the signal information
+is carried in so-called {\em sidebands}\/ which are equally spaced on either side of the
+carrier frequency. The {\em upper sidebands}\/ correspond to the frequencies
+$\omega_0+\omega_n$, whereas the {\em lower sidebands}\/ correspond to the
+frequencies $\omega_0-\omega_n$. Thus, in order for an AM radio signal
+to carry all of the information present in audible sound, for which the appropriate modulation frequencies, $\omega_n$, range
+from about 0 Hz to about 20\,kHz, the signal would have to consist of a superposition
+of sinusoidal oscillations with frequencies which range from the carrier frequency
+minus 20\,kHz to the carrier frequency plus 20\,kHz. In other words, the signal would have to occupy a
+{\em range of frequencies}\/ from $\omega_0-\omega_N$ to $\omega_0+\omega_N$,
+where $\omega_N$ is the largest modulation frequency. This is an important result.
+An AM radio signal which only consists of a single frequency, such as the carrier frequency, transmits
+no information. Only a signal which occupies a finite range of frequencies, centered
+on the carrier frequency, is capable of transmitting useful information. The difference between the highest and the lowest frequency components of an AM radio signal, which
+is twice the maximum modulation frequency,
+is called the {\em bandwidth}\/ of the signal. Thus, to transmit all the information
+present in audible sound an AM signal would need to have a bandwidth of 40\,kHz.
+In fact, commercial AM radio signals are only allowed to broadcast a bandwidth of
+10\,kHz, in order to maximize the number of available stations. (Obviously, two
+different stations cannot broadcast in frequency ranges which overlap.) This
+means that commercial AM radio can only carry audible information in the
+range 0 to about 5\,kHz. This is perfectly adequate for ordinary speech, 
+but only barely adequate for music. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter08/fig05.eps}}
+\caption{\em A digital bit transmitted over AM radio.}\label{f8.5}   
+\end{figure}
+
+Let us now consider how we might transmit a {\em digital}\/ signal over AM radio. 
+Suppose that each data ``bit'' in the signal takes the form of a Gaussian envelope,
+of characteristic duration $\sigma_t$, superimposed on a
+carrier wave whose frequency is $\omega_0$: {\em i.e.}, 
+\begin{equation}\label{e8.67}
+\psi(t) = \exp\left(-\frac{t^2}{2\,\sigma_t^{\,2}}\right)\,\cos(\omega_0\,t).
+\end{equation}
+Of course, we must have $\omega_0\,\sigma_t\gg 1$: {\em i.e.}, the period of the
+carrier wave must be much less than the duration of the bit.
+Figure~\ref{f8.5} illustrates  a digital bit calculated for $\omega_0\,\sigma_t=20$. 
+
+The sine Fourier transform of the signal (\ref{e8.67}) is zero by symmetry. However,
+its cosine Fourier transform takes the form
+\begin{eqnarray}
+C(\omega) &=&\frac{1}{2\pi}\int_{-\infty}^{\infty} \exp\left(-\frac{t^2}{2\,\sigma_t^{\,2}}\right)\cos(\omega_0\,t)\,\cos(\omega\,t)\,dt,\nonumber\\[0.5ex]
+&=&\frac{1}{4\pi}\int_{-\infty}^\infty  \exp\left(-\frac{t^2}{2\,\sigma_t^{\,2}}\right)
+\left\{\cos[(\omega-\omega_0)\,t] + \cos[(\omega+\omega_0)\,t]\right\}dt.
+\end{eqnarray}
+A comparison  with Equations~(\ref{e8.15})--(\ref{e8.18}) reveals that
+\begin{eqnarray}
+C(\omega>0) = \frac{1}{2\,(2\pi\,\sigma_\omega^{\,2})^{1/2}}\,\exp\left(-\frac{(\omega-\omega_0)^2}{2\,\sigma_\omega^{\,2}}\right),
+\end{eqnarray}
+where 
+\begin{equation}
+\sigma_\omega = \frac{1}{\sigma_t}.
+\end{equation}
+In other words, the Fourier transform of the signal takes the form of a Gaussian
+in $\omega$-space, which is centered on the carrier frequency, $\omega_0$, and
+is of characteristic width $\sigma_\omega=1/\sigma_t$. Thus, the bandwidth of
+the signal is of order $\sigma_\omega$. Note that the shorter the signal duration
+the higher the bandwidth. This is a general rule. A signal of full width at half maximum temporal duration $\Delta t=\sqrt{2\pi}\,\sigma_t$
+generally has a Fourier transform of full width at half maximum bandwidth $\Delta \omega=\sqrt{2\pi}\,\sigma_\omega$, so that
+\begin{equation}
+\Delta\omega\,\Delta t\sim 2\pi.
+\end{equation}
+This can also be written
+\begin{equation}
+\Delta f\,\Delta t\sim 1,
+\end{equation}
+where $\Delta f=\Delta\omega/2\pi$ is the bandwidth in Hertz. 
+The above result is known as the {\em bandwidth theorem}. Of course, the duration
+of a digital bit is closely related to the maximum rate with which information
+can be transmitted in a digital signal. Obviously, the individual bits cannot
+overlap in time, so the maximum number of bits per second which can be transmitted 
+in a digital signal is of order $1/\Delta t$: {\em i.e.},  it is of order the bandwidth.
+Thus, digital signals which transmit information at a rapid rate require large bandwidths:
+{\em i.e.}, they occupy a wide range of frequency space. 
+
+An old-fashioned black and white TV screen consists of a rectangular grid
+of black and white spots. A given spot is ``white'' if the phosphorescent TV
+screen was recently ({\em i.e.}, within about $1/50$\,th of a second) struck by the
+electron beam at that location. The spot separation is about $1$ mm. A typical
+screen is $50\,{\rm cm}\times 50\,{\rm cm}$, and thus has 500 lines with
+500 spots per line, or $2.5\times 10^5$ spots. Each spot is renewed every $1/30$\,th of 
+a second. (Every other horizontal line is skipped during a given traversal of the
+electron beam over the screen. The skipped lines are renewed on the next
+traversal. This technique is known as {\em interlacing}. Consequently, a given region of the screen, that includes many horizontal lines,
+has a flicker rate of 60 Hz.) Thus, the rate at which the instructions ``turn on" and
+``turn off'' must be sent to the electron beam is $30\times 2.5\times 10^5$ or
+$8\times 10^6$ times a second. The transmitted TV signal must therefore
+have about $10^7$ on-off instruction blips per second. If temporal overlap is to be avoided, each blip can be no
+longer than $\Delta t \sim 10^{-7}$ seconds in duration.
+Thus, the required bandwidth is $\Delta f\sim 1/\Delta t\sim 10^7\,{\rm Hz}=10\,{\rm MHz}$. The carrier wave frequencies used for conventional broadcast TV lie in the
+so-called VHF band, and range
+from about 55 to 210 MHz. Our previous discussion of AM radio might lead us
+to think that the 10\,MHz bandwidth represents the combined extents of an upper and a lower
+sideband of modulation frequencies. In practice, the carrier wave and one
+of the sidebands are suppressed: {\em i.e.}, they are filtered out, and never applied
+to the antenna. However, they are regenerated in the receiver from the information
+contained in the single sideband which is broadcast. This technique, which
+is called {\em single sideband transmission}, halves the bandwidth
+requirement to about $5\,{\rm MHz}$. Thus, between $55$ and $210\,{\rm MHz}$
+there is room for about 30 TV channels, each using a 5\,MHz bandwidth. (Actually,
+there are far fewer TV channels than this in the VHF band, because part of this
+band is reserved for FM radio, air traffic control, air navigation beacons, marine communications, {\em etc.})
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Verify Equations~(\ref{e8.4})--(\ref{e8.6}). Derive  Equations~(\ref{e8.7}) and (\ref{e8.8}) from Equation~(\ref{e8.2}) and
+Equations~(\ref{e8.4})--(\ref{e8.6}).
+\item Suppose that
+$$
+F(x) = \exp\left(-\frac{x^2}{2\,\sigma_x^{\,2}}\right).
+$$
+Demonstrate that
+$$
+\bar{F}(k) \equiv \frac{1}{2\pi}\int_{-\infty}^{\infty} F(x)\,{\rm e}^{\,{\rm i}\,k\,x}\,dx
+= \frac{1}{\sqrt{2\,\pi\,\sigma_k^{\,2}}}\,\exp \left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right),
+$$
+where ${\rm i}$ is the square-root of minus one, and $\sigma_k=1/\sigma_x$. [Hint: You
+will need to complete the square of the exponent of ${\rm e}$, transform the variable of
+integration, and then make use of the standard result that $\int_{-\infty}^\infty {\rm e}^{-y^2}\,dy = \sqrt{\pi}$.] Hence, show from de Moive's theorem, $\exp(\,{\rm i}\,\theta)\equiv\cos \theta + {\rm i}\,\sin \theta$,  that
+\begin{eqnarray}
+C(k)& \equiv& \frac{1}{2\pi}\int_{-\infty}^{\infty} F(x)\,\cos(k\,x)\,dx
+= \frac{1}{\sqrt{2\,\pi\,\sigma_k^{\,2}}}\,\exp \left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right),\nonumber\\[0.5ex]
+S(k) &\equiv& \frac{1}{2\pi}\int_{-\infty}^{\infty} F(x)\,\sin(k\,x)\,dx=0.\nonumber
+\end{eqnarray}
+\item Demonstrate that
+$$
+\int_{-\infty}^{\infty} \frac{1}{\sqrt{2\,\pi\,\sigma_k^{\,2}}}\,\exp \left(-\frac{k^2}{2\,\sigma_k^{\,2}}\right)dk = 1.
+$$
+\item Verify Equations~(\ref{e8.30}) and (\ref{e8.31}). 
+\item Derive Equations~(\ref{e8.11}) and (\ref{e8.12}) directly from Equation~(\ref{e8.10}) using the results (\ref{e8.29})--(\ref{e8.31}).
+\item Verify directly that (\ref{e8.45}) is a solution of the wave equation (\ref{e8.32}),
+for arbitrary pulse shapes $F(x)$ and $G(x)$.
+\item Verify Equation~(\ref{e8.49}).
+
+\item Consider a function $F(t)$ which is zero for negative $t$, and takes the
+value $\exp(-t/2\,\tau)$ for $t\geq 0$. Find its Fourier transforms, $C(\omega)$
+and $S(\omega)$, defined in
+$$
+F(t) = \int_{-\infty}^\infty C(\omega)\,\cos(\omega\,t)\,d\omega + \int_{-\infty}^\infty S(\omega)\,\sin(\omega\,t)\,d\omega.
+$$
+
+\item Suppose that $F(t)$ is zero, except in the interval from $t=-\Delta t/2$ to $t=\Delta t/2$. Suppose that in this
+interval $F(t)$ makes exactly one sinusoidal oscillation at the angular frequency
+$\omega_0 = 2\pi/\Delta t$, starting and ending with the value zero. Find the above defined Fourier transforms $C(\omega)$ and $S(\omega)$.
+
+\item Demonstrate that
+$$
+\int_{-\infty}^\infty F^2(t)\,dt= 2\pi\int_{-\infty}^\infty[C^2(\omega)+S^2(\omega)]\,d\omega,
+$$
+where the relation between $F(t)$, $C(\omega)$, and $S(\omega)$ is defined above. 
+This result is known as {\em Parseval's theorem}.
+
+\item Suppose that $F(t)$ and $G(t)$ are both even functions of $t$ with the cosine
+transforms $\bar{F}(\omega)$ and $\bar{G}(\omega)$, so that
+\begin{eqnarray}
+F(t)&=&\int_{-\infty}^\infty \bar{F}(\omega)\,\cos(\omega\,t)\,d\omega,\nonumber\\[0.5ex]
+G(t)&=&\int_{-\infty}^\infty \bar{G}(\omega)\,\cos(\omega\,t)\,d\omega.\nonumber
+\end{eqnarray}
+Let $H(t)=F(t)\,G(t)$, and let $\bar{H}(\omega)$ be the cosine transform of
+this even function, so that
+$$
+H(t)= \int_{-\infty}^\infty \bar{H}(\omega)\,\cos(\omega\,t)\,d\omega.
+$$
+Demonstrate that
+$$
+\bar{H}(\omega) = \frac{1}{2}\int_{-\infty}^\infty \bar{F}(\omega')\left[\bar{G}(\omega'+\omega) + \bar{G}(\omega'-\omega)\right] d\omega'.
+$$
+This result is known as the {\em convolution theorem}, since the above type of
+integral is known as a convolution integral. Suppose that $F(t)=\cos(\omega_0\,t)$.
+Show that
+$$
+\bar{H}(\omega) = \frac{1}{2}\left[\bar{G}(\omega-\omega_0)  + \bar{G}(\omega+\omega_0)\right].
+$$
+
+\end{enumerate}}

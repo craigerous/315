@@ -1,0 +1,683 @@
+\chapter{Damped and Driven Harmonic Oscillation}
+
+\section{Damped Harmonic Oscillation}\label{s3.1}
+In the previous chapter, we encountered a number of energy conserving physical systems which
+exhibit {\em simple harmonic oscillation}\/ about a stable equilibrium state. One of
+the main features of such oscillation is that,  once 
+excited, it never dies away. However, the majority of the  oscillatory 
+systems that we  encounter in everyday life suffer some sort of irreversible energy loss whilst they are in motion, which is due, for instance,  to frictional or viscous heat generation. We would therefore expect oscillations excited in such  systems  
+to eventually  be damped away. Let us examine an example of a
+damped oscillatory system.
+
+Consider the mass-spring system investigated in Section~\ref{s2.1}.
+Suppose that, as it slides over the horizontal surface,  the mass is subject to
+a {\em frictional damping force}\/ which opposes its motion, and is directly
+proportional to its instantaneous velocity. It follows that the net force acting
+on the mass when its instantaneous displacement is $x(t)$ takes the form
+\begin{equation}\label{e3.1}
+f = - k\,x -m\,\nu\,\dot{x},
+\end{equation}
+where $m>0$ is the  mass, $k>0$ the spring force constant, and $\nu>0$  a constant (with the dimensions of angular frequency)  which parameterizes the strength of the damping. The time evolution equation of the
+system thus becomes [{\em cf}., Equation~(\ref{eshm})]
+\begin{equation}\label{e3.2}
+\ddot{x} + \nu\,\dot{x} + \omega_0^{\,2}\,x = 0,
+\end{equation}
+where $\omega_0=\sqrt{k/m}$ is the undamped oscillation frequency [{\em cf}., Equation (\ref{eomega})]. We  shall
+refer to the above as the {\em damped harmonic oscillator equation}.
+
+Let us search for a solution to Equation~(\ref{e3.2}) of the form
+\begin{equation}\label{e3.3}
+x(t) = a\,{\rm e}^{-\gamma\,t}\,\cos(\omega_1\,t-\phi),
+\end{equation}
+where $a>0$, $\gamma>0$, $\omega_1>0$, and $\phi$ are all constants. By analogy
+with the discussion in Section~\ref{s2.1}, we can interpret the 
+above solution as a periodic oscillation, of fixed angular frequency $\omega_1$
+and phase angle $\phi$, whose amplitude {\em decays exponentially}\/ in
+time as $a(t)=a\,\exp(-\gamma\,t)$. So,  (\ref{e3.3}) certainly seems like a plausible solution for
+a damped oscillatory system. It is easily demonstrated that
+\begin{eqnarray}
+\dot{x} &=& - \gamma\,a\,{\rm e}^{-\gamma\,t}\,\cos(\omega_1\,t-\phi) -\omega_1\, a\,{\rm e}^{-\gamma\,t}\,\sin(\omega_1\,t-\phi),\\[0.5ex]
+\ddot{x} &=& (\gamma^2-\omega_1^{\,2})\,a\,{\rm e}^{-\gamma\,t}\,\cos(\omega_1\,t-\phi) +2\,\gamma\,\omega_1\, a\,{\rm e}^{-\gamma\,t}\,\sin(\omega_1\,t-\phi),
+\end{eqnarray}
+so Equation~(\ref{e3.2}) becomes
+\begin{eqnarray}
+ 0&=&\left[ (\gamma^2-\omega_1^{\,2})  -\nu\,\gamma + \omega_0^{\,2}\right]a\,{\rm e}^{-\gamma\,t}\,\cos(\omega_1\,t-\phi) \nonumber\\[0.5ex]
+ &&+\left[2\,\gamma\,\omega_1-\nu\,\omega_1\right] a\,{\rm e}^{-\gamma\,t}\,\sin(\omega_1\,t-\phi).
+ \end{eqnarray}
+ Now, the only way in which the above equation can be satisfied {\em at all times}\/ is if the
+ coefficients of $\exp(-\gamma\,t)\,\cos(\omega_1\,t-\phi)$ and $\exp(-\gamma\,t)\,\sin(\omega_1\,t-\phi)$ separately equate to zero, so that
+  \begin{eqnarray}
+ (\gamma^2-\omega_1^{\,2}) -\nu\,\gamma+\omega_0^{\,2}&=&0,\\[0.5ex]
+2\,\gamma\,\omega_1-\nu\,\omega_1&=&0.
+ \end{eqnarray}
+ These equations can be solved to give
+ \begin{eqnarray}
+ \gamma&=& \nu/2,\\[0.5ex]
+ \omega_1 &=&(\omega_0^{\,2}-\nu^2/4)^{1/2}.
+ \end{eqnarray}
+ Thus, the solution to the damped harmonic oscillator equation is written
+ \begin{equation}\label{e3.11}
+ x(t) = a\,{\rm e}^{-\nu\,t/2}\,\cos\left(\omega_1 \,t-\phi\right),
+ \end{equation}
+  assuming  that $\nu< 2\,\omega_0$ (since
+ $\omega_1^{\,2}=\omega_0^{\,2}-\nu^2/4$ clearly cannot be negative). We conclude that the effect of a relatively small amount of damping, parameterized
+ by the {\em damping constant}\/ $\nu$, 
+ on  a system which exhibits simple harmonic oscillation about a stable equilibrium state is to {\em reduce the
+ angular frequency}\/ of the oscillation from its undamped value $\omega_0$ to $(\omega_0^{\,2}-\nu^2/4)^{1/2}$,  and to cause the amplitude of the oscillation to {\em decay exponentially
+ in time}\/ at the rate $\nu/2$. This modified type of oscillation, which we shall refer to  as {\em damped harmonic oscillation},  is illustrated in Figure~\ref{f3.1}. [Here, $T_0=2\pi/\omega_0$,
+ $\nu\,T_0=0.5$, and $\phi=0$. The solid line shows $x(t)/a$, whereas the dashed lines
+ show $\pm a(t)/a$.]
+Incidentally, if the damping is sufficiently large that $\nu\geq 2\,\omega_0$, which we shall assume is {\em not}\/ the case, then
+ the system does not oscillate at all, and any motion simply decays away exponentially
+ in time (see Exercise 3). 
+ 
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter03/fig01.eps}}
+\caption{\em Damped harmonic oscillation.}\label{f3.1}   
+\end{figure}
+
+ Note that, although the angular frequency, $\omega_1$, and decay rate, $\nu/2$,
+ of the damped harmonic oscillation specified in Equation~(\ref{e3.11}) are determined by the constants appearing in the damped harmonic oscillator equation, (\ref{e3.2}), the initial amplitude, $a$, and the phase angle, $\phi$, 
+ of the oscillation
+ are determined by the {\em initial conditions}. In fact, if $x(0)=x_0$ and $\dot{x}(0)=v_0$
+ then it follows from Equation~(\ref{e3.11}) that
+ \begin{eqnarray}
+ x_0 &=&a\,\cos\phi,\\[0.5ex]
+ v_0 &=& - \frac{\nu}{2}\,a\,\cos\phi + \omega_1\,a\,\sin\phi,
+ \end{eqnarray}
+giving
+ \begin{eqnarray}
+ a &=&\left[x_0^{\,2} + \frac{(v_0+\nu\,x_0/2)^2}{\omega_1^{\,2}}\right]^{1/2},\\[0.5ex]
+ \phi &=& \tan^{-1}\left(\frac{v_0+\nu\,x_0/2}{\omega_1\,x_0}\right).
+ \end{eqnarray}
+ Note, further, that the damped harmonic oscillator equation is  a {\em linear}\/ differential equation: {\em i.e.}, if $x(t)$ is a
+ solution then so is $a\,x(t)$, where $a$ is an arbitrary constant. It follows
+ that the solutions of this equation are {\em superposable},
+ so that if $x_1(t)$ and $x_2(t)$ are two solutions corresponding to different initial
+ conditions then $a\,x_1(t)+b\,x_2(t)$ is a third solution, where $a$ and $b$
+ are arbitrary constants. 
+ 
+ Multiplying the damped harmonic oscillator equation (\ref{e3.2}) by $\dot{x}$,
+ we obtain
+ \begin{equation}
+ \dot{x}\,\ddot{x} + \nu\,\dot{x}^{\,2}+ \omega_0^{\,2}\,\dot{x}\,x=0,
+ \end{equation}
+ which can be rearranged to give
+ \begin{equation}\label{e3.17}
+ \frac{dE}{dt} = - m\,\nu\,\dot{x}^{\,2},
+ \end{equation}
+ where
+ \begin{equation}
+ E = \frac{1}{2}\,m\,\dot{x}^{\,2}+\frac{1}{2}\,k\,x^2
+ \end{equation}
+ is the total energy of the system: {\em i.e.}, the sum of the kinetic and potential energies. Clearly, since the right-hand side of (\ref{e3.17})
+ cannot be positive, and is only zero when the system is stationary, the
+ total energy is {\em not}\/ a conserved quantity, but instead decays monotonically in time due to the presence of damping. Now, the net rate at which the force (\ref{e3.1}) does work
+ on the mass is
+ \begin{equation}
+ P = f\,\dot{x} = -k\,\dot{x}\,x-m\,\nu\,\dot{x}^2.
+ \end{equation}
+ Note that the spring force ({\em i.e.}, the first term on the right-hand side) does negative work
+ on the mass ({\em i.e.}, it reduces the system kinetic energy) when $\dot{x}$ and $x$ are of the same sign, and does positive work when they are of the opposite sign. On average,
+ the spring force does no net work on the mass during an oscillation cycle. The
+ damping force, on the other hand, ({\em i.e.}, the second term on the right-hand side)
+ always does negative work on the mass, and, therefore, always acts to reduce the
+ system kinetic energy. 
+ 
+ \section{Quality Factor}
+ The energy loss rate of a weakly damped  ({\em i.e.}, $\nu\ll 2\,\omega_0$)  harmonic oscillator is conveniently 
+characterized in terms of a parameter, $Q_f$, which is known as the 
+{\em quality factor}. This quantity is defined to be $2\pi$ times the
+energy stored in the oscillator, divided by the energy lost in a single
+ oscillation period. If the oscillator is weakly damped then
+the energy lost per period is relatively small, and $Q_f$ is therefore
+much larger than unity.  Roughly speaking, $Q_f$ is the number of oscillations
+ that the oscillator typically completes, after being set in motion, before its
+ amplitude decays to a negligible value. For instance, the quality factor for the
+ damped oscillation shown in Figure~\ref{f3.1} is $12.6$.
+ Let us find an expression for $Q_f$.
+
+As we have seen,  the motion of a weakly damped 
+harmonic oscillator is specified by [see Equation~(\ref{e3.11})]
+\begin{equation}
+x = a\,{\rm e}^{-\nu\,t/2}\,\cos(\omega_1\,t-\phi),
+\end{equation}
+It follows that
+\begin{equation}
+\dot{x} =- \frac{a\,\nu}{2}\,{\rm e}^{-\nu\,t/2}\,\cos(\omega_1\,t-\phi)-
+a\,\omega_1\,{\rm e}^{-\nu\,t/2}\,\sin(\omega_1\,t-\phi).
+\end{equation}
+Thus, making use of Equation~(\ref{e3.17}), the energy lost during a single oscillation period is
+\begin{eqnarray}
+\Delta E &=& -\int_{\phi/\omega_1}^{(2\pi+\phi)/\omega_1} \frac{dE}{dt}\,dt\nonumber\\[0.5ex]
+&=& m\,\nu\,a^{2}\int_{\phi/\omega_1}^{(2\pi+\phi)/\omega_1}{\rm e}^{-\nu\,t}\left[\frac{\nu}{2}\,\cos(\omega_1\,t-\phi) + \omega_1\,\sin(\omega_1\,t-\phi)\right]^2 dt.
+\end{eqnarray}
+In the weakly damped limit, $\nu\ll 2\,\omega_0$, the exponential factor is approximately
+unity in the interval $t=\phi/\omega_1$ to $(2\pi+\phi)/\omega_1$, so that
+\begin{equation}
+\Delta E \simeq \frac{m\,\nu\,a^{2}}{\omega_1}\int_0^{2\pi} \left(
+\frac{\nu^2}{4}\,\cos^2\theta + \nu\,\omega_1\,\cos\theta\,\sin\theta + \omega_1^{\,2}\,\sin^2\theta\right)d\theta,
+\end{equation}
+where $\theta=\omega_1\,t-\phi$. 
+Thus,
+\begin{equation}
+\Delta E \simeq \frac{\pi\,m\,\nu\,a^{2}}{\omega_1}\,(\nu^2/4+\omega_1^{\,2}) = \pi\,m\,\omega_0^{\,2}\,a^{2}\left(\frac{\nu}{\omega_1}\right),
+\end{equation}
+since, as is easily demonstrated, 
+\begin{eqnarray}
+\int_0^{2\pi}\cos^2\theta\,d\theta = \int_0^{2\pi}\sin^2\theta\,d\theta &=& \pi,\\[0.5ex]
+\int_0^{2\pi}\cos\theta\,\sin\theta\,d\theta &=& 0.
+\end{eqnarray}
+Now, the energy stored in the oscillator
+(at $t=0$) is [{\em cf}., Equation~(\ref{eosce})]
+\begin{equation}
+E = \frac{1}{2}\,m\,\omega_0^{\,2}\,a^{2}.
+\end{equation}
+Hence, we obtain
+\begin{equation}\label{e3.28x}
+Q_f = 2\pi\,\frac{E}{\Delta E} = \frac{\omega_1}{\nu}\simeq \frac{\omega_0}{\nu}.
+\end{equation}
+
+\section{$LCR$ Circuit}
+Consider an electrical circuit consisting of an inductor, of inductance $L$, connected
+in series with a capacitor, of capacitance $C$, and a resistor, of resistance $R$. See Figure~\ref{f3.2}. Such
+a circuit is known as an $LCR$ circuit, for obvious reasons. Suppose that
+$I(t)$ is the instantaneous current flowing around the circuit. As we saw in Section~\ref{slc}, the potential differences across the inductor and the capacitor are
+$L\,\dot{I}$ and $Q/C$, respectively. Here,  $Q$ is the charge on the capacitor's positive plate, and $I=\dot{Q}$. Moreover, from {\em Ohm's law}, the potential difference across the resistor is $V=I\,R$. Now, {\em Kirchhoff's second circuital law}\/ states that  the sum of the potential differences across the
+various components of a closed circuit loop is zero. It follows that
+\begin{equation}\label{e3.29}
+L\,\dot{I} + R\,I + Q/C=0.
+\end{equation}
+Dividing by $L$, and differentiating with respect to time, we obtain
+\begin{equation}\label{e3.28}
+\ddot{I} + \nu\,\dot{I} + \omega_0^{\,2}\,I=0,
+\end{equation}
+where
+\begin{eqnarray}
+\omega_0 &=& \frac{1}{\sqrt{L\,C}},\label{e3.31}\\[0.5ex]
+\nu &=& \frac{R}{L}.\label{e3.32}
+\end{eqnarray}
+Comparison with Equation~(\ref{e3.2}) reveals that (\ref{e3.28})
+is a damped harmonic oscillator equation. Thus,  provided that the
+resistance is not too high ({\em i.e.}, provided that $\nu<2\,\omega_0$, which is equivalent to $R<2\,\sqrt{L/C}$), the current
+in the circuit executes damped harmonic oscillations of the form [{\em cf}., Equation~(\ref{e3.11})]
+\begin{equation}
+I(t) = I_0\,{\rm e}^{-\nu\,t/2}\,\cos(\omega_1\,t-\phi),
+\end{equation}
+where $I_0$ and $\phi$ are constants, and $\omega_1=\sqrt{\omega_0^{\,2}-\nu^2/4}$.
+We conclude that when a small amount of resistance is introduced into an $LC$ circuit  the characteristic  oscillations in the current damp away exponentially
+at a rate proportional to the resistance.
+ 
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter03/fig02.eps}}
+\caption{\em An $LCR$ circuit.}\label{f3.2}   
+\end{figure}
+
+Multiplying Equation~(\ref{e3.29}) by $I$, and making use of the fact that $I=\dot{Q}$, 
+we obtain
+\begin{equation}
+L\,\dot{I}\,I + R\,I^2+\dot{Q}\,Q/C = 0,
+\end{equation}
+which can be rearranged to give
+\begin{equation}\label{e3.35}
+\frac{dE}{dt} = - R\,I^2,
+\end{equation}
+where
+\begin{equation}
+E = \frac{1}{2}\,L\,I^2 + \frac{1}{2}\,\frac{Q^2}{C}.
+\end{equation}
+Clearly, $E$ is the circuit energy: {\em i.e.}, the sum of the energies stored in the inductor
+and the capacitor. Moreover, according to Equation~(\ref{e3.35}), the circuit
+energy decays in time due to the power $R\,I^2$ dissipated via {\em Joule heating}\/ in the resistor. Note that the dissipated power is always positive: {\em i.e.}, the circuit
+never gains energy from the resistor. 
+
+Finally, a comparison of Equations~(\ref{e3.28x}), (\ref{e3.31}), and (\ref{e3.32}) reveals
+that the quality factor of an $LCR$ circuit is
+\begin{equation}
+Q_f = \frac{\sqrt{L/C}}{R}.
+\end{equation}
+
+\section{Driven Damped Harmonic Oscillation}\label{s3.4}
+We saw earlier, in Section~\ref{s3.1}, that when a damped mechanical oscillator is set into motion the oscillations
+eventually die away due to frictional energy losses. In fact, the only way of maintaining
+the amplitude  of a damped oscillator is to continuously  feed energy into the system in such a
+manner as
+to offset the frictional losses. A steady  ({\em i.e.}, constant amplitude) oscillation  of this type is called  {\em driven damped harmonic oscillation}. 
+Consider a modified version of the mass-spring system investigated in Section~\ref{s3.1} in which one end of the spring is
+attached to the mass, and the other to a moving piston. See Figure~\ref{f3.3}.
+Let $x(t)$ be the horizontal displacement of the mass, and $X(t)$ the horizontal
+displacement of the piston. The extension of the spring is thus $x(t)-X(t)$, assuming
+that the spring is unstretched when $x=X=0$. Thus, the horizontal force acting
+on the mass can be written [{\em cf}., Equation~(\ref{e3.1})]
+\begin{equation}
+f = - k\,(x-X)-m\,\nu\,\dot{x}.
+\end{equation}
+The equation of motion of the system then becomes [{\em cf}., Equation~(\ref{e3.2})]
+\begin{equation}
+\ddot{x} + \nu\,\dot{x} + \omega_0^{\,2}\,x = \omega_0^{\,2}\,X,
+\end{equation}
+where $\nu>0$ is the damping constant, and $\omega_0>0$ the undamped oscillation frequency. 
+Suppose, finally, that the piston  executes {\em simple harmonic oscillation}\/ of
+angular frequency $\omega>0$ and amplitude $X_0>0$, so that the time evolution
+equation of the system takes the form
+\begin{equation}\label{e3.40}
+\ddot{x} + \nu\,\dot{x} + \omega_0^{\,2}\,x = \omega_0^{\,2}\,X_0\,\cos(\omega\,t).
+\end{equation}
+We shall refer to the above as the {\em driven damped harmonic oscillator equation}. 
+
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{Chapter03/fig03.eps}}
+\caption{\em A driven oscillatory system}\label{f3.3}   
+\end{figure}
+
+Now, we would generally expect the periodically driven oscillator shown in Figure~\ref{f3.3} to eventually settle down to
+a {\em steady}\/ ({\em i.e.}, constant amplitude) pattern of oscillation, with the {\em same frequency}\/ as the piston, in which the frictional energy
+loss per cycle is exactly matched by the work done  by the piston per cycle (see Exercise 7). This suggests
+that we should search for a solution to Equation~(\ref{e3.40}) of the form
+\begin{equation}
+x(t)=x_0\,\cos(\omega\,t-\varphi).
+\end{equation}
+Here, $x_0>0$ is the {\em amplitude}\/ of the driven oscillation, whereas $\varphi$
+is the {\em phase lag}\/ of this oscillation (with respect to the phase of the piston oscillation). 
+Now, since
+\begin{eqnarray}
+\dot{x}& =& -\omega\,x_0\,\sin(\omega\,t-\varphi),\\[0.5ex]
+\ddot{x} &=&-\omega^2\,x_0\,\cos(\omega\,t-\varphi),
+\end{eqnarray}
+Equation~(\ref{e3.40}) becomes
+\begin{equation}
+(\omega_0^{\,2}-\omega^2)\,x_0\,\cos(\omega\,t-\varphi) - \nu\,\omega\,x_0\,\sin(\omega\,t-\varphi)
+ = \omega_0^{\,2}\,X_0\,\cos(\omega\,t).
+ \end{equation}
+However, $\cos(\omega\,t-\varphi)\equiv \cos(\omega\,t)\,\cos\varphi + \sin(\omega\,t)\,\sin\varphi$
+and $\sin(\omega\,t-\varphi) \equiv \sin(\omega\,t)\,\cos \varphi - \cos(\omega\,t)\,\sin\varphi$, so
+we obtain
+\begin{eqnarray}
+\left[x_0\,(\omega_0^{\,2}-\omega^2)\,\cos\varphi + x_0\,\nu\,\omega\,\sin\varphi -\omega_0^{\,2}\,X_0\right]\cos(\omega\,t)&&\nonumber\\[0.5ex]+x_0\left[(\omega_0^{\,2}-\omega^2)\,\sin\varphi-\nu\,\omega\,\cos\varphi\right]\sin(\omega\,t)&=&0.
+\end{eqnarray}
+Now, the only way in which the above equation can be satisfied {\em at all times}\/ is if
+the coefficients of $\cos(\omega\,t)$ and $\sin(\omega\,t)$ separately equate to
+zero. In other words,
+\begin{eqnarray}
+x_0\,(\omega_0^{\,2}-\omega^2)\,\cos\varphi + x_0\,\nu\,\omega\,\sin\varphi -\omega_0^{\,2}\,X_0&=&0,\label{e3.46}\\[0.5ex]
+(\omega_0^{\,2}-\omega^2)\,\sin\varphi-\nu\,\omega\,\cos\varphi&=&0.\label{e3.47}
+\end{eqnarray}
+These two expressions can be combined to give
+\begin{eqnarray}\label{e3.48}
+x_0&=& \frac{\omega_0^{\,2}\,X_0}{\left[(\omega_0^{\,2}-\omega^2)^2+\nu^2\,\omega^2\right]^{1/2}},\\[0.5ex]
+\varphi &=&\tan^{-1}\left(\frac{\nu\,\omega}{\omega_0^{\,2}-\omega^2}\right).\label{e3.49}
+\end{eqnarray}
+This follows because (\ref{e3.47}) gives
+\begin{equation}
+\tan\varphi = \frac{\nu\,\omega}{\omega_0^{\,2}-\omega^2},
+\end{equation}
+and so
+\begin{eqnarray}
+\cos\varphi &\equiv & \frac{1}{\sqrt{1+\tan^2\varphi}} = \frac{\omega_0^{\,2}-\omega^2}{\left[(\omega_0^{\,2}-\omega^2)^2+\nu^2\,\omega^2\right]^{1/2}},\\[0.5ex]
+\sin\varphi &\equiv &\frac{\tan\varphi}{\sqrt{1+\tan^2\varphi}} = \frac{\nu\,\omega}{\left[(\omega_0^{\,2}-\omega^2)^2+\nu^2\,\omega^2\right]^{1/2}}.\label{e3.49x}
+\end{eqnarray}
+Hence, substitution into (\ref{e3.46}) gives (\ref{e3.48}).
+
+\begin{figure}
+\epsfysize=2.25in
+\centerline{\epsffile{Chapter03/fig04.eps}}
+\caption{\em Driven harmonic motion.}\label{f3.04}   
+\end{figure}
+
+Let us investigate the dependence of  the amplitude, $x_0$, and phase lag, $\varphi$, of the driven oscillation on the driving frequency,
+$\omega$.  This is most easily done graphically. Figure~\ref{f3.04} shows $x_0/X_0$ and $\varphi$ plotted as functions of $\omega$ for
+various different values of $\nu/\omega_0$. In fact, $\nu/\omega_0 = 1/Q_f= 1$, $1/2$, $1/4$, $1/8$, and $1/16$ correspond to the solid, dotted, short-dashed, long-dashed,
+and dot-dashed curves, respectively. It can be seen that as the amount of
+damping in the system is decreased the amplitude of the response becomes
+progressively more peaked at the natural frequency of oscillation of the system, $\omega_0$. This effect is known as {\em resonance}, and
+$\omega_0$ is termed the {\em resonant frequency}. Thus,
+a weakly damped oscillator ({\em i.e.}, $\nu\ll \omega_0$) can be driven to large amplitude by the application of a relatively
+small amplitude external driving force which oscillates at a frequency close to the resonant frequency. Note that the response of the oscillator is {\em in phase}\/ ({\em i.e.}, $\varphi\simeq 0$)
+with the external drive for driving frequencies well below the resonant
+frequency, is {\em in phase quadrature}\/
+({\em i.e.}, $\varphi=\pi/2$)
+at the resonant frequency, and is {\em in anti-phase}\/ ({\em i.e.}, $\varphi\simeq \pi$)
+for frequencies well above the resonant frequency.
+
+According to Equations~(\ref{e3.28x}) and (\ref{e3.48}),
+\begin{equation}\label{e3.50}
+\frac{x_0(\omega=\omega_0)}{X_0} = \frac{\omega_0}{\nu}
+=Q_f.
+\end{equation}
+In other words, when the driving frequency matches the resonant frequency the ratio of the  amplitude of the driven oscillation
+to that of the piston oscillation is the quality factor, $Q_f$. Hence, $Q_f$ can be regarded as the {\em resonant
+amplification factor}\/ of the oscillator.  
+Equations~(\ref{e3.48}) and (\ref{e3.49x}) imply that,
+for a weakly damped oscillator ({\em i.e.}, $\nu\ll \omega_0$) which
+is close to resonance [{\em i.e.}, $|\omega-\omega_0|\sim \nu\ll \omega_0$],
+\begin{equation}\label{e3.51}
+\frac{x_0(\omega)}{x_0(\omega=\omega_0)}\simeq \sin\varphi\simeq \frac{\nu}{[4\,(\omega_0-\omega)^2 + \nu^2]^{1/2}}.
+\end{equation}
+This follows because $\omega_0^{\,2}-\omega^2=(\omega_0+\omega)\,(\omega_0-\omega)\simeq 2\,\omega_0\,(\omega_0-\omega)$. 
+Hence, the width of the resonance
+peak (in angular frequency) is $\Delta\omega = \nu$, where the edges of peak are defined as the points at which the driven amplitude
+is reduced to $1/\sqrt{2}$ of its maximum value: {\em i.e.}, $\omega=\omega_0\pm \nu/2$. Note that the phase lag at the low and high frequency edges of the
+peak are $\pi/4$ and $3\pi/4$, respectively.  Furthermore, the
+fractional width of the peak is
+\begin{equation}
+\frac{\Delta \omega}{\omega_0} = \frac{\nu}{\omega_0} = \frac{1}{Q_f}.
+\end{equation}
+We conclude that the
+height and width of the resonance peak of a weakly damped ($Q_f\gg 1$) harmonic oscillator scale as $Q_f$ and
+$Q_f^{-1}$, respectively. Thus, the area under the resonance peak stays
+approximately constant as $Q_f$ varies. 
+
+Now, the force exerted on the system by the piston is
+\begin{equation}
+F(t) = k\,X_0\,\cos(\omega\,t).
+\end{equation}
+Hence, the instantaneous power absorption from the piston becomes
+\begin{eqnarray}
+P(t) &=& F(t)\,\dot{x}(t)\nonumber\\[0.5ex]
+&=& - k\,X_0\,x_0\,\omega\,\cos(\omega\,t)\,\sin(\omega\,t-\varphi)\nonumber\\[0.5ex]
+&=& -k\,X_0\,x_0\,\omega\left[\cos(\omega\,t)\,\sin(\omega\,t)\,\cos\varphi - \cos^2(\omega\,t)\,\sin\varphi\right].
+\end{eqnarray}
+Thus, the average power absorption during an oscillation cycle is
+\begin{equation}
+\langle P\rangle = \frac{1}{2}\,k\,X_0\,\,x_0\,\omega\,\sin\varphi,
+\end{equation}
+since $\langle \cos(\omega\,t)\,\sin(\omega\,t)\rangle =0$ and $\langle \cos^2(\omega\,t)\rangle =1/2$. Of course, given that the amplitude of the driven oscillation neither grows nor decays, the average power absorption from the piston during an oscillation cycle must be equal to the average power dissipation  due to friction (see Exercise 7). 
+Making use of Equations~(\ref{e3.50}) and (\ref{e3.51}), the mean power absorption when the driving
+frequency is close to the resonant frequency is
+\begin{equation}\label{e3.56}
+\langle P\rangle \simeq \frac{1}{2}\,\omega_0\,k\,X_0^{\,2}\,Q_f\left[\frac{\nu^2}{4\,(\omega_0-\omega)^2+\nu^2}\right].
+\end{equation}
+Thus, the maximum power absorption occurs at the resonance ({\em i.e.}, $\omega=\omega_0$), and the absorption is reduced to half of this maximum value at the edges of the
+resonance ({\em i.e.}, $\omega=\omega_0\pm \nu/2$). Furthermore, the peak power
+absorption is proportional to the quality factor,  $Q_f$, which means that it is inversely
+proportional to the damping constant, $\nu$. 
+
+\begin{figure}
+\epsfysize=2.in
+\centerline{\epsffile{Chapter03/fig05.eps}}
+\caption{\em A driven $LCR$ circuit.}\label{f3.5}   
+\end{figure}
+
+\section{Driven $LCR$ Circuit}
+Consider an $LCR$ circuit consisting of an inductor, $L$, a capacitor, $C$,  and a resistor, $R$,  connected
+in series with an  emf   of voltage $V(t)$. See Figure~\ref{f3.5}. Let
+$I(t)$ be the instantaneous current flowing around the circuit. 
+Now, according to
+{\em Kirchhoff's second circuital law}, the sum of the potential drops across the
+various components of a closed circuit loop is equal to  zero. Thus, since the
+potential drop across an emf   is {\em minus}\/ the associated voltage,
+we obtain [{\em cf}., Equation~(\ref{e3.29})]
+\begin{equation}\label{e3.57}
+L\,\dot{I} + R\,I+ Q/C = V,
+\end{equation}
+where $\dot{Q}=I$. Suppose that the emf  is such that its voltage  oscillates
+{\em sinusoidally}\/ at the angular frequency $\omega>0$, with the peak value $V_0>0$, so that
+\begin{equation}
+V(t) = V_0\,\sin(\omega\,t).
+\end{equation}
+Dividing Equation~(\ref{e3.57}) by $L$, and differentiating with respect to time,
+we obtain [{\em cf}., Equation~(\ref{e3.28})]
+\begin{equation}
+\ddot{I} + \nu\,\dot{I} + \omega_0^{\,2}\,I = \frac{\omega\,V_0}{L}\,\cos(\omega\,t),
+\end{equation}
+where $\omega_0=1/\sqrt{L\,C}$ and $\nu=R/L$. Comparison with Equation~(\ref{e3.40}) reveals that this is a driven damped harmonic oscillator equation. 
+It follows, by comparison with the analysis contained in the previous section, that
+the current driven in the circuit by the oscillating emf  is of the form
+\begin{equation}
+I(t) = I_0\,\cos(\omega\,t-\varphi),
+\end{equation}
+where
+\begin{eqnarray}
+I_0&=& \frac{\omega\,V_0/L}{\left[(\omega_0^{\,2}-\omega^2)^2+\nu^2\,\omega^2\right]^{1/2}},\\[0.5ex]
+\varphi &=&\tan^{-1}\left(\frac{\nu\,\omega}{\omega_0^{\,2}-\omega^2}\right).
+\end{eqnarray}
+In the immediate vicinity of the resonance ({\em i.e.}, $|\omega-\omega_0|\sim \nu\ll\omega_0$) these expression simplify to
+\begin{eqnarray}
+I_0 &\simeq & \frac{V_0}{R}\,\frac{\nu}{[4\,(\omega_0-\omega)^2+\nu^2]^{1/2}},\\[0.5ex]
+\sin\varphi &\simeq& \frac{\nu}{[4\,(\omega-\omega_0)^2+\nu^2]^{1/2}}.
+\end{eqnarray}
+Now, the circuit's mean power absorption from the emf is written
+\begin{eqnarray}
+\langle P\rangle &=&\langle I(t)\,V(t)\rangle = I_0\,V_0\,\langle \cos(\omega\,t-\varphi)\,\sin(\omega\,t)\rangle\nonumber\\[0.5ex]
+&=& \frac{1}{2}\,I_0\,V_0\,\sin\varphi,
+\end{eqnarray}
+so that
+\begin{equation}
+\langle P\rangle \simeq \frac{1}{2}\,\frac{V_0^{\,2}}{R}\left[\frac{\nu^2}{4\,(\omega_0-\omega)^{\,2}+\nu^2}\right]
+\end{equation}
+close to the resonance.
+It follows that the peak power absorption, $(1/2)\,V_0^{\,2}/R$, takes place when the
+emf oscillates at the resonant frequency, $\omega_0$. Moreover, the power absorption falls
+to half of this peak value at the edges of the resonant peak: {\em i.e.}, $\omega=\omega_0\pm \nu$. 
+
+$LCR$ circuits are often employed as analogue {\em radio tuners}. In this application,
+the emf represents the analogue signal picked-up by a radio antenna. It is clear, from the
+above analysis, that the circuit only has a strong response ({\em i.e.}, it only absorbs significant energy) when
+the signal oscillates in the angular frequency range $\omega_0\pm \nu$, which corresponds
+to $1/\sqrt{L\,C}\pm R/L$. Thus, if the values of $L$, $C$, and $R$ are
+properly chosen then the circuit can be made to  strongly absorb the signal from a
+particular radio station, which has  a given carrier frequency and bandwidth, whilst essentially ignoring the signals from other stations
+with different carrier frequencies. In practice, the values of $L$ and $R$ are fixed,
+whilst the value of $C$ is varied (by turning a knob which adjusts the degree of overlap
+between two sets of parallel semicircular conducting plates) until the signal from the desired radio
+station is found. 
+
+\section{Transient Oscillator Response}
+The time evolution of the  driven mechanical oscillator discussed in Section~\ref{s3.4} is governed by the 
+{\em driven damped harmonic oscillator equation},
+\begin{equation}\label{e3.67}
+\ddot{x} + \nu\,\dot{x} + \omega_0^{\,2}\,x = \omega_0^{\,2}\,X_0\,\cos(\omega\,t).
+\end{equation}
+Recall that the steady ({\em i.e.}, constant amplitude) solution to this equation which we found earlier takes the form
+\begin{equation}\label{e3.68}
+x_{ta}(t)=x_0\,\cos(\omega\,t-\varphi),
+\end{equation}
+where
+\begin{eqnarray}
+x_0&=& \frac{\omega_0^{\,2}\,X_0}{\left[(\omega_0^{\,2}-\omega^2)^2+\nu^2\,\omega^2\right]^{1/2}},\\[0.5ex]
+\varphi &=&\tan^{-1}\left(\frac{\nu\,\omega}{\omega_0^{\,2}-\omega^2}\right).
+\end{eqnarray}
+Now, Equation~(\ref{e3.67}) is a {\em second-order}\/ ordinary differential equation, which means that its general solution should contain {\em two}\/ arbitrary constants. 
+Note, however, that (\ref{e3.68}) contains {\em no}\/ arbitrary constants. It follows that (\ref{e3.68}) cannot be the most general solution to the driven damped harmonic oscillator equation, (\ref{e3.67}). However, it is fairly easy to see that if
+we add any solution of the {\em undriven damped harmonic oscillator equation}, 
+\begin{equation}
+\ddot{x} + \nu\,\dot{x} + \omega_0^{\,2}\,x = 0,
+\end{equation}
+to (\ref{e3.68}) then the result will still be a solution to Equation~(\ref{e3.67}).
+Now, from Section~\ref{s3.1}, the most general solution to the
+above equation can be written
+\begin{equation}\label{e3.72}
+x_{tr}(t) = A\,{\rm e}^{-\nu\,t/2}\,\cos(\omega_1\,t) + B\,{\rm e}^{-\nu\,t/2}\,\sin(\omega_1\,t),
+\end{equation}
+where $\omega_1=(\omega_0^{\,2}-\nu^2/4)^{1/2}$,  and $A$ and $B$ are arbitrary constants. [In terms of the standard solution (\ref{e3.11}), $A=a\,\cos\phi$ and $B=a\,\sin\phi$.]
+Thus, a more general solution to (\ref{e3.67}) is
+\begin{eqnarray}\label{e3.73}
+x(t) &=& x_{ta}(t) + x_{tr}(t)\nonumber\\[0.5ex] 
+&=& x_0\,\cos(\omega\,t-\varphi) +  A\,{\rm e}^{-\nu\,t/2}\,\cos(\omega_1\,t) + B\,{\rm e}^{-\nu\,t/2}\,\sin(\omega_1\,t).
+\end{eqnarray}
+In fact, since the above solution contains {\em two}\/ arbitrary constants, we can be sure
+that it is the {\em most general}\/ solution. Of course, the constants $A$ and $B$
+are determined by the {\em initial conditions}. It is, thus,  clear that the
+most general solution to the driven damped harmonic oscillator equation (\ref{e3.67})
+consists of {\em two}\/ parts. First, the  solution (\ref{e3.68}), which oscillates at the {\em driving  frequency}\/ $\omega$ with a {\em constant}\/ amplitude, and which is {\em independent}\/ of the initial conditions. Second, the
+solution (\ref{e3.72}), which oscillates at the {\em natural frequency}\/ $\omega_1$ with an amplitude which {\em decays exponentially}\/ in time, and
+which {\em depends}\/ on the initial conditions. The former  is termed the
+{\em time asymptotic solution}, since if we wait long enough then it
+becomes dominant. The latter  is called the {\em transient solution}, since if
+we wait long enough then it decays away.
+
+Suppose, for the sake of argument, that the system is initially in its equilibrium
+state: {\em i.e.}, $x(0)=\dot{x}(0)=0$. It follows from (\ref{e3.73}) that
+\begin{eqnarray}
+x(0)&=& x_0\,\cos\varphi  +A=0,\\[0.5ex]
+\dot{x}(0)&=& x_0\,\omega\,\sin\varphi - \frac{\nu}{2}\,A+B\,\omega_1=0.
+\end{eqnarray}
+These equations can be solved to give
+\begin{eqnarray}\label{e3.76}
+A &=& -x_0\,\cos\varphi,\\[0.5ex]
+B &=& -x_0\left[\frac{\omega\,\sin\varphi + (\nu/2)\,\cos\varphi}{\omega_1}\right].\label{e3.77}
+\end{eqnarray}
+Now, according to the analysis in Section~\ref{s3.4}, for driving frequencies
+close to the resonant frequency ({\em i.e.}, $|\omega-\omega_0|\sim \nu$), we
+can write
+\begin{eqnarray}
+x_0 &\simeq& \frac{X_0\,\omega_0}{[4\,(\omega_0-\omega)^2+\nu^2]^{1/2}},\\[0.5ex]
+\sin\varphi &\simeq& \frac{\nu}{[4\,(\omega_0-\omega)^2+\nu^2]^{1/2}},\\[0.5ex]
+\cos\varphi &\simeq& \frac{2\,(\omega_0-\omega)}{[4\,(\omega_0-\omega)^2+\nu^2]^{1/2}}.\label{e3.80}
+\end{eqnarray}
+Hence, in this case, the solution (\ref{e3.73}), combined with (\ref{e3.76})--(\ref{e3.80}),  reduces to
+\begin{eqnarray}\label{e3.81}
+x(t) &\simeq& X_0\left[\frac{2\,\omega_0\,(\omega_0-\omega)}{4\,(\omega_0-\omega)^2+\nu^2}\right]\left[\cos(\omega\,t)-{\rm e}^{-\nu\,t/2}\,\cos(\omega_0\,t)\right]\nonumber\\[0.5ex]
+&&+ X_0\left[\frac{\omega_0\,\nu}{4\,(\omega_0-\omega)^2+\nu^2}\right]\left[\sin(\omega\,t)-{\rm e}^{-\nu\,t/2}\,\sin(\omega_0\,t)\right].
+\end{eqnarray}
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter03/fig06.eps}}
+\caption{\em Resonant response of a driven damped harmonic oscillator.}\label{f3.6}   
+\end{figure}
+
+There are a number of interesting cases which are worth discussing. Consider,
+first, the situation in which the driving frequency is equal to the resonant frequency: {\em i.e.},  $\omega=\omega_0$. In this case, Equation~(\ref{e3.81}) reduces to
+\begin{equation}
+x(t)= X_0\,Q_f\left(1-{\rm e}^{-\nu\,t/2}\right)\sin(\omega_0\,t),
+\end{equation} 
+since $Q_f=\omega_0/\nu$. Thus, the driven response oscillates at the
+resonant frequency, $\omega_0$, since  both the time asymptotic and transient solutions
+ oscillate at this frequency. However, the amplitude of the
+oscillation grows monotonically as $a(t) = X_0\,Q_f\,\left(1-{\rm e}^{-\nu\,t/2}\right)$, and
+so takes a time of order $\nu^{-1}$ to attain its final value $X_0\,Q_f$, which
+is, of course, larger that the driving amplitude  by the resonant amplification
+factor (or quality factor), $Q_f$. This behavior is illustrated in Figure~\ref{f3.6}.
+[Here, $T_0=2\pi/\omega_0$ and $Q_f=\omega_0/\nu=16$. The solid curve
+shows $x(t)/X_0$ and the dashed curves show $\pm a(t)/X_0$.]
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter03/fig07.eps}}
+\caption{\em Off-resonant response of a driven undamped harmonic oscillator.}\label{f3.7}   
+\end{figure}
+
+Consider, now, the situation in which there is no damping, so that $\nu=0$. In this
+case, Equation~(\ref{e3.81}) yields
+\begin{equation}\label{e3.83}
+x(t) = X_0\,\left(\frac{\omega_0}{\omega_0-\omega}\right)\sin[(\omega_0-\omega)\,t/2]\,\sin[(\omega_0+\omega)\,t/2],
+\end{equation}
+where use has been made of the trigonometry identity $\cos a - \cos b \equiv -2\,\sin[(a+b)/2]\,\sin[(a-b)/2]$. It can be seen that the driven response oscillates relatively rapidly at the ``sum frequency''
+$(\omega_0+\omega)/2$ with an amplitude $a(t) = X_0\,[\omega_0/(\omega_0-\omega)]\,\sin[(\omega_0-\omega)/t]$ which modulates relatively slowly at the
+``difference frequency'' $(\omega_0-\omega)/2$. (Recall, that we are assuming that
+$\omega$ is close to $\omega_0$.) This behavior is illustrated in
+Figure~\ref{f3.7}. [Here, $T_0=2\pi/\omega_0$ and $\omega_0-\omega=\omega_0/16$. The solid curve
+shows $x(t)/X_0$ and the dashed curves show $\pm a(t)/X_0$.] The amplitude modulations shown
+in Figure~\ref{f3.7} are called {\em beats}, and are produced whenever two
+sinusoidal oscillations of similar amplitude, and slightly different frequency,
+are superposed. In this case, the two oscillations are the time asymptotic solution,
+which oscillates at the driving frequency, $\omega$, and the transient
+solution, which oscillates at the resonant frequency, $\omega_0$. The beats
+modulate at the difference frequency, $(\omega_0-\omega)/2$. In the limit $\omega\rightarrow\omega_0$, Equation~(\ref{e3.83}) yields
+\begin{equation}
+x(t) = \frac{X_0}{2}\,\omega_0\,t\sin(\omega_0\,t),
+\end{equation}
+since $\sin x\simeq x$ when $|x|\ll 1$. Thus, the resonant response of a
+driven undamped oscillator is an oscillation at the resonant frequency whose
+amplitude, $a(t) = (X_0/2)\,\omega_0\,t$, increases {\em linearly}\/ in time. In this case, the period of the beats has
+effectively become infinite. 
+
+\begin{figure}
+\epsfysize=3in
+\centerline{\epsffile{Chapter03/fig08.eps}}
+\caption{\em Off-resonant response of a driven damped harmonic oscillator.}\label{f3.8}   
+\end{figure}
+
+Finally, Figure~\ref{f3.8} illustrates the non-resonant response of a driven
+dam\-ped harmonic oscillator, obtained from Equation~(\ref{e3.81}). [Here, $T_0=2\pi/\omega_0$, $\omega_0-\omega=\omega_0/16$, and $\nu = \omega_0/16$.]
+It can be seen that the driven response grows, showing some initial evidence of
+beat modulation, but eventually settles down to a steady pattern of oscillation. 
+This behavior occurs because the transient solution, which is needed to produce beats,
+initially grows, but then  damps away, leaving behind the constant amplitude
+time asymptotic solution. 
+
+\section{Exercises}
+{\small
+\begin{enumerate}
+\item Show that the ratio of two successive maxima in the displacement of a damped
+harmonic oscillator is constant.
+
+\item If the amplitude of a damped harmonic oscillator decreases to $1/e$ of its initial
+value after $n\gg 1$ periods show that the ratio of the period of oscillation to the period
+of the oscillation with no damping is
+$$
+\left(1+\frac{1}{4\pi^2\,n^2}\right)^{1/2}\simeq 1 + \frac{1}{8\pi^2\,n^2}.
+$$
+
+\item Many oscillatory systems are subject to damping effects which are
+not exactly analogous to the frictional damping considered in Section~\ref{f3.1}. 
+Nevertheless, such systems typically exhibit an exponential decrease
+in their average stored energy of the form $\langle E\rangle = E_0\,\exp(-\nu\,t)$. 
+It is possible to define an effective quality factor for such oscillators as $Q_f=\omega_0/\nu$, where
+$\omega_0$ is the natural angular oscillation frequency. For example, when the note ``middle C'' on
+a piano is struck its oscillation energy decreases to one half
+of its initial value in about 1 second. The frequency of middle C is $256$ Hz. What
+is the effective $Q_f$ of the system?
+
+\item According to classical electromagnetic theory, an accelerated electron
+radiates energy at the rate $K\,e^2\,a^2/c^3$, where $K=6\times 10^9\,{\rm N\,m^2}/{\rm C^2}$, $e$ is the charge on an electron, $a$  the instantaneous
+acceleration, and $c$ the velocity of light. If an electron were oscillating
+in a straight-line with displacement $x(t)= A\,\sin(2\pi\,f\,t)$ how much energy
+would it radiate away during a single cycle? What is the effective $Q_f$ of this oscillator?
+How many periods of oscillation would elapse before the energy of the
+oscillation was reduced to half of its initial value? Substituting a typical optical
+frequency ({\em i.e.}, for visible light) for $f$, give numerical estimates 
+for the $Q_f$ and half-life of the radiating system.
+
+\item Demonstrate that in the limit $\nu\rightarrow2\,\omega_0$  the solution to the damped
+harmonic oscillator equation becomes
+$$
+x(t) = \left(x_0 + [v_0+ (\nu/2)\,x_0]\,t\right)\,{\rm e}^{-\nu\,t/2},
+$$
+where $x_0=x(0)$ and $v_0=\dot{x}(0)$. 
+
+\begin{figure}[h]
+\epsfysize=1.6in
+\centerline{\epsffile{Chapter03/fig09.eps}}
+\end{figure}
+
+\item What are the resonant angular frequency and
+quality factor of the circuit pictured above? What is the average power absorbed at resonance?
+
+\item The power input $\langle P\rangle$ required to maintain a constant amplitude oscillation in a driven
+damped harmonic oscillator can be calculated by recognizing that this power is minus the average rate that work is done by the damping force, $-m\,\nu\,\dot{x}$.
+\begin{enumerate}
+\item Using $x = x_0\,cos(\omega\,t - \varphi)$, show that the average rate that the damping  force does work is $-m\,\nu\,\omega^2\,x_0^{\,2}/2$.
+
+\item Substitute the value of $x_0$ at an arbitrary driving frequency and, hence, obtain an expression for $\langle P\rangle$.
+
+\item Demonstrate that this expression yields (\ref{e3.56}) in the limit that the driving
+frequency is close to the resonant frequency.
+\end{enumerate}
+
+\item A generator of emf $V(t)= V_0\, \cos(\omega\,t)$ is connected in series with a resistance $R$, an inductor $L$, and a capacitor $C$. Let $I(t)$ be the current flowing
+in the circuit, and $Q(t)$ the charge on the capacitor. Suppose that $I=Q=0$ at
+$t=0$. Find $I(t)$ and $Q(t)$ for $t>0$.
+
+\item The equation $m\,\ddot{x}  + k\,x = F_0\,\sin(\omega\,t)$
+governs the motion of an undamped harmonic oscillator driven by a sinusoidal
+force of angular frequency $\omega$. Show that the time asymptotic solution is
+$$
+x = \frac{F_0\,\sin(\omega\,t)}{m\,(\omega_0^{\,2}-\omega^2)},
+$$
+where $\omega_0=\sqrt{k/m}$. Sketch the behavior of $x$ versus $t$ for
+$\omega<\omega_0$ and $\omega>\omega_0$. Demonstrate that if $x=\dot{x}=0$ at $t=0$ then the
+general solution is
+$$
+x =\frac{ F_0}{m\,(\omega_0^{\,2}-\omega^2)}\left[\sin(\omega\,t)-\frac{\omega}{\omega_0}\,\sin(\omega_0\,t)\right].
+$$
+Show, finally, that if $\omega$ is close to the resonant frequency $\omega_0$ then
+$$
+x\simeq \frac{F_0}{2\,m\,\omega_0^{\,2}}\,\left[\sin(\omega_0\,t)-\omega_0\,t\,\cos(\omega_0\,t)\right].
+$$
+Sketch the behavior of $x$ versus $t$. 
+\end{enumerate}}

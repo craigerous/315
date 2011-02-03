@@ -1,0 +1,868 @@
+\chapter{Wave Optics}\label{c11}
+\section{Introduction}
+Visible light is a type of {\em electromagnetic radiation}\/ whose wavelength
+lies in a relatively narrow band extending from about 400 to 700 nm. 
+The branch of physics which is concerned with  the properties of light is known as {\em optics}. 
+This chapter is devoted to those optical phenomena which depend explicitly on the ultimate {\em wave}\/
+nature of light, and cannot be accounted for using the well-known laws of geometric optics (see Section~\ref{sgeo}). 
+The branch of optics which deals with such phenomena is called {\em wave optics}.  
+The two most important topics in wave optics are {\em interference}\/ and {\em diffraction}. Interference occurs
+when beams of light from multiple sources (but with similar frequencies), or  multiple beams from the same source,  intersect one another. Diffraction takes place, for instance,  when a single  beam of light passes through an opening in
+an opaque screen whose spatial extent is  comparable to the wavelength of the light. It should be noted that interference and
+diffraction depend on the same underlying physical mechanisms, so that the distinction which is conventionally made between them is somewhat arbitrary. 
+
+In the following, for the sake of
+simplicity, we shall only deal with light emitted from uniform {\em line sources}\/ interacting with uniform slits which run
+parallel to these sources, since, under such circumstances, the problem remains essentially {\em  two-dimensional}. 
+
+\section{Two-Slit Interference}\label{s11.2}
+Consider a monochromatic plane light wave, propagating in the $x$-direction, through a transparent
+dielectric medium of refractive index unity ({\em e.g.}, a vacuum). (Such a wave might be produced by a uniform line
+source, running parallel to the $z$-axis, which is located at $x=-\infty$.)
+Let the associated wavefunction take the form
+\begin{equation}\label{e11.0}
+\psi(x,t) = \psi_0\,\cos(\phi+k\,x-\omega\,t).
+\end{equation}
+Here, $\psi$ represents the {\em electric}\/ component of the wave, $\psi_0>0$ the wave amplitude, $\phi$ the
+phase angle,
+$k>0$  the wavenumber, $\omega=k\,c$ the angular frequency, and $c$ the velocity of light in vacuum.
+Let the wave be normally incident on an opaque
+screen that is coincident with the plane $x=0$. See Figure~\ref{f11.1}.
+Suppose that the screen has two identical
+ slits of width $\delta$ cut in it. Let the slits run parallel to the $z$-axis,  be a perpendicular distance $d$ apart, and be located at $y=d/2$ and $y=-d/2$. Suppose that the
+light which passes through the two slits travels to a cylindrical projection screen of radius $R$ whose axis is the line $x=y=0$. In the
+following, it is assumed that there is no variation of wave quantities in the $z$-direction.
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter11/fig01.eps}}
+\caption{\em Two-slit interference at normal incidence.}\label{f11.1}   
+\end{figure}
+
+Now,  provided that the two slits are much narrower than the wavelength, $\lambda=2\pi/k$, of the light ({\em i.e.}, $\delta\ll \lambda$), we expect any light
+which passes through them to be strongly diffracted. See Section~\ref{s11.6}. {\em Diffraction}\/ is a fundamental wave phenomenon by which 
+waves bend around small (compared to the wavelength) obstacles, and spread out from narrow (compared to the wavelength) openings,
+whilst maintaining the same wavelength and frequency.
+The
+laws of geometric optics do not take diffraction into account, and are, therefore, restricted to situations in
+which light interacts with objects whose physical dimensions  greatly exceed its wavelength.
+The assumption of strong diffraction suggests that each slit acts like a uniform {\em line source}\/ which emits light isotropically
+in the forward direction ({\em i.e.}, toward the region $x>0$), but does not emit light in the
+backward direction ({\em i.e.}, toward the region $x<0$). (It is actually possible
+to demonstrate that this is, in fact, the case using advanced electromagnetic theory, but such a demonstration lies well beyond the
+scope of this course.) As discussed in
+Section~\ref{s10.4}, we would expect  a uniform line source to emit a {\em cylindrical wave}. It follows that each slit
+emits a half-cylindrical light wave in the forward direction. See Figure~\ref{f11.1}. Moreover, these waves are emitted with  {\em equal amplitude and  phase}, since the incident
+plane wave has the same amplitude ({\em i.e.}, $\psi_0$) and phase ({\em i.e.}, $\phi-\omega\,t$) at both of the slits, and the slits are  identical. Finally, we expect the  cylindrical waves emitted by the two slits to {\em interfere}\/ with one
+another (see Section~\ref{s7.3}), and to, thus, generate a characteristic {\em interference pattern}\/ on the
+cylindrical projection screen. Let us now determine the nature of this pattern.
+
+Consider the wave amplitude at a point on the projection screen which lies an angular distance $\theta$ from the
+plane $y=0$. See Figure~\ref{f11.1}. The wavefunction at this particular point 
+is written 
+\begin{eqnarray}\label{e11.1}
+\psi(\theta,t)&\propto&\frac{ \cos(\phi+k\,\rho_1-\omega\,t)}{\rho_1^{\,1/2}}+ {\cal O}\!\left(\frac{1}{k\,\rho_1^{\,3/2}}\right)\nonumber \\[0.5ex]&&
++ \frac{\cos(\phi+k\,\rho_2-\omega\,t)}{\rho_2^{\,1/2}}  + {\cal O}\!\left(\frac{1}{k\,\rho_2^{\,3/2}}\right),
+\end{eqnarray}
+assuming that $k\,\rho_1,\,k\,\rho_2\gg 1$. In other words, the overall wavefunction in the region $x>0$ is the superposition  of cylindrical 
+wavefunctions [see  Equation~(\ref{e10.30})] of equal amplitude ({\em i.e.}, $\rho^{-1/2}$) and phase ({\em  i.e.}, $\phi+k\,\rho-\omega\,t$) emanating from each  slit. Here, $\rho=(x^2+y^2)^{1/2}$. Moreover, $\rho_1$ and $\rho_2$ are the distances which the cylindrical waves emitted by the first and second slits (located at $y=d/2$ and $y=-d/2$, respectively) have travelled by the time they reach the point on the projection screen under discussion.
+
+Standard trigonometry ({\em i.e.}, the law of cosines) reveals that
+\begin{equation}\label{e11.3}
+\rho_1 = R\!\left(1-\frac{d}{R}\,\sin\theta + \frac{1}{4}\,\frac{d^2}{R^2}\right)^{1/2}\nonumber\\[0.5ex]
+=  R\!\left[1-\frac{1}{2}\,\frac{d}{R}\,\sin\theta + {\cal O}\!\left(\frac{d^2}{R^2}\right)\right].
+\end{equation}
+Likewise,
+\begin{equation}
+\rho_2 = R\!\left[1+\frac{1}{2}\,\frac{d}{R}\,\sin\theta + {\cal O}\!\left(\frac{d^2}{R^2}\right)\right].
+\end{equation}
+Hence, expression (\ref{e11.1}) yields
+\begin{eqnarray}\label{e11.5a}
+\psi(\theta,t)&\propto&\cos(\phi+k\,\rho_1-\omega\,t)+ \cos(\phi+k\,\rho_2-\omega\,t)\nonumber\\[0.5ex]&&+ {\cal O}\!\left(\frac{1}{k\,R}\right)+ {\cal O}\!\left(\frac{d}{R}\right),
+\end{eqnarray}
+which, making use of the trigonometric identity $\cos x + \cos y\equiv 2\,\cos[(x+y)/2]\,\cos[(x-y)/2]$, 
+ gives
+\begin{eqnarray}
+\psi(\theta,t)&\propto&\cos\left[\phi+\frac{1}{2}\,k\,(\rho_1+\rho_2)-\omega\,t\right]\cos\left[\frac{1}{2}\,k\,(\rho_1-\rho_2)\right] \nonumber\\[0.5ex]&&+ {\cal O}\!\left(\frac{1}{k\,R}\right)+ {\cal O}\!\left(\frac{d}{R}\right),
+\end{eqnarray}
+or
+\begin{eqnarray}
+\psi(\theta,t)&\propto&\cos\left[\phi+k\,R-\omega\,t+ {\cal O}\left(\frac{k\,d^2}{R}\right)\right]
+\cos\left[-\frac{1}{2}\,k\,d\,\sin\theta
++  {\cal O}\!\left(\frac{k\,d^2}{R}\right)\right]\nonumber\\[0.5ex]&&+ {\cal O}\!\left(\frac{1}{k\,R}\right)+ {\cal O}\!\left(\frac{d}{R}\right).
+\end{eqnarray}
+Finally, assuming that
+\begin{equation}\label{e11.7}
+\frac{k\,d^2}{R},\,\frac{1}{k\,R},\, \frac{d}{R},\ll 1,
+\end{equation}
+the above expression reduces to
+\begin{equation}\label{e11.10}
+\psi(\theta,t)\propto \cos(\phi+k\,R-\omega\,t)\,\cos\left(\frac{1}{2}\,k\,d\,\sin\theta\right).
+\end{equation}
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig02.eps}}
+\caption{\em Two-slit far-field interference pattern calculated for $d/\lambda = 5$ with normal incidence and narrow slits.}\label{f11.2}   
+\end{figure}
+
+Now, the orderings (\ref{e11.7}), which can also be written in the form,
+\begin{equation}\label{e11.9}
+R\gg d,\,\lambda,\,\frac{d^2}{\lambda},
+\end{equation}
+are satisfied provided that the projection screen is located sufficiently far away from the slits. Consequently, the
+type of interference described in this section is known as {\em far-field interference}.  The characteristic
+features of far-field
+interference are that the {\em amplitudes}\/ of the cylindrical waves emitted by the two slits are approximately equal to one another  when they reach  a given point on the projection
+screen ({\em i.e.}, $|\rho_1-\rho_2|/\rho_1\ll 1$), whereas the phases are, in general, significantly different ({\em i.e.}, $k\,|\rho_1-\rho_2|\gtapp \pi$). In other words, the
+interference pattern generated on the projection screen is  entirely due to the {\em phase difference}\/ between the
+ cylindrical waves emitted by the two slits when they reach the screen. This phase difference is produced by the slight difference in path length between  the slits and a
+given point on the projection screen. (Recall, that the two waves are in phase when they are emitted by the slits.)
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig03.eps}}
+\caption{\em Two-slit far-field interference pattern calculated for $d/\lambda = 1$ with normal incidence and narrow slits.}\label{f11.3}   
+\end{figure}
+
+The mean energy flux, or {\em intensity}, of the light striking the projection screen at angular position $\theta$
+is 
+\begin{eqnarray}
+{\cal I}(\theta) &\propto& \langle \psi(\theta,t)^2\rangle\nonumber\\[0.5ex]
+&\propto& \langle \cos^2(\phi+k\,R-\omega\,t)\rangle\,\cos^2\left(\frac{1}{2}\,k\,d\,\sin\theta\right)\nonumber\\[0.5ex]
+&\propto&\cos^2\left(\frac{1}{2}\,k\,d\,\sin\theta\right),
+\end{eqnarray}
+where $\langle\cdots\rangle$ denotes an average over a wave period. (The above expression follows from the standard result ${\cal I} = E^2/Z_0$, for
+an electromagnetic wave, where $E$ is the electric component of the wave, and $Z_0$ the impedance of free space. See Section~\ref{s7.7}. Recall, also, that $\psi\propto E$.)  Here, we have made use of the easily established result $\langle\cos^2(\phi+k\,R-\omega\,t)\rangle=1/2$.
+Note that, given the very high
+oscillation frequency of a light wave ({\em i.e.}, $f\sim 10^{14}\,{\rm Hz}$), it is the intensity of  light, rather than the rapidly
+oscillating amplitude of its electric component, which is typically detected experimentally ({\em e.g.}, by
+a photographic film, or photo-multiplier tube). Hence, for the case of  two-slit far-field interference,  assuming normal incidence and
+narrow slits, the intensity of the characteristic interference pattern appearing
+on the projection screen is specified  by
+\begin{equation}\label{e11.11}
+{\cal I}(\theta) \propto \cos^2\left(\pi\,\frac{d}{\lambda}\,\sin\theta\right).
+\end{equation}
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig04.eps}}
+\caption{\em Two-slit far-field interference pattern calculated for $d/\lambda = 0.1$ with normal incidence and narrow slits.}\label{f11.4}   
+\end{figure}
+
+Figure~\ref{f11.2} shows the intensity of the typical two-slit far-field interference pattern produced when the slit spacing, $d$, greatly exceeds the wavelength, $\lambda$,
+of the light. 
+It can be seen that the pattern consists of multiple bright and dark fringes. A bright fringe is generated whenever the cylindrical
+waves emitted by the two slits interfere constructively at  given point on the projection screen. This occurs if the path lengths between the
+ two slits and the  point in question differ by an {\em integer}\/ number of wavelengths: {\em i.e.}, 
+ \begin{equation}\label{e11.12x}
+ \rho_2-\rho_1 = d\,\sin\theta = j\,\lambda,
+\end{equation}
+where $j$ is an integer, since this ensures that the phases of the two waves differ by an integer multiple of  $2\pi$, and, hence, that
+the effective phase difference is zero. 
+ Likewise, a dark fringe is generated whenever the cylindrical waves emitted by the
+two slits interfere destructively at a given point on the projection screen. This occurs if the path lengths between the two slits  and the point in question differ by a {\em half-integer}\/ number of wavelengths: {\em i.e.}, 
+\begin{equation}
+\rho_2-\rho_1=d\,\sin\theta= (j+1/2)\,\lambda,
+\end{equation}
+since this ensures that the effective phase difference between the two waves is $\pi$. 
+We conclude  that the innermost ({\em i.e.}, low $j$, small $\theta$) bright fringes are approximately {\em equally-spaced}, with a characteristic
+angular width $\Delta\theta\simeq \lambda/d$. This result, which follows
+from Equation~(\ref{e11.12x}), and the small angle approximation $\sin\theta\simeq \theta$, can be used experimentally to determine the wavelength of a 
+monochromatic light source (see Exercise 11.4).
+
+Figure~\ref{f11.3} shows the intensity of the interference pattern generated when the slit spacing is equal to the wavelength of the light.
+It can be seen that the width  of the central ({\em i.e.}, $j=0$, $\theta=0$) bright fringe has expanded to such
+an extent that the fringe occupies almost half of the projection screen,  leaving room for just two dark fringes on either
+side of it.
+
+Finally, Figure~\ref{f11.4} shows the intensity of the interference pattern generated when the slit spacing is much less than the
+wavelength of the light. It can be seen that the width of the central bright fringe  has expanded to
+such an extent that the band occupies the whole projection screen, and there are no dark fringes. Indeed, ${\cal I}(\theta)$ becomes constant
+in the limit that $d/\lambda\ll 1$,    in which case the interference pattern entirely disappears.
+
+It is  clear, from Figures~\ref{f11.2}--\ref{f11.3}, that the two-slit far-field interference apparatus shown in Figure~\ref{f11.1}
+only generates an interesting interference patten when the slit spacing, $d$, is greater  than the
+wavelength, $\lambda$, of the light. 
+
+\begin{figure}
+\epsfysize=3.3in
+\centerline{\epsffile{Chapter11/fig05.eps}}
+\caption{\em Two-slit interference at oblique incidence.}\label{f11.5}   
+\end{figure}
+
+Suppose, now, that the   plane wave which illuminates the interference apparatus is not normally incident on the slits, but instead propagates at an angle $\theta_0$ to the $x$-axis, as
+shown in Figure~\ref{f11.5}. In this case, the incident wavefunction (\ref{e11.0})  becomes
+\begin{equation}\label{e11.13}
+\psi(x,y,t) = \psi_0\,\cos(\phi + k\,x\,\cos\theta_0+k\,y\,\sin\theta_0-\omega\,t).
+\end{equation}
+Thus, the phase of the light incident on the first slit (located at $x=0$, $y=d/2$) is
+$\phi + (1/2)\,k\,d\,\sin\theta_0-\omega\,t$, whereas the phase of the light incident on the second slit (located at
+$x=0$, $y=-d/2$) is $\phi - (1/2)\,k\,d\,\sin\theta_0-\omega\,t$. Assuming that the cylindrical waves
+emitted by each slit have the same phase (at the slits) as the plane wave which illuminates them, Equation~(\ref{e11.1})
+generalizes to
+\begin{eqnarray}\label{e11.14}
+\psi(\theta,t)&\propto&\frac{\cos(\phi_1+k\,\rho_1-\omega\,t)}{\rho_1^{\,1/2}}
++\frac{\cos(\phi_2+k\,\rho_2-\omega\,t)}{\rho_2^{\,1/2}},
+\end{eqnarray}
+where $\phi_1= \phi+(1/2)\,k\,d\,\sin\theta_0$ and $\phi_2=\phi-(1/2)\,k\,d\,\sin\theta_0$. 
+Hence, making use of the far-field orderings (\ref{e11.9}), and a standard trigonometric identity, we obtain
+\begin{eqnarray}
+\psi(\theta,t) &\propto & \cos\left[\frac{1}{2}\,(\phi_1+\phi_2)+ k\,R-\omega\,t\right]\cos
+\left[\frac{1}{2}\,(\phi_1-\phi_2)-\frac{1}{2}\,k\,d\,\sin\theta\right]\nonumber\\[0.5ex]
+&\propto& \cos(\phi+ k\,R-\omega\,t)\,\cos
+\left[\frac{1}{2}\,k\,d\,(\sin\theta-\sin\theta_0)\right].\label{e11.15}
+\end{eqnarray}
+
+For the sake of simplicity, let us concentrate on the limit  $d\gg \lambda$ in which the innermost ({\em i.e.},  low $j$) interference
+fringes are located at small $\theta$. (Note that the projection screen is approximately  planar in this limit, as
+indicated in Figure~\ref{f11.5}, since a sufficiently small section of a cylindrical surface looks like a plane.) Assuming that $\theta_0$ is also small, the above expression reduces to
+\begin{equation}\label{e11.16}
+\psi(\theta,t)\propto  \cos(\phi+ k\,R-\omega\,t)\,\cos
+\left[\frac{1}{2}\,k\,d\,(\theta-\theta_0)\right],
+\end{equation}
+and Equation~(\ref{e11.11}) becomes
+\begin{equation}
+{\cal I}(\theta) \propto\cos^2\left[\pi\,\frac{d}{\lambda}\,(\theta-\theta_0)\right].
+\end{equation}
+Thus, the bright fringes in the interference pattern are located at 
+\begin{equation}
+\theta = \theta_0 + j\,\frac{\lambda}{d},
+\end{equation}
+ where $j$ is an integer.  We conclude  that if the slits 
+in a two-slit interference apparatus, such as that shown in Figure~\ref{f11.5}, are illuminated by an obliquely incident plane wave then the consequent phase difference between the
+cylindrical waves emitted by each slit produces an {\em angular shift}\/ in the interference pattern appearing on the projection screen. 
+To be more exact, the angular shift is equal to the angle of incidence, $\theta_0$, of the plane wave, so that the central ($j=0$)
+bright fringe in the interference pattern is located at $\theta=\theta_0$---see Figure~\ref{f11.5}. Of course, this is equivalent to saying that the
+position of the central bright fringe can be determined via the rules of geometric optics. (Futhermore, this conclusion holds
+even when $\theta_0$ is not small.)
+
+\section{Coherence}
+A practical monochromatic light source consists of a collection of similar atoms which are continually excited by collisions, and
+then spontaneously decay back to their electronic ground states, in the process emitting  photons of characteristic angular
+frequency $\omega=\Delta{\cal E}/\hbar$, where $\Delta{\cal E}$ is the difference in energy between the excited state
+and the ground state, and $\hbar = 1.055\times 10^{-34}\,{\rm J\,s}^{-1}$ is Planck's constant divided by $2\pi$. 
+Now, an excited electronic state of an atom has a characteristic lifetime, $\tau$, which can be 
+calculated from quantum mechanics, and is typically $10^{-8}\,{\rm s}$. It follows that when an atom in
+an excited state decays back to its ground state it emits a  burst of electromagnetic radiation of duration $\tau$ and angular frequency $\omega$. 
+However, according to the bandwidth theorem (see Section~\ref{s8.3}), a sinusoidal wave of finite duration $\tau$ has a finite bandwidth
+\begin{equation}
+\Delta\omega\sim \frac{2\pi}{\tau}.
+\end{equation}
+In other words, if the emitted wave is Fourier transformed in time then it is found to consist of a linear superposition of sinusoidal
+waves of infinite duration whose frequencies lie in the approximate range $\omega-\Delta\omega/2$ to $\omega+\Delta\omega/2$. 
+We conclude that there is no such thing as a truly  monochromatic light source. In reality, all such sources have a small, but finite, bandwidths
+which are inversely proportional to the lifetimes, $\tau$, of the associated excited atomic states. 
+
+So, how do we take the finite bandwidth of  a practical ``monochromatic'' light source into account in our analysis? Actually,
+all we need to do is to assume that the phase angle, $\phi$, appearing in Equations~(\ref{e11.0}) and (\ref{e11.13}), is
+only constant on timescales much less that the lifetime, $\tau$, of the associated excited atomic state, and is subject to abrupt random changes on timescales much
+greater than $\tau$. We can understand this phenomenon as due to the fact that the radiation emitted by a single atom  has a
+fixed phase angle, $\phi$, but only lasts a finite time period, $\tau$, combined with the fact that there is generally no correlation between the
+phase angles of the radiation emitted by different atoms. Alternatively, we can account for the variation in the phase
+angle in terms of the finite bandwidth of the light source: {\em i.e.}, since the light emitted by the source consists of a superposition of sinusoidal waves of
+frequencies extending over the range $\omega-\Delta\omega/2$ to $\omega+\Delta\omega/2$ then, even if all the
+component waves start off in phase, the phases will be completely scrambled after a time  period $2\pi/\Delta\omega = \tau$ has
+elapsed. What we are, in effect, saying is that a practical monochromatic light source is {\em temporally coherent}\/ on timescales
+much less than its characteristic {\em coherence time}, $\tau$ (which, for visible light,  is typically
+of order  $10^{-8}$ seconds), and {\em temporally incoherent}\/ on timescales much greater than $\tau$. Incidentally, two waves are said
+to be {\em coherent}\/ if their phase difference is constant in time, and {\em incoherent}\/ if their phase difference varies
+significantly in time. In this case, the
+two waves in question are the same wave observed  at two different times. 
+
+So, what effect does the temporal incoherence of a practical monochromatic light source on timescales greater than $\tau\sim 10^{-8}$
+seconds have on the two-slit interference patterns discussed in the previous section? Consider the case of oblique incidence.
+According to Equation~(\ref{e11.14}), 
+the phase angles, $\phi_1=\phi+(1/2)\,k\,d\,\sin\theta_0$, and $\phi_2=\phi-(1/2)\,k\,d\,\sin\theta_0$, of the
+cylindrical waves emitted by each slit are subject to abrupt random changes on timescales much greater than $\tau$, since the
+phase angle, $\phi$ of the plane wave which illuminates the two slits is subject to the same changes. Nevertheless, the
+{\em relative phase angle}, $\phi_1-\phi_2= k\,d\,\sin\theta_0$,  between the two cylindrical waves remains {\em constant}. Moreover, 
+as is clear from Equation~(\ref{e11.15}), the interference pattern appearing on the projection screen is generated by the {\em 
+phase difference}\/ $(1/2)\,(\phi_1-\phi_2)-(1/2)\,k\,d\,\sin\theta$ between the two cylindrical waves at a given point on the screen,
+and this phase difference only depends on the relative phase angle. Indeed, the
+intensity of the interference pattern is ${\cal I}(\theta)\propto \cos^2[(1/2)\,(\phi_1-\phi_2)-(1/2)\,k\,d\,\sin\theta]$. 
+ Hence, the
+fact that the relative phase angle,  $\phi_1-\phi_2$, between the two cylindrical waves emitted by the slits remains constant on timescales much
+longer than the characteristic coherence time, $\tau$, of the light source implies that the interference pattern generated in
+a conventional two-slit interference apparatus
+is generally {\em unaffected}\/ by the temporal incoherence of the source. Strictly speaking, however, the preceding 
+conclusion is only accurate when the spatial extent of the light source is {\em negligible}. Let us now broaden
+our discussion to take spatially extended light sources into account. 
+
+\begin{figure}
+\epsfysize=3.5in
+\centerline{\epsffile{Chapter11/fig06.eps}}
+\caption{\em Two-slit interference with two line sources.}\label{f11.6}   
+\end{figure}
+
+Up until now, we have assumed that our two-slit interference apparatus is illuminated by a single plane wave, such as
+might be generated by a line source located at infinity. Let us now consider a more realistic situation in
+which the light source is located  a finite distance from the slits, and also has a finite spatial
+extent. Figure~\ref{f11.6} shows the simplest possible case. Here, the slits are
+illuminated by two identical line sources, $A$ and $B$, which are a distance $D$ apart, and a
+perpendicular distance $L$ from the opaque screen containing the slits. Assuming that $L\gg D,\,d$, the
+light incident on the slits from source $A$ is effectively a plane wave whose direction of propagation subtends an angle
+$\theta_0/2\simeq D/2\,L$ with the $x$-axis. Likewise, the light incident on the slits from source $B$ is
+a plane wave whose direction of propagation subtends an angle $-\theta_0/2$ with the $x$-axis. Moreover, the net interference
+pattern ({\em i.e.}, wavefunction) appearing on the projection screen is the {\em linear superposition}\/ of the patterns generated by each
+source taken individually (since light propagation is ultimately governed by a {\em linear}\/
+wave equation with {\em superposable}\/ solutions---see Section~\ref{s10.2}.).  Let us determine whether these patterns reinforce
+one another, or interfere with one another. 
+
+The light emitted by source $A$ has a phase angle, $\phi_A$, which is constant on timescales
+much less than the characteristic coherence time of the source, $\tau$, but is subject to
+abrupt random changes on timescale much longer than $\tau$. Likewise, the light
+emitted by source $B$ has a phase angle, $\phi_B$, which is constant on timescales much
+less than $\tau$, and varies significantly on timescales much greater than $\tau$. Furthermore,
+there is, in general, {\em no correlation}\/ between  $\phi_A$ and $\phi_B$. In other words, our composite
+light source, consisting of the two line sources $A$ and $B$, is both {\em temporally}\/ and {\em spatially}\/
+incoherent on timescales much longer than $\tau$. 
+
+Again working in the limit $d\gg \lambda$, with $\theta,\,\theta_0\ll 1$, Equation~(\ref{e11.16}) yields the following expression
+for the wavefunction on the projection screen:
+\begin{eqnarray}
+\psi(\theta,t)&\propto& \cos(\phi_A+k\,R-\omega\,t)\,\cos\left[\frac{1}{2}\,k\,d\,(\theta-\theta_0/2)\right]\nonumber\\[0.5ex]
+&&+ \cos(\phi_B+k\,R-\omega\,t)\,\cos\left[\frac{1}{2}\,k\,d\,(\theta+\theta_0/2)\right].
+\end{eqnarray}
+Hence, the intensity of the interference pattern is 
+\begin{eqnarray}
+{\cal I}(\theta)\propto \langle \psi^2\rangle&\propto& \langle\,\cos^2 (\phi_A+k\,R-\omega\,t)\rangle\cos^2\left[\frac{1}{2}\,k\,d\,(\theta-\theta_0/2)\right]\nonumber\\[0.5ex]
+&&+2\,\langle \cos (\phi_A+k\,R-\omega\,t)\,\cos (\phi_B+k\,R-\omega\,t)\rangle\nonumber\\[0.5ex]
+&&\times \cos\left[\frac{1}{2}\,k\,d\,(\theta-\theta_0/2)\right]\,\cos\left[\frac{1}{2}\,k\,d\,(\theta+\theta_0/2)\right]\nonumber\\[0.5ex]
+&&+\langle\,\cos^2 (\phi_B+k\,R-\omega\,t)\rangle\cos^2\left[\frac{1}{2}\,k\,d\,(\theta+\theta_0/2)\right].
+\end{eqnarray}
+However, $\langle \cos^2 (\phi_A+k\,R-\omega\,t)\rangle= \langle \cos^2 (\phi_B+k\,R-\omega\,t)\rangle=1/2$, and
+$\langle \cos (\phi_A+k\,R-\omega\,t)\,\cos (\phi_B+k\,R-\omega\,t)\rangle=0$, since the phase angles $\phi_A$ and $\phi_B$
+are uncorrelated. Hence, the above expression reduces to
+\begin{eqnarray}\label{e11.23}
+{\cal I}(\theta)&\propto&\cos^2\left[\frac{1}{2}\,k\,d\,(\theta-\theta_0/2)\right]+ \cos^2\left[\frac{1}{2}\,k\,d\,(\theta+\theta_0/2)\right]
+\nonumber\\[0.5ex] &=& 1 + \cos\left(2\pi\,\frac{d}{\lambda}\,\theta\right)\,\cos\left(\pi\,\frac{d}{\lambda}\,\theta_0\right),
+\end{eqnarray}
+where use has been made of the trigonometric identities $\cos^2\theta\equiv (1+\cos 2\theta)/2$, and
+$\cos x + \cos y \equiv 2\,\cos[(x+y)/2]\,\cos((x-y)/2]$. 
+Note that if $\theta_0=\lambda/2\,d$ then $\cos[\pi\,(d/\lambda)\,\theta_0]=0$ and ${\cal I}(\theta)\propto 1$. 
+In this case, the bright fringes of the interference pattern generated by source $A$ exactly overlay the dark fringes
+of the pattern generated by source $B$, and {\em vice versa}, and the net interference pattern is completely
+washed out. On the other hand, if $\theta_0\ll \lambda/d$ then $\cos[\pi\,(d/\lambda)\,\theta_0]\simeq 1$ and
+${\cal I}(\theta)\propto 1+\cos[2\pi\,(d/\lambda)\,\theta]=2\, \cos^2[\pi\,(d/\lambda)\,\theta]$. In this case, the two interference patterns
+reinforce one another, and the net interference pattern is the same as that generated by a light  source
+of negligible spatial extent. 
+
+Suppose, now, that our light source consists of a regularly spaced array of  very many identical incoherent line sources, filling the region
+between sources $A$ and $B$ in Figure~\ref{f11.6}. In other words, suppose that our light source is a uniform incoherent source of
+angular extent $\theta_0$. 
+ It is, hopefully, clear, from the linear nature of the problem, that the associated interference pattern can be obtained
+by {\em averaging}\/ expression (\ref{e11.23}) over all $\theta_0$ values in the range $0$ to $\theta_0$: 
+{\em i.e.}, by operating on this expression with $\theta_0^{-1}\int_0^{\theta_0}\cdots\,d\theta_0$. In this manner,
+we obtain
+\begin{equation}\label{e11.24x}
+{\cal I}(\theta) \propto 1 + \cos\left(2\pi\,\frac{d}{\lambda}\,\theta\right)\,{\rm sinc}\left(\pi\,\frac{d}{\lambda}\,\theta_0\right),
+\end{equation}
+where ${\rm sinc}(x)\equiv 
+\sin x/x$. Now, we can conveniently parameterize  the {\em visibility}\/ of the interference pattern, appearing on the projection
+screen, in terms of the quantity
+\begin{equation}\label{e11.26xx}
+V = \frac{{\cal I}_{\rm max} - {\cal I}_{\rm min}}{{\cal I}_{\rm max} + {\cal I}_{\rm min}},
+\end{equation}
+where the maximum and minimum values of the intensity are taken with respect to variation in $\theta$ (rather than $\theta_0$). Of course, $V=1$ corresponds to a sharply defined pattern, and $V=0$ to a pattern which is completely
+washed out. It follows from (\ref{e11.24x}) that
+\begin{equation}
+V = \left|{\rm sinc}\left(\pi\,\frac{d}{\lambda}\,\theta_0\right)\right|.
+\end{equation}
+The predicted visibility, $V$, of a two-slit interference pattern generated by an extended incoherent light source is plotted as a function of the angular extent, $\theta_0$, of the  source 
+in Figure~\ref{f11.7}. It can be seen that the pattern is highly visible ({\em i.e.}, $V\sim 1$) when $\theta_0\ll \lambda/d$, but
+becomes washed out ({\em i.e.}, $V\sim 0$) when $\theta_0\gtapp \lambda/d$. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig07.eps}}
+\caption{\em Visibility of a two-slit far-field interference pattern generated by an extended incoherent light source.}\label{f11.7}   
+\end{figure}
+
+We conclude that a spatially extended incoherent light source only generates a visible interference pattern in a
+conventional two-slit interference apparatus when the angular extent of the source is
+sufficiently small: {\em i.e.}, when
+\begin{equation}
+\theta_0\ll \frac{\lambda}{d}.
+\end{equation}
+Equivalently, if the source is of linear extent $D$, and  located a distance $L$ from the slits, then the source
+only generates a visible interference pattern when it is sufficiently far away from the slits: {\em i.e.},
+when
+\begin{equation}
+L\gg \frac{d\,D}{\lambda}.
+\end{equation}
+This follows because $\theta_0\simeq D/L$. 
+
+The whole of the above discussion is premised on the assumption that an extended light source is both
+temporally and spatially incoherent on timescales much longer than a typical atomic coherence time, which is about $10^{-8}$ seconds. This
+is, indeed, generally the case. However, there is one type of light source---namely, a {\em laser}---for which this is not necessarily  the
+case.  In a laser (in single-mode operation), excited atoms are stimulated 
+in such a manner that they emit radiation which is both temporally and spatially coherent on timescales
+much longer than the relevant atomic coherence time. 
+
+Let us, briefly, consider the two-slit far-field interference pattern generated by an extended {\em coherent}\/ light source.
+Suppose that the two line sources, $A$ and $B$, in Figure~\ref{f11.6}
+are mutually coherent  ({\em i.e.}, $\phi_A=\phi_B$). In this case,  as is easily demonstrated, Equation~(\ref{e11.23}) is replaced by
+\begin{eqnarray}
+{\cal I}(\theta) &\propto &\left(\cos\left[\frac{1}{2}\,k\,d\,(\theta-\theta_0/2)\right] + \cos\left[\frac{1}{2}\,k\,d\,(\theta+\theta_0/2)\right] \right)^2\nonumber\\[0.5ex]
+&=&4\,\cos^2\left(\pi\,\frac{d}{\lambda}\,\theta\right)\,\cos^2\left(\frac{\pi}{2}\,\frac{d}{\lambda}\,\theta_0\right)\nonumber\\[0.5ex]
+&=&
+2\,\cos^2\left(\pi\,\frac{d}{\lambda}\,\theta\right)\left[1+\cos\left(\pi\,\frac{d}{\lambda}\,\theta_0\right)\right].
+\end{eqnarray}
+Moreover, when this expression is averaged over $\theta_0$, in order to generate the interference pattern produced by a uniform coherent light
+source of angular extent $\theta_0$, we obtain
+\begin{equation}
+{\cal I}(\theta)\propto  2\,\cos^2\left(\pi\,\frac{d}{\lambda}\,\theta\right)\left[1+{\rm sinc}\left(\pi\,\frac{d}{\lambda}\,\theta_0\right)\right].
+\end{equation}
+It follows, from (\ref{e11.26xx}),  that the visibility of the interference pattern is {\em unity}: {\em i.e.}, the pattern is sharply defined irrespective
+of the angular extent, $\theta_0$, of the light source, as long as the source is spatially coherent. 
+It is hardly surprising, then, that lasers generally produce much clearer  interference patterns than conventional incoherent light sources.  
+
+One simple rule that can be gleaned from the above discussion is that when considering interference between two
+{\em coherent}\/ light sources the wave {\em amplitudes}\/ must be added,  but when considering interference between two
+{\em incoherent}\/  sources it is sufficient to add the wave {\em intensities}. 
+
+\section{Multi-Slit Interference}\label{s11.4}
+Suppose that the interference apparatus pictured in Figure~\ref{f11.1} is modified such that $N$ identical   slits  of width $\delta\ll \lambda$,
+running parallel to the $z$-axis, are cut in the
+opaque screen which occupies the plane $x=0$. Let the slits be located at $y=y_n$, for $n=1,N$.  For the sake of
+simplicity, the arrangement of slits is assumed to
+be {\em symmetric}\/ with respect to the  plane $y=0$: {\em i.e.}, if there is a slit at $y=y_n$ then there is also
+a slit at $y=-y_n$. 
+ Now, the path length between a 
+point on the projection screen which is an angular distance $\theta$ from the  plane $y=0$ and the $n$th slit
+is [{\em cf.}, Equation~(\ref{e11.3})]
+\begin{equation}
+\rho_n = R\!\left[1-\frac{y_n}{R}\,\sin\theta + {\cal O}\left(\frac{y_n^{\,2}}{R^2}\right)\right].
+\end{equation}
+Thus, making use of the far-field
+orderings (\ref{e11.9}), where $d$ now represents the typical  spacing between neighboring slits, 
+and assuming normally incident collimated light, Equation~(\ref{e11.5a}) generalizes to
+\begin{equation}
+\psi(\theta,t)\propto \sum_{n=1,N}\cos(\phi+k\,R-\omega\,t-k\,y_n\,\sin\theta),
+\end{equation}
+which can also be written
+\begin{eqnarray}
+\psi(\theta,t)&\propto& \cos(\phi+k\,R-\omega\,t)\sum_{n=1,N} \cos(k\,y_n\,\sin\theta)\nonumber\\[0.5ex]
+&&+ \sin(\phi+k\,R-\omega\,t)\sum_{n=1,N}\sin(k\,y_n\,\sin\theta),
+\end{eqnarray}
+or
+\begin{equation}
+\psi(\theta,t)\propto \cos(\phi+k\,R-\omega\,t)\sum_{n=1,N} \cos(k\,y_n\,\sin\theta).
+\end{equation}
+Here, we have made use of the fact that arrangement of slits is symmetric with respect to the plane
+$y=0$ (which implies that $\sum_{n=1,N} \sin(k\,y_n\,\sin\theta)= 0$). We have also employed the standard
+identity $\cos(x-y)\equiv \cos x\,\cos y+\sin x\,\sin y$. 
+It follows that the intensity of
+the interference pattern appearing on the projection screen is specified  by 
+\begin{equation}
+{\cal I}(\theta) \propto \langle \psi(\theta,t)^{\,2}\rangle \propto \left[\sum_{n=1,N} \cos\left(2\pi\,\frac{y_n}{\lambda}\,\sin\theta\right)\right]^2,
+\end{equation}
+since $\langle \cos^2(\phi+k\,R-\omega\,t)\rangle=1/2$.
+The above expression  is a generalized version of Equation~(\ref{e11.11}). 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig08.eps}}
+\caption{\em Multi-slit  far-field interference pattern calculated for $N=10$ and $d/\lambda = 5$ with normal
+incidence and narrow slits.}\label{f11.8}   
+\end{figure}
+
+Suppose that the slits are {\em evenly spaced}\/ a distance $d$ apart, so that
+\begin{equation}
+y_n = [n-(N+1)/2]\,d
+\end{equation}
+for $n=1,N$. It follows that
+\begin{equation}
+{\cal I}(\theta) \propto  \left[\sum_{n=1,N} \cos\left(2\pi\,[n-(N+1)/2]\,\frac{d}{\lambda}\,\sin\theta\right)\right]^2,
+\end{equation}
+which can be summed to give (see Exercise 11.1)
+\begin{equation}\label{e11.31}
+{\cal I}(\theta)\propto \frac{\sin^2[\pi\,N\,(d/\lambda)\,\sin\theta]}{\sin^2[\pi\,(d/\lambda)\,\sin\theta)]}.
+\end{equation}
+
+Now, the multi-slit interference function, (\ref{e11.31}), exhibits  strong maxima in situations in which
+its numerator and  denominator are {\em simultaneously zero}: {\em i.e.}, when 
+\begin{equation}\label{e11.31a}
+\sin\theta=j\,\frac{\lambda}{d},
+\end{equation}
+ where
+$j$ is an integer. In this situation, application of {\em L'Hopital's rule}\/ yields ${\cal I} = N^2$. The
+heights of these so-called {\em principal maxima}\/ in the interference function are very large, being proportional to $N^2$, because  
+ there is constructive
+interference of the light from {\em all}\/ $N$ slits. This occurs because the path lengths between neighboring
+slits and the point on the projection screen at which a given maximum is located differ by an {\em integer}\/ number of wavelengths: {\em i.e.},
+$\rho_n-\rho_{n-1}=d\,\sin\theta=j\,\lambda$. Note, incidentally, that all of the principle maxima have the {\em same}\/ height. 
+
+The multi-slit interference function (\ref{e11.31}) is  {\em zero}\/ when
+its numerator is zero but its denominator  non-zero: {\em i.e.}, when 
+\begin{equation}\label{e11.31b}
+\sin\theta=\frac{l}{N}\,\frac{\lambda}{d},
+\end{equation}
+ where
+$l$ is an integer which is {\em not}\/ an integer multiple of $N$. It follows that there are $N-1$ zeros between neighboring
+principle maxima. It can also be demonstrated that there are $N-2$ {\em secondary maxima}\/ between
+the said zeros. However, these maxima are much lower in height, by a factor of order $N^2$,  than the primary maxima.
+
+Figure~\ref{f11.8} shows the typical  far-field interference pattern produced by a system of ten identical
+equally-spaced parallel slits, assuming normal incidence and narrow slits, when the slit spacing, $d$, greatly exceeds the wavelength, $\lambda$,
+of the light (which, as we saw in Section~\ref{s11.2}, is the most interesting case). It can be seen that the
+pattern consists of a series of  bright fringes of equal height, separated by much wider
+(relatively) dark fringes. Of course, the bright fringes correspond to the principal maxima discussed above. As is the case for two-slit interference, the innermost ({\em i.e.}, low $j$, small $\theta$) principal maxima are approximately {\em equally-spaced}, with a characteristic angular
+spacing $\Delta\theta\simeq \lambda/d$. [This
+result follows from Equation~(\ref{e11.31a}), and the small angle approximation $\sin\theta\simeq \theta$.]  However, the typical angular width of a principal maximum
+({\em i.e.}, the angular distance between the maximum and the closest zeroes on either side of it) is $\delta\theta \simeq (1/N)\,(\lambda/d)$. [This result follows from Equation~(\ref{e11.31b}), and the small angle approximation]. The ratio of the angular width of a principal maximum to the angular spacing between successive maxima is thus
+\begin{equation}
+\frac{\delta\theta}{\Delta\theta}\simeq \frac{1}{N}.
+\end{equation}
+Hence, we conclude that, as the number of slits increases, the bright fringes in a multi-slit interference pattern become progressively sharper.  
+
+The most common practical application of multi-slit interference is the {\em transmission diffraction grating}. Such a device consists
+of $N$ identical equally-spaced  parallel scratches on one side of a thin  uniform  transparent glass or plastic film. When the film is illuminated  the scratches
+strongly scatter the incident light, and effectively constitute  $N$ identical equally-spaced parallel line sources. Hence, the grating generates 
+the type of $N$-slit interference pattern discussed above, with one major difference: {\em i.e.}, the central ($j=0$) principal maximum has
+contributions not only from the scratches, but also from all the transparent material between the scratches. Thus, the central
+principal maximum is considerably brighter than the other ($j\neq 0$) principal maxima. 
+
+Diffraction gratings are often employed in {\em spectroscopes}, which are instruments used to decompose light that is
+made up of a mixture of different wavelengths into its
+constituent wavelengths. As a simple example, suppose that a spectroscope contains an $N$-line diffraction grating which is illuminated, at normal  incidence, 
+by a mixture of light of wavelength $\lambda$, and light of wavelength $\lambda+\Delta\lambda$, where
+$\Delta\lambda\ll \lambda$. As always, the overall interference pattern ({\em i.e.}, the overall  wavefunction at the projection screen) produced by the grating is a {\em linear superposition}\/
+of the pattern generated by the light of wavelength $\lambda$, and the pattern generated by the
+light of wavelength $\lambda+\Delta\lambda$. Consider the $j$th-order principal maximum associated
+with the wavelength $\lambda$ interference pattern, which is located at $\theta_j$, where $\sin\theta_j = j\,(\lambda/d)$---see Equation~(\ref{e11.31a}). Here, $d$ is
+the spacing between neighboring  lines on the diffraction grating, which is assumed to be greater than $\lambda$.  (Incidentally, the
+width of the lines is assumed to be much less than $\lambda$.)
+Of course, the maximum in question has a finite angular width.
+We can determine this width by locating the zeros in the interference pattern on either side of the maximum. Let the zeros
+be 
+ located at $\theta_j\pm \delta\theta_j$. 
+Now, the maximum itself corresponds to $\pi\,N\,(d/\lambda)\,\sin\theta_j = \pi\,N\,j$. Hence, the 
+zeros correspond to $\pi\,N\,(d/\lambda)\,\sin(\theta_j\pm\delta\theta_j)= \pi\,(N\,j\pm 1)$ [{\em i.e.},
+they correspond to the first zeros of the function $\sin[\pi\,N\,(d/\lambda)\,\sin\theta]$ on either side of the zero at $\theta_j$---see Equation~(\ref{e11.31})]. 
+Taylor expanding to first-order in $\delta\theta_j$, we obtain
+\begin{equation}\label{e11.35}
+\delta\theta_j = \frac{\tan\theta_j}{N\,j}.
+\end{equation}
+Hence, the maximum in question effectively extends from $\theta_j-\delta\theta_j$ to $\theta_j+\delta\theta_j$. 
+Consider, now, the $j$th-order principal maximum associated  with the wavelength $\lambda+\Delta\lambda$ interference pattern, which is
+located at $\theta_j+\Delta\theta_j$, where $\sin(\theta_j+\Delta\theta_j)= j\,(\lambda+\Delta\lambda)/d$---see Equation~(\ref{e11.31a}). Taylor
+expanding to first-order in $\Delta\theta_j$, we obtain
+\begin{equation}
+\Delta\theta_j = \tan\theta_j\,\frac{\Delta\lambda}{\lambda}.
+\end{equation}
+Clearly, in order for the spectroscope to resolve the incident light into its  two constituent wavelengths, at the $j$th spectral order, the angular spacing, $\Delta\theta_j$, between the 
+$j$th-order maxima associated with these two wavelengths must be greater than the angular widths, $\delta\theta_j$, of the
+maxima themselves. If this is the case then the overall $j$th-order maximum will consist of two closely spaced maxima, or ``spectral lines''  (centered at $\theta_j$ and
+$\theta_j+\Delta\theta_j$). On the other hand, if this is not the case then the two maxima will merge to form a single maximum, and it will
+consequently not be possible to tell that the incident light consists of a mixture of {\em  two}\/ different wavelengths. Thus, the condition
+for the spectroscope to be able to resolve the spectral lines at the $j$th spectral order is  $\Delta\theta_j>\delta\theta_j$, or
+\begin{equation}
+\frac{\Delta\lambda}{\lambda} > \frac{1}{N\,j}.
+\end{equation}
+We conclude that the resolving power of a diffraction grating spectroscope increases as the number of illuminated lines
+({\em i.e.}, $N$) increases, and also as the spectral order ({\em i.e.}, $j$) increases. Note, incidentally, that there
+is no resolving power at the lowest ({\em i.e.}, $j=0$) spectral order, since the corresponding principal maximum is located at $\theta=0$
+irrespective of the wavelength of the incident light. Moreover, there is a limit to how large $j$ can become ({\em i.e.}, a given diffraction
+grating, illuminated by light of a given wavelength, has a finite number of principal maxima). This follows since $\sin\theta_j$ cannot
+exceed unity, so, according to (\ref{e11.31a}),  $j$ cannot exceed $d/\lambda$. 
+
+\section{Fourier Optics}
+Up to now, we have only considered the interference of monochromatic light produced  when a plane wave is incident
+on an opaque screen, coincident with the plane $x=0$, which has a number of {\em narrow}\/ ({\em i.e.}, $\delta\ll \lambda$,
+where $\delta$ is the slit width)  slits, running parallel to the $z$-axis, cut in it.  Let us now generalize our analysis
+to take slits of {\em finite width}\/ ({\em i.e.}, $\delta\gtapp \lambda$) into account. In order to achieve this goal, it is convenient to
+define the so-called {\em aperture function}, $F(y)$, of the screen. This function takes the value zero if the screen is
+opaque at position $y$, and some constant positive value if it is transparent, and is normalized such that $\int_{-\infty}^\infty F(y)\,dy = 1$.  Thus, for the case of a screen with $N$   identical 
+slits of negligible width, located at $y=y_n$, for $n=1,N$, the appropriate aperture function is 
+\begin{equation}
+F(y)=\frac{1}{N}\sum_{y=1,N} \delta(y-y_n),
+\end{equation}
+where $\delta(y)$ is a Dirac delta function.
+
+The wavefunction at the projection screen, generated by the above mentioned arrangement of slits, when  the opaque screen is
+illuminated by a plane wave of phase angle $\phi$, wavenumber $k$, and angular frequency $\omega$, whose
+direction of propagation subtends an angle $\theta_0$ with the $x$-axis, is (see the analysis in Sections~\ref{s11.2} and \ref{s11.4})
+\begin{equation}\label{e11.41a}
+\psi(\theta,t)\propto \cos(\phi+k\,R-\omega\,t)\sum_{n=1,N} \cos[k\,y_n\,(\sin\theta-\sin\theta_0)].
+\end{equation}
+Here, for the sake of simplicity, we have assumed that the arrangement of slits is symmetric with respect to the
+plane $y=0$, so that $\sum_{n=1,N} \sin(\alpha\,y_n) =0$ for any $\alpha$. 
+Now, using the well-known properties of the delta function [see Equation~(\ref{e8.26})], expression (\ref{e11.41a}) can also be written
+\begin{equation}\label{e11.22}
+\psi(\theta,t) \propto \cos(\phi+ k\,R-\omega\,t)\,\bar{F}(\theta),
+\end{equation}
+where
+\begin{equation}\label{e11.23a}
+\bar{F}(\theta) = \int_{-\infty}^\infty F(y)\,\cos[k\,(\sin\theta-\sin\theta_0)\,y]\,dy.
+\end{equation}
+In the following, we shall assume that Equation~(\ref{e11.22}) is a {\em general result}, and is valid even when the
+slits in the opaque screen are of finite width ({\em i.e.}, $\delta\gtapp \lambda$). This assumption is equivalent to the assumption  that each unblocked section of the screen emits a cylindrical wave in the forward direction that is in phase with
+the plane wave which illuminates it from behind. The latter assumption is known as {\em Huygen's principle}. 
+ (Huygen's principle can actually be justified using advanced electromagnetic
+theory, but such a proof lies well beyond the scope of this course.)
+Note that the {\em interference/diffraction function}, $\bar{F}(\theta)$, is just the {\em Fourier transform}\/ of the aperture function, $F(y)$. 
+This is an extremely powerful result. It implies that we can work out the far-field interference/diffraction pattern associated
+with {\em any}\/ arrangement of parallel slits, of arbitrary  width,  by simply Fourier transforming the associated aperture function. Of course, once we have calculated the interference/diffraction function, $\bar{F}(\theta)$, the intensity of the
+interference/diffraction pattern appearing on the projection screen is readily obtained from
+\begin{equation}
+{\cal I}(\theta) \propto \left[\bar{F}(\theta)\right]^2.
+\end{equation}
+
+\section{Single-Slit Diffraction}\label{s11.6}
+Suppose that the opaque screen contains a single slit of finite width. In fact, let the slit in question be of width $\delta$,
+and extend from $y=-\delta/2$ to $y=\delta/2$. Thus, the associated aperture function is
+\begin{equation}\label{e11.45}
+F(y)=\left\{
+\begin{array}{ccc}
+1/\delta&\mbox{\hspace{0.5cm}}&|y|\leq \delta/2\\[0.5ex]
+0 &&|y|> \delta/2
+\end{array}\right..
+\end{equation}
+It follows from (\ref{e11.23a}) that
+\begin{equation}\label{e11.46}
+\bar{F}(\theta) =\frac{1}{\delta} \int_{-\delta/2}^{\delta/2} \cos[k\,(\sin\theta-\sin\theta_0)\,y]\,dy = {\rm sinc}\left[\pi\,\frac{\delta}{\lambda}\,(\sin\theta-\sin\theta_0)\right],
+\end{equation}
+where ${\rm sinc}(x)\equiv \sin(x)/x$. Finally, assuming, for the sake of simplicity, that $\theta,\,\theta_0\ll 1$, 
+which is most likely to be the case when $\delta\gg \lambda$, the diffraction
+pattern appearing on the projection screen  is specified by
+\begin{equation}\label{e11.47}
+{\cal I}(\theta) \propto {\rm sinc}^2\left[\pi\,\frac{\delta}{\lambda}\,(\theta-\theta_0)\right].
+\end{equation}
+Note,  from {\em L'Hopital's rule}, that ${\rm sinc}(0)=\lim_{x\rightarrow 0}\,\sin x/x = \lim_{x_\rightarrow 0}\, \cos x/1=1$.
+Furthermore, it is easily demonstrated that the zeros of the ${\rm sinc}(x)$ function occur at $x=j\,\pi$, where $j$ is a {\em non-zero}\/ integer.
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig09.eps}}
+\caption{\em Single-slit  far-field diffraction pattern calculated for  $\delta/\lambda = 20$.}\label{f11.9}   
+\end{figure}
+
+Figure~\ref{f11.9} shows a typical single-slit diffraction pattern calculated for a case in which the slit width
+greatly exceeds the wavelength of the light. Note that the pattern consists of a dominant central maximum, flanked by subsidiary maxima of
+ negligible amplitude.
+The situation is shown schematically in Figure~\ref{f11.10}. When the incident
+plane wave, whose direction of motion subtends an angle $\theta_0$ with the $x$-axis, passes through the
+slit it is effectively transformed into a {\em divergent}\/  beam of light (where the beam corresponds to the central peak in Figure~\ref{f11.9}) that is centered on $\theta=\theta_0$. The angle of
+divergence of the beam, which is obtained from the first zero of the single-slit diffraction function (\ref{e11.47}), is
+\begin{equation}
+\delta\theta = \frac{\lambda}{\delta}:
+\end{equation}
+{\em i.e.}, the beam effectively extends from $\theta_0-\delta\theta$ to $\theta_0+\delta\theta$. 
+Thus, if the slit width, $\delta$, is very much greater than the wavelength, $\lambda$, of the light then the beam divergence is negligible, and the beam is, thus,  governed by the laws of geometric optics (according to which there is no beam divergence). 
+On the other hand, if the slit width is  comparable with the wavelength of the light then the beam divergence is significant, and the  behavior of the beam is, consequently, very different than that predicted by the laws of
+geometric optics. 
+
+\begin{figure}
+\epsfysize=3.3in
+\centerline{\epsffile{Chapter11/fig10.eps}}
+\caption{\em Single-slit diffraction at oblique incidence.}\label{f11.10}   
+\end{figure}
+
+The diffraction of light is a very important physical phenomenon, since it sets a limit on the angular resolution of optical instruments. For instance, consider a
+telescope whose objective lens is of diameter $D$. When a plane wave from a distant light  source  of negligible angular
+extent ({\em e.g.}, a star) enter the lens it is  diffracted, and forms a divergent beam of angular width $\lambda/D$. 
+Thus, instead of  being a point, the resulting image of the star is  a {\em disk}\/ of finite angular width $\lambda/D$. Such a disk is known
+as an {\em Airy disk}. Suppose that two stars are an angular distance $\Delta\theta$ apart in the sky. As we have just seen, when viewed through
+the telescope, each star appears as a disk of angular extent $\delta\theta=\lambda/D$. Clearly, if $\Delta\theta>\delta\theta$ then
+the two stars  appear as separate disks. On the other hand, if $\Delta\theta < \delta\theta$ then the two
+disks merge to form a single disk, and it becomes impossible to tell that there are, in fact, {\em two}\/ stars. 
+It follows that the
+maximum angular resolution of a telescope whose objective lens is of diameter $D$ is
+\begin{equation}
+\delta\theta \simeq \frac{\lambda}{D}.
+\end{equation}
+This result is usually called the {\em Rayleigh criterion}. 
+Note that the angular resolution of the telescope increases  ({\em i.e.}, $\delta\theta$ decreases) as the diameter of its objective lens increases. 
+
+\section{Multi-Slit Diffraction}
+Suppose, finally,  that the opaque screen in our interference/diffraction apparatus contains $N$ identical equally-spaced parallel slits of {\em finite width}. Let the slit spacing be $d$, and the
+slit width $\delta$, where $\delta < d$. It follows that the aperture function for the screen is written
+\begin{equation}
+F(y) = \frac{1}{N}\sum_{n=1,N} F_2(y-y_n),
+\end{equation}
+where
+\begin{equation}
+y_n = [n-(N+1)/2]\,d,
+\end{equation}
+and
+\begin{equation}
+F_2(y)=\left\{
+\begin{array}{ccc}
+1/\delta&\mbox{\hspace{0.5cm}}&|y|\leq \delta/2\\[0.5ex]
+0 &&|y|> \delta/2
+\end{array}\right..
+\end{equation}
+Of course, $F_2(y)$ is the aperture function for a single slit,  of finite width $\delta$, which is centered on $\theta=0$---see Equation~(\ref{e11.45}).
+
+Assuming normal incidence ({\em i.e.}, $\theta_0=0$), the interference/diffraction function, which is the Fourier transform
+of the aperture function, takes the form [see Equation~(\ref{e11.23a})]
+\begin{equation}
+\bar{F}(\theta) = \int_{-\infty}^{\infty} F(y)\,\cos(k\,\sin\theta\,y)\,dy.
+\end{equation}
+Hence, 
+\begin{eqnarray}
+\bar{F}(\theta) &=& \frac{1}{N}\sum_{n=1,N}\int_{-\infty}^\infty F_2(y-y_n)\,\cos(k\,\sin\theta\,y)\,dy\nonumber\\[0.5ex]
+&=&\frac{1}{N}\sum_{n=1,N} \left[\cos(k\,\sin\theta\,y_n)\,\int_{-\infty}^\infty F_2(y')\,\cos(k\,\sin\theta\,y')\,dy'\right.\nonumber\\[0.5ex]
+&&\left.
+- \sin(k\,\sin\theta\,y_n)\,\int_{-\infty}^\infty F_2(y')\,\sin(k\,\sin\theta\,y')\,dy'\right]\nonumber\\[0.5ex]
+&=&\left[\frac{1}{N}\sum_{n=1,N} \cos(k\,\sin\theta\,y_n)\right] \int_{-\infty}^\infty F_2(y')\,\cos(k\,\sin\theta\,y')\,dy',
+\end{eqnarray}
+where $y'=y-y_n$. Here, we have made use of  $\int_{-\infty}^\infty  F_2(y')\,\sin(\alpha\,y')\,dy'=0$, for any $\alpha$,
+which follows because $F_2(y')$ is even in $y'$, whereas $\sin(\alpha\,y')$ is odd. 
+We have also employed the standard identity $\cos(x-y)\equiv \cos x\,\cos y-\sin x\,\sin y$. 
+The above expression reduces to
+\begin{equation}
+\bar{F}(\theta) = \bar{F}_1(\theta)\,\bar{F}_2(\theta).
+\end{equation}
+Here [{\em cf.}, Equation~(\ref{e11.31})],
+\begin{eqnarray}
+\bar{F}_1(\theta)&=& \int_{-\infty}^\infty F_1(y)\,\cos(k\,\sin\theta\,y)\,dy=\frac{1}{N}\sum_{n=1,N}\cos(k\,\sin\theta\,y_n)\nonumber\\[0.5ex]
+&=&\frac{1}{N}\,\frac{\sin[\pi\,N\,(d/\lambda)\,\sin\theta]}{\sin [\pi\,(d/\lambda)\,\sin\theta]},
+\end{eqnarray}
+where
+\begin{equation}
+F_1(y) = \frac{1}{N} \sum_{n=1,N} \delta(y-y_n),
+\end{equation}
+is the interference/diffraction function  for $N$ identical parallel slits of negligible width which are equally-spaced a distance $d$
+apart, and $F_1(y)$ is the corresponding aperture function.
+Furthermore [{\em cf.}, Equation~(\ref{e11.46})], 
+\begin{equation}
+\bar{F}_2(\theta) = \int_{-\infty}^\infty F_2(y)\,\cos(k\,\sin\theta\,y)\,dy = {\rm sinc}[\pi\,(\delta/\lambda)\,\sin\theta],
+\end{equation}
+is the interference/diffraction function for a single slit of width $\delta$. 
+
+\begin{figure}
+\epsfysize=2.5in
+\centerline{\epsffile{Chapter11/fig11.eps}}
+\caption{\em Multi-slit  far-field interference pattern calculated for $N=10$, $d/\lambda = 10$, and $\delta/\lambda=2$,  assuming normal
+incidence.}\label{f11.11}   
+\end{figure}
+
+We conclude, from the above analysis, that the interference/diffraction function for $N$ identical equally-spaced parallel slits of
+finite width is the product of the interference/diffraction function for $N$ identical equally-spac\-ed parallel slits of
+negligible width, $\bar{F}_1(\theta)$,  and the interference/diffraction function for a single slit of finite width, $\bar{F}_2(\theta)$. 
+We have already encountered both of these  functions. The former function (see Figure~\ref{f11.8}, which shows
+$[\bar{F}_1(\theta)]^2$) consists of a series of sharp maxima of equal amplitude located
+at [see Equation~(\ref{e11.31a})]
+\begin{equation}
+\theta_j = \sin^{-1}\left(j\,\frac{\lambda}{d}\right),
+\end{equation}
+where $j$ is an integer. The latter function (see Figure~\ref{f11.9}, which shows $[\bar{F}_2(\theta-\theta_0)]^2$) is of order unity for $|\theta|\ltapp \sin^{-1}(\lambda/\delta)$, and much less than unity for $|\theta|\gtapp \sin^{-1}(\lambda/\delta)$. 
+It follows that the intensity of the interference/diffraction pattern associated with $N$ identical equally-spaced parallel slits of finite width, which is given by
+\begin{equation}
+{\cal I}(\theta) \propto \left[\bar{F}_1(\theta)\,\bar{F}_2(\theta)\right]^2\propto\left[\bar{F}_1(\theta)\right]^2\, \left[\bar{F}_2(\theta)\right]^2,
+\end{equation}
+is similar to that for $N$ identical equally-spaced parallel slits of negligible  width, $[\bar{F}_1(\theta)]^2$, except that the heights of the various maxima in the pattern are
+modulated by $[\bar{F}_2(\theta)]^2$. 
+Hence, those maxima lying in the angular range $|\theta|< \sin^{-1}(\lambda/\delta)$ are of similar height, whereas those lying in the range $|\theta|> \sin^{-1}(\lambda/\delta)$ are of negligible height. This is illustrated in Figure~\ref{f11.11}, which shows the multi-slit interference/diffraction
+pattern calculated for $N=10$, $d/\lambda =10$, and $\delta/\lambda = 2$. As expected, the maxima lying 
+in the angular range $|\theta|< \sin^{-1}(0.5) = \pi/6$ have relatively large
+amplitudes, whereas those lying in the 
+range $|\theta|> \pi/6$ have negligibly  small amplitudes. 
+
+\section{Exercises}
+{\small 
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item Consider the geometric series 
+$$
+S= \sum_{n=0,N-1} z^n,
+$$
+where $z$ is a complex number. Demonstrate that
+$$
+S = \frac{1-z^N}{1-z}.
+$$
+
+\item Suppose that $z={\rm e}^{\,{\rm i}\,\theta}$, where $\theta$ is real. Employing the well-known
+identity
+$$
+\sin\theta \equiv \frac{1}{2\,{\rm i}}\left({\rm e}^{\,{\rm i}\,\theta} - {\rm e}^{-{\rm i}\,\theta}\right),
+$$
+show that
+$$
+S = {\rm e}^{\,{\rm i}\,(N-1)\,\theta/2}\,\frac{\sin(N\,\theta/2)}{\sin(\theta/2)}.
+$$
+
+\item Finally, making use of de Moivre's theorem,
+$$
+{\rm e}^{\,{\rm i}\,n\,\theta} \equiv \cos(n\,\theta) + {\rm i}\,\sin(n\,\theta),
+$$
+demonstrate that 
+$$
+C=\sum_{n=1,N} \cos(\alpha\,y_n),
+$$
+where
+$$
+y_n = [n-(N+1)/2]\,d,
+$$
+evaluates to
+$$
+C = \frac{\sin(N\,\alpha\,d/2)}{\sin(\alpha\,d/2)}.
+$$
+\end{enumerate}
+
+\item An interference experiment employs two narrow parallel slits of separation $0.25\,{\rm mm}$, and monochromatic  light of wavelength $\lambda=500\,{\rm nm}$.
+Estimate the minimum distance that the projection screen must be placed behind the slits in order to obtain a far-field interference
+pattern. 
+
+\item A double-slit of slit separation $0.5\,{\rm mm}$ is illuminated at normal incidence by a parallel beam from
+a helium-neon laser that emits monochromatic light of wavelength $632.8\,{\rm nm}$. A projection
+screen is located $5\,{\rm m}$ behind the slit. What is the separation of the central interference fringes on the screen?
+
+\item Consider a double-slit interference experiment in which the slit spacing is $0.1\,{\rm mm}$, and the
+projection screen is located $50\,{\rm cm}$ behind the slits. Assuming monochromatic illumination at normal incidence, if the observed separation between neighboring interference 
+maxima at the center of the projection screen is $2.5\,{\rm mm}$, what is the wavelength of the
+light illuminating the slits?
+
+\item What is the mean length of the classical wavetrain (wave packet) corresponding to the light emitted by an
+atom whose excited state has a mean lifetime $\tau\sim 10^{-8}\,{\rm s}$? In an ordinary gas-discharge source, the
+excited atomic states do not decay freely, but instead have an effective lifetime $\tau\sim 10^{-9}\,{\rm s}$, due to
+collisions and Doppler effects. What is the length of the corresponding classical wavetrain?
+
+\item If a ``monochromatic''  incoherent ``line'' source of visible light is not really a line, but has a finite width of $1\,{\rm mm}$, estimate  the
+minimum distance it can
+ be placed in front of a double-slit, of slit separation $0.5\,{\rm mm}$, if the light from the slit is to generate a
+ clear interference pattern.
+ 
+ \item The visible emission spectrum of a sodium atom  is dominated by a yellow line which actually consists of two
+ closely-spaced lines of wavelength $589.0\,{\rm nm}$ and $589.6\,{\rm nm}$. Demonstrate that a diffraction
+ grating must have at least 328 lines in order to resolve this doublet at the third spectral order. 
+  
+  \item Consider a diffraction grating having 5000 lines per centimeter. Find the angular
+  locations of the principle maxima when the grating is illuminated at normal incidence by (a) red light of
+  wavelength 700 nm, and (b) violet light of wavelength 400 nm.
+  
+  \item Suppose that a monochromatic laser of wavelength $632.8\,{\rm nm}$ emits a
+  diffrac\-tion-limited beam of initial diameter 2\,mm. Estimate how large a light spot
+  the beam would produce on the surface of the Moon (which is a mean distance
+  $3.76\times 10^5\,{\rm km}$ from the surface of the Earth). Neglect any effects of the Earth's atmosphere.
+  
+ \item Estimate how far away an automobile is when you can only just barely resolve the two headlights with your eyes. 
+ 
+ \item Venus has a diameter of about 8000 miles. When it is prominently visible in the sky, in the early morning or late evening, it
+ is about as far away as the Sun: {\em i.e.}, about 93 million miles. Now, Venus commonly appears larger than a point to the
+ unaided eye. Are we seeing the true size of Venus?
+ 
+ \item The world's largest steerable  radio telescope, at the National Radio  Astronomy Observatory, Green Bank, West Virginia,
+consists of  a parabolic disk which is 300 ft in diameter. Estimate the angular resolution (in minutes of an arc) of the telescope when it is
+observing the well-known 21-cm
+ radiation of hydrogen.
+ 
+ \item Estimate how large  the lens of a camera carried by an artificial satellite orbiting the Earth at an altitude of 150 miles
+would  have to be in order to resolve features on the Earth's surface a foot in diameter.
+ 
+ \item Demonstrate that the secondary maxima in the far-field interference pattern generated by three identical equally-spaced parallel slits of
+ negligible width are nine times less  intense than the principle maxima. 
+ 
+\item Consider a double-slit interference/diffraction experiment in which the slit spacing is $d$, and the  slit width  $\delta$.
+Show that the intensity of the far-field interference pattern, assuming normal incidence by monochromatic
+ light of wavelength $\lambda$, is
+ $$
+ {\cal I}(\theta)\propto \cos^2\left(\pi\,\frac{d}{\lambda}\,\sin\theta\right){\rm sinc}^2\left(\pi\,\frac{\delta}{\lambda}\,\sin\theta\right).
+ $$
+ Plot the intensity pattern for $d/\lambda=8$ and $\delta/\lambda= 2$. 
+ 
+\end{enumerate}}
