@@ -1,0 +1,22 @@
+This repository contains Latex code to compile a
+set of lower-division undergraduate lecture notes
+on Waves and Oscillations.
+
+The code will only compile correctly if the following
+standard Tex packages are installed:
+
+fullpage
+epfs
+charter
+euler
+fancyhdr
+
+The document can be compiled by issuing the command
+
+latex Waves
+
+in the lowest directory (containing the file Waves.tex).
+
+The document must be compiled at least three times to
+get all of the cross-references and table of content
+data correct.
